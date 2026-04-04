@@ -1,0 +1,53 @@
+[gd_scene format=3 uid="uid://c3ge72d2jsbe7"]
+
+[ext_resource type="Script" uid="uid://csdvgmyume013" path="res://room_0.gd" id="1_5ywfs"]
+
+[node name="Room0" type="Node2D" unique_id=2095281744]
+script = ExtResource("1_5ywfs")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1030770431]
+position = Vector2(122, 94)
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+rotation_smoothing_enabled = true
+
+[node name="Button" type="Control" parent="." unique_id=2007058816]
+texture_repeat = 1
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Start" type="Button" parent="Button" unique_id=1850536945]
+custom_minimum_size = Vector2(94, 56)
+layout_mode = 0
+offset_left = 83.0
+offset_top = 3.0
+offset_right = 177.0
+offset_bottom = 59.0
+text = "Start"
+flat = true
+
+[node name="Settings" type="Button" parent="Button" unique_id=601426618]
+custom_minimum_size = Vector2(94, 56)
+layout_mode = 0
+offset_left = 83.0
+offset_top = 62.0
+offset_right = 177.0
+offset_bottom = 118.0
+text = "Settings"
+flat = true
+
+[node name="Exit" type="Button" parent="Button" unique_id=1207303219]
+custom_minimum_size = Vector2(94, 56)
+layout_mode = 0
+offset_left = 83.0
+offset_top = 126.0
+offset_right = 177.0
+offset_bottom = 182.0
+text = "Exit"
+flat = true
+
+[connection signal="pressed" from="Button/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Button/Exit" to="." method="_on_exit_pressed"]
