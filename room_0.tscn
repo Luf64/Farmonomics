@@ -6,7 +6,7 @@
 script = ExtResource("1_5ywfs")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1030770431]
-position = Vector2(122, 94)
+position = Vector2(132, 93)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
