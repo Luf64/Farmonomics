@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c3ge72d2jsbe7"]
 
-[ext_resource type="Script" uid="uid://csdvgmyume013" path="res://room_0.gd" id="1_5ywfs"]
-[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="2_jc28f"]
-[ext_resource type="Texture2D" uid="uid://bwrlj75ptmqli" path="res://Assets/Main Menu.jpg" id="2_l5bpn"]
+[ext_resource type="Script" uid="uid://csdvgmyume013" path="res://scrips/room_0.gd" id="1_oa8wf"]
+[ext_resource type="Texture2D" uid="uid://bwrlj75ptmqli" path="res://Assets/Main Menu.jpg" id="2_853v1"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="3_c68s2"]
 
 [node name="Room0" type="Node2D" unique_id=2095281744]
-script = ExtResource("1_5ywfs")
+script = ExtResource("1_oa8wf")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1030770431]
 position = Vector2(132, 93)
@@ -17,7 +17,7 @@ rotation_smoothing_enabled = true
 show_behind_parent = true
 position = Vector2(0, -1)
 scale = Vector2(0.7795918, 0.7791262)
-texture = ExtResource("2_l5bpn")
+texture = ExtResource("2_853v1")
 flip_h = true
 
 [node name="Button" type="Control" parent="." unique_id=2007058816]
@@ -40,7 +40,7 @@ offset_top = -87.96
 offset_right = 46.999985
 offset_bottom = -31.96
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_jc28f")
+theme_override_fonts/font = ExtResource("3_c68s2")
 theme_override_font_sizes/font_size = 22
 text = "Start"
 flat = true
@@ -53,7 +53,7 @@ offset_top = 85.0
 offset_right = 177.0
 offset_bottom = 141.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_jc28f")
+theme_override_fonts/font = ExtResource("3_c68s2")
 theme_override_font_sizes/font_size = 22
 text = "Settings"
 flat = true
@@ -66,7 +66,7 @@ offset_top = 146.0
 offset_right = 177.0
 offset_bottom = 202.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_jc28f")
+theme_override_fonts/font = ExtResource("3_c68s2")
 theme_override_font_sizes/font_size = 22
 text = "Exit"
 flat = true
