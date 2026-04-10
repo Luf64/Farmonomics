@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cuoy08xj84lep"
-path="res://.godot/imported/Front - Attacking_002.png-2ed2c06c8b22a4d57e60ade1187eae8f.ctex"
+path="res://.godot/imported/Front - Attacking_002.png-7891728aabab32f7a5e27817506329a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robber/PNG/PNG Sequences/Front - Attacking/Front - Attacking_002.png"
-dest_files=["res://.godot/imported/Front - Attacking_002.png-2ed2c06c8b22a4d57e60ade1187eae8f.ctex"]
+source_file="res://Assets/sprites/Robber/PNG/PNG Sequences/Front - Attacking/Front - Attacking_002.png"
+dest_files=["res://.godot/imported/Front - Attacking_002.png-7891728aabab32f7a5e27817506329a1.ctex"]
 
 [params]
 

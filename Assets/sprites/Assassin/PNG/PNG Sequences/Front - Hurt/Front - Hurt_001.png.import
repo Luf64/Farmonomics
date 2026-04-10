@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://r6x4kv3vq8ev"
-path="res://.godot/imported/Front - Hurt_001.png-9a86b1e9ccc51de577352ce17a6770ff.ctex"
+path="res://.godot/imported/Front - Hurt_001.png-5256cedef88e1319c03f46a142d94d39.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Assassin/PNG/PNG Sequences/Front - Hurt/Front - Hurt_001.png"
-dest_files=["res://.godot/imported/Front - Hurt_001.png-9a86b1e9ccc51de577352ce17a6770ff.ctex"]
+source_file="res://Assets/sprites/Assassin/PNG/PNG Sequences/Front - Hurt/Front - Hurt_001.png"
+dest_files=["res://.godot/imported/Front - Hurt_001.png-5256cedef88e1319c03f46a142d94d39.ctex"]
 
 [params]
 

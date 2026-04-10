@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bu0tkr3w8pgvi"
-path="res://.godot/imported/Left Hand - Front.png-1952127b8cc6813b483a83dc04a5dda8.ctex"
+path="res://.godot/imported/Left Hand - Front.png-a4e77671b592245322267f06a2814f95.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robber/PNG/Vector Parts/Left Hand - Front.png"
-dest_files=["res://.godot/imported/Left Hand - Front.png-1952127b8cc6813b483a83dc04a5dda8.ctex"]
+source_file="res://Assets/sprites/Robber/PNG/Vector Parts/Left Hand - Front.png"
+dest_files=["res://.godot/imported/Left Hand - Front.png-a4e77671b592245322267f06a2814f95.ctex"]
 
 [params]
 

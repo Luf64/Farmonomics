@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bntp3erc6j2pa"
-path="res://.godot/imported/Right - Attacking.png-a3e0044b51a9e29e5e738d28a2f89288.ctex"
+path="res://.godot/imported/Right - Attacking.png-28e2d6d390c3fb089e41f5d03cc0a69b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Thug/PNG/Spritesheets/Right - Attacking.png"
-dest_files=["res://.godot/imported/Right - Attacking.png-a3e0044b51a9e29e5e738d28a2f89288.ctex"]
+source_file="res://Assets/sprites/Thug/PNG/Spritesheets/Right - Attacking.png"
+dest_files=["res://.godot/imported/Right - Attacking.png-28e2d6d390c3fb089e41f5d03cc0a69b.ctex"]
 
 [params]
 

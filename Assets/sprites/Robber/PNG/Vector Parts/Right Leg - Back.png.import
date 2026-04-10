@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cwydph4a65p06"
-path="res://.godot/imported/Right Leg - Back.png-d44593a0ecb48a804ffbc54857bbdf0b.ctex"
+path="res://.godot/imported/Right Leg - Back.png-4718e90233341d210f0a227189ff26bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robber/PNG/Vector Parts/Right Leg - Back.png"
-dest_files=["res://.godot/imported/Right Leg - Back.png-d44593a0ecb48a804ffbc54857bbdf0b.ctex"]
+source_file="res://Assets/sprites/Robber/PNG/Vector Parts/Right Leg - Back.png"
+dest_files=["res://.godot/imported/Right Leg - Back.png-4718e90233341d210f0a227189ff26bf.ctex"]
 
 [params]
 

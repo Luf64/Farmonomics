@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c16fopk2iyl4w"
-path="res://.godot/imported/Slash FX 01.png-93332b70b05d88fe347044a3ef9b54bf.ctex"
+path="res://.godot/imported/Slash FX 01.png-cfd8ae110bf859a32bf4bf82d6bef019.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robber/PNG/Vector Parts/Slash FX 01.png"
-dest_files=["res://.godot/imported/Slash FX 01.png-93332b70b05d88fe347044a3ef9b54bf.ctex"]
+source_file="res://Assets/sprites/Robber/PNG/Vector Parts/Slash FX 01.png"
+dest_files=["res://.godot/imported/Slash FX 01.png-cfd8ae110bf859a32bf4bf82d6bef019.ctex"]
 
 [params]
 

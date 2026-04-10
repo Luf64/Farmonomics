@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://p5006ue85buc"
-path="res://.godot/imported/Face 01 - Front.png-50162166322729bc1664868ad232a0be.ctex"
+path="res://.godot/imported/Face 01 - Front.png-f201e48ea6d36f6143b1474d06c7373d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Assassin/PNG/Vector Parts/Face 01 - Front.png"
-dest_files=["res://.godot/imported/Face 01 - Front.png-50162166322729bc1664868ad232a0be.ctex"]
+source_file="res://Assets/sprites/Assassin/PNG/Vector Parts/Face 01 - Front.png"
+dest_files=["res://.godot/imported/Face 01 - Front.png-f201e48ea6d36f6143b1474d06c7373d.ctex"]
 
 [params]
 

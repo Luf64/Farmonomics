@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cq7udbyheqecm"
-path="res://.godot/imported/Body - Front.png-943fab719e28ac33b5970dccd6fa9a3f.ctex"
+path="res://.godot/imported/Body - Front.png-52ccd143a6d7564c166cdd777f2eca58.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robber/PNG/Vector Parts/Body - Front.png"
-dest_files=["res://.godot/imported/Body - Front.png-943fab719e28ac33b5970dccd6fa9a3f.ctex"]
+source_file="res://Assets/sprites/Robber/PNG/Vector Parts/Body - Front.png"
+dest_files=["res://.godot/imported/Body - Front.png-52ccd143a6d7564c166cdd777f2eca58.ctex"]
 
 [params]
 
