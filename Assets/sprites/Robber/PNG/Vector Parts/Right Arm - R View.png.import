@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://de86hcy1imr7r"
-path="res://.godot/imported/Right Arm - R View.png-8d832c57e5892bce5fbd748d1eb348a1.ctex"
+path="res://.godot/imported/Right Arm - R View.png-9e88fa97dac1aca1d4ca09bd1c6d9fce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robber/PNG/Vector Parts/Right Arm - R View.png"
-dest_files=["res://.godot/imported/Right Arm - R View.png-8d832c57e5892bce5fbd748d1eb348a1.ctex"]
+source_file="res://Assets/sprites/Robber/PNG/Vector Parts/Right Arm - R View.png"
+dest_files=["res://.godot/imported/Right Arm - R View.png-9e88fa97dac1aca1d4ca09bd1c6d9fce.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ws07vho528hn"
-path="res://.godot/imported/Right Arm - Front.png-e506e4836ff35729a4b52402bf9b9ef0.ctex"
+path="res://.godot/imported/Right Arm - Front.png-80cde78dad400a06c597ea86f19705c9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Thug/PNG/Vector Parts/Right Arm - Front.png"
-dest_files=["res://.godot/imported/Right Arm - Front.png-e506e4836ff35729a4b52402bf9b9ef0.ctex"]
+source_file="res://Assets/sprites/Thug/PNG/Vector Parts/Right Arm - Front.png"
+dest_files=["res://.godot/imported/Right Arm - Front.png-80cde78dad400a06c597ea86f19705c9.ctex"]
 
 [params]
 

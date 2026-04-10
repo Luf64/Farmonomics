@@ -15,6 +15,10 @@ run/main_scene="res://rooms/room_0.tscn"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global="*uid://bnakydl0inppu"
+
 [display]
 
 window/size/mode=3

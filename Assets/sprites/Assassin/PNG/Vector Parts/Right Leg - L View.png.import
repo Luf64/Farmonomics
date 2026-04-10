@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dc7iifv016i0g"
-path="res://.godot/imported/Right Leg - L View.png-9c5494e4c1a53557189c6aceed573f9a.ctex"
+path="res://.godot/imported/Right Leg - L View.png-ef663cc15441e7093c7602c9e5acbbe1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Assassin/PNG/Vector Parts/Right Leg - L View.png"
-dest_files=["res://.godot/imported/Right Leg - L View.png-9c5494e4c1a53557189c6aceed573f9a.ctex"]
+source_file="res://Assets/sprites/Assassin/PNG/Vector Parts/Right Leg - L View.png"
+dest_files=["res://.godot/imported/Right Leg - L View.png-ef663cc15441e7093c7602c9e5acbbe1.ctex"]
 
 [params]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dencs7wuodlsj"
-path="res://.godot/imported/Front - Walking_011.png-14d534f138ff8c4a12193ce57d14f2ca.ctex"
+path="res://.godot/imported/Front - Walking_011.png-2ad3b7608a9129e9fe0188ae428a5a5d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Thug/PNG/PNG Sequences/Front - Walking/Front - Walking_011.png"
-dest_files=["res://.godot/imported/Front - Walking_011.png-14d534f138ff8c4a12193ce57d14f2ca.ctex"]
+source_file="res://Assets/sprites/Thug/PNG/PNG Sequences/Front - Walking/Front - Walking_011.png"
+dest_files=["res://.godot/imported/Front - Walking_011.png-2ad3b7608a9129e9fe0188ae428a5a5d.ctex"]
 
 [params]
 

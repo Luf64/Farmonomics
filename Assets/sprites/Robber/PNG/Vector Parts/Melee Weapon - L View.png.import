@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnsigkbvaoibf"
-path="res://.godot/imported/Melee Weapon - L View.png-ae5072bd42207992a77361189d8b1548.ctex"
+path="res://.godot/imported/Melee Weapon - L View.png-0463a93a952472ea6eec82956451861d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robber/PNG/Vector Parts/Melee Weapon - L View.png"
-dest_files=["res://.godot/imported/Melee Weapon - L View.png-ae5072bd42207992a77361189d8b1548.ctex"]
+source_file="res://Assets/sprites/Robber/PNG/Vector Parts/Melee Weapon - L View.png"
+dest_files=["res://.godot/imported/Melee Weapon - L View.png-0463a93a952472ea6eec82956451861d.ctex"]
 
 [params]
 

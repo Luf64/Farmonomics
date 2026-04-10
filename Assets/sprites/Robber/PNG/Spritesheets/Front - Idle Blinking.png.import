@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://du51oudcaa6wg"
-path="res://.godot/imported/Front - Idle Blinking.png-bf3e34d75e5b122077631fdf23c68f64.ctex"
+path="res://.godot/imported/Front - Idle Blinking.png-4dc5b363408abf71cb818a86188f4b33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robber/PNG/Spritesheets/Front - Idle Blinking.png"
-dest_files=["res://.godot/imported/Front - Idle Blinking.png-bf3e34d75e5b122077631fdf23c68f64.ctex"]
+source_file="res://Assets/sprites/Robber/PNG/Spritesheets/Front - Idle Blinking.png"
+dest_files=["res://.godot/imported/Front - Idle Blinking.png-4dc5b363408abf71cb818a86188f4b33.ctex"]
 
 [params]
 

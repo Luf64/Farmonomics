@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b28wp6vxbcjck"
-path="res://.godot/imported/Left - Idle_005.png-e69e409b0c7af4393a653d99a20c9f70.ctex"
+path="res://.godot/imported/Left - Idle_005.png-f749d5e74d1749ff3136b46b41f7ef15.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Thug/PNG/PNG Sequences/Left - Idle/Left - Idle_005.png"
-dest_files=["res://.godot/imported/Left - Idle_005.png-e69e409b0c7af4393a653d99a20c9f70.ctex"]
+source_file="res://Assets/sprites/Thug/PNG/PNG Sequences/Left - Idle/Left - Idle_005.png"
+dest_files=["res://.godot/imported/Left - Idle_005.png-f749d5e74d1749ff3136b46b41f7ef15.ctex"]
 
 [params]
 

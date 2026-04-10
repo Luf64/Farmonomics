@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ds3fnwvsp6erc"
-path="res://.godot/imported/Left Hand - Back.png-c169bcffd440dfedff06d6c8808b619a.ctex"
+path="res://.godot/imported/Left Hand - Back.png-db9c9be24c6bada3b24d7b790a39dab3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Thug/PNG/Vector Parts/Left Hand - Back.png"
-dest_files=["res://.godot/imported/Left Hand - Back.png-c169bcffd440dfedff06d6c8808b619a.ctex"]
+source_file="res://Assets/sprites/Thug/PNG/Vector Parts/Left Hand - Back.png"
+dest_files=["res://.godot/imported/Left Hand - Back.png-db9c9be24c6bada3b24d7b790a39dab3.ctex"]
 
 [params]
 

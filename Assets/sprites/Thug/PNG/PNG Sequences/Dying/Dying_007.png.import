@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cgd8isxrhh55l"
-path="res://.godot/imported/Dying_007.png-dc3012db5d7980ea970f7dacf2df7252.ctex"
+path="res://.godot/imported/Dying_007.png-b6dddae9e4a278e6d54dcfe1f804b126.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Thug/PNG/PNG Sequences/Dying/Dying_007.png"
-dest_files=["res://.godot/imported/Dying_007.png-dc3012db5d7980ea970f7dacf2df7252.ctex"]
+source_file="res://Assets/sprites/Thug/PNG/PNG Sequences/Dying/Dying_007.png"
+dest_files=["res://.godot/imported/Dying_007.png-b6dddae9e4a278e6d54dcfe1f804b126.ctex"]
 
 [params]
 

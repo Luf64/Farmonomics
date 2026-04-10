@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hqjqaqhpgtpu"
-path="res://.godot/imported/Left - Attacking_009.png-888972410715e6c3f8c73f41837a59d8.ctex"
+path="res://.godot/imported/Left - Attacking_009.png-cd0c18c9a760ce7884073f7cb8deff71.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Assassin/PNG/PNG Sequences/Left - Attacking/Left - Attacking_009.png"
-dest_files=["res://.godot/imported/Left - Attacking_009.png-888972410715e6c3f8c73f41837a59d8.ctex"]
+source_file="res://Assets/sprites/Assassin/PNG/PNG Sequences/Left - Attacking/Left - Attacking_009.png"
+dest_files=["res://.godot/imported/Left - Attacking_009.png-cd0c18c9a760ce7884073f7cb8deff71.ctex"]
 
 [params]
 

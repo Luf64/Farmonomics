@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d3ravnwirm66a"
-path="res://.godot/imported/Body - L View.png-fa37d1c112bb603b9d3a32884ec083d7.ctex"
+path="res://.godot/imported/Body - L View.png-e52c29059af3b17011f1e234ebea63c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Assassin/PNG/Vector Parts/Body - L View.png"
-dest_files=["res://.godot/imported/Body - L View.png-fa37d1c112bb603b9d3a32884ec083d7.ctex"]
+source_file="res://Assets/sprites/Assassin/PNG/Vector Parts/Body - L View.png"
+dest_files=["res://.godot/imported/Body - L View.png-e52c29059af3b17011f1e234ebea63c3.ctex"]
 
 [params]
 

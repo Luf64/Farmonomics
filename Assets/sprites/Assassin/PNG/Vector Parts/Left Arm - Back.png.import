@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cm7lia2ce54gp"
-path="res://.godot/imported/Left Arm - Back.png-2dba889d9193c8013994508d07df2a41.ctex"
+path="res://.godot/imported/Left Arm - Back.png-aeaff7072709f8fb313353e0e73e8321.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Assassin/PNG/Vector Parts/Left Arm - Back.png"
-dest_files=["res://.godot/imported/Left Arm - Back.png-2dba889d9193c8013994508d07df2a41.ctex"]
+source_file="res://Assets/sprites/Assassin/PNG/Vector Parts/Left Arm - Back.png"
+dest_files=["res://.godot/imported/Left Arm - Back.png-aeaff7072709f8fb313353e0e73e8321.ctex"]
 
 [params]
 
