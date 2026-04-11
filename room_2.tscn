@@ -1,3 +1,79 @@
 [gd_scene format=3 uid="uid://cbjb3ns1rumod"]
 
+[ext_resource type="Script" uid="uid://docf7cok16ypy" path="res://coin.gd" id="1_7hp4u"]
+[ext_resource type="Texture2D" uid="uid://doj2eolm0chh3" path="res://Pic/1d18b2ea01b97173293e27c71a7546cb-removebg-preview.png" id="2_7hp4u"]
+[ext_resource type="Texture2D" uid="uid://dqykmd21rfowf" path="res://Pic/9f6f9384e08f4855f7a8150c6e17603e.jpg" id="3_h83ob"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h83ob"]
+atlas = ExtResource("2_7hp4u")
+region = Rect2(0, 0, 89, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ttdm0"]
+atlas = ExtResource("2_7hp4u")
+region = Rect2(89, 0, 89, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfw8o"]
+atlas = ExtResource("2_7hp4u")
+region = Rect2(178, 0, 89, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3sgd"]
+atlas = ExtResource("2_7hp4u")
+region = Rect2(267, 0, 89, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy8vn"]
+atlas = ExtResource("2_7hp4u")
+region = Rect2(356, 0, 89, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1untl"]
+atlas = ExtResource("2_7hp4u")
+region = Rect2(445, 0, 89, 313)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f7hpu"]
+atlas = ExtResource("2_7hp4u")
+region = Rect2(534, 0, 89, 313)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hkprr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h83ob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ttdm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfw8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3sgd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy8vn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1untl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f7hpu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
 [node name="Room2_tscn" type="Node2D" unique_id=1482026099]
+
+[node name="Coin" type="Area2D" parent="." unique_id=801308102]
+script = ExtResource("1_7hp4u")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Coin" unique_id=723623529]
+position = Vector2(-474, -207)
+sprite_frames = SubResource("SpriteFrames_hkprr")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin" unique_id=1863039882]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=887185753]
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera2D" unique_id=1495127491]
+texture = ExtResource("3_h83ob")
