@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4ayvh7nt8183"]
 
-[ext_resource type="Texture2D" uid="uid://cr6qrhsbwv60" path="res://Assets/sprites/black shirt guy.png" id="1_2otyv"]
+[ext_resource type="Texture2D" uid="uid://cmp3pn8oddsq8" path="res://Assets/sprites/black shirt guy.png" id="1_2otyv"]
+[ext_resource type="Script" uid="uid://bnakydl0inppu" path="res://scrips/global.gd" id="1_j6sld"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j6sld"]
 atlas = ExtResource("1_2otyv")
@@ -34,9 +35,13 @@ animations = [{
 [node name="Room1" type="Node2D" unique_id=1710378233]
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=366399085]
+disable_mode = 1
+motion_mode = 1
+script = ExtResource("1_j6sld")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=1657050390]
 position = Vector2(563, 307.99997)
 scale = Vector2(0.48598132, 0.55803573)
 sprite_frames = SubResource("SpriteFrames_1j48i")
+autoplay = "default"
 frame_progress = 0.8392222
