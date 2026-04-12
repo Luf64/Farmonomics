@@ -1,14 +1,6 @@
 extends CharacterBody2D
 
 @export var speed = 400
-
-func get_input():
-	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	velocity = input_direction * speed
-
-func _physics_process(delta):
-	get_input()
-	move_and_slide()
 	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

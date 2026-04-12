@@ -1,0 +1,117 @@
+[gd_scene format=3 uid="uid://d0nwm3n4vavnb"]
+
+[ext_resource type="Script" uid="uid://ddk8u1dd1ka5o" path="res://scrips/player/red shirt guy.gd" id="1_f1w80"]
+[ext_resource type="Texture2D" uid="uid://dugei30qwdtd4" path="res://Assets/sprites/red shirt guy.png" id="1_r26dq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j6sld"]
+size = Vector2(79, 114)
+
+[sub_resource type="Animation" id="Animation_6e4rd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedShirtGuy:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_yfs5g"]
+resource_name = "walk_down"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedShirtGuy:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_82dyn"]
+resource_name = "walk_left"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedShirtGuy:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11]
+}
+
+[sub_resource type="Animation" id="Animation_ivdd8"]
+resource_name = "walk_right"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedShirtGuy:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_1p3c4"]
+resource_name = "walk_up"
+length = 0.8
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("RedShirtGuy:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [12, 13, 14, 15]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b64px"]
+_data = {
+&"RESET": SubResource("Animation_6e4rd"),
+&"walk_down": SubResource("Animation_yfs5g"),
+&"walk_left": SubResource("Animation_82dyn"),
+&"walk_right": SubResource("Animation_ivdd8"),
+&"walk_up": SubResource("Animation_1p3c4")
+}
+
+[node name="player" type="CharacterBody2D" unique_id=1637164717]
+disable_mode = 1
+motion_mode = 1
+script = ExtResource("1_f1w80")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1719151545]
+shape = SubResource("RectangleShape2D_j6sld")
+
+[node name="RedShirtGuy" type="Sprite2D" parent="." unique_id=1096378448]
+position = Vector2(-18, -2)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("1_r26dq")
+hframes = 4
+vframes = 4
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1252943225]
+libraries/ = SubResource("AnimationLibrary_b64px")

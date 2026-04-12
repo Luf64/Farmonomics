@@ -1,3 +1,10 @@
 [gd_scene format=3 uid="uid://pdotcf0yb4iw"]
 
+[ext_resource type="Texture2D" uid="uid://c788m2iiqaf7n" path="res://Assets/room 4 (brewing room with selling it)/brewing room (shop).jpg" id="1_ugu2v"]
+
 [node name="Room3_tscn" type="Node2D" unique_id=1489131796]
+
+[node name="BrewingRoom(shop)" type="Sprite2D" parent="." unique_id=1567184787]
+position = Vector2(575.49994, 323.74997)
+scale = Vector2(3.1620877, 2.3125)
+texture = ExtResource("1_ugu2v")
