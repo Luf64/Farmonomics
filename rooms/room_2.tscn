@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://botut34asfv6a"]
 
-[ext_resource type="Script" uid="uid://docf7cok16ypy" path="res://coin.gd" id="1_7hp4u"]
-[ext_resource type="Texture2D" uid="uid://doj2eolm0chh3" path="res://Pic/1d18b2ea01b97173293e27c71a7546cb-removebg-preview.png" id="2_7hp4u"]
-[ext_resource type="Texture2D" uid="uid://dqykmd21rfowf" path="res://Pic/9f6f9384e08f4855f7a8150c6e17603e.jpg" id="3_h83ob"]
+[ext_resource type="Texture2D" uid="uid://doj2eolm0chh3" path="res://Assets/Pic/1d18b2ea01b97173293e27c71a7546cb-removebg-preview.png" id="2_7hp4u"]
+[ext_resource type="Texture2D" uid="uid://dqykmd21rfowf" path="res://Assets/Pic/9f6f9384e08f4855f7a8150c6e17603e.jpg" id="3_h83ob"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h83ob"]
 atlas = ExtResource("2_7hp4u")
@@ -64,7 +63,6 @@ animations = [{
 [node name="Room2_tscn" type="Node2D" unique_id=1482026099]
 
 [node name="Coin" type="Area2D" parent="." unique_id=801308102]
-script = ExtResource("1_7hp4u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Coin" unique_id=723623529]
 top_level = true
