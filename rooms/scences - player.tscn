@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d0nwm3n4vavnb"]
 
 [ext_resource type="Script" uid="uid://ddk8u1dd1ka5o" path="res://scrips/player/red shirt guy.gd" id="1_f1w80"]
-[ext_resource type="Texture2D" uid="uid://dugei30qwdtd4" path="res://Assets/sprites/red shirt guy.png" id="1_r26dq"]
+[ext_resource type="Texture2D" uid="uid://dmtm4p3xyd6ms" path="res://Assets/sprites/testing-removebg-preview.png" id="2_6e4rd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6sld"]
-size = Vector2(79, 114)
+size = Vector2(67, 79)
 
 [sub_resource type="Animation" id="Animation_6e4rd"]
 length = 0.001
@@ -104,12 +104,13 @@ motion_mode = 1
 script = ExtResource("1_f1w80")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1719151545]
+position = Vector2(-3.5, -1.5)
 shape = SubResource("RectangleShape2D_j6sld")
 
 [node name="RedShirtGuy" type="Sprite2D" parent="." unique_id=1096378448]
-position = Vector2(-18, -2)
+position = Vector2(-3, 0)
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("1_r26dq")
+texture = ExtResource("2_6e4rd")
 hframes = 4
 vframes = 4
 
