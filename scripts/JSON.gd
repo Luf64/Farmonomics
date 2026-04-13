@@ -33,7 +33,7 @@ func save_user() -> void:
 		print("Failed to open file for writing.")
 		return
 
-	file.store_string(JSON.print(users))
+	file.store_string(JSON.print(users):
 	file.close()
 
 func register(username: String) -> Dictionary:
