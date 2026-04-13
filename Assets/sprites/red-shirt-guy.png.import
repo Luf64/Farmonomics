@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dugei30qwdtd4"
-path="res://.godot/imported/red shirt guy.png-c04c87e3339a80cd2ef8280167097221.ctex"
+uid="uid://b0ntgw0m1svlu"
+path="res://.godot/imported/red-shirt-guy.png-cb0d39485a9f13b41d7700a0a43b3a76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/sprites/red shirt guy.png"
-dest_files=["res://.godot/imported/red shirt guy.png-c04c87e3339a80cd2ef8280167097221.ctex"]
+source_file="res://Assets/sprites/red-shirt-guy.png"
+dest_files=["res://.godot/imported/red-shirt-guy.png-cb0d39485a9f13b41d7700a0a43b3a76.ctex"]
 
 [params]
 
