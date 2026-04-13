@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://est5u45a534w" path="res://scripts/global.gd" id="3_mi4eo"]
 
 [node name="Room3_tscn" type="Node2D" unique_id=1489131796]
+script = ExtResource("3_mi4eo")
 
 [node name="BrewingRoom(shop)" type="Sprite2D" parent="." unique_id=1567184787]
 position = Vector2(575.49994, 323.74997)
@@ -13,4 +14,3 @@ texture = ExtResource("1_ugu2v")
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("2_5ql8f")]
 position = Vector2(459, 522)
-script = ExtResource("3_mi4eo")
