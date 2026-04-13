@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://pdotcf0yb4iw"]
 
 [ext_resource type="Texture2D" uid="uid://c788m2iiqaf7n" path="res://Assets/room 4 (brewing room with selling it)/brewing room (shop).jpg" id="1_ugu2v"]
+[ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="2_5ql8f"]
 
 [node name="Room3_tscn" type="Node2D" unique_id=1489131796]
 
@@ -8,3 +9,6 @@
 position = Vector2(575.49994, 323.74997)
 scale = Vector2(3.1620877, 2.3125)
 texture = ExtResource("1_ugu2v")
+
+[node name="player" parent="." unique_id=1637164717 instance=ExtResource("2_5ql8f")]
+position = Vector2(459, 522)
