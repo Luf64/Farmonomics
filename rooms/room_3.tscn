@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c788m2iiqaf7n" path="res://Assets/room 4 (brewing room with selling it)/brewing room (shop).jpg" id="1_ugu2v"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="2_5ql8f"]
+[ext_resource type="Script" uid="uid://est5u45a534w" path="res://scripts/global.gd" id="3_mi4eo"]
 
 [node name="Room3_tscn" type="Node2D" unique_id=1489131796]
 
@@ -12,3 +13,4 @@ texture = ExtResource("1_ugu2v")
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("2_5ql8f")]
 position = Vector2(459, 522)
+script = ExtResource("3_mi4eo")
