@@ -9,6 +9,7 @@ func _ready() -> void:
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	
 	var direction : Vector2 = Vector2.ZERO
@@ -20,5 +21,6 @@ func _process(delta: float) -> void:
 	pass
 
 
+@warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:
 	move_and_slide()

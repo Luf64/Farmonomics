@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://pdotcf0yb4iw"]
 
+[ext_resource type="Script" uid="uid://yo0i8ft2tgto" path="res://scripts/room_3.gd" id="1_mi4eo"]
 [ext_resource type="Texture2D" uid="uid://c788m2iiqaf7n" path="res://Assets/room 4 (brewing room with selling it)/brewing room (shop).jpg" id="1_ugu2v"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="2_5ql8f"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ql8f"]
+size = Vector2(213, 32)
+
 [node name="Room3_tscn" type="Node2D" unique_id=1489131796]
+script = ExtResource("1_mi4eo")
 
 [node name="BrewingRoom(shop)" type="Sprite2D" parent="." unique_id=1567184787]
 position = Vector2(575.49994, 323.74997)
@@ -12,3 +17,11 @@ texture = ExtResource("1_ugu2v")
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("2_5ql8f")]
 position = Vector2(449, 493)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1250640326]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1044449736]
+position = Vector2(444.5, 584)
+shape = SubResource("RectangleShape2D_5ql8f")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
