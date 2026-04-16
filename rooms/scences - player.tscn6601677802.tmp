@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://d0nwm3n4vavnb"]
 
 [ext_resource type="Script" uid="uid://ddk8u1dd1ka5o" path="res://sprites/player/red shirt guy.gd" id="1_f1w80"]
-[ext_resource type="Texture2D" uid="uid://pdpflx3ns5c8" path="res://Assets/sprites/red-shirt-guy.png" id="2_6e4rd"]
+[ext_resource type="Texture2D" uid="uid://dq4knktg6ka8a" path="res://Assets/sprites/red-shirt-guy.png" id="2_6e4rd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6sld"]
 size = Vector2(67, 79)
