@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://botut34asfv6a"]
 
 [ext_resource type="Script" uid="uid://bh7n8u0eyjqga" path="res://scripts/coin.gd" id="1_bylct"]
-[ext_resource type="Script" uid="uid://bnkb4lclgevyf" path="res://scripts/room_2.gd" id="1_qgqlj"]
+[ext_resource type="Script" uid="uid://bqgo45amuixgn" path="res://scripts/room_2.gd" id="1_qgqlj"]
 [ext_resource type="Texture2D" uid="uid://dqykmd21rfowf" path="res://Assets/Pic/9f6f9384e08f4855f7a8150c6e17603e.jpg" id="3_h83ob"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="4_13qvk"]
 [ext_resource type="Texture2D" uid="uid://bwwdwv8o6k0ps" path="res://Assets/Pic/coin 3.png" id="4_vkoc7"]
