@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx8ar81qefsfa"
-path="res://.godot/imported/Room3.png-604b6fbbb74e6657a0991c52758f921f.ctex"
+uid="uid://cx0dni6hbg8v5"
+path="res://.godot/imported/milk(EVO3).png-9327f8957b65aff228b0c29c193e36ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/room 1 (outside)/Room3.png"
-dest_files=["res://.godot/imported/Room3.png-604b6fbbb74e6657a0991c52758f921f.ctex"]
+source_file="res://Assets/item/Milk/milk(EVO3).png"
+dest_files=["res://.godot/imported/milk(EVO3).png-9327f8957b65aff228b0c29c193e36ac.ctex"]
 
 [params]
 

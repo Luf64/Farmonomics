@@ -1,5 +1,14 @@
 [gd_scene format=3 uid="uid://c4ayvh7nt8183"]
 
+[ext_resource type="Texture2D" uid="uid://cx8ar81qefsfa" path="res://Assets/room 1 (outside)/Room3.png" id="1_2otyv"]
+
 [node name="Room1" type="Node2D" unique_id=1710378233]
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1007312540]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=478089098]
+
+[node name="Room3" type="Sprite2D" parent="Camera2D" unique_id=765477965]
+position = Vector2(-488.99997, -245.99998)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_2otyv")

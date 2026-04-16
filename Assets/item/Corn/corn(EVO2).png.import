@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx8ar81qefsfa"
-path="res://.godot/imported/Room3.png-604b6fbbb74e6657a0991c52758f921f.ctex"
+uid="uid://cjt3ts5o7ub"
+path="res://.godot/imported/corn(EVO2).png-658ef3b967baf55f88705f4a08a83427.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/room 1 (outside)/Room3.png"
-dest_files=["res://.godot/imported/Room3.png-604b6fbbb74e6657a0991c52758f921f.ctex"]
+source_file="res://Assets/item/Corn/corn(EVO2).png"
+dest_files=["res://.godot/imported/corn(EVO2).png-658ef3b967baf55f88705f4a08a83427.ctex"]
 
 [params]
 
