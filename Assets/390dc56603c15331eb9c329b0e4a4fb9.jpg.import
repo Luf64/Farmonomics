@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmtkr5k4hgcng"
-path="res://.godot/imported/brewing room (outside shop).jpg-db74087e25b96079404a90532c580e8b.ctex"
+uid="uid://ds500tim4h35o"
+path="res://.godot/imported/390dc56603c15331eb9c329b0e4a4fb9.jpg-8cb7f76f5b3339dd53354b0782686c60.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/room 4 (brewing room with selling it)/brewing room (outside shop).jpg"
-dest_files=["res://.godot/imported/brewing room (outside shop).jpg-db74087e25b96079404a90532c580e8b.ctex"]
+source_file="res://Assets/390dc56603c15331eb9c329b0e4a4fb9.jpg"
+dest_files=["res://.godot/imported/390dc56603c15331eb9c329b0e4a4fb9.jpg-8cb7f76f5b3339dd53354b0782686c60.ctex"]
 
 [params]
 
