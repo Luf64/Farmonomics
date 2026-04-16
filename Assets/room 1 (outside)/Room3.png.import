@@ -2,12 +2,24 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://b167kd2dym7or"
 valid=false
+=======
+uid="uid://btntruqvbc2sr"
+path="res://.godot/imported/Room3.png-604b6fbbb74e6657a0991c52758f921f.ctex"
+metadata={
+"vram_texture": false
+}
+>>>>>>> 0f7ff8b0157a6598628cfdfcce7eba4f73bf9974
 
 [deps]
 
 source_file="res://Assets/room 1 (outside)/Room3.png"
+<<<<<<< HEAD
+=======
+dest_files=["res://.godot/imported/Room3.png-604b6fbbb74e6657a0991c52758f921f.ctex"]
+>>>>>>> 0f7ff8b0157a6598628cfdfcce7eba4f73bf9974
 
 [params]
 
