@@ -2,7 +2,6 @@ class_name red_shirt_guy extends CharacterBody2D
 
 var move_speed : float = 135.0
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -18,9 +17,15 @@ func _process(delta: float) -> void:
 	
 	velocity = direction * move_speed
 	
+	
+	if Input.is_action_just_pressed("tab"):
+		open_inventory()
+	
 	pass
-
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:
 	move_and_slide()
+
+func open_inventory() -> void:
+	Global.open_inventory(get_tree().current_scene.scene_file_path)

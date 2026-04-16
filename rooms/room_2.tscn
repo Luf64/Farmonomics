@@ -64,7 +64,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kamh"]
-size = Vector2(102, 74)
+size = Vector2(131, 31)
 
 [node name="Room2_tscn" type="Node2D" unique_id=1482026099]
 script = ExtResource("1_qgqlj")
@@ -87,12 +87,12 @@ scale = Vector2(1.5611413, 1.1559715)
 texture = ExtResource("3_h83ob")
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("4_13qvk")]
-position = Vector2(464, -140)
+position = Vector2(-225, 248)
 
 [node name="Area2D" type="Area2D" parent="." unique_id=305347241]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1164879793]
-position = Vector2(460, -233)
+position = Vector2(-228.5, 314.5)
 shape = SubResource("RectangleShape2D_1kamh")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
