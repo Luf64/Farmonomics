@@ -1,7 +1,7 @@
 extends Node
 
 # to locate previous room for inventory
-var previous_room =""
+var previous_room = ""
 var inventory_room_path: String = "res://rooms/inventory.tscn"
 
 # Called when the node enters the scene tree for the first time.
