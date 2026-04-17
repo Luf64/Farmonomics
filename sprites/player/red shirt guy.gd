@@ -12,11 +12,28 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	var direction : Vector2 = Vector2.ZERO
-	direction.x = Input.get_action_raw_strength("right") - Input.get_action_raw_strength("left")
-	direction.y = Input.get_action_raw_strength("down") - Input.get_action_raw_strength("up")
-	
+	if Input.is_action_pressed("right"):
+		direction.x += 1
+	if Input.is_action_pressed("left"):
+		direction.x -= 1
+	if Input.is_action_pressed("up"):
+		direction.y -= 1
+	if Input.is_action_pressed("down"):
+		direction.y += 1
 	velocity = direction * move_speed
 	
+	#animation
+	if direction == Vector2.ZERO:
+		$AnimationPlayer.play("idle_down")
+	else:
+		if direction.x > 0:
+			$AnimationPlayer.play("walk_right")
+		elif direction.x < 0:
+			$AnimationPlayer.play("walk_left")
+		elif direction.y > 0:
+			$AnimationPlayer.play("walk_down")
+		elif direction.y < 0:
+			$AnimationPlayer.play("walk_up")
 	
 	if Input.is_action_just_pressed("tab"):
 		open_inventory()
