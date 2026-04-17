@@ -1,3 +1,90 @@
 [gd_scene format=3 uid="uid://xvyauwwihyve"]
 
+[ext_resource type="Texture2D" uid="uid://cp3v4pd4driq5" path="res://Assets/item/Corn/corn(EVO1).png" id="1_676ew"]
+[ext_resource type="Texture2D" uid="uid://bamtxkemg1n4a" path="res://Assets/item/milk/milk(EVO1).png" id="1_j80mx"]
+[ext_resource type="Texture2D" uid="uid://klgbviaoin6m" path="res://Assets/item/milk/milk(EVO2).png" id="2_0ov7x"]
+[ext_resource type="Texture2D" uid="uid://cjt3ts5o7ub" path="res://Assets/item/Corn/corn(EVO2).png" id="2_3mme3"]
+[ext_resource type="Texture2D" uid="uid://cx0dni6hbg8v5" path="res://Assets/item/milk/milk(EVO3).png" id="3_5kdcd"]
+[ext_resource type="Texture2D" uid="uid://stdejwo2pkum" path="res://Assets/item/Corn/corn(EVO3).png" id="3_u2fcr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
+atlas = ExtResource("1_j80mx")
+region = Rect2(0, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_566fy"]
+atlas = ExtResource("2_0ov7x")
+region = Rect2(0, 0, 31, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2k8o"]
+atlas = ExtResource("3_5kdcd")
+region = Rect2(0, 0, 33, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cejrt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh5ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_566fy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2k8o")
+}],
+"loop": false,
+"name": &"Milk",
+"speed": 0.2
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j80mx"]
+atlas = ExtResource("1_676ew")
+region = Rect2(0, 0, 31, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ov7x"]
+atlas = ExtResource("2_3mme3")
+region = Rect2(0, 0, 38, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kdcd"]
+atlas = ExtResource("3_u2fcr")
+region = Rect2(0, 0, 39, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qh5ub"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j80mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ov7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kdcd")
+}],
+"loop": false,
+"name": &"Corn",
+"speed": 0.2
+}]
+
 [node name="Room0_0_1" type="Node2D" unique_id=512447265]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1290921535]
+position = Vector2(571, 325)
+
+[node name="Milk" type="AnimatedSprite2D" parent="." unique_id=1319164495]
+texture_filter = 2
+position = Vector2(1100, 53)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+frame_progress = 0.31945312
+
+[node name="Corn" type="AnimatedSprite2D" parent="." unique_id=1404408628]
+texture_filter = 1
+position = Vector2(1101, 153)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=987635788]
