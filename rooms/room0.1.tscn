@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://xvyauwwihyve"]
 
 [ext_resource type="Texture2D" uid="uid://cp3v4pd4driq5" path="res://Assets/item/Corn/corn(EVO1).png" id="1_676ew"]
-[ext_resource type="Texture2D" uid="uid://bamtxkemg1n4a" path="res://Assets/item/milk/milk(EVO1).png" id="1_j80mx"]
-[ext_resource type="Texture2D" uid="uid://klgbviaoin6m" path="res://Assets/item/milk/milk(EVO2).png" id="2_0ov7x"]
+[ext_resource type="Texture2D" uid="uid://bamtxkemg1n4a" path="res://Assets/item/Milk/milk(EVO1).png" id="1_j80mx"]
+[ext_resource type="Texture2D" uid="uid://klgbviaoin6m" path="res://Assets/item/Milk/milk(EVO2).png" id="2_0ov7x"]
 [ext_resource type="Texture2D" uid="uid://cjt3ts5o7ub" path="res://Assets/item/Corn/corn(EVO2).png" id="2_3mme3"]
-[ext_resource type="Texture2D" uid="uid://cx0dni6hbg8v5" path="res://Assets/item/milk/milk(EVO3).png" id="3_5kdcd"]
+[ext_resource type="Texture2D" uid="uid://cx0dni6hbg8v5" path="res://Assets/item/Milk/milk(EVO3).png" id="3_5kdcd"]
 [ext_resource type="Texture2D" uid="uid://stdejwo2pkum" path="res://Assets/item/Corn/corn(EVO3).png" id="3_u2fcr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]

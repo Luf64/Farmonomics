@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://botut34asfv6a"]
 
-[ext_resource type="Script" uid="uid://db887g3uhckwc" path="res://scripts/coin.gd" id="1_bylct"]
-[ext_resource type="Script" uid="uid://bnkb4lclgevyf" path="res://scripts/room_2.gd" id="1_qgqlj"]
+[ext_resource type="Script" uid="uid://bh7n8u0eyjqga" path="res://scripts/coin.gd" id="1_bylct"]
 [ext_resource type="Texture2D" uid="uid://dqykmd21rfowf" path="res://Assets/Pic/9f6f9384e08f4855f7a8150c6e17603e.jpg" id="3_h83ob"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="4_13qvk"]
 [ext_resource type="Texture2D" uid="uid://bwwdwv8o6k0ps" path="res://Assets/Pic/coin 3.png" id="4_vkoc7"]
@@ -79,7 +78,6 @@ a = Vector2(210, 5)
 b = Vector2(-10, 5)
 
 [node name="Room2_tscn" type="Node2D" unique_id=1482026099]
-script = ExtResource("1_qgqlj")
 
 [node name="Coin" type="Area2D" parent="." unique_id=801308102]
 script = ExtResource("1_bylct")
@@ -109,73 +107,73 @@ position = Vector2(-2, 4)
 position = Vector2(-194, 313)
 shape = SubResource("RectangleShape2D_1kamh")
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=241360094]
+[node name="CollisionShape (block)" type="StaticBody2D" parent="." unique_id=931146190]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D2" unique_id=1774032808]
-position = Vector2(-19, 125.5)
+[node name="two fridge(middle)" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=1774032808]
+position = Vector2(-19, 126.5)
 shape = SubResource("RectangleShape2D_vkoc7")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D2" unique_id=1213106601]
-position = Vector2(283.8125, -71)
+[node name="rack 1" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=1213106601]
+position = Vector2(283.8125, -70)
 shape = SubResource("RectangleShape2D_vsfs3")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D2" unique_id=1196437722]
-position = Vector2(284, 53)
+[node name="rack 2" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=1196437722]
+position = Vector2(284, 52)
 shape = SubResource("RectangleShape2D_vsfs3")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D2" unique_id=2071560156]
+[node name="rack 3" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=2071560156]
 position = Vector2(284, 176.5)
 shape = SubResource("RectangleShape2D_vsfs3")
 
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D2" unique_id=1927823678]
+[node name="big fridge" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=1927823678]
 position = Vector2(-272.25, -237)
 shape = SubResource("RectangleShape2D_kq7a6")
 
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D2" unique_id=406985486]
+[node name="wall 1" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=406985486]
 position = Vector2(192, -187.25)
 shape = SubResource("RectangleShape2D_h87l2")
 
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D2" unique_id=1467696588]
+[node name="casher" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=1467696588]
 position = Vector2(-460.5, 142.75)
 shape = SubResource("RectangleShape2D_cnnmw")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="Area2D2" unique_id=1255486216]
+[node name="bin" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=1255486216]
 position = Vector2(-507, 293)
 shape = SubResource("RectangleShape2D_8kwhi")
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="Area2D2" unique_id=1793166231]
+[node name="ice cream 1" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=1793166231]
 position = Vector2(517.5, -12)
 shape = SubResource("RectangleShape2D_hu2qu")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="Area2D2" unique_id=1344685688]
+[node name="ice cram 2" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=1344685688]
 position = Vector2(517.25, 107)
 shape = SubResource("RectangleShape2D_hu2qu")
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="Area2D2" unique_id=1199992824]
+[node name="rack 4" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=1199992824]
 position = Vector2(-445.25, -94.25)
 shape = SubResource("RectangleShape2D_1j2nb")
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="Area2D2" unique_id=691307568]
+[node name="rack 5" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=691307568]
 position = Vector2(-245.375, -94)
 shape = SubResource("RectangleShape2D_1j2nb")
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="Area2D2" unique_id=812093269]
+[node name="rack 6" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=812093269]
 position = Vector2(-46, -95)
 shape = SubResource("RectangleShape2D_1j2nb")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=822324782]
+[node name="wall 2" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=822324782]
 position = Vector2(-579, 313)
 shape = SubResource("SegmentShape2D_vkoc7")
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="Area2D2" unique_id=1797916724]
+[node name="wall 3" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=1797916724]
 position = Vector2(-579, -325)
 shape = SubResource("SegmentShape2D_vsfs3")
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="Area2D2" unique_id=896715133]
+[node name="wall 4" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=896715133]
 position = Vector2(573, -324)
 shape = SubResource("SegmentShape2D_vsfs3")
 
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Area2D2" unique_id=2073423825]
+[node name="back door" type="CollisionShape2D" parent="CollisionShape (block)" unique_id=2073423825]
 position = Vector2(362, -200)
 shape = SubResource("SegmentShape2D_kq7a6")
 

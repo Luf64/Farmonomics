@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://pdotcf0yb4iw"]
 
-[ext_resource type="Script" uid="uid://yo0i8ft2tgto" path="res://scripts/room_3.gd" id="1_mi4eo"]
+[ext_resource type="Script" uid="uid://ee6amefb4x05" path="res://scripts/room_3.gd" id="1_mi4eo"]
 [ext_resource type="Texture2D" uid="uid://c788m2iiqaf7n" path="res://Assets/room 4 (brewing room with selling it)/brewing room (shop).jpg" id="1_ugu2v"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="2_5ql8f"]
 
