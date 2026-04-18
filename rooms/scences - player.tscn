@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d0nwm3n4vavnb"]
 
-[ext_resource type="Script" uid="uid://ddk8u1dd1ka5o" path="res://sprites/player/red shirt guy.gd" id="1_f1w80"]
+[ext_resource type="Script" uid="uid://bhw22pawr3ixc" path="res://sprites/player/red shirt guy.gd" id="1_f1w80"]
 [ext_resource type="Texture2D" uid="uid://c8mph871w0fop" path="res://Assets/sprites/red-shirt-guy(fixed).png" id="2_6e4rd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j6sld"]
-size = Vector2(67, 79)
+size = Vector2(27, 66)
 
 [sub_resource type="Animation" id="Animation_6e4rd"]
 length = 0.001
@@ -171,17 +171,18 @@ _data = {
 }
 
 [node name="player" type="CharacterBody2D" unique_id=1637164717]
+y_sort_enabled = true
 position = Vector2(559, 307)
 disable_mode = 1
 motion_mode = 1
 script = ExtResource("1_f1w80")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1719151545]
-position = Vector2(-3.5, -1.5)
+position = Vector2(-3.5, -3)
 shape = SubResource("RectangleShape2D_j6sld")
 
 [node name="RedShirtGuy" type="Sprite2D" parent="." unique_id=1096378448]
-position = Vector2(-3, 0)
+position = Vector2(-3, -4)
 scale = Vector2(0.75, 0.75)
 texture = ExtResource("2_6e4rd")
 hframes = 4

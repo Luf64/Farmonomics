@@ -57,3 +57,7 @@ func _physics_process(delta: float) -> void:
 
 func open_inventory() -> void:
 	Global.open_inventory(get_tree().current_scene.scene_file_path)
+
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.

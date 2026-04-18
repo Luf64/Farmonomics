@@ -3,7 +3,6 @@ extends Node
 # to locate previous room for inventory
 var previous_room = ""
 var inventory_room_path: String = "res://rooms/inventory.tscn"
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -23,7 +22,8 @@ func open_inventory(current_room_path: String) -> void:
 	previous_room = current_room_path
 	get_tree().change_scene_to_file(inventory_room_path)
 
-#clock 
+#Time
+
 #calendar
 #inventory JSON system
 #player status global/local
