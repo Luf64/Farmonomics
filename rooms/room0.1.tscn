@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://xvyauwwihyve"]
 
+[ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="1_566fy"]
 [ext_resource type="Texture2D" uid="uid://cp3v4pd4driq5" path="res://Assets/item/Corn/corn(EVO1).png" id="1_676ew"]
 [ext_resource type="Texture2D" uid="uid://bamtxkemg1n4a" path="res://Assets/item/Milk/milk(EVO1).png" id="1_j80mx"]
 [ext_resource type="Texture2D" uid="uid://klgbviaoin6m" path="res://Assets/item/Milk/milk(EVO2).png" id="2_0ov7x"]
@@ -99,10 +100,15 @@ animations = [{
 
 [node name="Room0_0_1" type="Node2D" unique_id=512447265]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1290921535]
-position = Vector2(571, 325)
+[node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_566fy")]
+z_index = 5
+position = Vector2(583, 317)
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1290921535]
+position = Vector2(-5, 1)
 
 [node name="Milk" type="AnimatedSprite2D" parent="." unique_id=1319164495]
+z_index = 1
 texture_filter = 2
 position = Vector2(1100, 53)
 scale = Vector2(2, 2)
@@ -112,6 +118,7 @@ autoplay = "Milk"
 frame_progress = 0.31945312
 
 [node name="Corn" type="AnimatedSprite2D" parent="." unique_id=1404408628]
+z_index = 1
 texture_filter = 1
 position = Vector2(1101, 153)
 scale = Vector2(2, 2)
@@ -120,6 +127,7 @@ animation = &"Corn"
 autoplay = "Corn"
 
 [node name="Chocolate" type="AnimatedSprite2D" parent="." unique_id=987635788]
+z_index = 1
 position = Vector2(1106, 251)
 sprite_frames = SubResource("SpriteFrames_j80mx")
 animation = &"Chocolate"
