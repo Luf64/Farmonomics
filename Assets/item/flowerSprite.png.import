@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dld7sb620i6qn"
-valid=false
+uid="uid://dytht5odb1ac6"
+path="res://.godot/imported/flowerSprite.png-81cb97a105708d9cc1aa406a6f2898b6.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/item/leave 2.png"
+source_file="res://Assets/item/flowerSprite.png"
+dest_files=["res://.godot/imported/flowerSprite.png-81cb97a105708d9cc1aa406a6f2898b6.ctex"]
 
 [params]
 

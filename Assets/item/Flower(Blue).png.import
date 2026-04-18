@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btuuqaosotq6w"
-path="res://.godot/imported/milk(Product).png-057cc45539e3d85e02aba6c1328ba9f5.ctex"
+uid="uid://dm7gtpgxj7rmh"
+path="res://.godot/imported/Flower(Blue).png-14ca410273be2c760e9699fbf4e9f10b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/item/Milk/milk(Product).png"
-dest_files=["res://.godot/imported/milk(Product).png-057cc45539e3d85e02aba6c1328ba9f5.ctex"]
+source_file="res://Assets/item/Flower(Blue).png"
+dest_files=["res://.godot/imported/Flower(Blue).png-14ca410273be2c760e9699fbf4e9f10b.ctex"]
 
 [params]
 

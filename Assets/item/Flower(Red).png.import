@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://n3ubacnf66xk"
-valid=false
+uid="uid://iv7djao4qdwl"
+path="res://.godot/imported/Flower(Red).png-d0d8cb37c5add27fac87ccab4afb2181.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/item/potato.png"
+source_file="res://Assets/item/Flower(Red).png"
+dest_files=["res://.godot/imported/Flower(Red).png-d0d8cb37c5add27fac87ccab4afb2181.ctex"]
 
 [params]
 
