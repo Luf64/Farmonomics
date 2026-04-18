@@ -1,6 +1,7 @@
 class_name red_shirt_guy extends CharacterBody2D
 
 var move_speed : float = 135.0
+var last_direction : Vector2 = Vector2.DOWN
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -22,15 +23,28 @@ func _process(delta: float) -> void:
 		direction.y += 1
 	velocity = direction * move_speed
 	
+		# update last direction when moving
+	if direction != Vector2.ZERO:
+		last_direction = direction
+	
 	#animation
 	if direction.x > 0:
-			$AnimationPlayer.play("walk_right")
+		$AnimationPlayer.play("walk_right")
 	elif direction.x < 0:
 		$AnimationPlayer.play("walk_left")
 	elif direction.y > 0:
 		$AnimationPlayer.play("walk_down")
 	elif direction.y < 0:
 		$AnimationPlayer.play("walk_up")
+	else:
+		if last_direction.x > 0:
+			$AnimationPlayer.play("idle_right")
+		if last_direction.x < 0:
+			$AnimationPlayer.play("idle_left")
+		if last_direction.y > 0:
+			$AnimationPlayer.play("idle_down")
+		if last_direction.y < 0:
+			$AnimationPlayer.play("idle_up")
 	
 	if Input.is_action_just_pressed("tab"):
 		open_inventory()
