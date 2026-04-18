@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_area_2d_body_entered(body: Node2D) -> void:
+func _on_tp_to_room_0_1_body_entered(body: Node2D) -> void:
 	if body.name == "player":
 		get_tree().change_scene_to_file("res://rooms/room0.1.tscn")
 	pass 
