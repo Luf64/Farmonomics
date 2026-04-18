@@ -6,6 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://cjt3ts5o7ub" path="res://Assets/item/Corn/corn(EVO2).png" id="2_3mme3"]
 [ext_resource type="Texture2D" uid="uid://cx0dni6hbg8v5" path="res://Assets/item/Milk/milk(EVO3).png" id="3_5kdcd"]
 [ext_resource type="Texture2D" uid="uid://stdejwo2pkum" path="res://Assets/item/Corn/corn(EVO3).png" id="3_u2fcr"]
+[ext_resource type="Texture2D" uid="uid://cwccb7vuu2oes" path="res://Assets/item/Chocolate/chocolate(EVO1).png" id="7_qh5ub"]
+[ext_resource type="Texture2D" uid="uid://bh21xjhj1pxma" path="res://Assets/item/Chocolate/chocolate(EVO2).png" id="8_566fy"]
+[ext_resource type="Texture2D" uid="uid://dpa5dje7lcfal" path="res://Assets/item/Chocolate/chocolate(EVO3).png" id="9_v2k8o"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
 atlas = ExtResource("1_j80mx")
@@ -65,7 +68,34 @@ animations = [{
 "speed": 0.2
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_cejrt"]
+atlas = ExtResource("7_qh5ub")
+region = Rect2(0, 0, 29, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcj83"]
+atlas = ExtResource("8_566fy")
+region = Rect2(0, 0, 38, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hkjl"]
+atlas = ExtResource("9_v2k8o")
+region = Rect2(0, 0, 38, 35)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_j80mx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cejrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcj83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hkjl")
+}],
+"loop": false,
+"name": &"Chocolate",
+"speed": 0.2
+}]
 
 [node name="Room0_0_1" type="Node2D" unique_id=512447265]
 
@@ -89,5 +119,8 @@ sprite_frames = SubResource("SpriteFrames_qh5ub")
 animation = &"Corn"
 autoplay = "Corn"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=987635788]
+[node name="Chocolate" type="AnimatedSprite2D" parent="." unique_id=987635788]
+position = Vector2(1106, 251)
 sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
