@@ -23,17 +23,14 @@ func _process(delta: float) -> void:
 	velocity = direction * move_speed
 	
 	#animation
-	if direction == Vector2.ZERO:
-		$AnimationPlayer.play("idle_down")
-	else:
-		if direction.x > 0:
+	if direction.x > 0:
 			$AnimationPlayer.play("walk_right")
-		elif direction.x < 0:
-			$AnimationPlayer.play("walk_left")
-		elif direction.y > 0:
-			$AnimationPlayer.play("walk_down")
-		elif direction.y < 0:
-			$AnimationPlayer.play("walk_up")
+	elif direction.x < 0:
+		$AnimationPlayer.play("walk_left")
+	elif direction.y > 0:
+		$AnimationPlayer.play("walk_down")
+	elif direction.y < 0:
+		$AnimationPlayer.play("walk_up")
 	
 	if Input.is_action_just_pressed("tab"):
 		open_inventory()

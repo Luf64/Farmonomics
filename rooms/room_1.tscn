@@ -1,14 +1,25 @@
 [gd_scene format=3 uid="uid://c4ayvh7nt8183"]
 
 [ext_resource type="Texture2D" uid="uid://cx8ar81qefsfa" path="res://Assets/room 1 (outside)/Room3.png" id="1_2otyv"]
+[ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="1_31r0r"]
+[ext_resource type="Texture2D" uid="uid://cmnffj1d1t2s4" path="res://Assets/room 1 (outside)/Room0.1(House).png" id="2_j6sld"]
 
 [node name="Room1" type="Node2D" unique_id=1710378233]
 
+[node name="Farm" type="Sprite2D" parent="." unique_id=1231734030]
+position = Vector2(-1013, -561)
+scale = Vector2(0.6, 0.4)
+texture = ExtResource("2_j6sld")
+
+[node name="Potion" type="Sprite2D" parent="." unique_id=765477965]
+position = Vector2(102, -543)
+scale = Vector2(0.4, 0.3)
+texture = ExtResource("1_2otyv")
+
 [node name="Node2D" type="Node2D" parent="." unique_id=1007312540]
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=478089098]
+[node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_31r0r")]
+z_index = 5
+position = Vector2(-575, -317)
 
-[node name="Room3" type="Sprite2D" parent="Camera2D" unique_id=765477965]
-position = Vector2(-488.99997, -245.99998)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_2otyv")
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=478089098]
