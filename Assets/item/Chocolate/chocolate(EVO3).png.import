@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di5r4yhjjgy43"
-valid=false
+uid="uid://dpa5dje7lcfal"
+path="res://.godot/imported/chocolate(EVO3).png-e1f777fee99e879f027e736d9f9af96d.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/item/leave 1.png"
+source_file="res://Assets/item/Chocolate/chocolate(EVO3).png"
+dest_files=["res://.godot/imported/chocolate(EVO3).png-e1f777fee99e879f027e736d9f9af96d.ctex"]
 
 [params]
 

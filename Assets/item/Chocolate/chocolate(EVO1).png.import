@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgt38mb00i0sd"
-path="res://.godot/imported/corn(Product).png-8343f626cf77c0582f5c35e8bab8b7bd.ctex"
+uid="uid://cwccb7vuu2oes"
+path="res://.godot/imported/chocolate(EVO1).png-89cab5b0f5abb9db01add4ecbc00b618.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/item/Corn/corn(Product).png"
-dest_files=["res://.godot/imported/corn(Product).png-8343f626cf77c0582f5c35e8bab8b7bd.ctex"]
+source_file="res://Assets/item/Chocolate/chocolate(EVO1).png"
+dest_files=["res://.godot/imported/chocolate(EVO1).png-89cab5b0f5abb9db01add4ecbc00b618.ctex"]
 
 [params]
 

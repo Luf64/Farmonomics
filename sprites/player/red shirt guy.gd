@@ -45,4 +45,4 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func open_inventory() -> void:
-	Global.open_inventory(get_tree().current_scene.scene_file_path)
+q	Global.open_inventory(get_tree().current_scene.scene_file_path)

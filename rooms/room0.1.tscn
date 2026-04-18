@@ -65,6 +65,8 @@ animations = [{
 "speed": 0.2
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_j80mx"]
+
 [node name="Room0_0_1" type="Node2D" unique_id=512447265]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1290921535]
@@ -88,3 +90,4 @@ animation = &"Corn"
 autoplay = "Corn"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=987635788]
+sprite_frames = SubResource("SpriteFrames_j80mx")
