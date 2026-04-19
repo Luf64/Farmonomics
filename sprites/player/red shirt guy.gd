@@ -1,11 +1,17 @@
 class_name red_shirt_guy extends CharacterBody2D
 
+@onready var run_sound: AudioStreamPlayer2D = $Run
+
 var move_speed : float = 135.0
+var sprint_speed : float = 210.0
 var last_direction : Vector2 = Vector2.DOWN
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	# Make sure sound not play
+	if run_sound:
+		run_sound.autoplay = false
+		run_sound.stop()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,10 +29,30 @@ func _process(delta: float) -> void:
 		direction.y += 1
 	velocity = direction * move_speed
 	
+	var current_speed = move_speed
+	
+	# hold"Shift" 
+	if Input.is_action_pressed("Shift(run)") and direction != Vector2.ZERO:
+		current_speed = sprint_speed
+		run_sound.pitch_scale = 1.3  
+	else:
+		run_sound.pitch_scale = 1.0  
+	
+	
+	velocity = direction.normalized() * current_speed
+	
+	if direction != Vector2.ZERO:
+		if not run_sound.playing:
+			run_sound.play()
+	else:
+		#if stop moving, sound stop
+		if run_sound.playing:
+			run_sound.stop()
+	
 		# update last direction when moving
 	if direction != Vector2.ZERO:
 		last_direction = direction
-	
+		
 	#animation
 	if direction.x > 0:
 		$AnimationPlayer.play("walk_right")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vgaf4ypobovc"
+path="res://.godot/imported/Market Street - Background Music No Copyright.mp3-da919ecd4a793835b3da456632792d11.mp3str"
+
+[deps]
+
+source_file="res://Sound/Market Street - Background Music No Copyright.mp3"
+dest_files=["res://.godot/imported/Market Street - Background Music No Copyright.mp3-da919ecd4a793835b3da456632792d11.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
