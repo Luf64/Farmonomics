@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dqykmd21rfowf"
-path="res://.godot/imported/9f6f9384e08f4855f7a8150c6e17603e.jpg-bdd78320b78b5fbd85d240ca10213d77.ctex"
+uid="uid://bq210resf4wq5"
+path="res://.godot/imported/Spritesheet Farm.jpg-00f51010191f698719469cd0a5c7c8c2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pic/9f6f9384e08f4855f7a8150c6e17603e.jpg"
-dest_files=["res://.godot/imported/9f6f9384e08f4855f7a8150c6e17603e.jpg-bdd78320b78b5fbd85d240ca10213d77.ctex"]
+source_file="res://Assets/Pic/Spritesheet Farm.jpg"
+dest_files=["res://.godot/imported/Spritesheet Farm.jpg-00f51010191f698719469cd0a5c7c8c2.ctex"]
 
 [params]
 

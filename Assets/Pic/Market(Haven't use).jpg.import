@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://voxn61mkt8w4"
-path="res://.godot/imported/390dc56603c15331eb9c329b0e4a4fb9.png-c88dae3664f96c52ba8bc978dae669fd.ctex"
+uid="uid://e6crufismftx"
+path="res://.godot/imported/Market(Haven't use).jpg-d7b28a7bc8b2db6b736ce90219893f8b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pic/390dc56603c15331eb9c329b0e4a4fb9.png"
-dest_files=["res://.godot/imported/390dc56603c15331eb9c329b0e4a4fb9.png-c88dae3664f96c52ba8bc978dae669fd.ctex"]
+source_file="res://Assets/Pic/Market(Haven't use).jpg"
+dest_files=["res://.godot/imported/Market(Haven't use).jpg-d7b28a7bc8b2db6b736ce90219893f8b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2yngs730mj5s"
-path="res://.godot/imported/Fence(left).png-a699e0d026ecaf8257e96204c14e53b6.ctex"
+uid="uid://bej0xyrv0e734"
+path="res://.godot/imported/Coin.png-0744206be1180175386d65718a0d3cb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/room 1 (outside)/Fence(left).png"
-dest_files=["res://.godot/imported/Fence(left).png-a699e0d026ecaf8257e96204c14e53b6.ctex"]
+source_file="res://Assets/Pic/Coin.png"
+dest_files=["res://.godot/imported/Coin.png-0744206be1180175386d65718a0d3cb9.ctex"]
 
 [params]
 
