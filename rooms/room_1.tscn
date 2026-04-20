@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://doplhhvs8b0m8" path="res://Assets/room 1 (outside)/Room3(House punya something).png" id="2_p6f22"]
 [ext_resource type="Texture2D" uid="uid://b1ojfi80oa7cw" path="res://Assets/room 1 (outside)/Room0.1(House punya something).png" id="4_h00nm"]
 [ext_resource type="Texture2D" uid="uid://jf87jlrtc66o" path="res://Assets/room 1 (outside)/Room0.1(House punya it apa).png" id="5_1j48i"]
+[ext_resource type="Texture2D" uid="uid://b1wtil8sywwvu" path="res://Assets/room 1 (outside)/Gate.png" id="5_gdwmo"]
+[ext_resource type="Script" uid="uid://d1j24diuim5so" path="res://rooms/Room2.gd" id="6_brp25"]
 [ext_resource type="Script" uid="uid://cef57bmac6wku" path="res://scripts/room_1.gd" id="6_ttp18"]
 [ext_resource type="Texture2D" uid="uid://2yngs730mj5s" path="res://Assets/room 1 (outside)/Fence/Fence(left).png" id="8_c48p8"]
 [ext_resource type="Texture2D" uid="uid://1c8sowap4qwq" path="res://Assets/room 1 (outside)/Fence/Fence(Down).png" id="9_7ecps"]
@@ -15,6 +17,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31r0r"]
 size = Vector2(250, 53)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdn6i"]
+size = Vector2(73.7086, 17.741934)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c48p8"]
 
@@ -79,6 +84,21 @@ z_index = 6
 position = Vector2(102.25, -564.5)
 scale = Vector2(0.3997525, 0.30059522)
 texture = ExtResource("2_p6f22")
+
+[node name="Room2" type="Sprite2D" parent="." unique_id=97961512]
+position = Vector2(170, -26)
+scale = Vector2(1.1615385, 0.7750001)
+texture = ExtResource("5_gdwmo")
+
+[node name="Area2D" type="Area2D" parent="Room2" unique_id=445171265]
+position = Vector2(-146.3576, 33.54838)
+scale = Vector2(0.8609271, 1.2903224)
+script = ExtResource("6_brp25")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2/Area2D" unique_id=1502996389]
+position = Vector2(170.1923, -25.875)
+scale = Vector2(1.1615384, 0.7750001)
+shape = SubResource("RectangleShape2D_cdn6i")
 
 [node name="Room3" type="Sprite2D" parent="." unique_id=765477965]
 position = Vector2(102, -543)
@@ -314,6 +334,7 @@ shape = SubResource("RectangleShape2D_brp25")
 position = Vector2(-1166.75, -508)
 shape = SubResource("RectangleShape2D_jee7h")
 
+[connection signal="body_entered" from="Room2/Area2D" to="Room2/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="Room3 Door" to="Room3 Door" method="_on_body_entered"]
 [connection signal="body_entered" from="Farm Door" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Farm Door" to="Farm Door" method="_on_body_entered"]

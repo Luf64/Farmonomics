@@ -95,7 +95,7 @@ script = ExtResource("1_vkoc7")
 [node name="Coin" type="Area2D" parent="." unique_id=801308102]
 script = ExtResource("1_bylct")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=723623529]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Coin" unique_id=723623529]
 top_level = true
 position = Vector2(-530, -270)
 scale = Vector2(0.5, 0.5)
