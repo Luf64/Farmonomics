@@ -16,6 +16,8 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31r0r"]
 size = Vector2(250, 53)
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c48p8"]
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ns2yk"]
 size = Vector2(318.75, 106.666626)
 
@@ -85,6 +87,7 @@ texture = ExtResource("1_2otyv")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Room3" unique_id=1158678024]
 y_sort_enabled = true
+physics_material_override = SubResource("PhysicsMaterial_c48p8")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/StaticBody2D" unique_id=1504387909]
 position = Vector2(-21.875, 76.66675)
