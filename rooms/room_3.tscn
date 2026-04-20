@@ -23,13 +23,13 @@ size = Vector2(31, 485)
 size = Vector2(111, 355)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7j5ef"]
-size = Vector2(664, 130)
+size = Vector2(664, 143)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sti2h"]
-size = Vector2(96, 128)
+size = Vector2(96, 144)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0v5my"]
-size = Vector2(55, 34.5)
+size = Vector2(55, 50.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_suwb7"]
 size = Vector2(78.69388, 65.22977)
@@ -38,19 +38,22 @@ size = Vector2(78.69388, 65.22977)
 size = Vector2(114, 130.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gx0k2"]
-size = Vector2(72, 100)
+size = Vector2(72, 104)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pkq75"]
-size = Vector2(165, 36)
+size = Vector2(165, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbvqk"]
-size = Vector2(353.25, 9.5)
+size = Vector2(353.25, 11.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e5tcw"]
 size = Vector2(55, 92)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nqrud"]
-size = Vector2(97, 50)
+size = Vector2(97, 61)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pytw5"]
+size = Vector2(130, 81)
 
 [node name="Room3_tscn" type="Node2D" unique_id=1489131796]
 script = ExtResource("1_mi4eo")
@@ -61,7 +64,7 @@ scale = Vector2(3.1620877, 2.3125)
 texture = ExtResource("1_ugu2v")
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("2_5ql8f")]
-position = Vector2(449, 514)
+position = Vector2(448, 523)
 
 [node name="tp to room 0_1" type="Area2D" parent="." unique_id=1250640326]
 
@@ -98,15 +101,15 @@ position = Vector2(1029.5, 359.5)
 shape = SubResource("RectangleShape2D_2r27u")
 
 [node name="wall7" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1033248025]
-position = Vector2(393, 117)
+position = Vector2(393, 123.5)
 shape = SubResource("RectangleShape2D_7j5ef")
 
 [node name="wall8" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=668329026]
-position = Vector2(754, 249)
+position = Vector2(754, 257)
 shape = SubResource("RectangleShape2D_sti2h")
 
 [node name="wall9" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1309409581]
-position = Vector2(768.5, 325)
+position = Vector2(768.5, 332.875)
 shape = SubResource("RectangleShape2D_0v5my")
 
 [node name="box" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1287178591]
@@ -119,15 +122,15 @@ position = Vector2(986, 456)
 shape = SubResource("RectangleShape2D_52qvr")
 
 [node name="box3" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=260043099]
-position = Vector2(131, 374)
+position = Vector2(131, 376)
 shape = SubResource("RectangleShape2D_gx0k2")
 
 [node name="cabinet" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1276788495]
-position = Vector2(176.5, 201)
+position = Vector2(176.5, 208)
 shape = SubResource("RectangleShape2D_pkq75")
 
 [node name="counter" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=289470739]
-position = Vector2(442.375, 325.25)
+position = Vector2(442.375, 326.25)
 shape = SubResource("RectangleShape2D_mbvqk")
 
 [node name="counter2" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=92017001]
@@ -135,7 +138,24 @@ position = Vector2(292.5, 275)
 shape = SubResource("RectangleShape2D_e5tcw")
 
 [node name="statue" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=75967822]
-position = Vector2(662.5, 207)
+position = Vector2(662.5, 212.5)
 shape = SubResource("RectangleShape2D_nqrud")
 
+[node name="npc" type="Area2D" parent="." unique_id=310882814]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npc" unique_id=583627153]
+position = Vector2(439, 338.5)
+shape = SubResource("RectangleShape2D_pytw5")
+
+[node name="Label" type="Label" parent="npc" unique_id=972720347]
+visible = false
+offset_left = 407.0
+offset_top = 296.0
+offset_right = 472.0
+offset_bottom = 319.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "[Press F]"
+
 [connection signal="body_entered" from="tp to room 0_1" to="." method="_on_tp_to_room_0_1_body_entered"]
+[connection signal="body_entered" from="npc" to="." method="_on_npc_body_entered"]
+[connection signal="body_exited" from="npc" to="." method="_on_npc_body_exited"]
