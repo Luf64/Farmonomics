@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtlcdk31mjtyx"
-path="res://.godot/imported/Room2.jpg-1e0d1387e8a202b9776ae823b3ce37b9.ctex"
+uid="uid://b6qn58emsovy"
+path="res://.godot/imported/Fence(right).png-f7b5add248bb61d401196ca97616059b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pic/Room2.jpg"
-dest_files=["res://.godot/imported/Room2.jpg-1e0d1387e8a202b9776ae823b3ce37b9.ctex"]
+source_file="res://Assets/room 1 (outside)/Fence(right).png"
+dest_files=["res://.godot/imported/Fence(right).png-f7b5add248bb61d401196ca97616059b.ctex"]
 
 [params]
 

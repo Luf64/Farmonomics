@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://r83dyqdyegdt"
-path="res://.godot/imported/lift.jpg-ffaddaaec1375299173dfd5701bbf400.ctex"
+uid="uid://baqwwf872kxdo"
+path="res://.godot/imported/6ca93ccf9cf940c0fd2347e3df1ce05b.jpg-1b7437589ceeafb6ffc11fe7676a5b93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/lift.jpg"
-dest_files=["res://.godot/imported/lift.jpg-ffaddaaec1375299173dfd5701bbf400.ctex"]
+source_file="res://Assets/6ca93ccf9cf940c0fd2347e3df1ce05b.jpg"
+dest_files=["res://.godot/imported/6ca93ccf9cf940c0fd2347e3df1ce05b.jpg-1b7437589ceeafb6ffc11fe7676a5b93.ctex"]
 
 [params]
 
