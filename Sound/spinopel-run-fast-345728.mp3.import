@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/spinopel-run-fast-345728.mp3-4f430d334ca76b58
 [params]
 
 loop=false
-loop_offset=0
-bpm=0
+loop_offset=0.0
+bpm=0.0
 beat_count=0
 bar_beats=4
