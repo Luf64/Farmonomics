@@ -23,7 +23,7 @@ func _process(delta: float) -> void:
 		direction.y += 1
 	velocity = direction * move_speed
 	
-		# update last direction when moving
+		# update the last direction
 	if direction != Vector2.ZERO:
 		last_direction = direction
 	
