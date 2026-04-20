@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsl6ddvxmb3ea"
-path="res://.godot/imported/abcd.png-11b44e8ec1e25edf642856aebddb96d3.ctex"
+uid="uid://cvcd20fqkroei"
+path="res://.godot/imported/Plain floor.png-b693e44b5c225111e61370e79957b75e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Pic/abcd.png"
-dest_files=["res://.godot/imported/abcd.png-11b44e8ec1e25edf642856aebddb96d3.ctex"]
+source_file="res://Assets/room 1 (outside)/Ground/Plain floor.png"
+dest_files=["res://.godot/imported/Plain floor.png-b693e44b5c225111e61370e79957b75e.ctex"]
 
 [params]
 
