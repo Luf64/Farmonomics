@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://xvyauwwihyve"]
+
+[ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="1_566fy"]
+[ext_resource type="Texture2D" uid="uid://cp3v4pd4driq5" path="res://Assets/item/Corn/corn(EVO1).png" id="1_676ew"]
+[ext_resource type="Texture2D" uid="uid://bamtxkemg1n4a" path="res://Assets/item/Milk/milk(EVO1).png" id="1_j80mx"]
+[ext_resource type="Texture2D" uid="uid://klgbviaoin6m" path="res://Assets/item/Milk/milk(EVO2).png" id="2_0ov7x"]
+[ext_resource type="Texture2D" uid="uid://cjt3ts5o7ub" path="res://Assets/item/Corn/corn(EVO2).png" id="2_3mme3"]
+[ext_resource type="Texture2D" uid="uid://cx0dni6hbg8v5" path="res://Assets/item/Milk/milk(EVO3).png" id="3_5kdcd"]
+[ext_resource type="Texture2D" uid="uid://stdejwo2pkum" path="res://Assets/item/Corn/corn(EVO3).png" id="3_u2fcr"]
+[ext_resource type="Texture2D" uid="uid://cwccb7vuu2oes" path="res://Assets/item/Chocolate/chocolate(EVO1).png" id="7_qh5ub"]
+[ext_resource type="Texture2D" uid="uid://bh21xjhj1pxma" path="res://Assets/item/Chocolate/chocolate(EVO2).png" id="8_566fy"]
+[ext_resource type="Texture2D" uid="uid://dpa5dje7lcfal" path="res://Assets/item/Chocolate/chocolate(EVO3).png" id="9_v2k8o"]
+[ext_resource type="Texture2D" uid="uid://b1wtil8sywwvu" path="res://Assets/room 1 (outside)/Gate.png" id="11_cejrt"]
+[ext_resource type="Script" uid="uid://dg8vqoor6tf3" path="res://rooms/Gate.gd" id="12_cejrt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
+atlas = ExtResource("1_j80mx")
+region = Rect2(0, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_566fy"]
+atlas = ExtResource("2_0ov7x")
+region = Rect2(0, 0, 31, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2k8o"]
+atlas = ExtResource("3_5kdcd")
+region = Rect2(0, 0, 33, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cejrt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh5ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_566fy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2k8o")
+}],
+"loop": false,
+"name": &"Milk",
+"speed": 0.2
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j80mx"]
+atlas = ExtResource("1_676ew")
+region = Rect2(0, 0, 31, 25)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ov7x"]
+atlas = ExtResource("2_3mme3")
+region = Rect2(0, 0, 38, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5kdcd"]
+atlas = ExtResource("3_u2fcr")
+region = Rect2(0, 0, 39, 49)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qh5ub"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j80mx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ov7x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5kdcd")
+}],
+"loop": false,
+"name": &"Corn",
+"speed": 0.2
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cejrt"]
+atlas = ExtResource("7_qh5ub")
+region = Rect2(0, 0, 29, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcj83"]
+atlas = ExtResource("8_566fy")
+region = Rect2(0, 0, 38, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hkjl"]
+atlas = ExtResource("9_v2k8o")
+region = Rect2(0, 0, 38, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j80mx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cejrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcj83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hkjl")
+}],
+"loop": false,
+"name": &"Chocolate",
+"speed": 0.2
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2k8o"]
+size = Vector2(74, 13)
+
+[node name="Room0_0_1" type="Node2D" unique_id=512447265]
+
+[node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_566fy")]
+z_index = 5
+position = Vector2(583, 317)
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1290921535]
+position = Vector2(-5, 1)
+
+[node name="Milk" type="AnimatedSprite2D" parent="." unique_id=1319164495]
+z_index = 1
+texture_filter = 2
+position = Vector2(1100, 53)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+frame_progress = 0.31945312
+
+[node name="Corn" type="AnimatedSprite2D" parent="." unique_id=1404408628]
+z_index = 1
+texture_filter = 1
+position = Vector2(1101, 153)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="." unique_id=987635788]
+z_index = 1
+position = Vector2(1106, 251)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Gate" type="Sprite2D" parent="." unique_id=21269893]
+position = Vector2(581, 385)
+texture = ExtResource("11_cejrt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1183531205]
+script = ExtResource("12_cejrt")
+
+[node name="Gate" type="CollisionShape2D" parent="Area2D" unique_id=1637822691]
+position = Vector2(581, 393)
+shape = SubResource("RectangleShape2D_v2k8o")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

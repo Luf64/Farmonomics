@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://pdotcf0yb4iw"]
+
+[ext_resource type="Script" uid="uid://yo0i8ft2tgto" path="res://scripts/room_3.gd" id="1_mi4eo"]
+[ext_resource type="Texture2D" uid="uid://c788m2iiqaf7n" path="res://Assets/room 4 (brewing room with selling it)/brewing room (shop).jpg" id="1_ugu2v"]
+[ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="2_5ql8f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5ql8f"]
+size = Vector2(195, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi4eo"]
+size = Vector2(548, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir1v3"]
+size = Vector2(295, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6mom2"]
+size = Vector2(26, 77.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bsgv"]
+size = Vector2(31, 485)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2r27u"]
+size = Vector2(111, 355)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7j5ef"]
+size = Vector2(664, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sti2h"]
+size = Vector2(96, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0v5my"]
+size = Vector2(55, 34.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_suwb7"]
+size = Vector2(78.69388, 65.22977)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_52qvr"]
+size = Vector2(114, 130.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gx0k2"]
+size = Vector2(72, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pkq75"]
+size = Vector2(165, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mbvqk"]
+size = Vector2(353.25, 9.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e5tcw"]
+size = Vector2(55, 92)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqrud"]
+size = Vector2(97, 50)
+
+[node name="Room3_tscn" type="Node2D" unique_id=1489131796]
+script = ExtResource("1_mi4eo")
+
+[node name="BrewingRoom(shop)" type="Sprite2D" parent="." unique_id=1567184787]
+position = Vector2(575.49994, 323.74997)
+scale = Vector2(3.1620877, 2.3125)
+texture = ExtResource("1_ugu2v")
+
+[node name="player" parent="." unique_id=1637164717 instance=ExtResource("2_5ql8f")]
+position = Vector2(449, 514)
+
+[node name="tp to room 0_1" type="Area2D" parent="." unique_id=1250640326]
+
+[node name="door" type="CollisionShape2D" parent="tp to room 0_1" unique_id=1044449736]
+position = Vector2(445, 580)
+shape = SubResource("RectangleShape2D_5ql8f")
+
+[node name="walls or obstacle" type="CharacterBody2D" parent="." unique_id=607510938]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="walls or obstacle" unique_id=978649928]
+
+[node name="wall" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1307955319]
+position = Vector2(810, 527)
+shape = SubResource("RectangleShape2D_mi4eo")
+
+[node name="wall2" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=958402544]
+position = Vector2(208.5, 528.5)
+shape = SubResource("RectangleShape2D_ir1v3")
+
+[node name="wall3" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1474420696]
+position = Vector2(343, 558)
+shape = SubResource("RectangleShape2D_6mom2")
+
+[node name="wall4" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=636357501]
+position = Vector2(550, 557)
+shape = SubResource("RectangleShape2D_6mom2")
+
+[node name="wall5" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1944246126]
+position = Vector2(78.5, 293.5)
+shape = SubResource("RectangleShape2D_1bsgv")
+
+[node name="wall6" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=326477919]
+position = Vector2(1029.5, 359.5)
+shape = SubResource("RectangleShape2D_2r27u")
+
+[node name="wall7" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1033248025]
+position = Vector2(393, 117)
+shape = SubResource("RectangleShape2D_7j5ef")
+
+[node name="wall8" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=668329026]
+position = Vector2(754, 249)
+shape = SubResource("RectangleShape2D_sti2h")
+
+[node name="wall9" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1309409581]
+position = Vector2(768.5, 325)
+shape = SubResource("RectangleShape2D_0v5my")
+
+[node name="box" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1287178591]
+position = Vector2(883.6077, 492.3984)
+rotation = 0.90582585
+shape = SubResource("RectangleShape2D_suwb7")
+
+[node name="box2" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=80055162]
+position = Vector2(986, 456)
+shape = SubResource("RectangleShape2D_52qvr")
+
+[node name="box3" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=260043099]
+position = Vector2(131, 374)
+shape = SubResource("RectangleShape2D_gx0k2")
+
+[node name="cabinet" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1276788495]
+position = Vector2(176.5, 201)
+shape = SubResource("RectangleShape2D_pkq75")
+
+[node name="counter" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=289470739]
+position = Vector2(442.375, 325.25)
+shape = SubResource("RectangleShape2D_mbvqk")
+
+[node name="counter2" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=92017001]
+position = Vector2(292.5, 275)
+shape = SubResource("RectangleShape2D_e5tcw")
+
+[node name="statue" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=75967822]
+position = Vector2(662.5, 207)
+shape = SubResource("RectangleShape2D_nqrud")
+
+[connection signal="body_entered" from="tp to room 0_1" to="." method="_on_tp_to_room_0_1_body_entered"]
