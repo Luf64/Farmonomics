@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u8duun5jybnv"
-path="res://.godot/imported/Fence(Straight).png-78ee67f42fac861f3c7e6cbf46c13a5d.ctex"
+uid="uid://kox2amvblksg"
+path="res://.godot/imported/Fence(Straight left).png-4458d2f6fb7eb930697b4f642217a25e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/room 1 (outside)/Fence/Fence(Straight).png"
-dest_files=["res://.godot/imported/Fence(Straight).png-78ee67f42fac861f3c7e6cbf46c13a5d.ctex"]
+source_file="res://Assets/room 1 (outside)/Fence(Straight left).png"
+dest_files=["res://.godot/imported/Fence(Straight left).png-4458d2f6fb7eb930697b4f642217a25e.ctex"]
 
 [params]
 

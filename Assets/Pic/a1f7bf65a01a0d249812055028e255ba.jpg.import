@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctagxdjhsmjpw"
-path="res://.godot/imported/parshment.jpg-a01027ef6ceffedddda589c7ac77c432.ctex"
+uid="uid://b2lfyprlkxj8f"
+path="res://.godot/imported/a1f7bf65a01a0d249812055028e255ba.jpg-971f4a770e1d84d322ebcac1049e6251.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/parshment.jpg"
-dest_files=["res://.godot/imported/parshment.jpg-a01027ef6ceffedddda589c7ac77c432.ctex"]
+source_file="res://Assets/Pic/a1f7bf65a01a0d249812055028e255ba.jpg"
+dest_files=["res://.godot/imported/a1f7bf65a01a0d249812055028e255ba.jpg-971f4a770e1d84d322ebcac1049e6251.ctex"]
 
 [params]
 
