@@ -157,3 +157,5 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "[PRESS \"F\"]"
 
 [connection signal="body_entered" from="tp to room 0_1" to="." method="_on_tp_to_room_0_1_body_entered"]
+[connection signal="body_entered" from="npc" to="." method="_on_npc_body_entered"]
+[connection signal="body_exited" from="npc" to="." method="_on_npc_body_exited"]
