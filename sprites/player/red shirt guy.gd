@@ -73,13 +73,11 @@ func _process(delta: float) -> void:
 			$AnimationPlayer.play("idle_up")
 	
 	if Input.is_action_just_pressed("tab"):
-		open_inventory()
+		print("tab press")
+		Global.open_inventory()
 	
 	pass
 
 @warning_ignore("unused_parameter")
 func _physics_process(delta: float) -> void:
 	move_and_slide()
-
-func open_inventory() -> void:
-	Global.open_inventory(get_tree().current_scene.scene_file_path)

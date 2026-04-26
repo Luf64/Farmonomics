@@ -3,18 +3,34 @@
 [ext_resource type="Texture2D" uid="uid://tpuwkhcxd3iy" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Inventory(Changed).png" id="1_4rd18"]
 [ext_resource type="Script" uid="uid://ctn4vpfic4tf0" path="res://scripts/inventory.gd" id="1_d52to"]
 
-[node name="Inventory" type="Node2D" unique_id=1554713955]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=948162825]
 script = ExtResource("1_d52to")
 
-[node name="Inventory(changed)" type="Sprite2D" parent="." unique_id=1983722904]
-position = Vector2(569, 331)
-scale = Vector2(6.4, 6.4)
+[node name="Control" type="Control" parent="." unique_id=724451373]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1832990451]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.786
+anchor_top = 8.195001
+anchor_right = 14.786
+anchor_bottom = 8.195001
+offset_left = -323.44
+offset_top = -329.80002
+offset_right = -222.44
+offset_bottom = -226.80002
+scale = Vector2(6.365, 6.365)
 texture = ExtResource("1_4rd18")
 
-[node name="TextureButton" type="TextureButton" parent="." unique_id=439941384]
-offset_left = 809.0
-offset_top = 14.0
-offset_right = 867.0
-offset_bottom = 72.0
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=439941384]
+layout_mode = 0
+offset_left = 827.0
+offset_top = 11.0
+offset_right = 885.0
+offset_bottom = 69.0
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Control/TextureButton" to="." method="_on_texture_button_pressed"]

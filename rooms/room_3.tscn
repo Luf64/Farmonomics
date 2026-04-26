@@ -49,6 +49,9 @@ size = Vector2(353.25, 13.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e5tcw"]
 size = Vector2(55, 92)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m03l8"]
+size = Vector2(55, 96)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nqrud"]
 size = Vector2(97, 62)
 
@@ -136,6 +139,10 @@ shape = SubResource("RectangleShape2D_mbvqk")
 [node name="counter2" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=92017001]
 position = Vector2(292.5, 275)
 shape = SubResource("RectangleShape2D_e5tcw")
+
+[node name="counter3" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1429080434]
+position = Vector2(592.5, 275)
+shape = SubResource("RectangleShape2D_m03l8")
 
 [node name="statue" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=75967822]
 position = Vector2(662.5, 213)

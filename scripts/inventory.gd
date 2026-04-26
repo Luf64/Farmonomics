@@ -1,4 +1,4 @@
-extends Node
+extends CanvasLayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -11,5 +11,4 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_texture_button_pressed():
-	if Global.previous_room != "":
-		get_tree().change_scene_to_file(Global.previous_room)
+	Global.open_inventory()

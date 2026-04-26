@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d0nwm3n4vavnb"]
 
-[ext_resource type="Script" uid="uid://dl7d013eawayj" path="res://sprites/player/red shirt guy.gd" id="1_f1w80"]
+[ext_resource type="Script" uid="uid://ddk8u1dd1ka5o" path="res://sprites/player/red shirt guy.gd" id="1_f1w80"]
 [ext_resource type="Texture2D" uid="uid://c8mph871w0fop" path="res://Assets/sprites/red-shirt-guy(fixed).png" id="2_6e4rd"]
 [ext_resource type="AudioStream" uid="uid://643yqbr6emvp" path="res://Sound/spinopel-run-fast-345728.mp3" id="3_yfs5g"]
 
@@ -194,9 +194,3 @@ libraries/ = SubResource("AnimationLibrary_b64px")
 
 [node name="Run" type="AudioStreamPlayer2D" parent="." unique_id=368272118]
 stream = ExtResource("3_yfs5g")
-
-[node name="TextureButton" type="TextureButton" parent="Run" unique_id=1361666865]
-offset_left = 809.0
-offset_top = 14.0
-offset_right = 867.0
-offset_bottom = 72.0

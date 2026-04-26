@@ -1,10 +1,14 @@
 extends Node
 
 # to locate previous room for inventory
-var previous_room = ""
-var inventory_room_path: String = "res://rooms/inventory.tscn"
+var inventory_ui = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var inventory_room = load("res://rooms/inventory.tscn")
+	inventory_ui = inventory_room.instantiate()
+	get_tree().root.call_deferred("add_child", inventory_ui)
+	inventory_ui.visible = false
 	pass # Replace with function body.
 
 
@@ -17,10 +21,9 @@ func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
 		get_tree().quit()
 
-#call inventory from any way
-func open_inventory(current_room_path: String) -> void:
-	previous_room = current_room_path
-	get_tree().change_scene_to_file(inventory_room_path)
+#open inventory
+func open_inventory() -> void:
+	inventory_ui.visible = !inventory_ui.visible
 
 #Time
 
