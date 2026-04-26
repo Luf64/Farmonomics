@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bh21xjhj1pxma" path="res://Assets/item/Chocolate/chocolate(EVO2).png" id="8_566fy"]
 [ext_resource type="Texture2D" uid="uid://dpa5dje7lcfal" path="res://Assets/item/Chocolate/chocolate(EVO3).png" id="9_v2k8o"]
 [ext_resource type="Texture2D" uid="uid://b1wtil8sywwvu" path="res://Assets/room 1 (outside)/Gate.png" id="11_cejrt"]
-[ext_resource type="Script" uid="uid://dg8vqoor6tf3" path="res://rooms/Gate.gd" id="12_cejrt"]
+[ext_resource type="Script" uid="uid://dg8vqoor6tf3" path="res://scripts/Gate.gd" id="12_cejrt"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
 atlas = ExtResource("1_j80mx")

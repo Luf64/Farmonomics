@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bckshp6hgup2g" path="res://Assets/Pic/coin 7.png" id="8_cnnmw"]
 [ext_resource type="Texture2D" uid="uid://b2x33g31iu08l" path="res://Assets/Pic/coin 1.png" id="9_8kwhi"]
 [ext_resource type="Texture2D" uid="uid://dtlcdk31mjtyx" path="res://Assets/Pic/Room2.jpg" id="10_vsfs3"]
-[ext_resource type="Script" uid="uid://bimvtu0onvp07" path="res://rooms/area_2d.gd" id="12_vsfs3"]
+[ext_resource type="Script" uid="uid://bimvtu0onvp07" path="res://scripts/area_2d.gd" id="12_vsfs3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hkprr"]
 animations = [{
