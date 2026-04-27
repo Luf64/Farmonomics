@@ -55,6 +55,9 @@ size = Vector2(55, 96)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nqrud"]
 size = Vector2(97, 62)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evh4e"]
+size = Vector2(209, 13.5)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pytw5"]
 size = Vector2(127.25, 107)
 
@@ -65,17 +68,37 @@ script = ExtResource("1_mi4eo")
 position = Vector2(575.49994, 323.74997)
 scale = Vector2(3.1620877, 2.3125)
 texture = ExtResource("1_ugu2v")
+metadata/_edit_lock_ = true
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("2_5ql8f")]
 position = Vector2(448, 528)
 
-[node name="tp to room 0_1" type="Area2D" parent="." unique_id=1250640326]
+[node name="tp to room 1" type="Area2D" parent="." unique_id=1250640326]
+metadata/_edit_lock_ = true
 
-[node name="door" type="CollisionShape2D" parent="tp to room 0_1" unique_id=1044449736]
+[node name="door" type="CollisionShape2D" parent="tp to room 1" unique_id=1044449736]
 position = Vector2(445, 580)
 shape = SubResource("RectangleShape2D_5ql8f")
 
+[node name="Panel" type="Panel" parent="tp to room 1" unique_id=1793712161]
+visible = false
+offset_left = 451.0
+offset_top = 543.0
+offset_right = 537.0
+offset_bottom = 561.0
+
+[node name="Label" type="Label" parent="tp to room 1/Panel" unique_id=655514964]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 85.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "[PRESS \"F\"]"
+metadata/_edit_lock_ = true
+
 [node name="walls or obstacle" type="CharacterBody2D" parent="." unique_id=607510938]
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="walls or obstacle" unique_id=978649928]
 
@@ -148,21 +171,34 @@ shape = SubResource("RectangleShape2D_m03l8")
 position = Vector2(662.5, 213)
 shape = SubResource("RectangleShape2D_nqrud")
 
+[node name="door" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1633163608]
+position = Vector2(445, 588.75)
+shape = SubResource("RectangleShape2D_evh4e")
+
 [node name="npc" type="Area2D" parent="." unique_id=481346254]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="npc" unique_id=1306339384]
 position = Vector2(440.375, 333.5)
 shape = SubResource("RectangleShape2D_pytw5")
 
-[node name="Label" type="Label" parent="npc" unique_id=420005664]
+[node name="Panel" type="Panel" parent="npc" unique_id=124301452]
 visible = false
 offset_left = 399.0
 offset_top = 292.0
 offset_right = 483.0
-offset_bottom = 315.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "[PRESS \"F\"]"
+offset_bottom = 311.0
+metadata/_edit_lock_ = true
 
-[connection signal="body_entered" from="tp to room 0_1" to="." method="_on_tp_to_room_0_1_body_entered"]
+[node name="Label" type="Label" parent="npc/Panel" unique_id=420005664]
+layout_mode = 0
+offset_top = -4.0
+offset_right = 84.0
+offset_bottom = 19.0
+text = "[PRESS \"F\"]"
+metadata/_edit_lock_ = true
+
+[connection signal="body_entered" from="tp to room 1" to="." method="_on_tp_to_room_1_body_entered"]
+[connection signal="body_exited" from="tp to room 1" to="." method="_on_tp_to_room_1_body_exited"]
 [connection signal="body_entered" from="npc" to="." method="_on_npc_body_entered"]
 [connection signal="body_exited" from="npc" to="." method="_on_npc_body_exited"]
