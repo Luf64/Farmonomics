@@ -5,8 +5,8 @@ var player_in_range = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$npc/Label.visible = false
-	pass # Replace with function body.
-
+	pass
+		
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

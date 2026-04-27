@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://botut34asfv6a"]
 
-[ext_resource type="Script" uid="uid://bh7n8u0eyjqga" path="res://scripts/coin.gd" id="1_bylct"]
-[ext_resource type="Script" uid="uid://26iucmewvot6" path="res://scripts/room_2.gd" id="1_vkoc7"]
+[ext_resource type="Script" uid="uid://db887g3uhckwc" path="res://scripts/coin.gd" id="1_bylct"]
+[ext_resource type="Script" uid="uid://bnkb4lclgevyf" path="res://scripts/room_2.gd" id="1_vkoc7"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="4_13qvk"]
 [ext_resource type="Texture2D" uid="uid://bwwdwv8o6k0ps" path="res://Assets/Pic/coin 3.png" id="4_vkoc7"]
 [ext_resource type="Texture2D" uid="uid://boqqag743dwlf" path="res://Assets/Pic/coin 2.png" id="4_xxshv"]
@@ -90,6 +90,9 @@ loop = true
 
 [node name="Room2_tscn" type="Node2D" unique_id=1482026099]
 script = ExtResource("1_vkoc7")
+
+[node name="from room2" type="Marker2D" parent="." unique_id=1433002976]
+position = Vector2(-198, 289)
 
 [node name="Coin" type="Area2D" parent="." unique_id=801308102]
 script = ExtResource("1_bylct")

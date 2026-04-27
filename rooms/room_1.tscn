@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://b1ojfi80oa7cw" path="res://Assets/room 1 (outside)/Room0.1(House punya something).png" id="4_h00nm"]
 [ext_resource type="Texture2D" uid="uid://jf87jlrtc66o" path="res://Assets/room 1 (outside)/Room0.1(House punya it apa).png" id="5_1j48i"]
 [ext_resource type="Texture2D" uid="uid://b1wtil8sywwvu" path="res://Assets/room 1 (outside)/Gate.png" id="5_gdwmo"]
-[ext_resource type="Script" uid="uid://d1j24diuim5so" path="res://scripts/Room2.gd" id="6_brp25"]
 [ext_resource type="Script" uid="uid://cef57bmac6wku" path="res://scripts/room_1.gd" id="6_ttp18"]
 [ext_resource type="Texture2D" uid="uid://2yngs730mj5s" path="res://Assets/room 1 (outside)/Fence(left).png" id="8_c48p8"]
 [ext_resource type="Texture2D" uid="uid://1c8sowap4qwq" path="res://Assets/room 1 (outside)/Fence(Down).png" id="9_7ecps"]
@@ -90,12 +89,12 @@ position = Vector2(170, -26)
 scale = Vector2(1.1615385, 0.7750001)
 texture = ExtResource("5_gdwmo")
 
-[node name="Area2D" type="Area2D" parent="Room2" unique_id=445171265]
+[node name="Room2 Door" type="Area2D" parent="Room2" unique_id=445171265]
 position = Vector2(-146.3576, 33.54838)
 scale = Vector2(0.8609271, 1.2903224)
-script = ExtResource("6_brp25")
+script = ExtResource("6_ttp18")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2/Area2D" unique_id=1502996389]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2/Room2 Door" unique_id=1502996389]
 position = Vector2(170.1923, -25.875)
 scale = Vector2(1.1615384, 0.7750001)
 shape = SubResource("RectangleShape2D_cdn6i")
@@ -113,7 +112,16 @@ physics_material_override = SubResource("PhysicsMaterial_c48p8")
 position = Vector2(-21.875, 76.66675)
 shape = SubResource("RectangleShape2D_ns2yk")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1007312540]
+[node name="Spawn" type="Node2D" parent="." unique_id=1007312540]
+
+[node name="Farm" type="Marker2D" parent="Spawn" unique_id=774472344]
+position = Vector2(-965, -461)
+
+[node name="Room1" type="Marker2D" parent="Spawn" unique_id=54791096]
+position = Vector2(171, 6)
+
+[node name="Room3" type="Marker2D" parent="Spawn" unique_id=746379862]
+position = Vector2(74, -462)
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_31r0r")]
 position = Vector2(-575, -317)
@@ -334,7 +342,7 @@ shape = SubResource("RectangleShape2D_brp25")
 position = Vector2(-1166.75, -508)
 shape = SubResource("RectangleShape2D_jee7h")
 
-[connection signal="body_entered" from="Room2/Area2D" to="Room2/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Room2/Room2 Door" to="Room2/Room2 Door" method="_on_body_entered"]
 [connection signal="body_entered" from="Room3 Door" to="Room3 Door" method="_on_body_entered"]
 [connection signal="body_entered" from="Farm Door" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Farm Door" to="Farm Door" method="_on_body_entered"]
