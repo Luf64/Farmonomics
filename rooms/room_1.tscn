@@ -102,7 +102,7 @@ position = Vector2(-940.00006, -499)
 shape = SubResource("RectangleShape2D_p6f22")
 
 [node name="Marketplace" type="Sprite2D" parent="." unique_id=359558912]
-position = Vector2(348, -34)
+position = Vector2(1260, -61)
 scale = Vector2(0.49999997, 0.5)
 texture = ExtResource("6_brp25")
 
