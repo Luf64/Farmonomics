@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bykhi8ex1wmop"
+path="res://.godot/imported/Diviners, Ren - Savannah 2026 (Japanese version) [NCS Release].mp3-d83f1f66b3c8262d5963118dc78959ee.mp3str"
+
+[deps]
+
+source_file="res://Assets/room 1 (outside)/Diviners, Ren - Savannah 2026 (Japanese version) [NCS Release].mp3"
+dest_files=["res://.godot/imported/Diviners, Ren - Savannah 2026 (Japanese version) [NCS Release].mp3-d83f1f66b3c8262d5963118dc78959ee.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

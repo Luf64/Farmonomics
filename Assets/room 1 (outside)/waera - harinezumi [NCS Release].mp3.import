@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b7bqjnj7rk8t3"
+path="res://.godot/imported/waera - harinezumi [NCS Release].mp3-48d3f1f3d56daee6b761f6bcb4e7ed5a.mp3str"
+
+[deps]
+
+source_file="res://Assets/room 1 (outside)/waera - harinezumi [NCS Release].mp3"
+dest_files=["res://.godot/imported/waera - harinezumi [NCS Release].mp3-48d3f1f3d56daee6b761f6bcb4e7ed5a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

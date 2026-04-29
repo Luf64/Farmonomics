@@ -1,5 +1,0 @@
-[gd_scene format=3 uid="uid://qkej6hd8fp3x"]
-
-[node name="Room1" type="Node2D" unique_id=1710378233]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1431789462]
