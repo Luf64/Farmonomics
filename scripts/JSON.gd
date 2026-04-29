@@ -2,63 +2,49 @@ extends Node
 
 const SAVE_FILE = "user://main.json"
 
-var users: Dictionary = {}
+var game = {
+	"id": "",
+	"scene": "res://rooms/room_0.tscn",
+	"position": {"x":-575,"y":-317},
+	"money": 0,
+	"money_state": [],
+	"inventory": [],
+	"market_price":{
+		"Chocolate": 3,
+		"Corn": 1,
+		"Milk": 3
+	}
+}
 
-func _ready():
-	load_user()
-	
-func load_user() -> void:
+func save_game():
+	var player = get_tree().get_first_node_in_group("Player")
+	if player != null:
+		game.position.x = player.global_position.x
+		game.position.y = player.global_position.y
+		game.scene = get_tree().current_scene.scene_file_path
+		var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
+		var content = JSON.stringify(game)
+		file.store_string(content)
+		file.close()
+		print("Game Saved")
+
+func load_game():
 	if not FileAccess.file_exists(SAVE_FILE):
-		users = {}
-		return
-		
+		print("File could not be found.")
+		return false
 	var file = FileAccess.open(SAVE_FILE, FileAccess.READ)
-	if file == null:
-		print("Failed to open file.")
-		return
-
 	var content = file.get_as_text()
 	file.close()
+	var parse = JSON.parse_string(content)
+	if parse != null:
+		game = parse
+		return true
+	return false
 
-	var parsed = JSON.parse_string(content)
-	if parsed == null:
-		print("Failed to parse JSON.") #Check if file is empty or contains invalid JSON
-		users = {}
-	else:
-		users = parsed
-
-func save_user() -> void:
-	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
-	if file == null:
-		print("Failed to open file for writing.")
-		return
-
-	file.store_string(JSON.print(users):
-	file.close()
-
-func register(username: String) -> Dictionary:
-	username = username.strip_edges().to_lower()
-
-	if users.has(username):
-		return {"success": false,"username":null, "data":"Username already exists."}
-
-	users[username] = {
-		"name": username,
-		"coin": 100,
-		"market price": {
-			"carrot": 5,
-			"potato": 5,
-			"tomato": 5
-		},
-		"bag": [""],
-		"inventory": [""]
-	}
-	save_user()
-	return {"success": true, "username": username, "data": "User registered successfully."}
-
-func login(username:String) -> Dictionary:
-	username = username.strip_edges().to_lower()
-	if users.has(username):
-		return {"success": true,"username":username,"data":users[username]}
-	else:
-		return {"success":false, "data": "User not found."}
+func money_change(x):
+	game.money +=x
+	var change = "+" if x > 0 else ""
+	var Track = str(change,x," ","Farmonomies","Total: ", game.money)
+	game.money_state.append(Track)
+	if game.money_state.size() > 10:
+		game.money_state.remove_at(0)

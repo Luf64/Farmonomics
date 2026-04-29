@@ -7,10 +7,11 @@ var player_in_range = false
 func _ready() -> void:
 	$Shop_UI/interaction.visible = false
 	pass # Replace with function body.
-
+	
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if player_in_range and Input.is_action_just_pressed("interaction"):
 		print("interacted")
 	pass
