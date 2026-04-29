@@ -5,22 +5,14 @@ var player_in_range_tp_room1 = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-<<<<<<< HEAD
-	pass # Replace with function body.
-
-=======
-	$npc/Label.visible = false
 	pass
-		
->>>>>>> phua
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	if player_in_range_npc and Input.is_action_just_pressed("interaction"):
-		print("interacted")
+func _physics_process(delta: float) -> void:
+	
+	'''if player_in_range_npc and Input.is_action_just_pressed("interaction"):
+		print("interacted")'''
 	if player_in_range_tp_room1 and Input.is_action_just_pressed("interaction"):
-		get_tree().change_scene_to_file("res://rooms/room_1.tscn")
+		get_tree().change_scene_to_file(Global.Room_1)
 	pass
 
 

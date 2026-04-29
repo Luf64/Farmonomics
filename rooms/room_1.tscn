@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://u8duun5jybnv" path="res://Assets/room 1 (outside)/Fence(Straight).png" id="10_gdwmo"]
 [ext_resource type="Texture2D" uid="uid://b6qn58emsovy" path="res://Assets/room 1 (outside)/Fence(right).png" id="11_brp25"]
 [ext_resource type="Texture2D" uid="uid://kox2amvblksg" path="res://Assets/room 1 (outside)/Fence(Straight left).png" id="12_jee7h"]
+[ext_resource type="Texture2D" uid="uid://bpe606dutxyfy" path="res://Assets/room 1 (outside)/Floor0.png" id="14_gdwmo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31r0r"]
 size = Vector2(250, 53)
@@ -32,19 +33,19 @@ size = Vector2(29, 2)
 size = Vector2(51.25, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c48p8"]
-size = Vector2(448.5, 29)
+size = Vector2(448.5, 13)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ecps"]
 size = Vector2(6.5, 369)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdwmo"]
-size = Vector2(281, 34)
+size = Vector2(282, 4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brp25"]
-size = Vector2(249, 33)
+size = Vector2(249, 2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jee7h"]
-size = Vector2(54.5, 32)
+size = Vector2(54.5, 21)
 
 [node name="Room1" type="Node2D" unique_id=1710378233]
 y_sort_enabled = true
@@ -319,28 +320,630 @@ shape = SubResource("RectangleShape2D_p6f22")
 [node name="Fences collision" type="StaticBody2D" parent="." unique_id=327371389]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Fences collision" unique_id=632261380]
-position = Vector2(-654.25, -505.5)
+position = Vector2(-654.25, -513.5)
 shape = SubResource("RectangleShape2D_c48p8")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Fences collision" unique_id=640123853]
 position = Vector2(-1191.25, -297.5)
 shape = SubResource("RectangleShape2D_7ecps")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Fences collision" unique_id=1513990644]
-position = Vector2(-431.5, -284)
-shape = SubResource("RectangleShape2D_7ecps")
-
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Fences collision" unique_id=706807631]
-position = Vector2(-576.5, -94)
+position = Vector2(-577, -79)
 shape = SubResource("RectangleShape2D_gdwmo")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Fences collision" unique_id=1212191482]
-position = Vector2(-1070.5, -94.5)
+position = Vector2(-1070.5, -79)
 shape = SubResource("RectangleShape2D_brp25")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Fences collision" unique_id=1839208918]
-position = Vector2(-1166.75, -508)
+position = Vector2(-1166.75, -513.5)
 shape = SubResource("RectangleShape2D_jee7h")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Fences collision" unique_id=769666890]
+position = Vector2(-427, -297.5)
+shape = SubResource("RectangleShape2D_7ecps")
+
+[node name="Land" type="Node2D" parent="." unique_id=713428557]
+
+[node name="Floor168" type="Sprite2D" parent="Land" unique_id=188124367]
+z_index = -1
+position = Vector2(-559, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor169" type="Sprite2D" parent="Land" unique_id=1197937200]
+z_index = -1
+position = Vector2(-459, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor170" type="Sprite2D" parent="Land" unique_id=212587322]
+z_index = -1
+position = Vector2(-509, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor171" type="Sprite2D" parent="Land" unique_id=1733454054]
+z_index = -1
+position = Vector2(-509, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor172" type="Sprite2D" parent="Land" unique_id=1699281664]
+z_index = -1
+position = Vector2(-459, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor173" type="Sprite2D" parent="Land" unique_id=362252176]
+z_index = -1
+position = Vector2(-559, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor174" type="Sprite2D" parent="Land" unique_id=2107378156]
+z_index = -1
+position = Vector2(-559, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor175" type="Sprite2D" parent="Land" unique_id=1603437477]
+z_index = -1
+position = Vector2(-459, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor176" type="Sprite2D" parent="Land" unique_id=846459783]
+z_index = -1
+position = Vector2(-509, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor177" type="Sprite2D" parent="Land" unique_id=1695322475]
+z_index = -1
+position = Vector2(-509, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor178" type="Sprite2D" parent="Land" unique_id=1473584043]
+z_index = -1
+position = Vector2(-459, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor179" type="Sprite2D" parent="Land" unique_id=1827566921]
+z_index = -1
+position = Vector2(-559, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor180" type="Sprite2D" parent="Land" unique_id=1731904457]
+z_index = -1
+position = Vector2(-559, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor181" type="Sprite2D" parent="Land" unique_id=1577818420]
+z_index = -1
+position = Vector2(-459, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor182" type="Sprite2D" parent="Land" unique_id=1754818858]
+z_index = -1
+position = Vector2(-509, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor183" type="Sprite2D" parent="Land" unique_id=665089728]
+z_index = -1
+position = Vector2(-509, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor184" type="Sprite2D" parent="Land" unique_id=1395852310]
+z_index = -1
+position = Vector2(-459, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor185" type="Sprite2D" parent="Land" unique_id=1250469739]
+z_index = -1
+position = Vector2(-559, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor186" type="Sprite2D" parent="Land" unique_id=375612638]
+z_index = -1
+position = Vector2(-559, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor187" type="Sprite2D" parent="Land" unique_id=1058601396]
+z_index = -1
+position = Vector2(-459, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor188" type="Sprite2D" parent="Land" unique_id=1229247339]
+z_index = -1
+position = Vector2(-509, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor189" type="Sprite2D" parent="Land" unique_id=1115779554]
+z_index = -1
+position = Vector2(-509, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor190" type="Sprite2D" parent="Land" unique_id=558790150]
+z_index = -1
+position = Vector2(-459, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor191" type="Sprite2D" parent="Land" unique_id=1891980154]
+z_index = -1
+position = Vector2(-559, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor48" type="Sprite2D" parent="Land" unique_id=1695240979]
+z_index = -1
+position = Vector2(-709, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor49" type="Sprite2D" parent="Land" unique_id=744964658]
+z_index = -1
+position = Vector2(-609, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor50" type="Sprite2D" parent="Land" unique_id=331197713]
+z_index = -1
+position = Vector2(-659, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor51" type="Sprite2D" parent="Land" unique_id=901251066]
+z_index = -1
+position = Vector2(-659, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor52" type="Sprite2D" parent="Land" unique_id=1366061268]
+z_index = -1
+position = Vector2(-609, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor53" type="Sprite2D" parent="Land" unique_id=314479290]
+z_index = -1
+position = Vector2(-709, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor54" type="Sprite2D" parent="Land" unique_id=1721778231]
+z_index = -1
+position = Vector2(-709, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor55" type="Sprite2D" parent="Land" unique_id=1569720996]
+z_index = -1
+position = Vector2(-609, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor56" type="Sprite2D" parent="Land" unique_id=619888660]
+z_index = -1
+position = Vector2(-659, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor57" type="Sprite2D" parent="Land" unique_id=1688800895]
+z_index = -1
+position = Vector2(-659, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor58" type="Sprite2D" parent="Land" unique_id=663209232]
+z_index = -1
+position = Vector2(-609, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor59" type="Sprite2D" parent="Land" unique_id=2100829964]
+z_index = -1
+position = Vector2(-709, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor60" type="Sprite2D" parent="Land" unique_id=218540619]
+z_index = -1
+position = Vector2(-709, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor61" type="Sprite2D" parent="Land" unique_id=99951017]
+z_index = -1
+position = Vector2(-609, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor62" type="Sprite2D" parent="Land" unique_id=602113931]
+z_index = -1
+position = Vector2(-659, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor63" type="Sprite2D" parent="Land" unique_id=642308763]
+z_index = -1
+position = Vector2(-659, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor64" type="Sprite2D" parent="Land" unique_id=750328794]
+z_index = -1
+position = Vector2(-609, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor65" type="Sprite2D" parent="Land" unique_id=221438901]
+z_index = -1
+position = Vector2(-709, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor66" type="Sprite2D" parent="Land" unique_id=95014851]
+z_index = -1
+position = Vector2(-709, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor67" type="Sprite2D" parent="Land" unique_id=1809741551]
+z_index = -1
+position = Vector2(-609, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor68" type="Sprite2D" parent="Land" unique_id=483768429]
+z_index = -1
+position = Vector2(-659, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor69" type="Sprite2D" parent="Land" unique_id=310517615]
+z_index = -1
+position = Vector2(-659, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor70" type="Sprite2D" parent="Land" unique_id=1901806852]
+z_index = -1
+position = Vector2(-609, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor71" type="Sprite2D" parent="Land" unique_id=676038756]
+z_index = -1
+position = Vector2(-709, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor72" type="Sprite2D" parent="Land" unique_id=401124939]
+z_index = -1
+position = Vector2(-859, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor73" type="Sprite2D" parent="Land" unique_id=802634927]
+z_index = -1
+position = Vector2(-759, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor74" type="Sprite2D" parent="Land" unique_id=733022893]
+z_index = -1
+position = Vector2(-809, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor75" type="Sprite2D" parent="Land" unique_id=1733629600]
+z_index = -1
+position = Vector2(-809, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor76" type="Sprite2D" parent="Land" unique_id=2084075402]
+z_index = -1
+position = Vector2(-759, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor77" type="Sprite2D" parent="Land" unique_id=1955292648]
+z_index = -1
+position = Vector2(-859, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor78" type="Sprite2D" parent="Land" unique_id=489334250]
+z_index = -1
+position = Vector2(-859, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor79" type="Sprite2D" parent="Land" unique_id=1435652170]
+z_index = -1
+position = Vector2(-759, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor80" type="Sprite2D" parent="Land" unique_id=538160399]
+z_index = -1
+position = Vector2(-809, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor81" type="Sprite2D" parent="Land" unique_id=1788562502]
+z_index = -1
+position = Vector2(-809, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor82" type="Sprite2D" parent="Land" unique_id=1937113915]
+z_index = -1
+position = Vector2(-759, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor83" type="Sprite2D" parent="Land" unique_id=51624872]
+z_index = -1
+position = Vector2(-859, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor84" type="Sprite2D" parent="Land" unique_id=1870228377]
+z_index = -1
+position = Vector2(-859, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor85" type="Sprite2D" parent="Land" unique_id=265937526]
+z_index = -1
+position = Vector2(-759, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor86" type="Sprite2D" parent="Land" unique_id=98601957]
+z_index = -1
+position = Vector2(-809, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor87" type="Sprite2D" parent="Land" unique_id=913143529]
+z_index = -1
+position = Vector2(-809, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor88" type="Sprite2D" parent="Land" unique_id=1966812215]
+z_index = -1
+position = Vector2(-759, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor89" type="Sprite2D" parent="Land" unique_id=1639402151]
+z_index = -1
+position = Vector2(-859, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor90" type="Sprite2D" parent="Land" unique_id=241163278]
+z_index = -1
+position = Vector2(-859, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor91" type="Sprite2D" parent="Land" unique_id=8030900]
+z_index = -1
+position = Vector2(-759, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor92" type="Sprite2D" parent="Land" unique_id=1790090384]
+z_index = -1
+position = Vector2(-809, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor93" type="Sprite2D" parent="Land" unique_id=736764760]
+z_index = -1
+position = Vector2(-809, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor94" type="Sprite2D" parent="Land" unique_id=1657723968]
+z_index = -1
+position = Vector2(-759, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor95" type="Sprite2D" parent="Land" unique_id=1751944442]
+z_index = -1
+position = Vector2(-859, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor24" type="Sprite2D" parent="Land" unique_id=1260979280]
+z_index = -1
+position = Vector2(-1009, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor25" type="Sprite2D" parent="Land" unique_id=745111012]
+z_index = -1
+position = Vector2(-909, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor26" type="Sprite2D" parent="Land" unique_id=1900768148]
+z_index = -1
+position = Vector2(-959, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor27" type="Sprite2D" parent="Land" unique_id=1211713931]
+z_index = -1
+position = Vector2(-959, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor28" type="Sprite2D" parent="Land" unique_id=506677151]
+z_index = -1
+position = Vector2(-909, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor29" type="Sprite2D" parent="Land" unique_id=1121362432]
+z_index = -1
+position = Vector2(-1009, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor30" type="Sprite2D" parent="Land" unique_id=134895813]
+z_index = -1
+position = Vector2(-1009, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor31" type="Sprite2D" parent="Land" unique_id=328758740]
+z_index = -1
+position = Vector2(-909, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor32" type="Sprite2D" parent="Land" unique_id=774912379]
+z_index = -1
+position = Vector2(-959, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor33" type="Sprite2D" parent="Land" unique_id=263847810]
+z_index = -1
+position = Vector2(-959, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor34" type="Sprite2D" parent="Land" unique_id=1031066375]
+z_index = -1
+position = Vector2(-909, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor35" type="Sprite2D" parent="Land" unique_id=1477528371]
+z_index = -1
+position = Vector2(-1009, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor36" type="Sprite2D" parent="Land" unique_id=1964048316]
+z_index = -1
+position = Vector2(-1009, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor37" type="Sprite2D" parent="Land" unique_id=699715623]
+z_index = -1
+position = Vector2(-909, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor38" type="Sprite2D" parent="Land" unique_id=608847042]
+z_index = -1
+position = Vector2(-959, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor39" type="Sprite2D" parent="Land" unique_id=1447090026]
+z_index = -1
+position = Vector2(-959, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor40" type="Sprite2D" parent="Land" unique_id=1576631605]
+z_index = -1
+position = Vector2(-909, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor41" type="Sprite2D" parent="Land" unique_id=1975485275]
+z_index = -1
+position = Vector2(-1009, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor42" type="Sprite2D" parent="Land" unique_id=681053911]
+z_index = -1
+position = Vector2(-1009, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor43" type="Sprite2D" parent="Land" unique_id=799153742]
+z_index = -1
+position = Vector2(-909, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor44" type="Sprite2D" parent="Land" unique_id=904008216]
+z_index = -1
+position = Vector2(-959, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor45" type="Sprite2D" parent="Land" unique_id=1401961071]
+z_index = -1
+position = Vector2(-959, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor46" type="Sprite2D" parent="Land" unique_id=1810766568]
+z_index = -1
+position = Vector2(-909, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor47" type="Sprite2D" parent="Land" unique_id=1268502986]
+z_index = -1
+position = Vector2(-1009, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor12" type="Sprite2D" parent="Land" unique_id=357036566]
+z_index = -1
+position = Vector2(-1159, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor13" type="Sprite2D" parent="Land" unique_id=1807084449]
+z_index = -1
+position = Vector2(-1059, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor14" type="Sprite2D" parent="Land" unique_id=1942341466]
+z_index = -1
+position = Vector2(-1109, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor15" type="Sprite2D" parent="Land" unique_id=1627109463]
+z_index = -1
+position = Vector2(-1109, -105)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor16" type="Sprite2D" parent="Land" unique_id=1757551611]
+z_index = -1
+position = Vector2(-1059, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor17" type="Sprite2D" parent="Land" unique_id=1734263678]
+z_index = -1
+position = Vector2(-1159, -155)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor18" type="Sprite2D" parent="Land" unique_id=881918669]
+z_index = -1
+position = Vector2(-1159, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor19" type="Sprite2D" parent="Land" unique_id=2010799592]
+z_index = -1
+position = Vector2(-1059, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor20" type="Sprite2D" parent="Land" unique_id=1509337825]
+z_index = -1
+position = Vector2(-1109, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor21" type="Sprite2D" parent="Land" unique_id=1476713470]
+z_index = -1
+position = Vector2(-1109, -205)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor22" type="Sprite2D" parent="Land" unique_id=1219338411]
+z_index = -1
+position = Vector2(-1059, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor23" type="Sprite2D" parent="Land" unique_id=1398414248]
+z_index = -1
+position = Vector2(-1159, -255)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor6" type="Sprite2D" parent="Land" unique_id=1688718567]
+z_index = -1
+position = Vector2(-1159, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor7" type="Sprite2D" parent="Land" unique_id=516155436]
+z_index = -1
+position = Vector2(-1059, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor8" type="Sprite2D" parent="Land" unique_id=782360580]
+z_index = -1
+position = Vector2(-1109, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor9" type="Sprite2D" parent="Land" unique_id=2119562875]
+z_index = -1
+position = Vector2(-1109, -305)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor10" type="Sprite2D" parent="Land" unique_id=817097786]
+z_index = -1
+position = Vector2(-1059, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor11" type="Sprite2D" parent="Land" unique_id=1793883564]
+z_index = -1
+position = Vector2(-1159, -355)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor5" type="Sprite2D" parent="Land" unique_id=1727224966]
+z_index = -1
+position = Vector2(-1159, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor4" type="Sprite2D" parent="Land" unique_id=2004675252]
+z_index = -1
+position = Vector2(-1059, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor2" type="Sprite2D" parent="Land" unique_id=1676260583]
+z_index = -1
+position = Vector2(-1109, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor3" type="Sprite2D" parent="Land" unique_id=326962014]
+z_index = -1
+position = Vector2(-1109, -405)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor1" type="Sprite2D" parent="Land" unique_id=1672939401]
+z_index = -1
+position = Vector2(-1059, -455)
+texture = ExtResource("14_gdwmo")
+
+[node name="Floor0" type="Sprite2D" parent="Land" unique_id=1269817986]
+z_index = -1
+position = Vector2(-1159, -455)
+texture = ExtResource("14_gdwmo")
 
 [connection signal="body_entered" from="Room2/Room2 Door" to="Room2/Room2 Door" method="_on_body_entered"]
 [connection signal="body_entered" from="Room3 Door" to="Room3 Door" method="_on_body_entered"]

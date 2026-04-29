@@ -11,7 +11,7 @@ func _ready() -> void:
 		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if player_in_range and Input.is_action_just_pressed("interaction"):
 		print("interacted")
 	pass

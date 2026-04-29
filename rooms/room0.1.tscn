@@ -104,6 +104,7 @@ animations = [{
 size = Vector2(74, 13)
 
 [node name="Room0_0_1" type="Node2D" unique_id=512447265]
+y_sort_enabled = true
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_566fy")]
 z_index = 5
@@ -114,6 +115,7 @@ position = Vector2(-5, 1)
 
 [node name="Milk" type="AnimatedSprite2D" parent="." unique_id=1319164495]
 z_index = 1
+y_sort_enabled = true
 texture_filter = 2
 position = Vector2(1100, 53)
 scale = Vector2(2, 2)
@@ -124,6 +126,7 @@ frame_progress = 0.31945312
 
 [node name="Corn" type="AnimatedSprite2D" parent="." unique_id=1404408628]
 z_index = 1
+y_sort_enabled = true
 texture_filter = 1
 position = Vector2(1101, 153)
 scale = Vector2(2, 2)
@@ -133,12 +136,14 @@ autoplay = "Corn"
 
 [node name="Chocolate" type="AnimatedSprite2D" parent="." unique_id=987635788]
 z_index = 1
+y_sort_enabled = true
 position = Vector2(1106, 251)
 sprite_frames = SubResource("SpriteFrames_j80mx")
 animation = &"Chocolate"
 autoplay = "Chocolate"
 
 [node name="Gate" type="Sprite2D" parent="." unique_id=21269893]
+y_sort_enabled = true
 position = Vector2(581, 385)
 texture = ExtResource("11_cejrt")
 
