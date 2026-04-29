@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddi1p4frmqeok"
-path="res://.godot/imported/1.jpg-a205589364e76be26c591f92496be9ee.ctex"
+uid="uid://bvqjhmo5vx1uv"
+path="res://.godot/imported/Hidden Planting Area.png-e790de2b731cb751e7464a08a7215d09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/room 1 (outside)/1.jpg"
-dest_files=["res://.godot/imported/1.jpg-a205589364e76be26c591f92496be9ee.ctex"]
+source_file="res://Assets/room 1 (outside)/Hidden Planting Area.png"
+dest_files=["res://.godot/imported/Hidden Planting Area.png-e790de2b731cb751e7464a08a7215d09.ctex"]
 
 [params]
 

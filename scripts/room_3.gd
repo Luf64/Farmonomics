@@ -5,8 +5,14 @@ var player_in_range_tp_room1 = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+<<<<<<< HEAD
 	pass # Replace with function body.
 
+=======
+	$npc/Label.visible = false
+	pass
+		
+>>>>>>> phua
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
