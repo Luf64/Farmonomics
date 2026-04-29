@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://kox2amvblksg" path="res://Assets/room 1 (outside)/Fence(Straight left).png" id="12_jee7h"]
 [ext_resource type="Texture2D" uid="uid://bpe606dutxyfy" path="res://Assets/room 1 (outside)/Floor0.png" id="14_gdwmo"]
 [ext_resource type="PackedScene" uid="uid://eb5lofaaep2x" path="res://rooms/Grass_Environment.tscn" id="15_brp25"]
+[ext_resource type="Texture2D" uid="uid://br60pgwohjlb8" path="res://Assets/room 1 (outside)/Marketplace punya something.png" id="16_jee7h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31r0r"]
 size = Vector2(147.75, 17)
@@ -22,19 +23,37 @@ size = Vector2(147.75, 17)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1q16"]
 size = Vector2(60, 16)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0cw7g"]
+size = Vector2(254, 3)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p6f22"]
 size = Vector2(47.625, 2.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jlk02"]
+size = Vector2(101.46658, 11.152072)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_re7fg"]
+size = Vector2(25.785278, 24.884792)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7gw8"]
+size = Vector2(47.350945, 24.884789)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdn6i"]
-size = Vector2(24.96687, 46.451607)
+size = Vector2(27.457478, 3.0414734)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0357"]
-size = Vector2(29, 2)
+size = Vector2(31.350891, 2)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_c48p8"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_afsgx"]
+size = Vector2(150, 73.33328)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ns2yk"]
-size = Vector2(318.75, 106.666626)
+size = Vector2(51.875, 83.33334)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cn27q"]
+size = Vector2(288.75, 10)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c48p8"]
 size = Vector2(448.5, 13)
@@ -92,6 +111,10 @@ shape = SubResource("RectangleShape2D_31r0r")
 position = Vector2(-887.00006, -511)
 shape = SubResource("RectangleShape2D_p1q16")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Farm/StaticBody2D" unique_id=1524213156]
+position = Vector2(-984.00006, -519.5)
+shape = SubResource("RectangleShape2D_0cw7g")
+
 [node name="Farm Door" type="Area2D" parent="Farm" unique_id=1707039216]
 position = Vector2(1643.3334, 1345)
 scale = Vector2(1.6666666, 2.5)
@@ -102,9 +125,27 @@ position = Vector2(-940.00006, -499)
 shape = SubResource("RectangleShape2D_p6f22")
 
 [node name="Marketplace" type="Sprite2D" parent="." unique_id=359558912]
+y_sort_enabled = true
 position = Vector2(1260, -61)
-scale = Vector2(0.49999997, 0.5)
+scale = Vector2(0.7, 0.7)
 texture = ExtResource("6_brp25")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Marketplace" unique_id=1867206699]
+position = Vector2(86.62073, 74.42857)
+scale = Vector2(2.323076, 1.5500002)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Marketplace/StaticBody2D" unique_id=1914246726]
+position = Vector2(-26.52539, -17.557606)
+shape = SubResource("RectangleShape2D_jlk02")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Marketplace/StaticBody2D" unique_id=133304240]
+position = Vector2(-64.36603, 1.2903175)
+scale = Vector2(1.0000001, 1)
+shape = SubResource("RectangleShape2D_re7fg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marketplace/StaticBody2D" unique_id=1253809467]
+position = Vector2(0.53240967, 1.2903194)
+shape = SubResource("RectangleShape2D_n7gw8")
 
 [node name="Room2 Door" type="Area2D" parent="Marketplace" unique_id=445171265]
 position = Vector2(-1146.0001, 74)
@@ -112,13 +153,19 @@ scale = Vector2(2, 2)
 script = ExtResource("6_ttp18")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Marketplace/Room2 Door" unique_id=1502996389]
-position = Vector2(573.5, 10)
-scale = Vector2(1.1615384, 0.7750001)
+position = Vector2(572.7677, -4.857142)
+scale = Vector2(1.161538, 0.7750001)
 shape = SubResource("RectangleShape2D_cdn6i")
 
+[node name="MarketplacePunyaSomething" type="Sprite2D" parent="Marketplace" unique_id=970849694]
+z_index = 1
+position = Vector2(-10.714355, -67.32143)
+scale = Vector2(1.0012566, 1.0188137)
+texture = ExtResource("16_jee7h")
+
 [node name="Room3" type="Sprite2D" parent="." unique_id=765477965]
-position = Vector2(102, -543)
-scale = Vector2(0.4, 0.3)
+position = Vector2(117.1, -559.7)
+scale = Vector2(0.4747525, 0.36900824)
 texture = ExtResource("1_2otyv")
 
 [node name="Room3 Door" type="Area2D" parent="Room3" unique_id=64709193]
@@ -127,22 +174,32 @@ scale = Vector2(2.5, 3.3333333)
 script = ExtResource("6_ttp18")
 
 [node name="Door (Potion)" type="CollisionShape2D" parent="Room3/Room3 Door" unique_id=1586508945]
-position = Vector2(74, -495)
+position = Vector2(98.7789, -509.91132)
 shape = SubResource("RectangleShape2D_f0357")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Room3" unique_id=1158678024]
 y_sort_enabled = true
 physics_material_override = SubResource("PhysicsMaterial_c48p8")
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Room3/StaticBody2D" unique_id=1171310287]
+position = Vector2(47.5, 113.33362)
+scale = Vector2(0.99999994, 0.99999994)
+shape = SubResource("RectangleShape2D_afsgx")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room3/StaticBody2D" unique_id=1504387909]
-position = Vector2(-21.875, 76.66675)
+position = Vector2(-137.5, 113.333336)
 shape = SubResource("RectangleShape2D_ns2yk")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Room3/StaticBody2D" unique_id=1503470694]
+position = Vector2(-19.167887, 66.93616)
+shape = SubResource("RectangleShape2D_cn27q")
 
 [node name="Room3 Roof" type="Sprite2D" parent="Room3" unique_id=1510038532]
 z_index = 6
-position = Vector2(0.625, -71.666626)
-scale = Vector2(0.99938124, 1.001984)
+position = Vector2(-0.2106018, -79.40196)
+scale = Vector2(1.0086634, 1.1011907)
 texture = ExtResource("2_p6f22")
+metadata/_edit_lock_ = true
 
 [node name="Spawn" type="Node2D" parent="." unique_id=1007312540]
 
@@ -393,727 +450,883 @@ shape = SubResource("RectangleShape2D_7ecps")
 
 [node name="Floor168" type="Sprite2D" parent="Land" unique_id=188124367]
 z_index = -1
+texture_filter = 2
 position = Vector2(-559, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor169" type="Sprite2D" parent="Land" unique_id=1197937200]
 z_index = -1
+texture_filter = 2
 position = Vector2(-459, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor170" type="Sprite2D" parent="Land" unique_id=212587322]
 z_index = -1
+texture_filter = 2
 position = Vector2(-509, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor171" type="Sprite2D" parent="Land" unique_id=1733454054]
 z_index = -1
+texture_filter = 2
 position = Vector2(-509, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor172" type="Sprite2D" parent="Land" unique_id=1699281664]
 z_index = -1
+texture_filter = 2
 position = Vector2(-459, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor173" type="Sprite2D" parent="Land" unique_id=362252176]
 z_index = -1
+texture_filter = 2
 position = Vector2(-559, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor174" type="Sprite2D" parent="Land" unique_id=2107378156]
 z_index = -1
+texture_filter = 2
 position = Vector2(-559, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor175" type="Sprite2D" parent="Land" unique_id=1603437477]
 z_index = -1
+texture_filter = 2
 position = Vector2(-459, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor176" type="Sprite2D" parent="Land" unique_id=846459783]
 z_index = -1
+texture_filter = 2
 position = Vector2(-509, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor177" type="Sprite2D" parent="Land" unique_id=1695322475]
 z_index = -1
+texture_filter = 2
 position = Vector2(-509, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor178" type="Sprite2D" parent="Land" unique_id=1473584043]
 z_index = -1
+texture_filter = 2
 position = Vector2(-459, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor179" type="Sprite2D" parent="Land" unique_id=1827566921]
 z_index = -1
+texture_filter = 2
 position = Vector2(-559, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor180" type="Sprite2D" parent="Land" unique_id=1731904457]
 z_index = -1
+texture_filter = 2
 position = Vector2(-559, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor181" type="Sprite2D" parent="Land" unique_id=1577818420]
 z_index = -1
+texture_filter = 2
 position = Vector2(-459, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor182" type="Sprite2D" parent="Land" unique_id=1754818858]
 z_index = -1
+texture_filter = 2
 position = Vector2(-509, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor183" type="Sprite2D" parent="Land" unique_id=665089728]
 z_index = -1
+texture_filter = 2
 position = Vector2(-509, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor184" type="Sprite2D" parent="Land" unique_id=1395852310]
 z_index = -1
+texture_filter = 2
 position = Vector2(-459, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor185" type="Sprite2D" parent="Land" unique_id=1250469739]
 z_index = -1
+texture_filter = 2
 position = Vector2(-559, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor186" type="Sprite2D" parent="Land" unique_id=375612638]
 z_index = -1
+texture_filter = 2
 position = Vector2(-559, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor187" type="Sprite2D" parent="Land" unique_id=1058601396]
 z_index = -1
+texture_filter = 2
 position = Vector2(-459, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor188" type="Sprite2D" parent="Land" unique_id=1229247339]
 z_index = -1
+texture_filter = 2
 position = Vector2(-509, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor189" type="Sprite2D" parent="Land" unique_id=1115779554]
 z_index = -1
+texture_filter = 2
 position = Vector2(-509, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor190" type="Sprite2D" parent="Land" unique_id=558790150]
 z_index = -1
+texture_filter = 2
 position = Vector2(-459, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor191" type="Sprite2D" parent="Land" unique_id=1891980154]
 z_index = -1
+texture_filter = 2
 position = Vector2(-559, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor48" type="Sprite2D" parent="Land" unique_id=1695240979]
 z_index = -1
+texture_filter = 2
 position = Vector2(-709, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor49" type="Sprite2D" parent="Land" unique_id=744964658]
 z_index = -1
+texture_filter = 2
 position = Vector2(-609, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor50" type="Sprite2D" parent="Land" unique_id=331197713]
 z_index = -1
+texture_filter = 2
 position = Vector2(-659, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor51" type="Sprite2D" parent="Land" unique_id=901251066]
 z_index = -1
+texture_filter = 2
 position = Vector2(-659, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor52" type="Sprite2D" parent="Land" unique_id=1366061268]
 z_index = -1
+texture_filter = 2
 position = Vector2(-609, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor53" type="Sprite2D" parent="Land" unique_id=314479290]
 z_index = -1
+texture_filter = 2
 position = Vector2(-709, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor54" type="Sprite2D" parent="Land" unique_id=1721778231]
 z_index = -1
+texture_filter = 2
 position = Vector2(-709, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor55" type="Sprite2D" parent="Land" unique_id=1569720996]
 z_index = -1
+texture_filter = 2
 position = Vector2(-609, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor56" type="Sprite2D" parent="Land" unique_id=619888660]
 z_index = -1
+texture_filter = 2
 position = Vector2(-659, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor57" type="Sprite2D" parent="Land" unique_id=1688800895]
 z_index = -1
+texture_filter = 2
 position = Vector2(-659, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor58" type="Sprite2D" parent="Land" unique_id=663209232]
 z_index = -1
+texture_filter = 2
 position = Vector2(-609, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor59" type="Sprite2D" parent="Land" unique_id=2100829964]
 z_index = -1
+texture_filter = 2
 position = Vector2(-709, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor60" type="Sprite2D" parent="Land" unique_id=218540619]
 z_index = -1
+texture_filter = 2
 position = Vector2(-709, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor61" type="Sprite2D" parent="Land" unique_id=99951017]
 z_index = -1
+texture_filter = 2
 position = Vector2(-609, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor62" type="Sprite2D" parent="Land" unique_id=602113931]
 z_index = -1
+texture_filter = 2
 position = Vector2(-659, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor63" type="Sprite2D" parent="Land" unique_id=642308763]
 z_index = -1
+texture_filter = 2
 position = Vector2(-659, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor64" type="Sprite2D" parent="Land" unique_id=750328794]
 z_index = -1
+texture_filter = 2
 position = Vector2(-609, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor65" type="Sprite2D" parent="Land" unique_id=221438901]
 z_index = -1
+texture_filter = 2
 position = Vector2(-709, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor66" type="Sprite2D" parent="Land" unique_id=95014851]
 z_index = -1
+texture_filter = 2
 position = Vector2(-709, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor67" type="Sprite2D" parent="Land" unique_id=1809741551]
 z_index = -1
+texture_filter = 2
 position = Vector2(-609, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor68" type="Sprite2D" parent="Land" unique_id=483768429]
 z_index = -1
+texture_filter = 2
 position = Vector2(-659, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor69" type="Sprite2D" parent="Land" unique_id=310517615]
 z_index = -1
+texture_filter = 2
 position = Vector2(-659, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor70" type="Sprite2D" parent="Land" unique_id=1901806852]
 z_index = -1
+texture_filter = 2
 position = Vector2(-609, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor71" type="Sprite2D" parent="Land" unique_id=676038756]
 z_index = -1
+texture_filter = 2
 position = Vector2(-709, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor72" type="Sprite2D" parent="Land" unique_id=401124939]
 z_index = -1
+texture_filter = 2
 position = Vector2(-859, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor73" type="Sprite2D" parent="Land" unique_id=802634927]
 z_index = -1
+texture_filter = 2
 position = Vector2(-759, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor74" type="Sprite2D" parent="Land" unique_id=733022893]
 z_index = -1
+texture_filter = 2
 position = Vector2(-809, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor75" type="Sprite2D" parent="Land" unique_id=1733629600]
 z_index = -1
+texture_filter = 2
 position = Vector2(-809, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor76" type="Sprite2D" parent="Land" unique_id=2084075402]
 z_index = -1
+texture_filter = 2
 position = Vector2(-759, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor77" type="Sprite2D" parent="Land" unique_id=1955292648]
 z_index = -1
+texture_filter = 2
 position = Vector2(-859, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor78" type="Sprite2D" parent="Land" unique_id=489334250]
 z_index = -1
+texture_filter = 2
 position = Vector2(-859, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor79" type="Sprite2D" parent="Land" unique_id=1435652170]
 z_index = -1
+texture_filter = 2
 position = Vector2(-759, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor80" type="Sprite2D" parent="Land" unique_id=538160399]
 z_index = -1
+texture_filter = 2
 position = Vector2(-809, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor81" type="Sprite2D" parent="Land" unique_id=1788562502]
 z_index = -1
+texture_filter = 2
 position = Vector2(-809, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor82" type="Sprite2D" parent="Land" unique_id=1937113915]
 z_index = -1
+texture_filter = 2
 position = Vector2(-759, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor83" type="Sprite2D" parent="Land" unique_id=51624872]
 z_index = -1
+texture_filter = 2
 position = Vector2(-859, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor84" type="Sprite2D" parent="Land" unique_id=1870228377]
 z_index = -1
+texture_filter = 2
 position = Vector2(-859, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor85" type="Sprite2D" parent="Land" unique_id=265937526]
 z_index = -1
+texture_filter = 2
 position = Vector2(-759, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor86" type="Sprite2D" parent="Land" unique_id=98601957]
 z_index = -1
+texture_filter = 2
 position = Vector2(-809, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor87" type="Sprite2D" parent="Land" unique_id=913143529]
 z_index = -1
+texture_filter = 2
 position = Vector2(-809, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor88" type="Sprite2D" parent="Land" unique_id=1966812215]
 z_index = -1
+texture_filter = 2
 position = Vector2(-759, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor89" type="Sprite2D" parent="Land" unique_id=1639402151]
 z_index = -1
+texture_filter = 2
 position = Vector2(-859, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor90" type="Sprite2D" parent="Land" unique_id=241163278]
 z_index = -1
+texture_filter = 2
 position = Vector2(-859, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor91" type="Sprite2D" parent="Land" unique_id=8030900]
 z_index = -1
+texture_filter = 2
 position = Vector2(-759, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor92" type="Sprite2D" parent="Land" unique_id=1790090384]
 z_index = -1
+texture_filter = 2
 position = Vector2(-809, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor93" type="Sprite2D" parent="Land" unique_id=736764760]
 z_index = -1
+texture_filter = 2
 position = Vector2(-809, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor94" type="Sprite2D" parent="Land" unique_id=1657723968]
 z_index = -1
+texture_filter = 2
 position = Vector2(-759, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor95" type="Sprite2D" parent="Land" unique_id=1751944442]
 z_index = -1
+texture_filter = 2
 position = Vector2(-859, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor24" type="Sprite2D" parent="Land" unique_id=1260979280]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1009, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor25" type="Sprite2D" parent="Land" unique_id=745111012]
 z_index = -1
+texture_filter = 2
 position = Vector2(-909, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor26" type="Sprite2D" parent="Land" unique_id=1900768148]
 z_index = -1
+texture_filter = 2
 position = Vector2(-959, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor27" type="Sprite2D" parent="Land" unique_id=1211713931]
 z_index = -1
+texture_filter = 2
 position = Vector2(-959, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor28" type="Sprite2D" parent="Land" unique_id=506677151]
 z_index = -1
+texture_filter = 2
 position = Vector2(-909, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor29" type="Sprite2D" parent="Land" unique_id=1121362432]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1009, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor30" type="Sprite2D" parent="Land" unique_id=134895813]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1009, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor31" type="Sprite2D" parent="Land" unique_id=328758740]
 z_index = -1
+texture_filter = 2
 position = Vector2(-909, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor32" type="Sprite2D" parent="Land" unique_id=774912379]
 z_index = -1
+texture_filter = 2
 position = Vector2(-959, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor33" type="Sprite2D" parent="Land" unique_id=263847810]
 z_index = -1
+texture_filter = 2
 position = Vector2(-959, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor34" type="Sprite2D" parent="Land" unique_id=1031066375]
 z_index = -1
+texture_filter = 2
 position = Vector2(-909, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor35" type="Sprite2D" parent="Land" unique_id=1477528371]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1009, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor36" type="Sprite2D" parent="Land" unique_id=1964048316]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1009, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor37" type="Sprite2D" parent="Land" unique_id=699715623]
 z_index = -1
+texture_filter = 2
 position = Vector2(-909, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor38" type="Sprite2D" parent="Land" unique_id=608847042]
 z_index = -1
+texture_filter = 2
 position = Vector2(-959, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor39" type="Sprite2D" parent="Land" unique_id=1447090026]
 z_index = -1
+texture_filter = 2
 position = Vector2(-959, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor40" type="Sprite2D" parent="Land" unique_id=1576631605]
 z_index = -1
+texture_filter = 2
 position = Vector2(-909, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor41" type="Sprite2D" parent="Land" unique_id=1975485275]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1009, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor42" type="Sprite2D" parent="Land" unique_id=681053911]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1009, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor43" type="Sprite2D" parent="Land" unique_id=799153742]
 z_index = -1
+texture_filter = 2
 position = Vector2(-909, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor44" type="Sprite2D" parent="Land" unique_id=904008216]
 z_index = -1
+texture_filter = 2
 position = Vector2(-959, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor45" type="Sprite2D" parent="Land" unique_id=1401961071]
 z_index = -1
+texture_filter = 2
 position = Vector2(-959, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor46" type="Sprite2D" parent="Land" unique_id=1810766568]
 z_index = -1
+texture_filter = 2
 position = Vector2(-909, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor47" type="Sprite2D" parent="Land" unique_id=1268502986]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1009, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor12" type="Sprite2D" parent="Land" unique_id=357036566]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1159, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor13" type="Sprite2D" parent="Land" unique_id=1807084449]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1059, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor14" type="Sprite2D" parent="Land" unique_id=1942341466]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1109, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor15" type="Sprite2D" parent="Land" unique_id=1627109463]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1109, -105)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor16" type="Sprite2D" parent="Land" unique_id=1757551611]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1059, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor17" type="Sprite2D" parent="Land" unique_id=1734263678]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1159, -155)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor18" type="Sprite2D" parent="Land" unique_id=881918669]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1159, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor19" type="Sprite2D" parent="Land" unique_id=2010799592]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1059, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor20" type="Sprite2D" parent="Land" unique_id=1509337825]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1109, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor21" type="Sprite2D" parent="Land" unique_id=1476713470]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1109, -205)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor22" type="Sprite2D" parent="Land" unique_id=1219338411]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1059, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor23" type="Sprite2D" parent="Land" unique_id=1398414248]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1159, -255)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor6" type="Sprite2D" parent="Land" unique_id=1688718567]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1159, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor7" type="Sprite2D" parent="Land" unique_id=516155436]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1059, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor8" type="Sprite2D" parent="Land" unique_id=782360580]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1109, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor9" type="Sprite2D" parent="Land" unique_id=2119562875]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1109, -305)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor10" type="Sprite2D" parent="Land" unique_id=817097786]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1059, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor11" type="Sprite2D" parent="Land" unique_id=1793883564]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1159, -355)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor5" type="Sprite2D" parent="Land" unique_id=1727224966]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1159, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor4" type="Sprite2D" parent="Land" unique_id=2004675252]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1059, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor2" type="Sprite2D" parent="Land" unique_id=1676260583]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1109, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor3" type="Sprite2D" parent="Land" unique_id=326962014]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1109, -405)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor1" type="Sprite2D" parent="Land" unique_id=1672939401]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1059, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
 [node name="Floor0" type="Sprite2D" parent="Land" unique_id=1269817986]
 z_index = -1
+texture_filter = 2
 position = Vector2(-1159, -455)
 texture = ExtResource("14_gdwmo")
 metadata/_edit_lock_ = true
 
-[node name="GrassEnvironment" parent="." unique_id=706492716 instance=ExtResource("15_brp25")]
-y_sort_enabled = true
-position = Vector2(-2277, 43.00003)
+[node name="GrassEnvironment2" parent="." unique_id=706492716 instance=ExtResource("15_brp25")]
+position = Vector2(4863.0005, -41.999992)
+scale = Vector2(5, 5)
+
+[node name="GrassEnvironment" parent="." unique_id=2133624735 instance=ExtResource("15_brp25")]
+position = Vector2(-2242, -118.999985)
+scale = Vector2(5, 5)
+
+[node name="GrassEnvironment3" parent="." unique_id=574890453 instance=ExtResource("15_brp25")]
+position = Vector2(-9325, -223.99998)
+scale = Vector2(5, 5)
+
+[node name="GrassEnvironment4" parent="." unique_id=73358345 instance=ExtResource("15_brp25")]
+position = Vector2(-7001, -2400)
+scale = Vector2(5, 5)
+
+[node name="GrassEnvironment5" parent="." unique_id=1154636802 instance=ExtResource("15_brp25")]
+z_index = -1
+position = Vector2(974, -2207)
+scale = Vector2(5, 5)
+
+[node name="GrassEnvironment6" parent="." unique_id=1080719647 instance=ExtResource("15_brp25")]
+position = Vector2(-5840, -2898)
+scale = Vector2(5, 5)
+
+[node name="GrassEnvironment7" parent="." unique_id=836123220 instance=ExtResource("15_brp25")]
+position = Vector2(-6786.0005, 2090)
+scale = Vector2(5, 5)
+
+[node name="GrassEnvironment8" parent="." unique_id=1401133837 instance=ExtResource("15_brp25")]
+position = Vector2(369.0005, 2200)
+scale = Vector2(5, 5)
+
+[node name="GrassEnvironment9" parent="." unique_id=61061055 instance=ExtResource("15_brp25")]
+position = Vector2(8139.0005, -2294.0002)
+scale = Vector2(5, 5)
+
+[node name="GrassEnvironment10" parent="." unique_id=1339785221 instance=ExtResource("15_brp25")]
+position = Vector2(7502, 2293.0002)
 scale = Vector2(5, 5)
 
 [connection signal="body_entered" from="Farm/Farm Door" to="player" method="_on_area_2d_body_entered"]
