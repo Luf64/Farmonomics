@@ -39,7 +39,7 @@ size = Vector2(25.785278, 24.884792)
 size = Vector2(47.350945, 24.884789)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cdn6i"]
-size = Vector2(27.457478, 3.0414734)
+size = Vector2(27.457478, 4.009216)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f0357"]
 size = Vector2(31.350891, 2)
@@ -153,7 +153,7 @@ scale = Vector2(2, 2)
 script = ExtResource("6_ttp18")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Marketplace/Room2 Door" unique_id=1502996389]
-position = Vector2(572.7677, -4.857142)
+position = Vector2(572.7677, -2.1249995)
 scale = Vector2(1.161538, 0.7750001)
 shape = SubResource("RectangleShape2D_cdn6i")
 
@@ -1306,7 +1306,7 @@ scale = Vector2(5, 5)
 
 [node name="GrassEnvironment5" parent="." unique_id=1154636802 instance=ExtResource("15_brp25")]
 z_index = -1
-position = Vector2(974, -2207)
+position = Vector2(976, -2203)
 scale = Vector2(5, 5)
 
 [node name="GrassEnvironment6" parent="." unique_id=1080719647 instance=ExtResource("15_brp25")]
