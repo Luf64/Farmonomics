@@ -13,6 +13,8 @@ func _physics_process(delta: float) -> void:
 		print("interacted")'''
 	if player_in_range_tp_room1 and Input.is_action_just_pressed("interaction"):
 		get_tree().change_scene_to_file(Global.Room_1)
+		
+	# $Land -- Make it process in 60fps
 	pass
 
 

@@ -1,9 +1,10 @@
 [gd_scene format=3 uid="uid://c3ge72d2jsbe7"]
 
 [ext_resource type="Script" uid="uid://csdvgmyume013" path="res://scripts/room_0.gd" id="1_oa8wf"]
-[ext_resource type="Texture2D" uid="uid://1ox4so65ipkq" path="res://Assets/Main Menu.jpg" id="2_853v1"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="3_c68s2"]
 [ext_resource type="AudioStream" uid="uid://bve2jgjox778n" path="res://Sound/delosound-meditation-relaxing-music-466470.mp3" id="4_853v1"]
+[ext_resource type="Texture2D" uid="uid://rwl1615hcbs" path="res://Assets/Main Menu1.png" id="4_c68s2"]
+[ext_resource type="Texture2D" uid="uid://bjo3mudwnc3cr" path="res://Assets/Sky.png" id="5_iv03q"]
 
 [node name="Room0" type="Node2D" unique_id=2095281744]
 script = ExtResource("1_oa8wf")
@@ -14,14 +15,6 @@ scale = Vector2(2.014066, 2.0109673)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
-
-[node name="Side" type="Sprite2D" parent="." unique_id=172126092]
-show_behind_parent = true
-z_index = 1
-position = Vector2(132.00002, 92.499985)
-scale = Vector2(0.7836735, 0.788835)
-texture = ExtResource("2_853v1")
-flip_h = true
 
 [node name="Button" type="Control" parent="." unique_id=2007058816]
 z_index = 2
@@ -148,10 +141,40 @@ alignment = 0
 stream = ExtResource("4_853v1")
 autoplay = true
 
+[node name="MainMenu1" type="Sprite2D" parent="." unique_id=1457754725]
+z_index = 1
+position = Vector2(129.25002, 92.50001)
+scale = Vector2(0.7884354, 0.788835)
+texture = ExtResource("4_c68s2")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=175587361]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1747443717]
+
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=2058397027]
+position = Vector2(-118.99999, 92.24999)
+scale = Vector2(0.42335767, 0.42252606)
+texture = ExtResource("5_iv03q")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1848491223]
+
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=32922172]
+visible = false
+position = Vector2(129.25002, 92.74999)
+scale = Vector2(0.42445257, 0.4238281)
+texture = ExtResource("5_iv03q")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1599072273]
+
+[node name="Sky" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=1476801259]
+position = Vector2(437.99997, 93)
+scale = Vector2(0.42372265, 0.4244792)
+texture = ExtResource("5_iv03q")
+
 [connection signal="pressed" from="Button/Continue" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button/Continue" to="." method="_on_continue_pressed"]
-[connection signal="pressed" from="Button/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Button/New Game" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Button/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button/Quit Game" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Button/Quit Game" to="." method="_on_quit_game_pressed"]
