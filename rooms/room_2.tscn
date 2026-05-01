@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bckshp6hgup2g" path="res://Assets/Pic/coin 7.png" id="8_cnnmw"]
 [ext_resource type="Texture2D" uid="uid://b2x33g31iu08l" path="res://Assets/Pic/coin 1.png" id="9_8kwhi"]
 [ext_resource type="Texture2D" uid="uid://dtlcdk31mjtyx" path="res://Assets/Pic/Room2.jpg" id="10_vsfs3"]
+[ext_resource type="AudioStream" uid="uid://c3uopj1vfa7km" path="res://Sound/pop.mp3" id="12_vsfs3"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hkprr"]
 animations = [{
@@ -207,7 +208,6 @@ shape = SubResource("RectangleShape2D_txl2c")
 debug_color = Color(0.62755585, 0.348856, 1, 0.41960785)
 
 [node name="interaction" type="Label" parent="Shop_UI" unique_id=1568840607]
-visible = false
 modulate = Color(0, 0, 0, 1)
 offset_left = -344.0
 offset_top = 53.0
@@ -215,6 +215,15 @@ offset_right = -304.0
 offset_bottom = 76.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "[PRESS \"F\"]"
+
+[node name="ShopMenu" type="Control" parent="Shop_UI" unique_id=1153984570]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PopSound" type="AudioStreamPlayer" parent="Shop_UI" unique_id=482289145]
+stream = ExtResource("12_vsfs3")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=422759732]
 stream = SubResource("AudioStreamMP3_vsfs3")
