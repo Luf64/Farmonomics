@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://clvgdljqnc4g4"]
 
+[ext_resource type="Script" uid="uid://c0qqsxqcuvwrt" path="res://scripts/shop_ui.gd" id="1_5jfs2"]
 [ext_resource type="Texture2D" uid="uid://chjq5786ja8jd" path="res://Assets/Pic/shop ui1.png" id="1_cg2ta"]
 [ext_resource type="Texture2D" uid="uid://oq1fv4cuxw6r" path="res://Assets/Pic/Block UI.png" id="2_qf5tm"]
 [ext_resource type="Texture2D" uid="uid://47h7e8afm4wk" path="res://Assets/Pic/item.png" id="3_5wht7"]
@@ -15,7 +16,20 @@
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_pigwl"]
 load_path = "res://.godot/imported/item.png-a090af145a8e06f207d85c939302015b.ctex"
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jfs2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pigwl"]
+bg_color = Color(0.28627452, 0.105882354, 0.05490196, 1)
+border_color = Color(0.28627452, 0.105882354, 0.05490196, 1)
+shadow_color = Color(0.28627452, 0.105882354, 0.05490196, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_18nhq"]
+bg_color = Color(0.28627452, 0.105882354, 0.05490196, 1)
+border_color = Color(0.28627452, 0.105882354, 0.05490196, 1)
+shadow_color = Color(0.28627452, 0.105882354, 0.05490196, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" unique_id=57178223]
+script = ExtResource("1_5jfs2")
 
 [node name="Control" type="Control" parent="." unique_id=490150751]
 layout_mode = 3
@@ -23,169 +37,76 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1243265638]
+[node name="TextureRect6" type="TextureRect" parent="Control" unique_id=1243265638]
 layout_mode = 0
-offset_left = 13.0
+offset_left = 11.0
 offset_top = 1.0
-offset_right = 514.0
+offset_right = 512.0
 offset_bottom = 652.0
 texture = ExtResource("1_cg2ta")
 expand_mode = 1
 
-[node name="TextureRect5" type="TextureRect" parent="Control" unique_id=291282665]
-modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
-layout_mode = 0
-offset_left = 45.0
-offset_top = 45.0
-offset_right = 471.0
-offset_bottom = 135.0
-texture = ExtResource("2_qf5tm")
-
-[node name="TextureRect2" type="TextureRect" parent="Control" unique_id=1384688598]
-layout_mode = 0
-offset_left = 54.0
-offset_top = 54.0
-offset_right = 129.0
-offset_bottom = 129.0
-texture = SubResource("CompressedTexture2D_pigwl")
-
-[node name="TextureRect6" type="TextureRect" parent="Control" unique_id=1798123748]
-modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
-layout_mode = 0
-offset_left = 45.0
-offset_top = 140.0
-offset_right = 471.0
-offset_bottom = 230.0
-texture = ExtResource("2_qf5tm")
-
-[node name="TextureRect3" type="TextureRect" parent="Control" unique_id=1252526]
-layout_mode = 0
-offset_left = 54.0
-offset_top = 149.0
-offset_right = 129.0
-offset_bottom = 224.0
-texture = ExtResource("3_5wht7")
-
-[node name="TextureRect7" type="TextureRect" parent="Control" unique_id=1656230512]
-modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+[node name="Apple_Button" type="Button" parent="Control" unique_id=1364817204]
 layout_mode = 0
 offset_left = 45.0
 offset_top = 234.0
 offset_right = 471.0
 offset_bottom = 324.0
+
+[node name="TextureRect7" type="TextureRect" parent="Control/Apple_Button" unique_id=1656230512]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
 texture = ExtResource("2_qf5tm")
 
-[node name="TextureRect4" type="TextureRect" parent="Control" unique_id=1184996251]
+[node name="TextureRect4" type="TextureRect" parent="Control/Apple_Button" unique_id=1184996251]
 layout_mode = 0
-offset_left = 54.0
-offset_top = 243.0
-offset_right = 129.0
-offset_bottom = 318.0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
 texture = ExtResource("3_5wht7")
 
-[node name="TextureRect9" type="TextureRect" parent="Control" unique_id=2078323478]
+[node name="TextureRect9" type="TextureRect" parent="Control/Apple_Button" unique_id=2078323478]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 251.0
-offset_right = 118.0
-offset_bottom = 310.0
+offset_left = 21.0
+offset_top = 17.0
+offset_right = 73.0
+offset_bottom = 76.0
 texture = ExtResource("4_5wht7")
 expand_mode = 1
 
-[node name="TextureRect10" type="TextureRect" parent="Control" unique_id=27650684]
+[node name="Coin3" type="TextureRect" parent="Control/Apple_Button" unique_id=151779044]
 layout_mode = 0
-offset_left = 43.0
-offset_top = 45.0
-offset_right = 139.0
-offset_bottom = 139.0
-texture = ExtResource("5_pxn6d")
-expand_mode = 1
-
-[node name="Coin" type="TextureRect" parent="Control" unique_id=276042882]
-layout_mode = 0
-offset_left = 424.0
-offset_top = 65.0
-offset_right = 459.0
-offset_bottom = 115.0
+offset_left = 379.0
+offset_top = 18.0
+offset_right = 414.0
+offset_bottom = 68.0
 texture = ExtResource("4_pxn6d")
 expand_mode = 1
 
-[node name="Coin2" type="TextureRect" parent="Control" unique_id=1733933374]
-layout_mode = 0
-offset_left = 424.0
-offset_top = 161.0
-offset_right = 459.0
-offset_bottom = 211.0
-texture = ExtResource("4_pxn6d")
-expand_mode = 1
-
-[node name="Coin3" type="TextureRect" parent="Control" unique_id=151779044]
-layout_mode = 0
-offset_left = 424.0
-offset_top = 252.0
-offset_right = 459.0
-offset_bottom = 302.0
-texture = ExtResource("4_pxn6d")
-expand_mode = 1
-
-[node name="TextEdit" type="TextEdit" parent="Control" unique_id=989515487]
+[node name="TextEdit3" type="TextEdit" parent="Control/Apple_Button" unique_id=455338060]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 133.0
-offset_top = 55.0
-offset_right = 433.0
-offset_bottom = 114.0
-theme_override_font_sizes/font_size = 38
-text = "Tomato          10"
-
-[node name="TextEdit2" type="TextEdit" parent="Control" unique_id=1388211373]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 133.0
-offset_top = 154.0
-offset_right = 249.0
-offset_bottom = 211.0
-theme_override_font_sizes/font_size = 38
-text = "Corn"
-
-[node name="TextEdit" type="TextEdit" parent="Control/TextEdit2" unique_id=1746082982]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 241.0
-offset_top = -4.0
-offset_right = 301.0
-offset_bottom = 63.0
-theme_override_font_sizes/font_size = 38
-text = "20"
-
-[node name="TextEdit3" type="TextEdit" parent="Control" unique_id=455338060]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 135.0
-offset_top = 243.0
-offset_right = 261.0
-offset_bottom = 304.0
+offset_left = 90.0
+offset_top = 9.0
+offset_right = 216.0
+offset_bottom = 70.0
+mouse_filter = 2
 theme_override_font_sizes/font_size = 38
 text = "Apple"
 
-[node name="TextEdit" type="TextEdit" parent="Control/TextEdit3" unique_id=716459997]
+[node name="TextEdit" type="TextEdit" parent="Control/Apple_Button/TextEdit3" unique_id=716459997]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 239.0
 offset_top = -1.0
 offset_right = 290.0
 offset_bottom = 65.0
+mouse_filter = 2
 theme_override_font_sizes/font_size = 38
 text = "30"
-
-[node name="TextureRect8" type="TextureRect" parent="Control" unique_id=341919678]
-layout_mode = 0
-offset_left = 69.0
-offset_top = 162.0
-offset_right = 113.0
-offset_bottom = 211.0
-texture = ExtResource("5_6a1ug")
-expand_mode = 1
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=712075489]
 anchors_preset = -1
@@ -223,10 +144,141 @@ offset_bottom = 585.0
 texture = ExtResource("2_qf5tm")
 expand_mode = 1
 
-[node name="TextureRect5" type="TextureRect" parent="." unique_id=1077404471]
-offset_left = 473.0
-offset_top = 63.0
-offset_right = 498.0
-offset_bottom = 88.0
+[node name="Tomato_Button" type="Button" parent="." unique_id=348468710]
+offset_left = 45.0
+offset_top = 45.0
+offset_right = 471.0
+offset_bottom = 135.0
+
+[node name="TextureRect5" type="TextureRect" parent="Tomato_Button" unique_id=291282665]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
+texture = ExtResource("2_qf5tm")
+
+[node name="TextureRect2" type="TextureRect" parent="Tomato_Button" unique_id=1384688598]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = SubResource("CompressedTexture2D_pigwl")
+
+[node name="TextureRect10" type="TextureRect" parent="Tomato_Button" unique_id=27650684]
+layout_mode = 0
+offset_left = -2.0
+offset_right = 94.0
+offset_bottom = 94.0
+texture = ExtResource("5_pxn6d")
+expand_mode = 1
+
+[node name="Coin" type="TextureRect" parent="Tomato_Button" unique_id=276042882]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 20.0
+offset_right = 414.0
+offset_bottom = 70.0
+texture = ExtResource("4_pxn6d")
+expand_mode = 1
+
+[node name="TextEdit" type="TextEdit" parent="Tomato_Button" unique_id=989515487]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 88.0
+offset_top = 10.0
+offset_right = 388.0
+offset_bottom = 69.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 38
+text = "Tomato          10"
+
+[node name="Corn_Button" type="Button" parent="." unique_id=1568633286]
+offset_left = 45.0
+offset_top = 140.0
+offset_right = 471.0
+offset_bottom = 230.0
+
+[node name="TextureRect6" type="TextureRect" parent="Corn_Button" unique_id=1798123748]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
+texture = ExtResource("2_qf5tm")
+
+[node name="TextureRect3" type="TextureRect" parent="Corn_Button" unique_id=1252526]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = ExtResource("3_5wht7")
+
+[node name="Coin2" type="TextureRect" parent="Corn_Button" unique_id=1733933374]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 21.0
+offset_right = 414.0
+offset_bottom = 71.0
+texture = ExtResource("4_pxn6d")
+expand_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="Corn_Button" unique_id=1388211373]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 88.0
+offset_top = 14.0
+offset_right = 204.0
+offset_bottom = 71.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 38
+text = "Corn"
+
+[node name="TextEdit" type="TextEdit" parent="Corn_Button/TextEdit2" unique_id=1746082982]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 241.0
+offset_top = -4.0
+offset_right = 301.0
+offset_bottom = 63.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 38
+text = "20"
+
+[node name="TextureRect8" type="TextureRect" parent="Corn_Button" unique_id=341919678]
+layout_mode = 0
+offset_left = 24.0
+offset_top = 22.0
+offset_right = 68.0
+offset_bottom = 71.0
+texture = ExtResource("5_6a1ug")
+expand_mode = 1
+
+[node name="VSlider" type="VSlider" parent="." unique_id=1987513403]
+offset_left = 494.99997
+offset_top = 589.0526
+offset_right = 504.99997
+offset_bottom = 851.9916
+rotation = 3.1415927
+scale = Vector2(2, 2)
+theme_override_constants/center_grabber = 0
+theme_override_icons/grabber = ExtResource("11_18nhq")
+theme_override_icons/grabber_highlight = ExtResource("11_18nhq")
+theme_override_icons/grabber_disabled = ExtResource("11_18nhq")
+theme_override_styles/slider = SubResource("StyleBoxFlat_5jfs2")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_pigwl")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_18nhq")
+
+[node name="TextureRect5" type="TextureRect" parent="VSlider" unique_id=1077404471]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 2.0
+offset_right = 26.0
+offset_bottom = 27.0
 texture = ExtResource("11_18nhq")
 expand_mode = 1
+
+[connection signal="pressed" from="Control/Apple_Button" to="." method="_on_apple_button_pressed"]
+[connection signal="pressed" from="Tomato_Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Corn_Button" to="." method="_on_corn_button_pressed"]
