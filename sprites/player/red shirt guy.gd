@@ -70,11 +70,8 @@ func _physics_process(delta: float) -> void:
 			$AnimationPlayer.play("idle_up")
 	
 	if Input.is_action_just_pressed("tab"):
+		Global.open_inventory()
 		pass #open_inventory() -- Bug
 		
 	move_and_slide()
 	pass
-
-
-'''func open_inventory() -> void:
-	Global.open_inventory(get_tree().current_2ene_file_path)'''
