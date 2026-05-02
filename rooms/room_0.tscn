@@ -3,93 +3,155 @@
 [ext_resource type="Script" uid="uid://csdvgmyume013" path="res://scripts/room_0.gd" id="1_oa8wf"]
 [ext_resource type="Texture2D" uid="uid://1ox4so65ipkq" path="res://Assets/Main Menu.jpg" id="2_853v1"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="3_c68s2"]
+[ext_resource type="AudioStream" uid="uid://bve2jgjox778n" path="res://Sound/delosound-meditation-relaxing-music-466470.mp3" id="4_853v1"]
 
 [node name="Room0" type="Node2D" unique_id=2095281744]
 script = ExtResource("1_oa8wf")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1030770431]
-position = Vector2(132, 93)
+position = Vector2(131.74648, 92.747246)
+scale = Vector2(2.014066, 2.0109673)
 zoom = Vector2(2, 2)
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
 
-[node name="MainMenu" type="Sprite2D" parent="Camera2D" unique_id=1377103021]
+[node name="Side" type="Sprite2D" parent="." unique_id=172126092]
 show_behind_parent = true
-position = Vector2(0, -1)
-scale = Vector2(0.7795918, 0.7791262)
+z_index = 1
+position = Vector2(132.00002, 92.499985)
+scale = Vector2(0.7836735, 0.788835)
 texture = ExtResource("2_853v1")
 flip_h = true
 
 [node name="Button" type="Control" parent="." unique_id=2007058816]
+z_index = 2
 texture_repeat = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Button" type="Button" parent="Button" unique_id=1615710733]
-modulate = Color(0, 0, 0, 1)
-self_modulate = Color(0, 0, 0, 1)
+[node name="Title" type="Button" parent="Button" unique_id=1615710733]
+modulate = Color(1, 1, 0, 1)
+self_modulate = Color(1, 1, 0, 1)
+z_index = 2
+texture_filter = 2
+custom_minimum_size = Vector2(94, 56)
+layout_direction = 2
 layout_mode = 0
-offset_left = 29.0
-offset_top = -23.0
-offset_right = 234.0
-offset_bottom = 33.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = -138.0
+offset_top = -28.0
+offset_right = 67.0
+offset_bottom = 28.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_c68s2")
 theme_override_font_sizes/font_size = 30
 text = "Farmonomics"
 flat = true
+alignment = 0
 icon_alignment = 1
 
-[node name="Start" type="Button" parent="Button" unique_id=1850536945]
+[node name="Button" type="Button" parent="Button" unique_id=338865722]
+z_index = 2
+texture_filter = 2
 custom_minimum_size = Vector2(94, 56)
+layout_direction = 2
+layout_mode = 0
+offset_left = -129.0
+offset_top = 185.0
+offset_right = -35.0
+offset_bottom = 241.0
+scale = Vector2(1.1, 1.1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_c68s2")
+text = "Credits"
+flat = true
+alignment = 0
+
+[node name="Continue" type="Button" parent="Button" unique_id=601426618]
+z_index = 2
+texture_filter = 2
+custom_minimum_size = Vector2(94, 56)
+layout_direction = 2
+layout_mode = 0
+offset_left = -128.0
+offset_top = 85.0
+offset_right = -34.0
+offset_bottom = 141.0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_c68s2")
+theme_override_font_sizes/font_size = 22
+text = "Start"
+flat = true
+alignment = 0
+
+[node name="New Game" type="Button" parent="Button" unique_id=1850536945]
+z_index = 2
+texture_filter = 2
+custom_minimum_size = Vector2(94, 56)
+layout_direction = 2
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 3.2500002
 anchor_top = 2.799
 anchor_right = 3.2500002
 anchor_bottom = 2.799
-offset_left = -47.000015
-offset_top = -66.96
-offset_right = 46.999985
-offset_bottom = -10.959999
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = -259.0
+offset_top = -0.9599991
+offset_right = -142.00002
+offset_bottom = 55.04
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_c68s2")
 theme_override_font_sizes/font_size = 22
-text = "Start"
+text = "New Game"
 flat = true
+alignment = 0
 
-[node name="Settings" type="Button" parent="Button" unique_id=601426618]
+[node name="Settings" type="Button" parent="Button" unique_id=1129153270]
+z_index = 2
+texture_filter = 2
 custom_minimum_size = Vector2(94, 56)
+layout_direction = 2
 layout_mode = 0
-offset_left = 83.0
-offset_top = 105.0
-offset_right = 177.0
-offset_bottom = 161.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = -130.0
+offset_top = 129.0
+offset_right = -36.0
+offset_bottom = 185.0
+scale = Vector2(1.1, 1.1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_c68s2")
-theme_override_font_sizes/font_size = 22
 text = "Settings"
 flat = true
+alignment = 0
 
-[node name="Exit" type="Button" parent="Button" unique_id=1207303219]
+[node name="Quit Game" type="Button" parent="Button" unique_id=1207303219]
+z_index = 2
+texture_filter = 2
 custom_minimum_size = Vector2(94, 56)
+layout_direction = 2
 layout_mode = 0
-offset_left = 83.0
-offset_top = 165.0
-offset_right = 177.0
-offset_bottom = 221.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = -129.0
+offset_top = 166.0
+offset_right = -12.0
+offset_bottom = 222.0
+scale = Vector2(0.8, 0.8)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_c68s2")
 theme_override_font_sizes/font_size = 22
-text = "Exit"
+text = "Quit Game"
 flat = true
+alignment = 0
 
-[node name="Settings1" type="CanvasLayer" parent="." unique_id=1295164765]
-visible = false
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1001714645]
+stream = ExtResource("4_853v1")
+autoplay = true
 
-[connection signal="pressed" from="Button/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button/Continue" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="Button/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="Button/New Game" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="Button/New Game" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Button/Exit" to="." method="_on_exit_pressed"]
-[connection signal="visibility_changed" from="Settings1" to="." method="_on_canvas_layer_visibility_changed"]
+[connection signal="pressed" from="Button/Quit Game" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Button/Quit Game" to="." method="_on_quit_game_pressed"]

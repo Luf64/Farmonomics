@@ -1,7 +1,6 @@
 class_name red_shirt_guy extends CharacterBody2D
-
 @onready var run_sound: AudioStreamPlayer2D = $Run
-
+var sound_volume: float
 var move_speed : float = 135.0
 var sprint_speed : float = 210.0
 var last_direction : Vector2 = Vector2.DOWN
@@ -10,13 +9,12 @@ var last_direction : Vector2 = Vector2.DOWN
 func _ready() -> void:
 	# Make sure sound not play
 	if run_sound:
+		sound_volume
 		run_sound.autoplay = false
 		run_sound.stop()
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-@warning_ignore("unused_parameter")
-func _process(delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	
 	var direction : Vector2 = Vector2.ZERO
 	if Input.is_action_pressed("right"):
@@ -27,7 +25,6 @@ func _process(delta: float) -> void:
 		direction.y -= 1
 	if Input.is_action_pressed("down"):
 		direction.y += 1
-	velocity = direction * move_speed
 	
 	var current_speed = move_speed
 	
@@ -73,11 +70,11 @@ func _process(delta: float) -> void:
 			$AnimationPlayer.play("idle_up")
 	
 	if Input.is_action_just_pressed("tab"):
-		print("tab press")
-		Global.open_inventory()
-	
+		pass #open_inventory() -- Bug
+		
+	move_and_slide()
 	pass
 
-@warning_ignore("unused_parameter")
-func _physics_process(delta: float) -> void:
-	move_and_slide()
+
+'''func open_inventory() -> void:
+	Global.open_inventory(get_tree().current_2ene_file_path)'''
