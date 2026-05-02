@@ -45,3 +45,20 @@ func add_to_inventory(item_name):
 
 func _on_button_pressed() -> void:
 	pass # Replace with function body.
+	
+func _on_up_button_pressed():
+	$VSlider.value -= 1 
+
+func _on_down_button_pressed():
+	$VSlider.value += 1
+
+func _on_button_2_pressed() -> void:
+	pass # Replace with function body.
+
+
+var scroll_speed = 20 
+
+
+func _on_v_box_container_mouse_entered() -> void:
+	pass # Replace with function body.
+	
