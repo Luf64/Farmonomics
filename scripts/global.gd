@@ -15,7 +15,7 @@ var room = {
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var inventory_room = load(Global.Inventory)
+	var inventory_room = load(Inventory)
 	inventory_ui = inventory_room.instantiate()
 	get_tree().root.call_deferred("add_child", inventory_ui)
 	inventory_ui.visible = false
