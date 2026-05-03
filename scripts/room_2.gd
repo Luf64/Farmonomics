@@ -9,7 +9,8 @@ var current_shop = null
 func _ready() -> void:
 	$Shop_UI/interaction.visible = false
 	pass # Replace with function body.
-
+	
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

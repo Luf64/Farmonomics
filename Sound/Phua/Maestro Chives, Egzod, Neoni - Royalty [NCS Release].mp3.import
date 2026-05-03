@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://k1tkt5p56dda"
+path="res://.godot/imported/Maestro Chives, Egzod, Neoni - Royalty [NCS Release].mp3-d75fa8ded02ce93fd829ece4a47e8f3b.mp3str"
+
+[deps]
+
+source_file="res://Sound/Phua/Maestro Chives, Egzod, Neoni - Royalty [NCS Release].mp3"
+dest_files=["res://.godot/imported/Maestro Chives, Egzod, Neoni - Royalty [NCS Release].mp3-d75fa8ded02ce93fd829ece4a47e8f3b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

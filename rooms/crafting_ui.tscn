@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bgfb1hyfgy8u2"]
+
+[ext_resource type="Script" uid="uid://datjtjorby1nm" path="res://scripts/crafting_ui.gd" id="1_ntsyr"]
+[ext_resource type="Texture2D" uid="uid://dj6xjmrswr80" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Craft(crafting only).png" id="1_xh8vp"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=915512477]
+script = ExtResource("1_ntsyr")
+
+[node name="Control" type="Control" parent="." unique_id=2130055259]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=397541996]
+layout_mode = 0
+offset_left = 31.999996
+offset_top = 3.000002
+offset_right = 230.0
+offset_bottom = 120.0
+scale = Vector2(5.5, 5.5)
+texture = ExtResource("1_xh8vp")
+metadata/_edit_lock_ = true
+
+[node name="TextureButton" type="TextureButton" parent="Control" unique_id=1519087964]
+layout_mode = 0
+offset_left = 686.0
+offset_top = 21.0
+offset_right = 736.0
+offset_bottom = 71.0
+
+[connection signal="pressed" from="Control/TextureButton" to="." method="_on_texture_button_pressed"]

@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://pdotcf0yb4iw"]
 
-[ext_resource type="Script" uid="uid://ctni3bfg3vvs8" path="res://scripts/room_3.gd" id="1_mi4eo"]
+[ext_resource type="Script" uid="uid://yo0i8ft2tgto" path="res://scripts/room_3.gd" id="1_mi4eo"]
 [ext_resource type="Texture2D" uid="uid://c788m2iiqaf7n" path="res://Assets/room 4 (brewing room with selling it)/brewing room (shop).jpg" id="1_ugu2v"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="2_5ql8f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ql8f"]
-size = Vector2(195, 32)
+size = Vector2(126.5, 32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mi4eo"]
-size = Vector2(548, 20)
+size = Vector2(414, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ir1v3"]
-size = Vector2(295, 19)
+size = Vector2(210.5, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6mom2"]
 size = Vector2(26, 77.5)
@@ -23,13 +23,16 @@ size = Vector2(31, 485)
 size = Vector2(111, 355)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7j5ef"]
-size = Vector2(664, 142)
+size = Vector2(536, 142)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sti2h"]
-size = Vector2(96, 138)
+size = Vector2(65, 138)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0v5my"]
-size = Vector2(55, 44.25)
+size = Vector2(41, 44.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h8lbs"]
+size = Vector2(130, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_suwb7"]
 size = Vector2(78.69388, 65.22977)
@@ -44,16 +47,19 @@ size = Vector2(72, 111)
 size = Vector2(165, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mbvqk"]
-size = Vector2(353.25, 13.5)
+size = Vector2(269, 13.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e5tcw"]
-size = Vector2(55, 92)
+size = Vector2(37.5, 92)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m03l8"]
 size = Vector2(55, 96)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nqrud"]
-size = Vector2(97, 62)
+size = Vector2(56, 62)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_evh4e"]
+size = Vector2(145.5, 13.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pytw5"]
 size = Vector2(127.25, 107)
@@ -61,108 +67,193 @@ size = Vector2(127.25, 107)
 [node name="Room3_tscn" type="Node2D" unique_id=1489131796]
 script = ExtResource("1_mi4eo")
 
+[node name="from room3" type="Marker2D" parent="." unique_id=1730449842]
+position = Vector2(484.00003, 530)
+scale = Vector2(3.1620877, 2.3125)
+
 [node name="BrewingRoom(shop)" type="Sprite2D" parent="." unique_id=1567184787]
 position = Vector2(575.49994, 323.74997)
-scale = Vector2(3.1620877, 2.3125)
+scale = Vector2(2.3, 2.313)
 texture = ExtResource("1_ugu2v")
+metadata/_edit_lock_ = true
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("2_5ql8f")]
-position = Vector2(448, 528)
+position = Vector2(488, 526)
 
-[node name="tp to room 0_1" type="Area2D" parent="." unique_id=1250640326]
+[node name="tp to room 1" type="Area2D" parent="." unique_id=1250640326]
+metadata/_edit_lock_ = true
 
-[node name="door" type="CollisionShape2D" parent="tp to room 0_1" unique_id=1044449736]
-position = Vector2(445, 580)
+[node name="door" type="CollisionShape2D" parent="tp to room 1" unique_id=1044449736]
+position = Vector2(479.25, 580)
 shape = SubResource("RectangleShape2D_5ql8f")
 
+[node name="Panel" type="Panel" parent="tp to room 1" unique_id=1793712161]
+visible = false
+offset_left = 451.0
+offset_top = 543.0
+offset_right = 537.0
+offset_bottom = 561.0
+
+[node name="Label" type="Label" parent="tp to room 1/Panel" unique_id=655514964]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 85.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "[PRESS \"F\"]"
+metadata/_edit_lock_ = true
+
 [node name="walls or obstacle" type="CharacterBody2D" parent="." unique_id=607510938]
+metadata/_edit_lock_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="walls or obstacle" unique_id=978649928]
+metadata/_edit_lock_ = true
 
 [node name="wall" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1307955319]
-position = Vector2(810, 527)
+position = Vector2(743, 527)
 shape = SubResource("RectangleShape2D_mi4eo")
+metadata/_edit_lock_ = true
 
 [node name="wall2" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=958402544]
-position = Vector2(208.5, 528.5)
+position = Vector2(310.25, 530)
 shape = SubResource("RectangleShape2D_ir1v3")
+metadata/_edit_lock_ = true
 
 [node name="wall3" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1474420696]
-position = Vector2(343, 558)
+position = Vector2(403, 560)
 shape = SubResource("RectangleShape2D_6mom2")
+metadata/_edit_lock_ = true
 
 [node name="wall4" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=636357501]
 position = Vector2(550, 557)
 shape = SubResource("RectangleShape2D_6mom2")
+metadata/_edit_lock_ = true
 
 [node name="wall5" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1944246126]
-position = Vector2(78.5, 293.5)
+position = Vector2(207, 301)
 shape = SubResource("RectangleShape2D_1bsgv")
+metadata/_edit_lock_ = true
 
 [node name="wall6" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=326477919]
-position = Vector2(1029.5, 359.5)
+position = Vector2(921.5, 359.5)
 shape = SubResource("RectangleShape2D_2r27u")
+metadata/_edit_lock_ = true
 
 [node name="wall7" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1033248025]
-position = Vector2(393, 123)
+position = Vector2(457, 123)
 shape = SubResource("RectangleShape2D_7j5ef")
+metadata/_edit_lock_ = true
 
 [node name="wall8" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=668329026]
-position = Vector2(754, 254)
+position = Vector2(704.5, 254)
 shape = SubResource("RectangleShape2D_sti2h")
+metadata/_edit_lock_ = true
 
 [node name="wall9" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1309409581]
-position = Vector2(768.5, 329.875)
+position = Vector2(719.5, 329.875)
 shape = SubResource("RectangleShape2D_0v5my")
+metadata/_edit_lock_ = true
+
+[node name="stairs" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=966606582]
+position = Vector2(800, 196)
+shape = SubResource("RectangleShape2D_h8lbs")
+metadata/_edit_lock_ = true
 
 [node name="box" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1287178591]
-position = Vector2(883.6077, 492.3984)
+position = Vector2(807.6077, 492.39844)
 rotation = 0.90582585
 shape = SubResource("RectangleShape2D_suwb7")
+metadata/_edit_lock_ = true
 
 [node name="box2" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=80055162]
-position = Vector2(986, 456)
+position = Vector2(892, 456)
 shape = SubResource("RectangleShape2D_52qvr")
+metadata/_edit_lock_ = true
 
 [node name="box3" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=260043099]
-position = Vector2(131, 379.5)
+position = Vector2(254, 383)
 shape = SubResource("RectangleShape2D_gx0k2")
+metadata/_edit_lock_ = true
 
 [node name="cabinet" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1276788495]
-position = Vector2(176.5, 208)
+position = Vector2(303.5, 208)
 shape = SubResource("RectangleShape2D_pkq75")
+metadata/_edit_lock_ = true
 
 [node name="counter" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=289470739]
-position = Vector2(442.375, 327.25)
+position = Vector2(484.5, 327.25)
 shape = SubResource("RectangleShape2D_mbvqk")
+metadata/_edit_lock_ = true
 
 [node name="counter2" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=92017001]
-position = Vector2(292.5, 275)
+position = Vector2(369, 275)
 shape = SubResource("RectangleShape2D_e5tcw")
+metadata/_edit_lock_ = true
 
 [node name="counter3" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1429080434]
 position = Vector2(592.5, 275)
 shape = SubResource("RectangleShape2D_m03l8")
+metadata/_edit_lock_ = true
 
 [node name="statue" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=75967822]
-position = Vector2(662.5, 213)
+position = Vector2(642, 213)
 shape = SubResource("RectangleShape2D_nqrud")
+metadata/_edit_lock_ = true
+
+[node name="door" type="CollisionShape2D" parent="walls or obstacle/StaticBody2D" unique_id=1633163608]
+position = Vector2(476.75, 588.75)
+shape = SubResource("RectangleShape2D_evh4e")
+metadata/_edit_lock_ = true
 
 [node name="npc" type="Area2D" parent="." unique_id=481346254]
+metadata/_edit_lock_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="npc" unique_id=1306339384]
-position = Vector2(440.375, 333.5)
+position = Vector2(480, 336)
 shape = SubResource("RectangleShape2D_pytw5")
+metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="npc" unique_id=420005664]
+[node name="press_f" type="Panel" parent="npc" unique_id=124301452]
 visible = false
-offset_left = 399.0
-offset_top = 292.0
-offset_right = 483.0
-offset_bottom = 315.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "[PRESS \"F\"]"
+offset_left = 435.0
+offset_top = 289.0
+offset_right = 519.0
+offset_bottom = 308.0
+metadata/_edit_lock_ = true
 
-[connection signal="body_entered" from="tp to room 0_1" to="." method="_on_tp_to_room_0_1_body_entered"]
+[node name="Label" type="Label" parent="npc/press_f" unique_id=420005664]
+layout_mode = 0
+offset_top = -4.0
+offset_right = 84.0
+offset_bottom = 19.0
+text = "[PRESS \"F\"]"
+metadata/_edit_lock_ = true
+
+[node name="options" type="Panel" parent="npc" unique_id=871385163]
+visible = false
+offset_left = 407.0
+offset_top = 278.0
+offset_right = 561.0
+offset_bottom = 317.0
+
+[node name="Label" type="Label" parent="npc/options" unique_id=1703025486]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -1.0
+offset_right = 136.0
+offset_bottom = 22.0
+text = "1. Selling potions"
+
+[node name="Label2" type="Label" parent="npc/options" unique_id=1291856456]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 14.0
+offset_right = 149.0
+offset_bottom = 37.0
+text = "2. Brewing potions"
+
+[connection signal="body_entered" from="tp to room 1" to="." method="_on_tp_to_room_1_body_entered"]
+[connection signal="body_exited" from="tp to room 1" to="." method="_on_tp_to_room_1_body_exited"]
 [connection signal="body_entered" from="npc" to="." method="_on_npc_body_entered"]
 [connection signal="body_exited" from="npc" to="." method="_on_npc_body_exited"]
