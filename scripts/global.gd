@@ -31,3 +31,15 @@ func open_inventory() -> void:
 #inventory JSON system
 #player status global/local
 #level system for unlocking new equipment and seeds
+
+# player starting money
+var money: int = 1000
+signal money_changed(new_amount)
+
+func subtract_money(amount: int) -> bool:
+	if money >= amount:
+		money -= amount
+		money_changed.emit(money) 
+		return true
+	else:
+		return false
