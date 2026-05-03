@@ -86,6 +86,7 @@ metadata/_edit_lock_ = true
 [node name="door" type="CollisionShape2D" parent="tp to room 1" unique_id=1044449736]
 position = Vector2(479.25, 580)
 shape = SubResource("RectangleShape2D_5ql8f")
+metadata/_edit_lock_ = true
 
 [node name="Panel" type="Panel" parent="tp to room 1" unique_id=1793712161]
 visible = false
@@ -93,6 +94,7 @@ offset_left = 451.0
 offset_top = 543.0
 offset_right = 537.0
 offset_bottom = 561.0
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="tp to room 1/Panel" unique_id=655514964]
 layout_mode = 0
@@ -236,6 +238,7 @@ offset_left = 407.0
 offset_top = 278.0
 offset_right = 561.0
 offset_bottom = 317.0
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="npc/options" unique_id=1703025486]
 layout_mode = 0
@@ -244,6 +247,7 @@ offset_top = -1.0
 offset_right = 136.0
 offset_bottom = 22.0
 text = "1. Selling potions"
+metadata/_edit_lock_ = true
 
 [node name="Label2" type="Label" parent="npc/options" unique_id=1291856456]
 layout_mode = 0
@@ -252,6 +256,7 @@ offset_top = 14.0
 offset_right = 149.0
 offset_bottom = 37.0
 text = "2. Brewing potions"
+metadata/_edit_lock_ = true
 
 [connection signal="body_entered" from="tp to room 1" to="." method="_on_tp_to_room_1_body_entered"]
 [connection signal="body_exited" from="tp to room 1" to="." method="_on_tp_to_room_1_body_exited"]
