@@ -2,7 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cx8ar81qefsfa" path="res://Assets/room 1 (outside)/Room3.png" id="1_2otyv"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="1_31r0r"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="2_cdn6i"]
 [ext_resource type="Texture2D" uid="uid://cmnffj1d1t2s4" path="res://Assets/room 1 (outside)/Room0.1(House).png" id="2_j6sld"]
+[ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/label.gd" id="2_jee7h"]
 [ext_resource type="Texture2D" uid="uid://doplhhvs8b0m8" path="res://Assets/room 1 (outside)/Room3(House punya something).png" id="2_p6f22"]
 [ext_resource type="Texture2D" uid="uid://b1ojfi80oa7cw" path="res://Assets/room 1 (outside)/Room0.1(House punya something).png" id="4_h00nm"]
 [ext_resource type="Texture2D" uid="uid://jf87jlrtc66o" path="res://Assets/room 1 (outside)/Room0.1(House punya it apa).png" id="5_1j48i"]
@@ -14,8 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://b6qn58emsovy" path="res://Assets/room 1 (outside)/Fence(right).png" id="11_brp25"]
 [ext_resource type="Texture2D" uid="uid://kox2amvblksg" path="res://Assets/room 1 (outside)/Fence(Straight left).png" id="12_jee7h"]
 [ext_resource type="Texture2D" uid="uid://bpe606dutxyfy" path="res://Assets/room 1 (outside)/Floor0.png" id="14_gdwmo"]
-[ext_resource type="PackedScene" uid="uid://eb5lofaaep2x" path="res://rooms/Grass_Environment.tscn" id="15_brp25"]
 [ext_resource type="Texture2D" uid="uid://br60pgwohjlb8" path="res://Assets/room 1 (outside)/Marketplace punya something.png" id="16_jee7h"]
+[ext_resource type="AudioStream" uid="uid://v4305gwyfv68" path="res://Sound/Phua/Aisake, Dosi - Cruising [NCS Release].mp3" id="18_p1q16"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31r0r"]
 size = Vector2(147.75, 17)
@@ -70,14 +72,23 @@ size = Vector2(249, 2)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jee7h"]
 size = Vector2(54.5, 21)
 
-[node name="Room2" type="Node2D" unique_id=1710378233]
+[node name="Room1" type="Node2D" unique_id=1710378233]
 y_sort_enabled = true
-position = Vector2(-25, 0)
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_31r0r")]
 position = Vector2(-575, -317)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=478089098]
+
+[node name="Label" type="Label" parent="player" unique_id=903280883]
+z_index = 1
+offset_left = 452.0
+offset_top = -311.0
+offset_right = 582.0
+offset_bottom = -250.0
+theme_override_fonts/font = ExtResource("2_cdn6i")
+horizontal_alignment = 1
+script = ExtResource("2_jee7h")
 
 [node name="Farm" type="Sprite2D" parent="." unique_id=1231734030]
 position = Vector2(-1011, -538)
@@ -1286,48 +1297,10 @@ z_index = -1
 texture_filter = 2
 position = Vector2(-1159, -455)
 texture = ExtResource("14_gdwmo")
-metadata/_edit_lock_ = true
 
-[node name="GrassEnvironment2" parent="." unique_id=706492716 instance=ExtResource("15_brp25")]
-position = Vector2(4863.0005, -41.999992)
-scale = Vector2(5, 5)
-
-[node name="GrassEnvironment" parent="." unique_id=2133624735 instance=ExtResource("15_brp25")]
-position = Vector2(-2242, -118.999985)
-scale = Vector2(5, 5)
-
-[node name="GrassEnvironment3" parent="." unique_id=574890453 instance=ExtResource("15_brp25")]
-position = Vector2(-9325, -223.99998)
-scale = Vector2(5, 5)
-
-[node name="GrassEnvironment4" parent="." unique_id=73358345 instance=ExtResource("15_brp25")]
-position = Vector2(-7001, -2400)
-scale = Vector2(5, 5)
-
-[node name="GrassEnvironment5" parent="." unique_id=1154636802 instance=ExtResource("15_brp25")]
-z_index = -1
-position = Vector2(976, -2203)
-scale = Vector2(5, 5)
-
-[node name="GrassEnvironment6" parent="." unique_id=1080719647 instance=ExtResource("15_brp25")]
-position = Vector2(-5840, -2898)
-scale = Vector2(5, 5)
-
-[node name="GrassEnvironment7" parent="." unique_id=836123220 instance=ExtResource("15_brp25")]
-position = Vector2(-6786.0005, 2090)
-scale = Vector2(5, 5)
-
-[node name="GrassEnvironment8" parent="." unique_id=1401133837 instance=ExtResource("15_brp25")]
-position = Vector2(369.0005, 2200)
-scale = Vector2(5, 5)
-
-[node name="GrassEnvironment9" parent="." unique_id=61061055 instance=ExtResource("15_brp25")]
-position = Vector2(8139.0005, -2294.0002)
-scale = Vector2(5, 5)
-
-[node name="GrassEnvironment10" parent="." unique_id=1339785221 instance=ExtResource("15_brp25")]
-position = Vector2(7502, 2293.0002)
-scale = Vector2(5, 5)
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=571570992]
+stream = ExtResource("18_p1q16")
+autoplay = true
 
 [connection signal="body_entered" from="Farm/Farm Door" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Farm/Farm Door" to="Farm/Farm Door" method="_on_body_entered"]

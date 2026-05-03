@@ -44,7 +44,7 @@ flat = true
 alignment = 0
 icon_alignment = 1
 
-[node name="Button" type="Button" parent="Button" unique_id=338865722]
+[node name="Credits" type="Button" parent="Button" unique_id=338865722]
 z_index = 2
 texture_filter = 2
 custom_minimum_size = Vector2(94, 56)
@@ -171,6 +171,7 @@ position = Vector2(437.99997, 93)
 scale = Vector2(0.42372265, 0.4244792)
 texture = ExtResource("5_iv03q")
 
+[connection signal="pressed" from="Button/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Button/Continue" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Button/New Game" to="." method="_on_start_pressed"]

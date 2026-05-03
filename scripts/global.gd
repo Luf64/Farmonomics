@@ -35,9 +35,6 @@ func _input(event: InputEvent) -> void:
 func open_inventory() -> void:
 	inventory_ui.visible = !inventory_ui.visible
 
-#Time
-
-#calendar
 #inventory JSON system
 #player status global/local
 #level system for unlocking new equipment and seeds
