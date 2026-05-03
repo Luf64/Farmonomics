@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://csdvgmyume013" path="res://scripts/room_0.gd" id="1_oa8wf"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="3_c68s2"]
-[ext_resource type="AudioStream" uid="uid://bve2jgjox778n" path="res://Sound/delosound-meditation-relaxing-music-466470.mp3" id="4_853v1"]
+[ext_resource type="AudioStream" uid="uid://bve2jgjox778n" path="res://Sound/Phua/delosound-meditation-relaxing-music-466470.mp3" id="4_853v1"]
 [ext_resource type="Texture2D" uid="uid://rwl1615hcbs" path="res://Assets/Main Menu1.png" id="4_c68s2"]
 [ext_resource type="Texture2D" uid="uid://bjo3mudwnc3cr" path="res://Assets/Sky.png" id="5_iv03q"]
 
@@ -43,23 +43,6 @@ text = "Farmonomics"
 flat = true
 alignment = 0
 icon_alignment = 1
-
-[node name="Credits" type="Button" parent="Button" unique_id=338865722]
-z_index = 2
-texture_filter = 2
-custom_minimum_size = Vector2(94, 56)
-layout_direction = 2
-layout_mode = 0
-offset_left = -129.0
-offset_top = 185.0
-offset_right = -35.0
-offset_bottom = 241.0
-scale = Vector2(1.1, 1.1)
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_fonts/font = ExtResource("3_c68s2")
-text = "Credits"
-flat = true
-alignment = 0
 
 [node name="Continue" type="Button" parent="Button" unique_id=601426618]
 z_index = 2
@@ -137,6 +120,23 @@ text = "Quit Game"
 flat = true
 alignment = 0
 
+[node name="Credits" type="Button" parent="Button" unique_id=338865722]
+z_index = 2
+texture_filter = 2
+custom_minimum_size = Vector2(94, 56)
+layout_direction = 2
+layout_mode = 0
+offset_left = -129.0
+offset_top = 185.0
+offset_right = -35.0
+offset_bottom = 241.0
+scale = Vector2(1.1, 1.1)
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = ExtResource("3_c68s2")
+text = "Credits"
+flat = true
+alignment = 0
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1001714645]
 stream = ExtResource("4_853v1")
 autoplay = true
@@ -171,7 +171,6 @@ position = Vector2(437.99997, 93)
 scale = Vector2(0.42372265, 0.4244792)
 texture = ExtResource("5_iv03q")
 
-[connection signal="pressed" from="Button/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="Button/Continue" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Button/New Game" to="." method="_on_start_pressed"]
@@ -179,3 +178,4 @@ texture = ExtResource("5_iv03q")
 [connection signal="pressed" from="Button/Settings" to="." method="_on_settings_pressed"]
 [connection signal="pressed" from="Button/Quit Game" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Button/Quit Game" to="." method="_on_quit_game_pressed"]
+[connection signal="pressed" from="Button/Credits" to="." method="_on_credits_pressed"]
