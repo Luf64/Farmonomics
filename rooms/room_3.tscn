@@ -214,20 +214,44 @@ position = Vector2(480, 336)
 shape = SubResource("RectangleShape2D_pytw5")
 metadata/_edit_lock_ = true
 
-[node name="Panel" type="Panel" parent="npc" unique_id=124301452]
+[node name="press_f" type="Panel" parent="npc" unique_id=124301452]
+visible = false
 offset_left = 435.0
 offset_top = 289.0
 offset_right = 519.0
 offset_bottom = 308.0
 metadata/_edit_lock_ = true
 
-[node name="Label" type="Label" parent="npc/Panel" unique_id=420005664]
+[node name="Label" type="Label" parent="npc/press_f" unique_id=420005664]
 layout_mode = 0
 offset_top = -4.0
 offset_right = 84.0
 offset_bottom = 19.0
 text = "[PRESS \"F\"]"
 metadata/_edit_lock_ = true
+
+[node name="options" type="Panel" parent="npc" unique_id=871385163]
+visible = false
+offset_left = 407.0
+offset_top = 278.0
+offset_right = 561.0
+offset_bottom = 317.0
+
+[node name="Label" type="Label" parent="npc/options" unique_id=1703025486]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -1.0
+offset_right = 136.0
+offset_bottom = 22.0
+text = "1. Selling potions"
+
+[node name="Label2" type="Label" parent="npc/options" unique_id=1291856456]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 14.0
+offset_right = 149.0
+offset_bottom = 37.0
+text = "2. Brewing potions"
 
 [connection signal="body_entered" from="tp to room 1" to="." method="_on_tp_to_room_1_body_entered"]
 [connection signal="body_exited" from="tp to room 1" to="." method="_on_tp_to_room_1_body_exited"]
