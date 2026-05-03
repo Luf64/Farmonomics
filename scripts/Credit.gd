@@ -31,8 +31,8 @@ Watch: http://ncs.lnk.to/FAVELAAT/youtube
 '''
 
 func _ready() -> void:
-	text = x
+    text = x
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://rooms/room_0.tscn")
+    get_tree().change_scene_to_file("res://rooms/room_0.tscn")
