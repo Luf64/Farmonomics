@@ -1,7 +1,7 @@
 extends Node
 
 # player money
-var money = 100.0
+var money = 1000.0
 
 # player bag
 var inventory = {

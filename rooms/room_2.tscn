@@ -12,7 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://bckshp6hgup2g" path="res://Assets/Pic/coin 7.png" id="8_cnnmw"]
 [ext_resource type="Texture2D" uid="uid://b2x33g31iu08l" path="res://Assets/Pic/coin 1.png" id="9_8kwhi"]
 [ext_resource type="Texture2D" uid="uid://dtlcdk31mjtyx" path="res://Assets/Pic/Room2.jpg" id="10_vsfs3"]
+[ext_resource type="Texture2D" uid="uid://banymrew4033d" path="res://Assets/Pic/middle.jpg" id="12_h87l2"]
 [ext_resource type="AudioStream" uid="uid://c3uopj1vfa7km" path="res://Sound/pop.mp3" id="12_vsfs3"]
+[ext_resource type="Texture2D" uid="uid://bvj8eog5vg7pg" path="res://Assets/Pic/shelf 2.png" id="13_cnnmw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hkprr"]
 animations = [{
@@ -112,6 +114,18 @@ position = Vector2(-2.7499952, -1.1250232)
 scale = Vector2(1.5658967, 1.1555258)
 texture = ExtResource("10_vsfs3")
 metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1367506016]
+y_sort_enabled = true
+position = Vector2(-24.250008, 124.124985)
+scale = Vector2(1.5312499, 1.1514777)
+texture = ExtResource("12_h87l2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=693165869]
+y_sort_enabled = true
+position = Vector2(283.25, 56)
+scale = Vector2(1.5661157, 1.25)
+texture = ExtResource("13_cnnmw")
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("4_13qvk")]
 position = Vector2(-284, 163)
@@ -232,10 +246,12 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1828575354]
 
 [node name="money" type="Label" parent="CanvasLayer" unique_id=2001268008]
-offset_left = -510.0
-offset_top = -280.0
-offset_right = -470.0
-offset_bottom = -257.0
+offset_left = -512.0
+offset_top = -295.0
+offset_right = -450.0
+offset_bottom = -245.0
+theme_override_font_sizes/font_size = 36
+text = "100"
 
 [connection signal="body_entered" from="tp" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Shop_UI" to="." method="_on_shop_ui_body_entered"]
