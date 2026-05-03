@@ -1,7 +1,8 @@
 [gd_scene format=4 uid="uid://botut34asfv6a"]
 
-[ext_resource type="Script" uid="uid://db887g3uhckwc" path="res://scripts/coin.gd" id="1_bylct"]
-[ext_resource type="Script" uid="uid://bnkb4lclgevyf" path="res://scripts/room_2.gd" id="1_vkoc7"]
+[ext_resource type="Script" uid="uid://bh7n8u0eyjqga" path="res://scripts/coin.gd" id="1_bylct"]
+[ext_resource type="Script" uid="uid://26iucmewvot6" path="res://scripts/room_2.gd" id="1_vkoc7"]
+[ext_resource type="PackedScene" uid="uid://clvgdljqnc4g4" path="res://rooms/shop_ui.tscn" id="2_kq7a6"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="4_13qvk"]
 [ext_resource type="Texture2D" uid="uid://bwwdwv8o6k0ps" path="res://Assets/Pic/coin 3.png" id="4_vkoc7"]
 [ext_resource type="Texture2D" uid="uid://boqqag743dwlf" path="res://Assets/Pic/coin 2.png" id="4_xxshv"]
@@ -11,7 +12,9 @@
 [ext_resource type="Texture2D" uid="uid://bckshp6hgup2g" path="res://Assets/Pic/coin 7.png" id="8_cnnmw"]
 [ext_resource type="Texture2D" uid="uid://b2x33g31iu08l" path="res://Assets/Pic/coin 1.png" id="9_8kwhi"]
 [ext_resource type="Texture2D" uid="uid://dtlcdk31mjtyx" path="res://Assets/Pic/Room2.jpg" id="10_vsfs3"]
+[ext_resource type="Texture2D" uid="uid://banymrew4033d" path="res://Assets/Pic/middle.jpg" id="12_h87l2"]
 [ext_resource type="AudioStream" uid="uid://c3uopj1vfa7km" path="res://Sound/pop.mp3" id="12_vsfs3"]
+[ext_resource type="Texture2D" uid="uid://bvj8eog5vg7pg" path="res://Assets/Pic/shelf 2.png" id="13_cnnmw"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hkprr"]
 animations = [{
@@ -91,9 +94,7 @@ loop = true
 
 [node name="Room2_tscn" type="Node2D" unique_id=1482026099]
 script = ExtResource("1_vkoc7")
-
-[node name="from room2" type="Marker2D" parent="." unique_id=1433002976]
-position = Vector2(-198, 289)
+shop_scene = ExtResource("2_kq7a6")
 
 [node name="Coin" type="Area2D" parent="." unique_id=801308102]
 script = ExtResource("1_bylct")
@@ -113,6 +114,18 @@ position = Vector2(-2.7499952, -1.1250232)
 scale = Vector2(1.5658967, 1.1555258)
 texture = ExtResource("10_vsfs3")
 metadata/_edit_lock_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1367506016]
+y_sort_enabled = true
+position = Vector2(-24.250008, 124.124985)
+scale = Vector2(1.5312499, 1.1514777)
+texture = ExtResource("12_h87l2")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=693165869]
+y_sort_enabled = true
+position = Vector2(283.25, 56)
+scale = Vector2(1.5661157, 1.25)
+texture = ExtResource("13_cnnmw")
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("4_13qvk")]
 position = Vector2(-284, 163)
@@ -217,6 +230,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "[PRESS \"F\"]"
 
 [node name="ShopMenu" type="Control" parent="Shop_UI" unique_id=1153984570]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -228,6 +242,16 @@ stream = ExtResource("12_vsfs3")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=422759732]
 stream = SubResource("AudioStreamMP3_vsfs3")
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1828575354]
+
+[node name="money" type="Label" parent="CanvasLayer" unique_id=2001268008]
+offset_left = -512.0
+offset_top = -295.0
+offset_right = -450.0
+offset_bottom = -245.0
+theme_override_font_sizes/font_size = 36
+text = "100"
 
 [connection signal="body_entered" from="tp" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Shop_UI" to="." method="_on_shop_ui_body_entered"]
