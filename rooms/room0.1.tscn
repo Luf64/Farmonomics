@@ -108,7 +108,7 @@ y_sort_enabled = true
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_566fy")]
 z_index = 5
-position = Vector2(583, 317)
+position = Vector2(584, 296)
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1290921535]
 position = Vector2(-5, 1)

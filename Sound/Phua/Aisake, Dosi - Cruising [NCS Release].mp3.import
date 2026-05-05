@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://v4305gwyfv68"
+path="res://.godot/imported/Aisake, Dosi - Cruising [NCS Release].mp3-45d3869fc9b6d0720d9e33811cae9ad6.mp3str"
+
+[deps]
+
+source_file="res://Sound/Phua/Aisake, Dosi - Cruising [NCS Release].mp3"
+dest_files=["res://.godot/imported/Aisake, Dosi - Cruising [NCS Release].mp3-45d3869fc9b6d0720d9e33811cae9ad6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

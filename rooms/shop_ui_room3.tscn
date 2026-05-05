@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://doppr5lxqvnec"]
 
-[ext_resource type="Script" uid="uid://bbcjw82kx3rhq" path="res://scripts/shop_ui_room3.gd" id="1_dswbr"]
+[ext_resource type="Script" uid="uid://oth83u2kv5pd" path="res://scripts/shop_ui_room3.gd" id="1_dswbr"]
 [ext_resource type="PackedScene" uid="uid://tgrxpaqlgev2" path="res://rooms/inventory.tscn" id="2_a7tyx"]
 [ext_resource type="Texture2D" uid="uid://dwkt1olh3ap5l" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Shop ui(room 3).png" id="3_lh5xg"]
 
