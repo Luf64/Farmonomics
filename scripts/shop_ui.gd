@@ -3,10 +3,21 @@ extends CanvasLayer
 
 @onready var coin_label = $Coin/Label 
 
+
 var player_coins = 100 # Start money
 
 func _ready():
     update_ui()
+
+func _input(event):
+    if event.is_action_pressed("ui_cancel"):
+        close_shop()
+
+func close_shop():
+    get_tree().paused = false
+    Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+    queue_free()
+    
 
 func _on_tomato_button_pressed():
     var price = 10
@@ -44,4 +55,28 @@ func add_to_inventory(item_name):
     print("Buy sussesfully: ", item_name)
 
 func _on_button_pressed() -> void:
+    pass # Replace with function body.
+    
+func _on_up_button_pressed():
+    $VSlider.value -= 1 
+
+func _on_down_button_pressed():
+    $VSlider.value += 1
+
+func _on_button_2_pressed() -> void:
+    pass # Replace with function body.
+
+
+var scroll_speed = 20 
+
+
+func _on_v_box_container_mouse_entered() -> void:
+    pass # Replace with function body.
+    
+
+
+func _on_texture_button_pressed() -> void:
+    get_tree().paused = false
+    Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+    queue_free()
     pass # Replace with function body.

@@ -15,7 +15,7 @@ var room = {
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    var inventory_room = load(Global.Inventory)
+    var inventory_room = load(Inventory)
     inventory_ui = inventory_room.instantiate()
     get_tree().root.call_deferred("add_child", inventory_ui)
     inventory_ui.visible = false
@@ -38,3 +38,15 @@ func open_inventory() -> void:
 #inventory JSON system
 #player status global/local
 #level system for unlocking new equipment and seeds
+
+# player starting money
+var money: int = 1000
+signal money_changed(new_amount)
+
+func subtract_money(amount: int) -> bool:
+    if money >= amount:
+        money -= amount
+        money_changed.emit(money) 
+        return true
+    else:
+        return false

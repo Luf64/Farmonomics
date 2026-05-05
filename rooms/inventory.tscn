@@ -32,5 +32,6 @@ offset_left = 827.0
 offset_top = 11.0
 offset_right = 885.0
 offset_bottom = 69.0
+ignore_texture_size = true
 
 [connection signal="pressed" from="Control/TextureButton" to="." method="_on_texture_button_pressed"]
