@@ -11,7 +11,7 @@ func _process(delta: float) -> void:
 	pass
 
 
-func _on_texture_button_pressed() -> void:
+func _on_close_pressed() -> void:
 	var room = get_parent()
 	room.selling_ui_open = false
 	room.selling_ui = null
