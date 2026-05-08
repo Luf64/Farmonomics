@@ -10,8 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://cwccb7vuu2oes" path="res://Assets/item/Chocolate/chocolate(EVO1).png" id="7_qh5ub"]
 [ext_resource type="Texture2D" uid="uid://bh21xjhj1pxma" path="res://Assets/item/Chocolate/chocolate(EVO2).png" id="8_566fy"]
 [ext_resource type="Texture2D" uid="uid://dpa5dje7lcfal" path="res://Assets/item/Chocolate/chocolate(EVO3).png" id="9_v2k8o"]
-[ext_resource type="Texture2D" uid="uid://b1wtil8sywwvu" path="res://Assets/room 1 (outside)/Gate.png" id="11_cejrt"]
-[ext_resource type="Script" uid="uid://dg8vqoor6tf3" path="res://scripts/Gate.gd" id="12_cejrt"]
+[ext_resource type="Script" uid="uid://dg8vqoor6tf3" path="res://scripts/Room0.1.gd" id="12_cejrt"]
+[ext_resource type="Texture2D" uid="uid://npswufwrq7hb" path="res://Assets/room 1 (outside)/DoorRoom0.1.png" id="13_6hkjl"]
+[ext_resource type="Texture2D" uid="uid://dvqc3hmdfviq1" path="res://Assets/room 1 (outside)/Room0.1.png" id="13_wcj83"]
+[ext_resource type="Texture2D" uid="uid://c0j4esm26con8" path="res://Assets/room 1 (outside)/PlantRoom0.1.png" id="14_6hkjl"]
+[ext_resource type="Texture2D" uid="uid://dad3f0lvwe5pc" path="res://Assets/room 1 (outside)/PlantRoom0.2.png" id="15_2blpw"]
+[ext_resource type="Texture2D" uid="uid://rsogvpor41eh" path="res://Assets/room 1 (outside)/PlantRoom0.3.png" id="16_tsncp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
 atlas = ExtResource("1_j80mx")
@@ -101,34 +105,84 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2k8o"]
-size = Vector2(74, 13)
+size = Vector2(2, 48)
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tsncp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cejrt"]
+size = Vector2(721, 17.375)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_wcj83"]
+a = Vector2(258, 112)
+b = Vector2(124, 219)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6hkjl"]
+a = Vector2(71, 307)
+b = Vector2(70, 236)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2blpw"]
+a = Vector2(987, 89)
+b = Vector2(1109, 210)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tsncp"]
+a = Vector2(610, 111)
+b = Vector2(612, 420)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_o6dsg"]
+a = Vector2(641, 71)
+b = Vector2(-298, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sgmoi"]
+size = Vector2(49, 156)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wcj83"]
+size = Vector2(56, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsncp"]
+size = Vector2(250, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o6dsg"]
+size = Vector2(289.5, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ux4u"]
+size = Vector2(244, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wffey"]
+size = Vector2(283.5, 38.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b60ft"]
+size = Vector2(65, 49)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7cmb6"]
+size = Vector2(89, 67)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ve1p"]
+size = Vector2(45, 8)
 
 [node name="Room0_0_1" type="Node2D" unique_id=512447265]
 y_sort_enabled = true
 
-[node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_566fy")]
-z_index = 5
-position = Vector2(584, 296)
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1290921535]
+position = Vector2(577, 300)
 
-[node name="Camera2D" type="Camera2D" parent="player" unique_id=1290921535]
-position = Vector2(-5, 1)
+[node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_566fy")]
+position = Vector2(154, 355)
 
 [node name="Milk" type="AnimatedSprite2D" parent="." unique_id=1319164495]
 z_index = 1
 y_sort_enabled = true
 texture_filter = 2
-position = Vector2(1100, 53)
+position = Vector2(1355, 55)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_cejrt")
 animation = &"Milk"
 autoplay = "Milk"
-frame_progress = 0.31945312
 
 [node name="Corn" type="AnimatedSprite2D" parent="." unique_id=1404408628]
 z_index = 1
 y_sort_enabled = true
 texture_filter = 1
-position = Vector2(1101, 153)
+position = Vector2(1349, 137)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_qh5ub")
 animation = &"Corn"
@@ -137,21 +191,112 @@ autoplay = "Corn"
 [node name="Chocolate" type="AnimatedSprite2D" parent="." unique_id=987635788]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(1106, 251)
+position = Vector2(1356, 218)
 sprite_frames = SubResource("SpriteFrames_j80mx")
 animation = &"Chocolate"
 autoplay = "Chocolate"
 
-[node name="Gate" type="Sprite2D" parent="." unique_id=21269893]
-y_sort_enabled = true
-position = Vector2(581, 385)
-texture = ExtResource("11_cejrt")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1929794701]
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1183531205]
+[node name="Gate" type="Area2D" parent="." unique_id=1183531205]
 script = ExtResource("12_cejrt")
 
-[node name="Gate" type="CollisionShape2D" parent="Area2D" unique_id=1637822691]
-position = Vector2(581, 393)
+[node name="Gate" type="CollisionShape2D" parent="Gate" unique_id=1637822691]
+position = Vector2(102, 360)
 shape = SubResource("RectangleShape2D_v2k8o")
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1974237301]
+physics_material_override = SubResource("PhysicsMaterial_tsncp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=589558237]
+position = Vector2(623, 109)
+shape = SubResource("RectangleShape2D_cejrt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=810528992]
+position = Vector2(3, 1)
+shape = SubResource("SegmentShape2D_wcj83")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=638258049]
+position = Vector2(51, -3)
+shape = SubResource("SegmentShape2D_6hkjl")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1772084053]
+position = Vector2(0, 31)
+shape = SubResource("SegmentShape2D_2blpw")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=972688831]
+position = Vector2(486, 145)
+shape = SubResource("SegmentShape2D_tsncp")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=48849241]
+position = Vector2(454, 494)
+shape = SubResource("SegmentShape2D_o6dsg")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=659528527]
+position = Vector2(131.5, 476)
+shape = SubResource("RectangleShape2D_sgmoi")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=771232835]
+position = Vector2(130, 308.5)
+shape = SubResource("RectangleShape2D_wcj83")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=430181813]
+position = Vector2(445, 219)
+shape = SubResource("RectangleShape2D_tsncp")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=1483791827]
+position = Vector2(834.25, 219)
+shape = SubResource("RectangleShape2D_o6dsg")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=1765496149]
+position = Vector2(447, 426)
+shape = SubResource("RectangleShape2D_2ux4u")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=887973578]
+position = Vector2(837.25, 427.875)
+shape = SubResource("RectangleShape2D_wffey")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" unique_id=2045739391]
+position = Vector2(176.5, 218.5)
+shape = SubResource("RectangleShape2D_b60ft")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" unique_id=135610082]
+position = Vector2(241.5, 139.5)
+shape = SubResource("RectangleShape2D_7cmb6")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D" unique_id=915029085]
+position = Vector2(628, 334)
+shape = SubResource("RectangleShape2D_8ve1p")
+
+[node name="Room0_1" type="Sprite2D" parent="." unique_id=334228717]
+z_index = -1
+position = Vector2(576.5, 299.5)
+scale = Vector2(0.8174716, 0.84505206)
+texture = ExtResource("13_wcj83")
+metadata/_edit_lock_ = true
+
+[node name="DoorRoom0_1" type="Sprite2D" parent="." unique_id=1875061979]
+y_sort_enabled = true
+position = Vector2(138, 277)
+scale = Vector2(0.8181817, 0.8546098)
+texture = ExtResource("13_6hkjl")
+
+[node name="PlantRoom0_1" type="Sprite2D" parent="." unique_id=1031291005]
+y_sort_enabled = true
+position = Vector2(644.5, 225.34767)
+scale = Vector2(0.8177515, 0.8584377)
+texture = ExtResource("14_6hkjl")
+
+[node name="PlantRoom0_2" type="Sprite2D" parent="." unique_id=1937813929]
+y_sort_enabled = true
+position = Vector2(645.5, 431)
+scale = Vector2(0.81644815, 0.835821)
+texture = ExtResource("15_2blpw")
+
+[node name="PlantRoom0_3" type="Sprite2D" parent="." unique_id=179128934]
+y_sort_enabled = true
+position = Vector2(630, 338.375)
+scale = Vector2(0.8318585, 0.84424096)
+texture = ExtResource("16_tsncp")
+
+[connection signal="body_entered" from="Gate" to="Gate" method="_on_body_entered"]
