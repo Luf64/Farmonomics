@@ -2,6 +2,27 @@
 
 [ext_resource type="Script" uid="uid://datjtjorby1nm" path="res://scripts/crafting_ui.gd" id="1_ntsyr"]
 [ext_resource type="Texture2D" uid="uid://dj6xjmrswr80" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Craft(crafting only).png" id="1_xh8vp"]
+[ext_resource type="Texture2D" uid="uid://bw730wtsmr303" path="res://Assets/room 4 (brewing room with selling it)/flowers/pixel-art-flowers-plants-collection-260nw-2597596201-ezgif.com-webp-to-png-converter.png" id="3_uffvs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6hpp"]
+atlas = ExtResource("3_uffvs")
+region = Rect2(0, 0, 80, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xhjsy"]
+atlas = ExtResource("3_uffvs")
+region = Rect2(80, 0, 80, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgfub"]
+atlas = ExtResource("3_uffvs")
+region = Rect2(160, 0, 80, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6p50"]
+atlas = ExtResource("3_uffvs")
+region = Rect2(240, 0, 75, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5nu3"]
+atlas = ExtResource("3_uffvs")
+region = Rect2(310, 0, 80, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=915512477]
 script = ExtResource("1_ntsyr")
@@ -12,7 +33,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="TextureRect" type="TextureRect" parent="Control" unique_id=397541996]
+[node name="background" type="TextureRect" parent="Control" unique_id=397541996]
 layout_mode = 0
 offset_left = 31.999996
 offset_top = 3.000002
@@ -22,11 +43,162 @@ scale = Vector2(5.5, 5.5)
 texture = ExtResource("1_xh8vp")
 metadata/_edit_lock_ = true
 
-[node name="TextureButton" type="TextureButton" parent="Control" unique_id=1519087964]
+[node name="close" type="TextureButton" parent="Control" unique_id=1519087964]
 layout_mode = 0
 offset_left = 686.0
 offset_top = 21.0
 offset_right = 736.0
 offset_bottom = 71.0
 
-[connection signal="pressed" from="Control/TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="inventory GridContainer" type="GridContainer" parent="Control" unique_id=314853896]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 184.0
+offset_right = 120.86667
+offset_bottom = 241.20001
+scale = Vector2(7.5, 7.5)
+columns = 3
+
+[node name="Panel" type="Panel" parent="Control/inventory GridContainer" unique_id=942757981]
+layout_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="Control/inventory GridContainer/Panel" unique_id=2026280264]
+layout_mode = 0
+offset_left = 1.5999999
+offset_top = -0.13333365
+offset_right = 81.6
+offset_bottom = 115.86667
+scale = Vector2(0.09, 0.09)
+texture_normal = SubResource("AtlasTexture_k6hpp")
+
+[node name="Panel2" type="Panel" parent="Control/inventory GridContainer" unique_id=1262329406]
+layout_mode = 2
+
+[node name="TextureButton2" type="TextureButton" parent="Control/inventory GridContainer/Panel2" unique_id=830168976]
+layout_mode = 0
+offset_left = 9.733334
+offset_top = -0.13333334
+offset_right = 89.73334
+offset_bottom = 115.86667
+scale = Vector2(0.09, 0.09)
+texture_normal = SubResource("AtlasTexture_xhjsy")
+
+[node name="Panel3" type="Panel" parent="Control/inventory GridContainer" unique_id=1399278967]
+layout_mode = 2
+
+[node name="TextureButton3" type="TextureButton" parent="Control/inventory GridContainer/Panel3" unique_id=629142311]
+layout_mode = 0
+offset_left = 16.933334
+offset_top = -0.2666664
+offset_right = 96.933334
+offset_bottom = 115.73334
+scale = Vector2(0.09, 0.09)
+texture_normal = SubResource("AtlasTexture_qgfub")
+
+[node name="Panel4" type="Panel" parent="Control/inventory GridContainer" unique_id=426303911]
+layout_mode = 2
+
+[node name="TextureButton4" type="TextureButton" parent="Control/inventory GridContainer/Panel4" unique_id=1318687437]
+layout_mode = 0
+offset_left = 2.2666664
+offset_top = 7.7333336
+offset_right = 82.26666
+offset_bottom = 123.73334
+scale = Vector2(0.09, 0.09)
+texture_normal = SubResource("AtlasTexture_o6p50")
+
+[node name="Panel5" type="Panel" parent="Control/inventory GridContainer" unique_id=1647011100]
+layout_mode = 2
+
+[node name="TextureButton5" type="TextureButton" parent="Control/inventory GridContainer/Panel5" unique_id=1739943193]
+layout_mode = 0
+offset_left = 9.333334
+offset_top = 7.6000004
+offset_right = 89.333336
+offset_bottom = 123.6
+scale = Vector2(0.09, 0.09)
+texture_normal = SubResource("AtlasTexture_r5nu3")
+
+[node name="TextureButton6" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1957023012]
+layout_mode = 2
+
+[node name="TextureButton7" type="TextureButton" parent="Control/inventory GridContainer" unique_id=781143482]
+layout_mode = 2
+
+[node name="TextureButton8" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1228939165]
+layout_mode = 2
+
+[node name="TextureButton9" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1852541933]
+layout_mode = 2
+
+[node name="TextureButton10" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1728153090]
+layout_mode = 2
+
+[node name="TextureButton11" type="TextureButton" parent="Control/inventory GridContainer" unique_id=392436251]
+layout_mode = 2
+
+[node name="TextureButton12" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1171683799]
+layout_mode = 2
+
+[node name="TextureButton13" type="TextureButton" parent="Control/inventory GridContainer" unique_id=271395470]
+layout_mode = 2
+
+[node name="TextureButton14" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1045684951]
+layout_mode = 2
+
+[node name="TextureButton15" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1290887952]
+layout_mode = 2
+
+[node name="crafting GridContainer" type="GridContainer" parent="Control" unique_id=681755418]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Panel" type="Panel" parent="Control/crafting GridContainer" unique_id=1612958447]
+layout_mode = 2
+
+[node name="Panel2" type="Panel" parent="Control/crafting GridContainer" unique_id=852583393]
+layout_mode = 2
+
+[node name="Panel3" type="Panel" parent="Control/crafting GridContainer" unique_id=253071864]
+layout_mode = 2
+
+[node name="Panel4" type="Panel" parent="Control/crafting GridContainer" unique_id=1902281481]
+layout_mode = 2
+
+[node name="Panel5" type="Panel" parent="Control/crafting GridContainer" unique_id=2059164017]
+layout_mode = 2
+
+[node name="Panel6" type="Panel" parent="Control/crafting GridContainer" unique_id=990330687]
+layout_mode = 2
+
+[node name="Panel7" type="Panel" parent="Control/crafting GridContainer" unique_id=1218471067]
+layout_mode = 2
+
+[node name="Panel8" type="Panel" parent="Control/crafting GridContainer" unique_id=1127425228]
+layout_mode = 2
+
+[node name="Panel9" type="Panel" parent="Control/crafting GridContainer" unique_id=2010221217]
+layout_mode = 2
+
+[node name="craftButton" type="Button" parent="Control" unique_id=697001478]
+visible = false
+layout_mode = 0
+offset_left = 446.0
+offset_top = 376.0
+offset_right = 682.0
+offset_bottom = 451.0
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1098029064]
+layout_mode = 0
+offset_left = 625.0
+offset_top = 498.0
+offset_right = 715.0
+offset_bottom = 586.0
+
+[node name="TextureRect" type="TextureRect" parent="Control/Panel" unique_id=902045551]
+layout_mode = 0
+offset_right = 90.0
+offset_bottom = 87.0
+
+[connection signal="pressed" from="Control/close" to="." method="_on_texture_button_pressed"]
