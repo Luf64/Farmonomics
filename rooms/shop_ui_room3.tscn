@@ -7,10 +7,6 @@
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1998750029]
 script = ExtResource("1_dswbr")
 
-[node name="CanvasLayer" parent="." unique_id=948162825 instance=ExtResource("2_a7tyx")]
-offset = Vector2(230, 0)
-transform = Transform2D(1, 0, 0, 1, 230, 0)
-
 [node name="Control" type="Control" parent="." unique_id=1715196503]
 layout_mode = 3
 anchors_preset = 0
@@ -30,5 +26,9 @@ offset_left = 451.0
 offset_top = 9.0
 offset_right = 495.0
 offset_bottom = 52.0
+
+[node name="CanvasLayer" parent="." unique_id=948162825 instance=ExtResource("2_a7tyx")]
+offset = Vector2(230, 0)
+transform = Transform2D(1, 0, 0, 1, 230, 0)
 
 [connection signal="pressed" from="Control/TextureButton" to="." method="_on_texture_button_pressed"]
