@@ -143,8 +143,8 @@ autoplay = true
 
 [node name="MainMenu1" type="Sprite2D" parent="." unique_id=1457754725]
 z_index = 1
-position = Vector2(129.25002, 92.50001)
-scale = Vector2(0.7884354, 0.788835)
+position = Vector2(129.75, 92.49999)
+scale = Vector2(0.7897959, 0.7888349)
 texture = ExtResource("4_c68s2")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=175587361]
