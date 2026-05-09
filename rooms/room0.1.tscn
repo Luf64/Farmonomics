@@ -10,14 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://cwccb7vuu2oes" path="res://Assets/item/Chocolate/chocolate(EVO1).png" id="7_qh5ub"]
 [ext_resource type="Texture2D" uid="uid://bh21xjhj1pxma" path="res://Assets/item/Chocolate/chocolate(EVO2).png" id="8_566fy"]
 [ext_resource type="Texture2D" uid="uid://dpa5dje7lcfal" path="res://Assets/item/Chocolate/chocolate(EVO3).png" id="9_v2k8o"]
-[ext_resource type="Script" uid="uid://dg8vqoor6tf3" path="res://scripts/Room0.1.gd" id="12_cejrt"]
+[ext_resource type="Script" uid="uid://brt35i52bbiri" path="res://scripts/Room0.1.gd" id="12_cejrt"]
 [ext_resource type="Texture2D" uid="uid://npswufwrq7hb" path="res://Assets/room 1 (outside)/DoorRoom0.1.png" id="13_6hkjl"]
 [ext_resource type="Texture2D" uid="uid://dvqc3hmdfviq1" path="res://Assets/room 1 (outside)/Room0.1.png" id="13_wcj83"]
 [ext_resource type="Texture2D" uid="uid://c0j4esm26con8" path="res://Assets/room 1 (outside)/PlantRoom0.1.png" id="14_6hkjl"]
 [ext_resource type="Texture2D" uid="uid://dad3f0lvwe5pc" path="res://Assets/room 1 (outside)/PlantRoom0.2.png" id="15_2blpw"]
 [ext_resource type="Texture2D" uid="uid://rsogvpor41eh" path="res://Assets/room 1 (outside)/PlantRoom0.3.png" id="16_tsncp"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="17_sgmoi"]
-[ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/button.gd" id="18_2ux4u"]
+[ext_resource type="Script" uid="uid://b11p3q4cx5p28" path="res://scripts/button.gd" id="18_2ux4u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
 atlas = ExtResource("1_j80mx")
