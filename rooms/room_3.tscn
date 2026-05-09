@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://pdotcf0yb4iw"]
 
-[ext_resource type="Script" uid="uid://ee6amefb4x05" path="res://scripts/room_3.gd" id="1_mi4eo"]
+[ext_resource type="Script" uid="uid://ctni3bfg3vvs8" path="res://scripts/room_3.gd" id="1_mi4eo"]
 [ext_resource type="Texture2D" uid="uid://c788m2iiqaf7n" path="res://Assets/room 4 (brewing room with selling it)/brewing room (shop).jpg" id="1_ugu2v"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="2_5ql8f"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="4_6mom2"]
-[ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/button.gd" id="5_1bsgv"]
+[ext_resource type="Script" uid="uid://b11p3q4cx5p28" path="res://scripts/button.gd" id="5_1bsgv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ql8f"]
 size = Vector2(126.5, 32)
