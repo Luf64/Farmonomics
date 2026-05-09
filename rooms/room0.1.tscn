@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://c0j4esm26con8" path="res://Assets/room 1 (outside)/PlantRoom0.1.png" id="14_6hkjl"]
 [ext_resource type="Texture2D" uid="uid://dad3f0lvwe5pc" path="res://Assets/room 1 (outside)/PlantRoom0.2.png" id="15_2blpw"]
 [ext_resource type="Texture2D" uid="uid://rsogvpor41eh" path="res://Assets/room 1 (outside)/PlantRoom0.3.png" id="16_tsncp"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="17_sgmoi"]
+[ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/button.gd" id="18_2ux4u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
 atlas = ExtResource("1_j80mx")
@@ -154,10 +156,16 @@ size = Vector2(283.5, 38.25)
 size = Vector2(65, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7cmb6"]
-size = Vector2(89, 67)
+size = Vector2(93, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ve1p"]
 size = Vector2(45, 8)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sgmoi"]
+a = Vector2(-147, 154)
+b = Vector2(-80, 154)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_wffey"]
 
 [node name="Room0_0_1" type="Node2D" unique_id=512447265]
 y_sort_enabled = true
@@ -261,17 +269,21 @@ position = Vector2(176.5, 218.5)
 shape = SubResource("RectangleShape2D_b60ft")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" unique_id=135610082]
-position = Vector2(241.5, 139.5)
+position = Vector2(243.5, 139.5)
 shape = SubResource("RectangleShape2D_7cmb6")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D" unique_id=915029085]
 position = Vector2(628, 334)
 shape = SubResource("RectangleShape2D_8ve1p")
 
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=1251525697]
+position = Vector2(251, 156)
+shape = SubResource("SegmentShape2D_sgmoi")
+
 [node name="Room0_1" type="Sprite2D" parent="." unique_id=334228717]
 z_index = -1
-position = Vector2(576.5, 299.5)
-scale = Vector2(0.8174716, 0.84505206)
+position = Vector2(577.00006, 299.5)
+scale = Vector2(0.81818193, 0.84505206)
 texture = ExtResource("13_wcj83")
 metadata/_edit_lock_ = true
 
@@ -298,5 +310,16 @@ y_sort_enabled = true
 position = Vector2(630, 338.375)
 scale = Vector2(0.8318585, 0.84424096)
 texture = ExtResource("16_tsncp")
+
+[node name="Button" type="Button" parent="." unique_id=1664977083]
+offset_left = 1043.0
+offset_top = -12.0
+offset_right = 1123.0
+offset_bottom = 15.0
+theme_override_fonts/font = ExtResource("17_sgmoi")
+icon = SubResource("ViewportTexture_wffey")
+flat = true
+script = ExtResource("18_2ux4u")
+metadata/_edit_use_anchors_ = true
 
 [connection signal="body_entered" from="Gate" to="Gate" method="_on_body_entered"]

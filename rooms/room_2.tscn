@@ -84,8 +84,16 @@ b = Vector2(0, 648)
 a = Vector2(210, 5)
 b = Vector2(-10, 5)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hu2qu"]
+a = Vector2(-173, 164)
+b = Vector2(-104, 164)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1j2nb"]
+a = Vector2(-72, 9)
+b = Vector2(2, 9)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1kamh"]
-size = Vector2(196, 10)
+size = Vector2(49, 8)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_txl2c"]
 size = Vector2(45.5, 208.25)
@@ -210,11 +218,19 @@ shape = SubResource("SegmentShape2D_vsfs3")
 position = Vector2(365, -214)
 shape = SubResource("SegmentShape2D_kq7a6")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/CollisionShape (block)" unique_id=1168843157]
+position = Vector2(-119, 144)
+shape = SubResource("SegmentShape2D_hu2qu")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D/CollisionShape (block)" unique_id=1526037273]
+position = Vector2(-101, 299)
+shape = SubResource("SegmentShape2D_1j2nb")
+
 [node name="tp" type="Area2D" parent="." unique_id=305347241]
 position = Vector2(-2, 4)
 
 [node name="door" type="CollisionShape2D" parent="tp" unique_id=1164879793]
-position = Vector2(-194, 313)
+position = Vector2(-196.5, 314)
 shape = SubResource("RectangleShape2D_1kamh")
 
 [node name="Shop_UI" type="Area2D" parent="." unique_id=1611062443]
@@ -258,10 +274,13 @@ theme_override_font_sizes/font_size = 36
 text = "100"
 
 [node name="Button" type="Button" parent="." unique_id=1002110187]
+modulate = Color(0.326184, 0.326184, 0.32618386, 1)
+self_modulate = Color(0.3254902, 0.3254902, 0.3254902, 1)
 offset_left = 467.0
 offset_top = -312.0
 offset_right = 547.0
 offset_bottom = -285.0
+theme_override_colors/font_color = Color(0.3254902, 0.3254902, 0.3254902, 1)
 theme_override_fonts/font = ExtResource("16_hu2qu")
 icon = SubResource("ViewportTexture_i1iwo")
 flat = true
