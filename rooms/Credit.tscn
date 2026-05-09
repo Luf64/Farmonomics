@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cqf6wpqvc3go5"]
+
+[ext_resource type="Script" uid="uid://cj0f7ihnft0si" path="res://scripts/Credit.gd" id="1_7plir"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="1_iyr7m"]
+
+[node name="Credit" type="Node2D" unique_id=1163145048]
+
+[node name="Label" type="Label" parent="." unique_id=336077877]
+offset_right = 1157.0
+offset_bottom = 647.0
+horizontal_alignment = 1
+autowrap_mode = 2
+script = ExtResource("1_7plir")
+
+[node name="Button" type="Button" parent="." unique_id=385488061]
+offset_left = 897.0
+offset_top = 519.0
+offset_right = 1104.0
+offset_bottom = 584.0
+theme_override_fonts/font = ExtResource("1_iyr7m")
+text = "Back"
+flat = true
+
+[connection signal="pressed" from="Button" to="Label" method="_on_button_pressed"]
