@@ -17,6 +17,6 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
     timer +=delta
-    if timer>=1.0:
+    while timer>=1.0:
         timer = 0.0
         current_time.from_unix(current_time.to_unix() + 1)

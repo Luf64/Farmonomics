@@ -10,14 +10,15 @@
 [ext_resource type="Texture2D" uid="uid://cwccb7vuu2oes" path="res://Assets/item/Chocolate/chocolate(EVO1).png" id="7_qh5ub"]
 [ext_resource type="Texture2D" uid="uid://bh21xjhj1pxma" path="res://Assets/item/Chocolate/chocolate(EVO2).png" id="8_566fy"]
 [ext_resource type="Texture2D" uid="uid://dpa5dje7lcfal" path="res://Assets/item/Chocolate/chocolate(EVO3).png" id="9_v2k8o"]
-[ext_resource type="Script" uid="uid://brt35i52bbiri" path="res://scripts/Room0.1.gd" id="12_cejrt"]
+[ext_resource type="Script" uid="uid://dg8vqoor6tf3" path="res://scripts/Room0.1.gd" id="12_cejrt"]
 [ext_resource type="Texture2D" uid="uid://npswufwrq7hb" path="res://Assets/room 1 (outside)/DoorRoom0.1.png" id="13_6hkjl"]
 [ext_resource type="Texture2D" uid="uid://dvqc3hmdfviq1" path="res://Assets/room 1 (outside)/Room0.1.png" id="13_wcj83"]
 [ext_resource type="Texture2D" uid="uid://c0j4esm26con8" path="res://Assets/room 1 (outside)/PlantRoom0.1.png" id="14_6hkjl"]
 [ext_resource type="Texture2D" uid="uid://dad3f0lvwe5pc" path="res://Assets/room 1 (outside)/PlantRoom0.2.png" id="15_2blpw"]
 [ext_resource type="Texture2D" uid="uid://rsogvpor41eh" path="res://Assets/room 1 (outside)/PlantRoom0.3.png" id="16_tsncp"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="17_sgmoi"]
-[ext_resource type="Script" uid="uid://b11p3q4cx5p28" path="res://scripts/button.gd" id="18_2ux4u"]
+[ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/button.gd" id="18_2ux4u"]
+[ext_resource type="Script" uid="uid://cg4ei51i2nsow" path="res://scripts/plant.gd" id="19_2ux4u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
 atlas = ExtResource("1_j80mx")
@@ -167,6 +168,9 @@ b = Vector2(-80, 154)
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_wffey"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2ux4u"]
+radius = 9.0
+
 [node name="Room0_0_1" type="Node2D" unique_id=512447265]
 y_sort_enabled = true
 
@@ -257,11 +261,11 @@ position = Vector2(834.25, 219)
 shape = SubResource("RectangleShape2D_o6dsg")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=1765496149]
-position = Vector2(447, 426)
+position = Vector2(448, 395)
 shape = SubResource("RectangleShape2D_2ux4u")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=887973578]
-position = Vector2(837.25, 427.875)
+position = Vector2(838.25, 405.875)
 shape = SubResource("RectangleShape2D_wffey")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" unique_id=2045739391]
@@ -322,4 +326,190 @@ flat = true
 script = ExtResource("18_2ux4u")
 metadata/_edit_use_anchors_ = true
 
+[node name="Planting logic" type="Area2D" parent="." unique_id=74053966]
+z_index = 1
+position = Vector2(-1, 22)
+script = ExtResource("19_2ux4u")
+corn_textures = Array[Texture2D]([ExtResource("1_676ew"), ExtResource("2_3mme3"), ExtResource("3_u2fcr")])
+chocolate_textures = Array[Texture2D]([ExtResource("7_qh5ub"), ExtResource("8_566fy"), ExtResource("9_v2k8o")])
+milk_textures = Array[Texture2D]([ExtResource("1_j80mx"), ExtResource("2_0ov7x"), ExtResource("3_5kdcd")])
+
+[node name="Hole1" type="CollisionShape2D" parent="Planting logic" unique_id=119256680]
+position = Vector2(354, 160)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole2" type="CollisionShape2D" parent="Planting logic" unique_id=1723915341]
+position = Vector2(866, 241)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole3" type="CollisionShape2D" parent="Planting logic" unique_id=568918425]
+position = Vector2(862, 160)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole4" type="CollisionShape2D" parent="Planting logic" unique_id=1012423197]
+position = Vector2(956, 424)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole5" type="CollisionShape2D" parent="Planting logic" unique_id=629599392]
+position = Vector2(911, 424)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole6" type="CollisionShape2D" parent="Planting logic" unique_id=1593442798]
+position = Vector2(864, 424)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole7" type="CollisionShape2D" parent="Planting logic" unique_id=971905471]
+position = Vector2(955, 371)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole8" type="CollisionShape2D" parent="Planting logic" unique_id=1896118365]
+position = Vector2(819, 425)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole9" type="CollisionShape2D" parent="Planting logic" unique_id=1089915231]
+position = Vector2(910, 371)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole10" type="CollisionShape2D" parent="Planting logic" unique_id=636565283]
+position = Vector2(865, 370)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole11" type="CollisionShape2D" parent="Planting logic" unique_id=341739393]
+position = Vector2(819, 371)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole12" type="CollisionShape2D" parent="Planting logic" unique_id=1991079174]
+position = Vector2(773, 424)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole13" type="CollisionShape2D" parent="Planting logic" unique_id=659210518]
+position = Vector2(773, 371)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole14" type="CollisionShape2D" parent="Planting logic" unique_id=448631381]
+position = Vector2(728, 424)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole15" type="CollisionShape2D" parent="Planting logic" unique_id=793647186]
+position = Vector2(728, 371)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole16" type="CollisionShape2D" parent="Planting logic" unique_id=2071898415]
+position = Vector2(538, 444)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole17" type="CollisionShape2D" parent="Planting logic" unique_id=277797868]
+position = Vector2(492, 444)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole18" type="CollisionShape2D" parent="Planting logic" unique_id=490718989]
+position = Vector2(537, 362)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole19" type="CollisionShape2D" parent="Planting logic" unique_id=1045163851]
+position = Vector2(492, 362)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole20" type="CollisionShape2D" parent="Planting logic" unique_id=1582660361]
+position = Vector2(446, 444)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole21" type="CollisionShape2D" parent="Planting logic" unique_id=1516976039]
+position = Vector2(401, 444)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole22" type="CollisionShape2D" parent="Planting logic" unique_id=409350810]
+position = Vector2(355, 444)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole23" type="CollisionShape2D" parent="Planting logic" unique_id=402973752]
+position = Vector2(445, 363)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole24" type="CollisionShape2D" parent="Planting logic" unique_id=1317640647]
+position = Vector2(401, 362)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole25" type="CollisionShape2D" parent="Planting logic" unique_id=1361213556]
+position = Vector2(354, 363)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole26" type="CollisionShape2D" parent="Planting logic" unique_id=525674388]
+position = Vector2(772, 160)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole27" type="CollisionShape2D" parent="Planting logic" unique_id=2136189273]
+position = Vector2(775, 242)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole28" type="CollisionShape2D" parent="Planting logic" unique_id=1783438070]
+position = Vector2(728, 242)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole29" type="CollisionShape2D" parent="Planting logic" unique_id=1528882693]
+position = Vector2(726, 160)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole30" type="CollisionShape2D" parent="Planting logic" unique_id=203456214]
+position = Vector2(354, 234)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole31" type="CollisionShape2D" parent="Planting logic" unique_id=876734005]
+position = Vector2(400, 159)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole32" type="CollisionShape2D" parent="Planting logic" unique_id=518914492]
+position = Vector2(819, 241)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole33" type="CollisionShape2D" parent="Planting logic" unique_id=1305016657]
+position = Vector2(818, 161)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole34" type="CollisionShape2D" parent="Planting logic" unique_id=1968794846]
+position = Vector2(537, 235)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole35" type="CollisionShape2D" parent="Planting logic" unique_id=566564798]
+position = Vector2(537, 159)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole36" type="CollisionShape2D" parent="Planting logic" unique_id=1423232319]
+position = Vector2(491, 234)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole37" type="CollisionShape2D" parent="Planting logic" unique_id=1668031739]
+position = Vector2(492, 159)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole38" type="CollisionShape2D" parent="Planting logic" unique_id=1273959964]
+position = Vector2(445, 235)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole39" type="CollisionShape2D" parent="Planting logic" unique_id=1968457334]
+position = Vector2(400, 235)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole40" type="CollisionShape2D" parent="Planting logic" unique_id=326368210]
+position = Vector2(445, 159)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole41" type="CollisionShape2D" parent="Planting logic" unique_id=1037579852]
+position = Vector2(955, 160)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole42" type="CollisionShape2D" parent="Planting logic" unique_id=249488640]
+position = Vector2(912, 241)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole43" type="CollisionShape2D" parent="Planting logic" unique_id=1883311324]
+position = Vector2(957, 241)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Hole44" type="CollisionShape2D" parent="Planting logic" unique_id=395482259]
+position = Vector2(909, 160)
+shape = SubResource("CircleShape2D_2ux4u")
+
 [connection signal="body_entered" from="Gate" to="Gate" method="_on_body_entered"]
+[connection signal="body_entered" from="Planting logic" to="Planting logic" method="_on_body_entered"]
+[connection signal="body_exited" from="Planting logic" to="Planting logic" method="_on_body_exited"]
