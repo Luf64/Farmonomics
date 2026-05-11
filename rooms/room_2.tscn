@@ -3,7 +3,9 @@
 [ext_resource type="Script" uid="uid://26iucmewvot6" path="res://scripts/room_2.gd" id="1_vkoc7"]
 [ext_resource type="PackedScene" uid="uid://clvgdljqnc4g4" path="res://rooms/shop_ui.tscn" id="2_kq7a6"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="4_13qvk"]
+[ext_resource type="Script" uid="uid://dib2eamov30bk" path="res://scripts/money_show.gd" id="10_vkoc7"]
 [ext_resource type="Texture2D" uid="uid://dtlcdk31mjtyx" path="res://Assets/Pic/Room2.jpg" id="10_vsfs3"]
+[ext_resource type="PackedScene" uid="uid://dx6e5oxpxyl8h" path="res://rooms/total_money.tscn" id="11_vsfs3"]
 [ext_resource type="Texture2D" uid="uid://banymrew4033d" path="res://Assets/Pic/middle.jpg" id="12_h87l2"]
 [ext_resource type="AudioStream" uid="uid://c3uopj1vfa7km" path="res://Sound/pop.mp3" id="12_vsfs3"]
 [ext_resource type="Texture2D" uid="uid://bvj8eog5vg7pg" path="res://Assets/Pic/shelf 2.png" id="13_cnnmw"]
@@ -229,6 +231,14 @@ icon = SubResource("ViewportTexture_i1iwo")
 flat = true
 script = ExtResource("17_1j2nb")
 metadata/_edit_use_anchors_ = true
+
+[node name="MoneyShow" type="Button" parent="." unique_id=706917263]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("16_hu2qu")
+script = ExtResource("10_vkoc7")
+
+[node name="Total_money" parent="MoneyShow" unique_id=1136350852 instance=ExtResource("11_vsfs3")]
 
 [connection signal="body_entered" from="tp" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Shop_UI" to="." method="_on_shop_ui_body_entered"]

@@ -47,7 +47,7 @@ offset_bottom = 652.0
 texture = ExtResource("1_cg2ta")
 expand_mode = 1
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=712075489]
+[node name="Inventory(example)" type="TextureRect" parent="." unique_id=712075489]
 anchors_preset = -1
 anchor_left = 14.786
 anchor_top = 8.195001
@@ -59,6 +59,23 @@ offset_right = -16432.473
 offset_bottom = -5201.3604
 scale = Vector2(6.365, 6.365)
 texture = ExtResource("8_pxn6d")
+
+[node name="TextureRect" type="TextureRect" parent="Inventory(example)" unique_id=399601767]
+visible = false
+layout_mode = 0
+offset_left = 12.097404
+offset_top = 16.967793
+offset_right = 25.923012
+offset_bottom = 30.950512
+
+[node name="Label" type="Label" parent="Inventory(example)" unique_id=964547760]
+visible = false
+layout_mode = 0
+offset_left = 21.995289
+offset_top = 24.037706
+offset_right = 43.990288
+offset_bottom = 47.037704
+theme_override_font_sizes/font_size = 5
 
 [node name="TextureButton" type="TextureButton" parent="." unique_id=1599703225]
 offset_left = 1060.0

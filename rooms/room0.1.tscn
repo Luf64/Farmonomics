@@ -18,6 +18,7 @@
 [ext_resource type="Texture2D" uid="uid://rsogvpor41eh" path="res://Assets/room 1 (outside)/PlantRoom0.3.png" id="16_tsncp"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="17_sgmoi"]
 [ext_resource type="Script" uid="uid://b11p3q4cx5p28" path="res://scripts/button.gd" id="18_2ux4u"]
+[ext_resource type="PackedScene" uid="uid://dx6e5oxpxyl8h" path="res://rooms/total_money.tscn" id="19_2ux4u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
 atlas = ExtResource("1_j80mx")
@@ -321,5 +322,12 @@ icon = SubResource("ViewportTexture_wffey")
 flat = true
 script = ExtResource("18_2ux4u")
 metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="." unique_id=1365454422]
+offset_right = 8.0
+offset_bottom = 8.0
+theme_override_fonts/font = ExtResource("17_sgmoi")
+
+[node name="Total_money" parent="Button2" unique_id=1136350852 instance=ExtResource("19_2ux4u")]
 
 [connection signal="body_entered" from="Gate" to="Gate" method="_on_body_entered"]
