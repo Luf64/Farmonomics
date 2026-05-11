@@ -18,7 +18,7 @@ func _on_scene_changed(_node):
 func check_hud_visibility():
 	var current_scene = get_tree().current_scene
 	if current_scene:
-		if current_scene.scene_file_path.contains("room_0"):
+		if current_scene.scene_file_path.contains("room0.1,room_1,room_2,room_3"):
 			self.visible = false
 		else:
 			self.visible = true
