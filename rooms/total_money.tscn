@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bckshp6hgup2g" path="res://Assets/Pic/coin 7.png" id="7_cjlc5"]
 [ext_resource type="Texture2D" uid="uid://b2x33g31iu08l" path="res://Assets/Pic/coin 1.png" id="8_76wu1"]
 [ext_resource type="Script" uid="uid://bua4d57atoser" path="res://scripts/money.gd" id="9_ej4dd"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="11_3t5sd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ime2j"]
 animations = [{
@@ -41,7 +42,7 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Total_money" type="CanvasLayer" unique_id=1136350852]
+[node name="Total_money" type="CanvasLayer" unique_id=655785980]
 script = ExtResource("1_6qq0w")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=598855396]
@@ -62,13 +63,14 @@ autoplay = "default"
 
 [node name="money" type="Label" parent="." unique_id=1922830906]
 top_level = true
-offset_left = 68.0
-offset_top = 13.0
-offset_right = 130.0
-offset_bottom = 68.0
+offset_left = 73.0
+offset_top = 24.0
+offset_right = 135.0
+offset_bottom = 79.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("11_3t5sd")
 theme_override_font_sizes/font_size = 40
 text = " "
 script = ExtResource("9_ej4dd")
