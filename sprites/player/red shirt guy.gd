@@ -7,6 +7,7 @@ var last_direction : Vector2 = Vector2.DOWN
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+    teleport_to_spawn()
     # Make sure sound not play
     if run_sound:
         sound_volume
@@ -74,3 +75,19 @@ func _physics_process(delta: float) -> void:
         
     move_and_slide()
     pass
+@onready var Spawn_node = get_tree().root.find_child("Spawn", true, false)
+func teleport_to_spawn(): # this is coordinates teleport between room
+    if Global.current_room == "":
+        return
+    if Spawn_node == null:
+        Global.current_room = ""
+        return
+    if Global.room.has(Global.current_room):
+        var marker_name = Global.room[Global.current_room]["coordinates"]
+        var marker = Spawn_node.get_node_or_null(marker_name)
+        if marker == null:
+            print("Marker not found", marker_name)
+            Global.current_room = ""
+            return
+        global_position = marker.global_position
+    Global.current_room = Global.Room_1

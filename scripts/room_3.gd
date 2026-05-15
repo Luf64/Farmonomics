@@ -21,6 +21,7 @@ func _physics_process(delta: float) -> void:
         open_menu()
     
     if player_in_range_tp_room1 and Input.is_action_just_pressed("interaction"):
+        Global.current_room = "room3"
         get_tree().change_scene_to_file(Global.Room_1)
     
     if interaction_menu and Input.is_action_just_pressed("1"):
