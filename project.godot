@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://scripts/global.gd"
 Date_Timer="*res://scripts/date_timer.gd"
+Json="*uid://b0f0at2cgnvqm"
 
 [display]
 

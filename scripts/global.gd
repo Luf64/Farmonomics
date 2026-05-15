@@ -1,4 +1,5 @@
 extends Node
+
 var Room_1 = "res://rooms/room_1.tscn" #Hall
 var Room0_1 = "res://rooms/room0.1.tscn" # Farm
 var Room_2 = "res://rooms/room_2.tscn" # Market Store
@@ -6,6 +7,7 @@ var Room_3 = "res://rooms/room_3.tscn" # Brewing Lab
 var Inventory = "res://rooms/inventory.tscn"
 # to locate previous room for inventory
 var inventory_ui = null
+var current_room: String = ""
 var coordinates: String = ""
 var room = {
     "farm" : {"scene": Room0_1, "coordinates": "Farm"},
@@ -19,7 +21,7 @@ func _ready() -> void:
     inventory_ui = inventory_room.instantiate()
     get_tree().root.call_deferred("add_child", inventory_ui)
     inventory_ui.visible = false
-    pass # Replace with function body.
+    Json.load_game()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -29,6 +31,8 @@ func _physics_process(delta: float) -> void:
 
 func _input(event: InputEvent) -> void:
     if event.is_action_pressed("ui_cancel"):
+        Json.save_game()
+        await get_tree().create_timer(1.0).timeout
         get_tree().quit()
 
 #open inventory

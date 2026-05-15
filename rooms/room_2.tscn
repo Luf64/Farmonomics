@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://botut34asfv6a"]
 
-[ext_resource type="Script" uid="uid://26iucmewvot6" path="res://scripts/room_2.gd" id="1_vkoc7"]
+[ext_resource type="Script" uid="uid://bnkb4lclgevyf" path="res://scripts/room_2.gd" id="1_vkoc7"]
 [ext_resource type="PackedScene" uid="uid://clvgdljqnc4g4" path="res://rooms/shop_ui.tscn" id="2_kq7a6"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="4_13qvk"]
 [ext_resource type="Script" uid="uid://dib2eamov30bk" path="res://scripts/money_show.gd" id="10_vkoc7"]
@@ -10,7 +10,7 @@
 [ext_resource type="AudioStream" uid="uid://c3uopj1vfa7km" path="res://Sound/pop.mp3" id="12_vsfs3"]
 [ext_resource type="Texture2D" uid="uid://bvj8eog5vg7pg" path="res://Assets/Pic/shelf 2.png" id="13_cnnmw"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="16_hu2qu"]
-[ext_resource type="Script" uid="uid://b11p3q4cx5p28" path="res://scripts/button.gd" id="17_1j2nb"]
+[ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/button.gd" id="17_1j2nb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vkoc7"]
 size = Vector2(119.75, 190)

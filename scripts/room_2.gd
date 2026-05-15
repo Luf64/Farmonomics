@@ -52,5 +52,6 @@ func close_shop():
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
     if body.name == "player":
-        get_tree().change_scene_to_file("res://rooms/room_1.tscn")
+        Global.current_room = "room2"
+        get_tree().change_scene_to_file(Global.Room_1)
     pass # Replace with function body.

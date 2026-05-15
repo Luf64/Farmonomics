@@ -233,8 +233,8 @@ metadata/_edit_lock_ = true
 [node name="Farm" type="Marker2D" parent="Spawn" unique_id=774472344]
 position = Vector2(-965, -461)
 
-[node name="Room1" type="Marker2D" parent="Spawn" unique_id=54791096]
-position = Vector2(171, 6)
+[node name="Room2" type="Marker2D" parent="Spawn" unique_id=54791096]
+position = Vector2(1265, 71)
 
 [node name="Room3" type="Marker2D" parent="Spawn" unique_id=746379862]
 position = Vector2(74, -462)
