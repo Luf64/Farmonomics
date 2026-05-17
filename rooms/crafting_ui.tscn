@@ -214,5 +214,5 @@ layout_mode = 0
 offset_right = 90.0
 offset_bottom = 87.0
 
-[connection signal="pressed" from="Control/close" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Control/close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Control/craftButton" to="." method="_on_craft_button_pressed"]

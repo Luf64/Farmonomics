@@ -15,12 +15,12 @@ func _ready() -> void:
 
 
 func _on_money_changed(new_amount):
-	_update_display(new_amount)
-	
+    _update_display(new_amount)
+    
 func _update_display(amount):
-	if money_label:
-		money_label.text = str(amount)
+    if money_label:
+        money_label.text = str(amount)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+    pass

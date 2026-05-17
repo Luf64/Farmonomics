@@ -44,19 +44,19 @@ func open_shop():
 	pass
 
 func _on_shop_ui_body_entered(body: Node2D) -> void:
-	if body.name == "player":
-		player_in_range = true
-		$Shop_UI/interaction.visible = true
-		
+    if body.name == "player":
+        player_in_range = true
+        $Shop_UI/interaction.visible = true
+        
 func _on_shop_ui_body_exited(body: Node2D) -> void:
-	if body.name == "player":
-		player_in_range = false
-		$Shop_UI/interaction.visible = false
+    if body.name == "player":
+        player_in_range = false
+        $Shop_UI/interaction.visible = false
 
 func _input(event):
-	if $Shop_UI/ShopMenu.visible and event.is_action_pressed("ui_cancel"):
-		close_shop()
-		
+    if $Shop_UI/ShopMenu.visible and event.is_action_pressed("ui_cancel"):
+        close_shop()
+        
 func close_shop():
 	$Shop_UI/ShopMenu.visible = false
 	get_tree().paused = false
@@ -65,6 +65,7 @@ func close_shop():
 		current_shop = null
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.name == "player":
-		get_tree().change_scene_to_file("res://rooms/room_1.tscn")
-	pass # Replace with function body.
+    if body.name == "player":
+        Global.current_room = "room2"
+        get_tree().change_scene_to_file(Global.Room_1)
+    pass # Replace with function body.
