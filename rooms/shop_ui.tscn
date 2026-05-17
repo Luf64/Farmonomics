@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://tpuwkhcxd3iy" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Inventory(Changed).png" id="8_pxn6d"]
 [ext_resource type="Texture2D" uid="uid://cosj8xbnfj1b7" path="res://Assets/Pic/Down.png" id="9_2rj55"]
 [ext_resource type="Texture2D" uid="uid://j58gqqyiyw2s" path="res://Assets/Pic/Up.png" id="10_5jfs2"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="10_18nhq"]
 [ext_resource type="Texture2D" uid="uid://b82cpg5gsh13v" path="res://Assets/Pic/SrollButton.png" id="11_18nhq"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jfs2"]
@@ -190,16 +191,26 @@ offset_bottom = 70.0
 texture = ExtResource("4_pxn6d")
 expand_mode = 1
 
+[node name="tomato_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=1738425512]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 29.0
+offset_right = 379.0
+offset_bottom = 68.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 38
+text = "10"
+
 [node name="TextEdit" type="TextEdit" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=989515487]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 88.0
 offset_top = 10.0
-offset_right = 388.0
+offset_right = 244.0
 offset_bottom = 69.0
 mouse_filter = 2
 theme_override_font_sizes/font_size = 38
-text = "Tomato          10"
+text = "Tomato"
 
 [node name="Corn_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1568633286]
 layout_mode = 2
@@ -239,14 +250,13 @@ mouse_filter = 2
 theme_override_font_sizes/font_size = 38
 text = "Corn"
 
-[node name="TextEdit" type="TextEdit" parent="ScrollContainer/VBoxContainer/Corn_Button/TextEdit2" unique_id=1746082982]
-self_modulate = Color(1, 1, 1, 0)
+[node name="corn_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Corn_Button" unique_id=894570448]
 layout_mode = 0
-offset_left = 241.0
-offset_top = -4.0
-offset_right = 301.0
-offset_bottom = 63.0
-mouse_filter = 2
+offset_left = 329.0
+offset_top = 30.0
+offset_right = 394.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "20"
 
@@ -306,14 +316,13 @@ mouse_filter = 2
 theme_override_font_sizes/font_size = 38
 text = "Apple"
 
-[node name="TextEdit" type="TextEdit" parent="ScrollContainer/VBoxContainer/Apple_Button/TextEdit3" unique_id=716459997]
-self_modulate = Color(1, 1, 1, 0)
+[node name="apple_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Apple_Button" unique_id=525388971]
 layout_mode = 0
-offset_left = 239.0
-offset_top = -1.0
-offset_right = 290.0
-offset_bottom = 65.0
-mouse_filter = 2
+offset_left = 330.0
+offset_top = 27.0
+offset_right = 390.0
+offset_bottom = 87.0
+theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "30"
 
