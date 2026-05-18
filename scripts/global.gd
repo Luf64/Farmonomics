@@ -9,9 +9,14 @@ var Inventory = "res://rooms/inventory.tscn"
 var inventory_ui = null
 var current_room: String = ""
 var coordinates: String = ""
+var money: int = 100:
+    set(value):
+        money = value
+        money_changed.emit(money)
+
 var room = {
     "farm" : {"scene": Room0_1, "coordinates": "Farm"},
-    "room1": {"scene": Room_1,"coordinates":"Room1"},
+    "room1": {"scene": Room_1,"coordinates":"Room1"},# haven't use
     "room2": {"scene": Room_2,"coordinates":"Room2"},
     "room3": {"scene": Room_3,"coordinates":"Room3"}
 }
@@ -44,11 +49,6 @@ func open_inventory() -> void:
 #level system for unlocking new equipment and seeds
 
 signal money_changed(new_amount)
-
-var money = 100:
-    set(value):
-        money = value
-        money_changed.emit(money)
 
 func subtract_money(amount: int) -> bool:
     if money >= amount:

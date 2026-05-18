@@ -8,6 +8,7 @@ var last_direction : Vector2 = Vector2.DOWN
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
     teleport_to_spawn()
+
     # Make sure sound not play
     if run_sound:
         sound_volume
