@@ -1,5 +1,7 @@
 extends Node
 
+signal global_prices_changed(market_data: Dictionary)
+
 var Room_1 = "res://rooms/room_1.tscn" #Hall
 var Room0_1 = "res://rooms/room0.1.tscn" # Farm
 var Room_2 = "res://rooms/room_2.tscn" # Market Store

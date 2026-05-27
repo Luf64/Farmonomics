@@ -6,13 +6,18 @@ var player_in_range = false
 var current_shop = null
 
 @onready var price_system = $PriceSystem
+@onready var price_change_sound = $PriceChangeSound
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Shop_UI/interaction.visible = false
+	$PriceSystem.prices_changed.connect(_on_market_prices_changed)
 	pass # Replace with function body.
 	
 func _on_market_prices_changed():
+	if price_change_sound:
+		price_change_sound.play()
+		print("[Sound Prompt] Price change sound effect")
 	#if the player currently has the shop interface open, immediately refresh the data for them.
 	if current_shop != null and current_shop.has_method("init_shop_data"):
 		current_shop.init_shop_data($PriceSystem.market_data)
