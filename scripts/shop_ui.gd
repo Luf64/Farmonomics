@@ -2,12 +2,34 @@ extends CanvasLayer
 
 
 @onready var coin_label = $Coin/Label 
+@onready var tomato_text = $ScrollContainer/VBoxContainer/Tomato_Button/tomato_price_label2
+@onready var corn_text = $ScrollContainer/VBoxContainer/Corn_Button/corn_price_label2
+@onready var apple_text = $ScrollContainer/VBoxContainer/Apple_Button/apple_price_label2
 
+# used to temporarily store received market data
+var saved_market_data = {}
 
+func init_shop_data(market_data: Dictionary) -> void:
+	saved_market_data = market_data
+	update_shop_display()
+
+func update_shop_display() -> void:
+	if saved_market_data.is_empty():
+		return
+	if saved_market_data.has("Tomato") and tomato_text:
+		var tomato_price = saved_market_data["Tomato"]["current_price"]
+		tomato_text.text = "%d" % tomato_price 
+	if saved_market_data.has("Corn") and corn_text:
+		var corn_price = saved_market_data["Corn"]["current_price"]
+		corn_text.text = "%d" % corn_price
+	if saved_market_data.has("Apple") and apple_text:
+		var apple_price = saved_market_data["Apple"]["current_price"]
+		apple_text.text = "%d" % apple_price
 
 func _ready():
-    update_ui()
-    Global.money_changed.connect(func(_new_val): update_ui())
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	update_ui()
+	Global.money_changed.connect(func(_new_val): update_ui())
 
 func _input(event):
     if event.is_action_pressed("ui_cancel"):
@@ -20,28 +42,37 @@ func close_shop():
     
 
 func _on_tomato_button_pressed():
-    var price = 10
-    if Global.subtract_money(price):
-        update_ui()
-        add_to_inventory("Tomato")
-    else:
-        print("Not enought money to buy Tomato")
-        
+	var price = 10
+	if saved_market_data.has("Tomato"):
+		price = saved_market_data["Tomato"]["current_price"]
+	if Global.subtract_money(price):
+		update_ui()
+		add_to_inventory("Tomato")
+		saved_market_data["Tomato"]["stock"] -= 1
+	else:
+		print("Not enought money to buy Tomato")
+		
 func _on_corn_button_pressed():
-    var price = 20
-    if Global.subtract_money(price):
-        update_ui()
-        add_to_inventory("Corn") 
-    else:
-        print("Not enought money to buy Corn")
-        
+	var price = 20
+	if saved_market_data.has("Corn"):
+		price = saved_market_data["Corn"]["current_price"]
+	if Global.subtract_money(price):
+		update_ui()
+		add_to_inventory("Corn")
+		saved_market_data["Corn"]["stock"] -= 1 
+	else:
+		print("Not enought money to buy Corn")
+		
 func _on_apple_button_pressed():
-    var price = 30 
-    if Global.subtract_money(price):
-        update_ui()
-        add_to_inventory("Apple")
-    else:
-        print("Not enough money to buy Apple")
+	var price = 30 
+	if saved_market_data.has("Apple"):
+		price = saved_market_data["Apple"]["current_price"]
+	if Global.subtract_money(price):
+		update_ui()
+		add_to_inventory("Apple")
+		saved_market_data["Apple"]["stock"] -= 1
+	else:
+		print("Not enough money to buy Apple")
 
 func update_ui():
     # Update money
