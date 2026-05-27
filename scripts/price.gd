@@ -7,11 +7,11 @@ var money = 100.0
 
 # player bag
 var inventory = {
-    "Tomato": 5,
-    "Corn": 0,
-    "Apple":0,
-    "Oringe":0,
-    "Potato":0
+	"Tomato": 5,
+	"Corn": 0,
+	"Apple":0,
+	"Oringe":0,
+	"Potato":0
 }
 
 # market data
