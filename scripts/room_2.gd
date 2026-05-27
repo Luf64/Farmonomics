@@ -6,13 +6,18 @@ var player_in_range = false
 var current_shop = null
 
 @onready var price_system = $PriceSystem
+@onready var price_change_sound = $PriceChangeSound
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	$Shop_UI/interaction.visible = false
+	$PriceSystem.prices_changed.connect(_on_market_prices_changed)
 	pass # Replace with function body.
 	
 func _on_market_prices_changed():
+	if price_change_sound:
+		price_change_sound.play()
+		print("[Sound Prompt] Price change sound effect")
 	#if the player currently has the shop interface open, immediately refresh the data for them.
 	if current_shop != null and current_shop.has_method("init_shop_data"):
 		current_shop.init_shop_data($PriceSystem.market_data)
@@ -44,19 +49,19 @@ func open_shop():
 	pass
 
 func _on_shop_ui_body_entered(body: Node2D) -> void:
-    if body.name == "player":
-        player_in_range = true
-        $Shop_UI/interaction.visible = true
-        
+	if body.name == "player":
+		player_in_range = true
+		$Shop_UI/interaction.visible = true
+		
 func _on_shop_ui_body_exited(body: Node2D) -> void:
-    if body.name == "player":
-        player_in_range = false
-        $Shop_UI/interaction.visible = false
+	if body.name == "player":
+		player_in_range = false
+		$Shop_UI/interaction.visible = false
 
 func _input(event):
-    if $Shop_UI/ShopMenu.visible and event.is_action_pressed("ui_cancel"):
-        close_shop()
-        
+	if $Shop_UI/ShopMenu.visible and event.is_action_pressed("ui_cancel"):
+		close_shop()
+		
 func close_shop():
 	$Shop_UI/ShopMenu.visible = false
 	get_tree().paused = false
@@ -65,7 +70,7 @@ func close_shop():
 		current_shop = null
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-    if body.name == "player":
-        Global.current_room = "room2"
-        get_tree().change_scene_to_file(Global.Room_1)
-    pass # Replace with function body.
+	if body.name == "player":
+		Global.current_room = "room2"
+		get_tree().change_scene_to_file(Global.Room_1)
+	pass # Replace with function body.

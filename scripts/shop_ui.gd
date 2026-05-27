@@ -16,30 +16,50 @@ func init_shop_data(market_data: Dictionary) -> void:
 func update_shop_display() -> void:
 	if saved_market_data.is_empty():
 		return
+		
+	var current_money = Global.money
+			
 	if saved_market_data.has("Tomato") and tomato_text:
 		var tomato_price = saved_market_data["Tomato"]["current_price"]
 		tomato_text.text = "%d" % tomato_price 
+		if current_money < tomato_price:
+			tomato_text.modulate = Color.RED
+		else:
+			tomato_text.modulate = Color.WHITE
+			
 	if saved_market_data.has("Corn") and corn_text:
 		var corn_price = saved_market_data["Corn"]["current_price"]
 		corn_text.text = "%d" % corn_price
+		if current_money < corn_price:
+			corn_text.modulate = Color.RED
+		else:
+			corn_text.modulate = Color.WHITE
+			
 	if saved_market_data.has("Apple") and apple_text:
 		var apple_price = saved_market_data["Apple"]["current_price"]
 		apple_text.text = "%d" % apple_price
+		if current_money < apple_price:
+			apple_text.modulate = Color.RED
+		else:
+			apple_text	.modulate = Color.WHITE
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
 	update_ui()
-	Global.money_changed.connect(func(_new_val): update_ui())
+	Global.money_changed.connect(func(_new_val): 
+		update_ui()
+		update_shop_display())
+
 
 func _input(event):
-    if event.is_action_pressed("ui_cancel"):
-        close_shop()
+	if event.is_action_pressed("ui_cancel"):
+		close_shop()
 
 func close_shop():
-    get_tree().paused = false
-    Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-    queue_free()
-    
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	queue_free()
+	
 
 func _on_tomato_button_pressed():
 	var price = 10
@@ -75,36 +95,37 @@ func _on_apple_button_pressed():
 		print("Not enough money to buy Apple")
 
 func update_ui():
-    # Update money
-    if coin_label:
-        coin_label.text = str(Global.money)
+	# Update money
+	if coin_label:
+		coin_label.text = str(Global.money)
+		update_shop_display()
 
 func add_to_inventory(item_name):
-    print("Buy sussesfully: ", item_name)
+	print("Buy sussesfully: ", item_name)
 
 func _on_button_pressed() -> void:
-    pass # Replace with function body.
-    
+	pass # Replace with function body.
+	
 func _on_up_button_pressed():
-    $VSlider.value -= 1 
+	$VSlider.value -= 1 
 
 func _on_down_button_pressed():
-    $VSlider.value += 1
+	$VSlider.value += 1
 
 func _on_button_2_pressed() -> void:
-    pass # Replace with function body.
+	pass # Replace with function body.
 
 
 var scroll_speed = 20 
 
 
 func _on_v_box_container_mouse_entered() -> void:
-    pass # Replace with function body.
-    
+	pass # Replace with function body.
+	
 
 
 func _on_texture_button_pressed() -> void:
-    get_tree().paused = false
-    Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-    queue_free()
-    pass # Replace with function body.
+	get_tree().paused = false
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	queue_free()
+	pass # Replace with function body.

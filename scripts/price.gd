@@ -7,11 +7,11 @@ var money = 100.0
 
 # player bag
 var inventory = {
-    "Tomato": 5,
-    "Corn": 0,
-    "Apple":0,
-    "Oringe":0,
-    "Potato":0
+	"Tomato": 0,
+	"Corn": 0,
+	"Apple":0,
+	"Oringe":0,
+	"Potato":0
 }
 
 # market data
@@ -53,6 +53,8 @@ func update_market_prices() -> void:
 		#ensure the price is at least 1 and rounded to the nearest integer 
 		item["current_price"] = int(max(1.0, new_price))
 		print("- ", item_name, " The latest price becomes: ", item["current_price"], " (Current inventory: ", item["stock"], ")")
+		prices_changed.emit()
+		Global.global_prices_changed.emit(market_data)
 		prices_changed.emit()
 		
 		
