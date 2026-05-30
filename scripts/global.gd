@@ -12,9 +12,9 @@ var inventory_ui = null
 var current_room: String = ""
 var coordinates: String = ""
 var money: int = 100:
-    set(value):
-        money = value
-        money_changed.emit(money)
+	set(value):
+		money = value
+		money_changed.emit(money)
 
 var room = {
 	"farm" : {"scene": Room0_1, "coordinates": "Farm"},
