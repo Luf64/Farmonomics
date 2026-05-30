@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://pdotcf0yb4iw"]
 
-[ext_resource type="Script" uid="uid://ee6amefb4x05" path="res://scripts/room_3.gd" id="1_mi4eo"]
+[ext_resource type="Script" uid="uid://ctni3bfg3vvs8" path="res://scripts/room_3.gd" id="1_mi4eo"]
 [ext_resource type="Texture2D" uid="uid://c788m2iiqaf7n" path="res://Assets/room 4 (brewing room with selling it)/brewing room (shop).jpg" id="1_ugu2v"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="2_5ql8f"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="4_6mom2"]
-[ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/button.gd" id="5_1bsgv"]
+[ext_resource type="Script" uid="uid://b11p3q4cx5p28" path="res://scripts/button.gd" id="5_1bsgv"]
 [ext_resource type="PackedScene" uid="uid://dx6e5oxpxyl8h" path="res://rooms/total_money.tscn" id="6_1bsgv"]
+[ext_resource type="PackedScene" uid="uid://bpr04seeqcl6e" path="res://rooms/market_notification.tscn" id="7_2r27u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ql8f"]
 size = Vector2(126.5, 32)
@@ -280,6 +281,12 @@ offset_bottom = 8.0
 theme_override_fonts/font = ExtResource("4_6mom2")
 
 [node name="Total_money" parent="npc/Button2" unique_id=1136350852 instance=ExtResource("6_1bsgv")]
+
+[node name="Button3" type="Button" parent="npc" unique_id=991195472]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="market_notification" parent="npc/Button3" unique_id=1446910186 instance=ExtResource("7_2r27u")]
 
 [connection signal="body_entered" from="tp to room 1" to="." method="_on_tp_to_room_1_body_entered"]
 [connection signal="body_exited" from="tp to room 1" to="." method="_on_tp_to_room_1_body_exited"]

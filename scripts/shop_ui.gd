@@ -5,6 +5,8 @@ extends CanvasLayer
 @onready var tomato_text = $ScrollContainer/VBoxContainer/Tomato_Button/tomato_price_label2
 @onready var corn_text = $ScrollContainer/VBoxContainer/Corn_Button/corn_price_label2
 @onready var apple_text = $ScrollContainer/VBoxContainer/Apple_Button/apple_price_label2
+@onready var orange_text = $ScrollContainer/VBoxContainer/Orange_Button/orange_price_label2
+@onready var buy_sound = $BuySound
 
 # used to temporarily store received market data
 var saved_market_data = {}
@@ -42,6 +44,14 @@ func update_shop_display() -> void:
 			apple_text.modulate = Color.RED
 		else:
 			apple_text	.modulate = Color.WHITE
+			
+	if saved_market_data.has("Orange") and orange_text:
+		var orange_price = saved_market_data["Orange"]["current_price"]
+		orange_text.text = "%d" % orange_price
+		if current_money < orange_price:
+			orange_text.modulate = Color.RED
+		else:
+			orange_text	.modulate = Color.WHITE
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -66,6 +76,8 @@ func _on_tomato_button_pressed():
 	if saved_market_data.has("Tomato"):
 		price = saved_market_data["Tomato"]["current_price"]
 	if Global.subtract_money(price):
+		if buy_sound:
+			buy_sound.play()
 		update_ui()
 		add_to_inventory("Tomato")
 		saved_market_data["Tomato"]["stock"] -= 1
@@ -77,6 +89,8 @@ func _on_corn_button_pressed():
 	if saved_market_data.has("Corn"):
 		price = saved_market_data["Corn"]["current_price"]
 	if Global.subtract_money(price):
+		if buy_sound:
+			buy_sound.play()
 		update_ui()
 		add_to_inventory("Corn")
 		saved_market_data["Corn"]["stock"] -= 1 
@@ -88,11 +102,26 @@ func _on_apple_button_pressed():
 	if saved_market_data.has("Apple"):
 		price = saved_market_data["Apple"]["current_price"]
 	if Global.subtract_money(price):
+		if buy_sound:
+			buy_sound.play()
 		update_ui()
 		add_to_inventory("Apple")
 		saved_market_data["Apple"]["stock"] -= 1
 	else:
 		print("Not enough money to buy Apple")
+		
+func _on_orange_button_pressed():
+	var price = 30 
+	if saved_market_data.has("Orange"):
+		price = saved_market_data["Orange"]["current_price"]
+	if Global.subtract_money(price):
+		if buy_sound:
+			buy_sound.play()
+		update_ui()
+		add_to_inventory("Orange")
+		saved_market_data["Orange"]["stock"] -= 1
+	else:
+		print("Not enough money to buy Orange")
 
 func update_ui():
 	# Update money
