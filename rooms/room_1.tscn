@@ -4,13 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="1_31r0r"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="2_cdn6i"]
 [ext_resource type="Texture2D" uid="uid://cmnffj1d1t2s4" path="res://Assets/room 1 (outside)/Room0.1(House).png" id="2_j6sld"]
+[ext_resource type="PackedScene" uid="uid://bpr04seeqcl6e" path="res://rooms/market_notification.tscn" id="2_jlk02"]
 [ext_resource type="Texture2D" uid="uid://doplhhvs8b0m8" path="res://Assets/room 1 (outside)/Room3(House punya something).png" id="2_p6f22"]
-[ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/button.gd" id="3_p1q16"]
+[ext_resource type="Script" uid="uid://b11p3q4cx5p28" path="res://scripts/button.gd" id="3_p1q16"]
 [ext_resource type="Texture2D" uid="uid://b1ojfi80oa7cw" path="res://Assets/room 1 (outside)/Room0.1(House punya something).png" id="4_h00nm"]
 [ext_resource type="PackedScene" uid="uid://dx6e5oxpxyl8h" path="res://rooms/total_money.tscn" id="4_jlk02"]
 [ext_resource type="Texture2D" uid="uid://jf87jlrtc66o" path="res://Assets/room 1 (outside)/Room0.1(House punya it apa).png" id="5_1j48i"]
 [ext_resource type="Texture2D" uid="uid://cja0g8aipee15" path="res://Assets/room 1 (outside)/Marketplace.png" id="6_brp25"]
-[ext_resource type="Script" uid="uid://cef57bmac6wku" path="res://scripts/room_1.gd" id="6_ttp18"]
+[ext_resource type="Script" uid="uid://d2xd321kfckg5" path="res://scripts/room_1.gd" id="6_ttp18"]
 [ext_resource type="Texture2D" uid="uid://2yngs730mj5s" path="res://Assets/room 1 (outside)/Fence(left).png" id="8_c48p8"]
 [ext_resource type="Texture2D" uid="uid://1c8sowap4qwq" path="res://Assets/room 1 (outside)/Fence(Down).png" id="9_7ecps"]
 [ext_resource type="Texture2D" uid="uid://u8duun5jybnv" path="res://Assets/room 1 (outside)/Fence(Straight).png" id="10_gdwmo"]
@@ -80,6 +81,13 @@ y_sort_enabled = true
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_31r0r")]
 position = Vector2(-962, -441)
+
+[node name="Button3" type="Button" parent="player" unique_id=1839670325]
+visible = false
+offset_right = 8.0
+offset_bottom = 8.0
+
+[node name="market_notification" parent="player/Button3" unique_id=1446910186 instance=ExtResource("2_jlk02")]
 
 [node name="Button" type="Button" parent="player" unique_id=1486784470]
 offset_left = 467.0

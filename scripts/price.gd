@@ -10,7 +10,7 @@ var inventory = {
 	"Tomato": 0,
 	"Corn": 0,
 	"Apple":0,
-	"Oringe":0,
+	"Orange":0,
 	"Potato":0
 }
 
@@ -19,7 +19,7 @@ var market_data = {
 	"Tomato": {"base_price": 10.0, "stock": 50, "ideal": 50, "current_price": 10.0},
 	"Corn": {"base_price": 20.0, "stock": 30, "ideal": 30, "current_price": 20.0},
 	"Apple": {"base_price": 30.0, "stock": 40, "ideal": 40, "current_price": 30.0},
-	"Oringe": {"base_price": 30.0, "stock": 40, "ideal": 40, "current_price": 30.0},
+	"Orange": {"base_price": 30.0, "stock": 40, "ideal": 40, "current_price": 30.0},
 	"Potato": {"base_price": 15.0, "stock": 50, "ideal": 50, "current_price": 15.0}
 }
 

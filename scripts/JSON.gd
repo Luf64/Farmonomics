@@ -54,7 +54,6 @@ func apply_save():
 	var player = get_tree().get_first_node_in_group("Player")
 	if player != null:
 		player.global_position = Vector2(game.position.x,game.position.y)
-	var player = get_tree().get_first_node_in_group("Player")
 	if player != null:
 		player.global_position = Vector2(game.position.x,game.position.y)
 
