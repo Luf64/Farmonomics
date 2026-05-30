@@ -7,13 +7,13 @@ var last_direction : Vector2 = Vector2.DOWN
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    teleport_to_spawn()
+	teleport_to_spawn()
 
-    # Make sure sound not play
-    if run_sound:
-        sound_volume
-        run_sound.autoplay = false
-        run_sound.stop()
+	# Make sure sound not play
+	if run_sound:
+		sound_volume
+		run_sound.autoplay = false
+		run_sound.stop()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
