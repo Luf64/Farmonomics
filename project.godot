@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://scripts/global.gd"
 Date_Timer="*res://scripts/date_timer.gd"
-Json="*uid://dfwt758eiwgil"
+Json="*res://scripts/JSON.gd"
 
 [display]
 
