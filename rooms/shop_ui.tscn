@@ -15,6 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://b82cpg5gsh13v" path="res://Assets/Pic/SrollButton.png" id="11_18nhq"]
 [ext_resource type="AudioStream" uid="uid://b3na8gxvl7xp5" path="res://Sound/buying-clinking-coins-4-468430.mp3" id="14_pigwl"]
 [ext_resource type="Texture2D" uid="uid://bh77u11eh427p" path="res://Assets/item/Orange.png" id="14_qx7ap"]
+[ext_resource type="Texture2D" uid="uid://dmv8krt74ecpp" path="res://Assets/item/potato.png" id="15_se1wg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jfs2"]
 
@@ -385,6 +386,63 @@ theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "30"
 
+[node name="Potato_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1882075171]
+layout_mode = 2
+
+[node name="TextureRect13" type="TextureRect" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=1638222110]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
+texture = ExtResource("2_qf5tm")
+
+[node name="TextureRect14" type="TextureRect" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=424350219]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = ExtResource("3_5wht7")
+
+[node name="TextureRect15" type="TextureRect" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=828678732]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 77.0
+offset_bottom = 78.0
+texture = ExtResource("15_se1wg")
+expand_mode = 1
+
+[node name="Coin5" type="TextureRect" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=187774798]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 18.0
+offset_right = 414.0
+offset_bottom = 68.0
+texture = ExtResource("4_pxn6d")
+expand_mode = 1
+
+[node name="TextEdit5" type="TextEdit" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=1994615104]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 90.0
+offset_top = 9.0
+offset_right = 233.0
+offset_bottom = 70.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 38
+text = "Potato"
+
+[node name="potato_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=1398193000]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 29.0
+offset_right = 399.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 38
+text = "15"
+
 [node name="BuySound" type="AudioStreamPlayer2D" parent="." unique_id=1194135101]
 stream = ExtResource("14_pigwl")
 
@@ -396,3 +454,4 @@ stream = ExtResource("14_pigwl")
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Corn_Button" to="." method="_on_corn_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Apple_Button" to="." method="_on_apple_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Orange_Button" to="." method="_on_orange_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Potato_Button" to="." method="_on_potato_button_pressed"]

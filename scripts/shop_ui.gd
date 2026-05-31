@@ -6,6 +6,7 @@ extends CanvasLayer
 @onready var corn_text = $ScrollContainer/VBoxContainer/Corn_Button/corn_price_label2
 @onready var apple_text = $ScrollContainer/VBoxContainer/Apple_Button/apple_price_label2
 @onready var orange_text = $ScrollContainer/VBoxContainer/Orange_Button/orange_price_label2
+@onready var potato_text = $ScrollContainer/VBoxContainer/Potato_Button/potato_price_label2
 @onready var buy_sound = $BuySound
 
 # used to temporarily store received market data
@@ -52,6 +53,14 @@ func update_shop_display() -> void:
 			orange_text.modulate = Color.RED
 		else:
 			orange_text	.modulate = Color.WHITE
+			
+	if saved_market_data.has("Potato") and orange_text:
+		var potato_price = saved_market_data["Potato"]["current_price"]
+		potato_text.text = "%d" % potato_price
+		if current_money < potato_price:
+			potato_text.modulate = Color.RED
+		else:
+			potato_text	.modulate = Color.WHITE
 
 func _ready():
 	process_mode = Node.PROCESS_MODE_ALWAYS
@@ -122,6 +131,20 @@ func _on_orange_button_pressed():
 		saved_market_data["Orange"]["stock"] -= 1
 	else:
 		print("Not enough money to buy Orange")
+		
+		
+func _on_potato_button_pressed():
+	var price = 15 
+	if saved_market_data.has("Potato"):
+		price = saved_market_data["Potato"]["current_price"]
+	if Global.subtract_money(price):
+		if buy_sound:
+			buy_sound.play()
+		update_ui()
+		add_to_inventory("Potato")
+		saved_market_data["Potato"]["stock"] -= 1
+	else:
+		print("Not enough money to buy Potato")
 
 func update_ui():
 	# Update money
