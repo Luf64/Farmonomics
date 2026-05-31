@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bpr04seeqcl6e"]
+
+[ext_resource type="Texture2D" uid="uid://cebs6kf7xm0qh" path="res://Assets/Pic/390dc56603c15331eb9c329b0e4a4fb9-removebg-preview.png" id="1_gvv0n"]
+[ext_resource type="Script" uid="uid://dhqqbjod4x6ra" path="res://scripts/market_notification.gd" id="1_u8o3x"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="3_mmqft"]
+
+[node name="market_notification" type="CanvasLayer" unique_id=1446910186]
+script = ExtResource("1_u8o3x")
+
+[node name="Control" type="Control" parent="." unique_id=745618363]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 823.0
+offset_top = 33.0
+offset_right = 863.0
+offset_bottom = 73.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=565654676]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 90.0
+offset_right = 325.0
+offset_bottom = 201.0
+texture = ExtResource("1_gvv0n")
+
+[node name="Label" type="Label" parent="Control" unique_id=96436828]
+modulate = Color(0, 0, 0, 1)
+layout_mode = 0
+offset_left = 113.0
+offset_top = 113.0
+offset_right = 313.0
+offset_bottom = 188.0
+theme_override_fonts/font = ExtResource("3_mmqft")
+theme_override_font_sizes/font_size = 17
+text = "[Market Announcement] 
+Prices of core materials 
+have fluctuated!"
