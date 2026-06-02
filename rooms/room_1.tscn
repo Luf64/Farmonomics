@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://bpe606dutxyfy" path="res://Assets/room 1 (outside)/Floor0.png" id="14_gdwmo"]
 [ext_resource type="Texture2D" uid="uid://br60pgwohjlb8" path="res://Assets/room 1 (outside)/Marketplace punya something.png" id="16_jee7h"]
 [ext_resource type="AudioStream" uid="uid://v4305gwyfv68" path="res://Sound/Phua/Aisake, Dosi - Cruising [NCS Release].mp3" id="18_p1q16"]
+[ext_resource type="PackedScene" uid="uid://rv1c61cx6p8u" path="res://rooms/green_npc.tscn" id="21_n7gw8"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_cdn6i"]
 
@@ -78,6 +79,9 @@ size = Vector2(54.5, 21)
 
 [node name="Room1" type="Node2D" unique_id=1710378233]
 y_sort_enabled = true
+
+[node name="GreenNPC" parent="." unique_id=236786661 instance=ExtResource("21_n7gw8")]
+position = Vector2(-310, -403)
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_31r0r")]
 position = Vector2(-962, -441)
