@@ -1,6 +1,11 @@
 extends Node
 
 signal global_prices_changed(market_data: Dictionary)
+signal money_changed(new_amount)
+
+var current_selected_item: String = "Corn"
+var selected_item: String = "Corn"
+var item_textures: Dictionary = {}
 
 var Room_1 = "res://rooms/room_1.tscn" #Hall
 var Room0_1 = "res://rooms/room0.1.tscn" # Farm
@@ -11,6 +16,7 @@ var Inventory = "res://rooms/inventory.tscn"
 var inventory_ui = null
 var current_room: String = ""
 var coordinates: String = ""
+
 var money: int = 100:
     set(value):
         money = value
@@ -29,18 +35,35 @@ func _ready() -> void:
     get_tree().root.call_deferred("add_child", inventory_ui)
     inventory_ui.visible = false
     Json.load_game()
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(delta: float) -> void:
-    pass
-
+    #testing
+    if Json.get_item_count("Corn") == 0:
+        Json.add_item("Corn",5)
+    if Json.get_item_count("Chocolate") == 0:
+        Json.add_item("Chocolate", 5)
+    if Json.get_item_count("Milk") == 0:
+        Json.add_item("Milk", 5)
+    current_selected_item = "Corn"
+    selected_item = "Corn"
+    selected_item = "Corn"
 
 func _input(event: InputEvent) -> void:
     if event.is_action_pressed("ui_cancel"):
         Json.save_game()
         await get_tree().create_timer(1.0).timeout
         get_tree().quit()
+    #test
+    if event.is_action_pressed("1"):
+        current_selected_item = "Corn"
+        selected_item = "Corn"
+        print("Selected: Corn")
+    if event.is_action_pressed("2"):
+        current_selected_item = "Chocolate"
+        selected_item = "Chocolate"
+        print("Selected: Chocolate")
+    if event.is_action_pressed("3"):
+        current_selected_item = "Milk"
+        selected_item = "Milk"
+        print("Selected:  Milk")
 
 #open inventory
 func open_inventory() -> void:
@@ -50,7 +73,6 @@ func open_inventory() -> void:
 #player status global/local
 #level system for unlocking new equipment and seeds
 
-signal money_changed(new_amount)
 
 func subtract_money(amount: int) -> bool:
     if money >= amount:

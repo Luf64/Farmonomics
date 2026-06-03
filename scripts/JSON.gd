@@ -16,6 +16,29 @@ var game = {
     }
 }
 
+func add_item(item:String, amount:int = 1) -> void:
+    for entry in game.inventory:
+        if entry["id"] == item:
+            entry["amount"] += amount
+            save_game()
+            return
+    game.inventory.append({"id":item,"amount":amount})
+    save_game()
+
+func remove_item(item:String,amount:int=1) ->void:
+    for entry in game.inventory:
+        if entry["id"] == item:
+            entry["amount"]-=amount
+            if entry["amount"] <=0:
+                game.inventory.erase(entry)
+            save_game()
+            return
+
+func get_item_count(item:String) -> int:
+    for entry in game.inventory:
+        if entry["id"] == item:
+            return  entry["amount"]
+    return 0
 func save_game():
     var player = get_tree().get_first_node_in_group("Player")
     if player != null:
@@ -41,6 +64,12 @@ func load_game():
         print("Save file corrupted")
         return false
     game = parse
+    if not game.has("inventory"):
+        game["inventory"] = []
+    if not game.has("money"):
+        game["money"] = 100
+    if not game.has("market_price"):
+        game["market_price"] = {"Chocolate":3,"Corn":1,"Milk":3}
     if game.has("money"):
         Global.money = int(game["money"])
     if game.has("scene"):

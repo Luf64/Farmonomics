@@ -1,1 +1,1 @@
-{"money":80,"scene":"res://rooms/room_1.tscn"}
+{"inventory":[{"amount":5.0,"id":"Chocolate"},{"amount":5.0,"id":"Milk"},{"amount":4.0,"id":"Corn"}],"market_price":{"Chocolate":3.0,"Corn":1.0,"Milk":3.0},"money":80,"scene":"res://rooms/room0.1.tscn"}

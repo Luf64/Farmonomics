@@ -1,62 +1,93 @@
 extends Area2D
 
-var grow_time: int = 0
 var planted: bool = false
 var plant_stage: int = 0
 var plant_ID: String = ""
-var player:bool = false
+var player: bool = false
+var plant_unix_end: int = 0
+var is_animating: bool = false
+
 var plants_grow_time: Dictionary = {
-    "Corn": 300,
-    "Chocolate" : 600,
-    "Milk": 500
-    
+    "Corn": 10,
+    "Chocolate": 10,
+    "Milk": 10
 }
 
-# Let 0 == Empty, 1 == Seed, 2 == Growing, 3 == Harvest
-func plant_seed(id: String): # check ID, plant time
-    plant_ID = id
-    planted = true
-    plant_stage = 1
-    update_sprite()
-    var x = str (plant_ID + "will grow at" + str(grow_time))
-    print(x)
-
-func update_sprite():
-    # find the AnimatedSprite2D regardless of its name
-    var sprite: AnimatedSprite2D = null
+func _ready() -> void:
     for child in get_children():
         if child is AnimatedSprite2D:
-            sprite = child
-            break
-    if sprite == null:
-        return
-    if plant_stage == 0 or plant_ID == "":
-        sprite.visible = false
-        return
-    sprite.visible = true
-    # check the animation exists before playing
-    if sprite.sprite_frames.has_animation(plant_ID):
-        sprite.play(plant_ID)
-        sprite.frame = plant_stage - 1
-    else:
-        print("Missing animation: ", plant_ID, " in ", name)
-    
+            child.stop()
+            child.frame = 0
+            child.visible = false
 
-func get_state() -> Dictionary:
-    return{
-        "node_name": name,
-        "plant_ID": plant_ID,
-        "plant_stage": plant_stage,
-        "grow_time": grow_time,
-        "planted": planted
-    }
-    
-func load_state(data:Dictionary):
-    plant_ID = data.get("plant_ID","")
-    plant_stage = data.get("plant_stage",0)
-    grow_time = data.get("grow_time",0)
-    planted = data.get("planted",false)
-    update_sprite()
+func get_sprite_for(id: String) -> AnimatedSprite2D:
+    for child in get_children():
+        if child is AnimatedSprite2D and child.name == id:
+            return child
+    return null
+
+func interact():
+    var x: String = Global.current_selected_item
+    if x == "":
+        print("No seed selected!")
+        return
+    if Json.get_item_count(x) <= 0:
+        print("You don't have any ", x, " seeds!")
+        return
+    var sprite = get_sprite_for(x)
+    if sprite == null:
+        print("No sprite found for: ", x)
+        return
+
+    is_animating = true
+    sprite.stop()
+    sprite.frame = 0
+    sprite.visible = true
+    sprite.play(x)
+    Json.remove_item(x, 1)
+
+    var anim_length = float(sprite.sprite_frames.get_frame_count(x)) / float(sprite.sprite_frames.get_animation_speed(x))
+    await get_tree().create_timer(anim_length).timeout
+
+    # animation done — stay on last frame
+    sprite.stop()
+    sprite.frame = sprite.sprite_frames.get_frame_count(x) - 1
+    sprite.visible = true
+    plant_ID = x
+    planted = true
+    plant_stage = 2
+    is_animating = false
+    print(x, " planted! Growing for ", plants_grow_time[x], " seconds...")
+
+    # start grow timer using Godot timer — no Date_Timer dependency
+    await get_tree().create_timer(plants_grow_time[x]).timeout
+    plant_stage = 3
+    print(plant_ID, " is ready! Press F to collect.")
+
+func collect():
+    var sprite = get_sprite_for(plant_ID)
+    if sprite:
+        sprite.stop()
+        sprite.visible = false
+    Json.add_item(plant_ID, 1)
+    print("Collected: ", plant_ID, " → added to inventory")
+    print("Inventory: ", Json.game.inventory)
+    plant_ID = ""
+    planted = false
+    plant_stage = 0
+    is_animating = false
+
+func _process(_delta: float) -> void:
+    pass  # no longer needed — timer handles grow
+
+func _input(event: InputEvent) -> void:
+    if event.is_action_pressed("interaction") and player and not is_animating:
+        if not planted:
+            interact()
+        elif plant_stage == 3:
+            collect()
+        elif plant_stage == 2:
+            print("Still growing...")
 
 func _on_body_entered(body: Node2D) -> void:
     if body.name == "player":
@@ -65,8 +96,27 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_body_exited(body: Node2D) -> void:
     if body.name == "player":
         player = false
-    
-func _input(event: InputEvent) -> void:
-    if event.is_action_pressed("interaction"):
-        if player and not planted:
-            plant_seed("Corn")
+
+func get_state() -> Dictionary:
+    return {
+        "node_name": name,
+        "plant_ID": plant_ID,
+        "plant_stage": plant_stage,
+        "plant_unix_end": plant_unix_end,
+        "planted": planted
+    }
+
+func load_state(data: Dictionary):
+    plant_ID = data.get("plant_ID", "")
+    plant_stage = data.get("plant_stage", 0)
+    plant_unix_end = data.get("plant_unix_end", 0)
+    planted = data.get("planted", false)
+    for child in get_children():
+        if child is AnimatedSprite2D:
+            child.stop()
+            child.visible = false
+    if planted:
+        var sprite = get_sprite_for(plant_ID)
+        if sprite:
+            sprite.frame = sprite.sprite_frames.get_frame_count(plant_ID) - 1
+            sprite.visible = true
