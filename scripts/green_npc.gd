@@ -1,5 +1,5 @@
 extends CharacterBody2D
-
+@export var dialogue_ui: Control
 const speed = 30
 var current_state = IDLE
 
@@ -22,18 +22,23 @@ func _ready():
 	randomize()
 	start_pos = position
 func _process(delta):
-	if current_state == 0 or current_state == 1:
+	if is_chatting:
 		$AnimatedSprite2D.play("idle")
-	elif current_state == 2 and !is_chatting:
-		if dir.x == -1:
-			$AnimatedSprite2D.play("walk_w")
-		if dir.x == 1:
-			$AnimatedSprite2D.play("walk_e")
-		if dir.x == -1:
-			$AnimatedSprite2D.play("walk_n")
-		if dir.x == 1:
-			$AnimatedSprite2D.play("walk_s")
-			
+		return
+		
+	if velocity.length() > 0:
+		if abs(velocity.x) > abs(velocity.y):
+			if velocity.x > 0:
+				$AnimatedSprite2D.play("walk_e")
+			else:
+				$AnimatedSprite2D.play("walk_w")
+		else:
+			if velocity.y > 0:
+				$AnimatedSprite2D.play("walk_s")
+			else:
+				$AnimatedSprite2D.play("walk_n")
+	else:
+		$AnimatedSprite2D.play("idle")
 	if is_roaming:
 		match current_state:
 			IDLE:
@@ -55,8 +60,12 @@ func choose(array):
 	
 	
 func move(delta):
-	if !is_chatting:
-		position += dir * speed * delta
+	if is_chatting:
+		velocity = Vector2.ZERO
+		return
+		
+	velocity = dir * speed
+	move_and_slide()
 		
 		
 
@@ -73,8 +82,13 @@ func _on_chat_detetion_area_body_exited(body: Node2D) -> void:
 
 
 func _on_timer_timeout() -> void:
-	$Timer.wait_time = choose([0.5, 1, 1.5])
-	current_state = choose([IDLE, NEW_DIR, MOVE])
+	$Timer.wait_time = randf_range(1.5, 3.0)
+	if current_state == IDLE:
+		dir = choose([Vector2.RIGHT, Vector2.UP, Vector2.LEFT, Vector2.DOWN])
+		current_state = MOVE
+	else:
+		velocity = Vector2.ZERO
+		current_state = IDLE
 
 
 func _on_green_npc_dialogue_dialogue_finished() -> void:
