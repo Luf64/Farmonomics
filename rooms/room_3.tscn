@@ -276,6 +276,7 @@ script = ExtResource("5_1bsgv")
 metadata/_edit_use_anchors_ = true
 
 [node name="Button2" type="Button" parent="npc" unique_id=169130831]
+visible = false
 offset_right = 8.0
 offset_bottom = 8.0
 theme_override_fonts/font = ExtResource("4_6mom2")
@@ -283,6 +284,7 @@ theme_override_fonts/font = ExtResource("4_6mom2")
 [node name="Total_money" parent="npc/Button2" unique_id=1136350852 instance=ExtResource("6_1bsgv")]
 
 [node name="Button3" type="Button" parent="npc" unique_id=991195472]
+visible = false
 offset_right = 8.0
 offset_bottom = 8.0
 
