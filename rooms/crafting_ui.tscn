@@ -166,6 +166,8 @@ offset_left = 437.0
 offset_top = 97.0
 offset_right = 691.0
 offset_bottom = 350.0
+theme_override_constants/h_separation = 90
+theme_override_constants/v_separation = 90
 columns = 3
 
 [node name="Panel" type="Panel" parent="Control/craftingGrid" unique_id=1612958447]
@@ -195,24 +197,30 @@ layout_mode = 2
 [node name="Panel9" type="Panel" parent="Control/craftingGrid" unique_id=2010221217]
 layout_mode = 2
 
-[node name="craftButton" type="Button" parent="Control" unique_id=697001478]
+[node name="craftTextureButton" type="TextureButton" parent="Control" unique_id=69010615]
 layout_mode = 0
-offset_left = 446.0
+offset_left = 445.0
 offset_top = 376.0
-offset_right = 682.0
-offset_bottom = 451.0
+offset_right = 683.0
+offset_bottom = 454.0
 
-[node name="Panel" type="Panel" parent="Control" unique_id=1098029064]
+[node name="result_PanelContainer" type="PanelContainer" parent="Control" unique_id=1983522146]
 layout_mode = 0
 offset_left = 625.0
 offset_top = 498.0
 offset_right = 715.0
-offset_bottom = 586.0
+offset_bottom = 590.0
 
-[node name="TextureRect" type="TextureRect" parent="Control/Panel" unique_id=902045551]
+[node name="resultItem" type="TextureRect" parent="Control/result_PanelContainer" unique_id=902045551]
+layout_mode = 2
+stretch_mode = 5
+
+[node name="resultLabel" type="Label" parent="Control" unique_id=187794624]
 layout_mode = 0
-offset_right = 90.0
-offset_bottom = 87.0
+offset_left = 608.0
+offset_top = 590.0
+offset_right = 729.0
+offset_bottom = 613.0
 
 [connection signal="pressed" from="Control/close" to="." method="_on_close_pressed"]
-[connection signal="pressed" from="Control/craftButton" to="." method="_on_craft_button_pressed"]
+[connection signal="pressed" from="Control/craftTextureButton" to="." method="_on_craft_texture_button_pressed"]
