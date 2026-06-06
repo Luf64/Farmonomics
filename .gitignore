@@ -19,3 +19,6 @@ save_data/
 
 #Sensitive data
 .env
+
+#JSON file
+main.json
