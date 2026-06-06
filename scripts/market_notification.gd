@@ -17,6 +17,8 @@ func _ready() -> void:
 	if Global.global_prices_changed.is_connected(_on_global_prices_changed):
 		Global.global_prices_changed.disconnect(_on_global_prices_changed)
 	Global.global_prices_changed.connect(_on_global_prices_changed)
+	
+
 
 func _on_global_prices_changed(market_data: Dictionary) -> void:
 	
@@ -31,3 +33,4 @@ func _on_global_prices_changed(market_data: Dictionary) -> void:
 
 	visible = true
 	hide_timer.start()
+	

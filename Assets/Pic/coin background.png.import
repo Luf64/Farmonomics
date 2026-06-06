@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyj5bih10oeje"
-valid=false
+uid="uid://dj5maliffq5hq"
+path="res://.godot/imported/coin background.png-19c758b51496bb765b94b69eb4dfc296.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/Pic/coin back.jpg"
+source_file="res://Assets/Pic/coin background.png"
+dest_files=["res://.godot/imported/coin background.png-19c758b51496bb765b94b69eb4dfc296.ctex"]
 
 [params]
 

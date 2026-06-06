@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyj5bih10oeje"
-valid=false
+uid="uid://d2x6amdmv31oy"
+path="res://.godot/imported/green hair girl face(1).png-1dfd302af011d670eff3126c594489bb.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/Pic/coin back.jpg"
+source_file="res://Assets/sprites/green hair girl face(1).png"
+dest_files=["res://.godot/imported/green hair girl face(1).png-1dfd302af011d670eff3126c594489bb.ctex"]
 
 [params]
 
