@@ -20,64 +20,6 @@
 [ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/button.gd" id="18_2ux4u"]
 [ext_resource type="Script" uid="uid://cg4ei51i2nsow" path="res://scripts/plant.gd" id="19_2ux4u"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
-atlas = ExtResource("1_j80mx")
-region = Rect2(0, 0, 16, 22)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_566fy"]
-atlas = ExtResource("2_0ov7x")
-region = Rect2(0, 0, 31, 37)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v2k8o"]
-atlas = ExtResource("3_5kdcd")
-region = Rect2(0, 0, 33, 44)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_cejrt"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qh5ub")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_566fy")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_v2k8o")
-}],
-"loop": false,
-"name": &"Milk",
-"speed": 0.2
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cejrt"]
-atlas = ExtResource("7_qh5ub")
-region = Rect2(0, 0, 29, 23)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_wcj83"]
-atlas = ExtResource("8_566fy")
-region = Rect2(0, 0, 38, 33)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6hkjl"]
-atlas = ExtResource("9_v2k8o")
-region = Rect2(0, 0, 38, 35)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_j80mx"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cejrt")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_wcj83")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6hkjl")
-}],
-"loop": false,
-"name": &"Chocolate",
-"speed": 0.2
-}]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v2k8o"]
 size = Vector2(2, 48)
 
@@ -142,6 +84,64 @@ b = Vector2(-80, 154)
 [sub_resource type="CircleShape2D" id="CircleShape2D_2ux4u"]
 radius = 9.0
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_cejrt"]
+atlas = ExtResource("7_qh5ub")
+region = Rect2(0, 0, 29, 23)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcj83"]
+atlas = ExtResource("8_566fy")
+region = Rect2(0, 0, 38, 33)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hkjl"]
+atlas = ExtResource("9_v2k8o")
+region = Rect2(0, 0, 38, 35)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j80mx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cejrt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcj83")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hkjl")
+}],
+"loop": false,
+"name": &"Chocolate",
+"speed": 0.2
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh5ub"]
+atlas = ExtResource("1_j80mx")
+region = Rect2(0, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_566fy"]
+atlas = ExtResource("2_0ov7x")
+region = Rect2(0, 0, 31, 37)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v2k8o"]
+atlas = ExtResource("3_5kdcd")
+region = Rect2(0, 0, 33, 44)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cejrt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qh5ub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_566fy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v2k8o")
+}],
+"loop": false,
+"name": &"Milk",
+"speed": 0.2
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_j80mx"]
 atlas = ExtResource("1_676ew")
 region = Rect2(0, 0, 31, 25)
@@ -179,26 +179,6 @@ position = Vector2(577, 300)
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_566fy")]
 position = Vector2(154, 355)
-
-[node name="Milk" type="AnimatedSprite2D" parent="." unique_id=1319164495]
-z_index = 1
-y_sort_enabled = true
-texture_filter = 2
-position = Vector2(1355, 55)
-scale = Vector2(2, 2)
-sprite_frames = SubResource("SpriteFrames_cejrt")
-animation = &"Milk"
-autoplay = "Milk"
-
-[node name="Chocolate" type="AnimatedSprite2D" parent="." unique_id=987635788]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(1356, 218)
-sprite_frames = SubResource("SpriteFrames_j80mx")
-animation = &"Chocolate"
-autoplay = "Chocolate"
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1929794701]
 
 [node name="Gate" type="Area2D" parent="." unique_id=1183531205]
 script = ExtResource("12_cejrt")
@@ -324,6 +304,26 @@ script = ExtResource("19_2ux4u")
 z_index = 1
 position = Vector2(352, 200)
 shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Hole1" unique_id=987635788]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(355, 185)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Hole1" unique_id=1319164495]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353, 184.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
 
 [node name="Corn" type="AnimatedSprite2D" parent="Hole1" unique_id=1404408628]
 visible = false
