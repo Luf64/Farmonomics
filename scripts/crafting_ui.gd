@@ -1,77 +1,92 @@
 class_name crafting_ui extends CanvasLayer
 
 @onready var craft_grid = $Control/craftingGrid
+@onready var result_panel = $"Control/result_PanelContainer"
+@onready var result_icon = $"Control/result_PanelContainer/resultItem"
+@onready var result_label = $"Control/resultLabel"
 
 var current_items = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    add_to_group("crafting_ui")
-    pass # Replace with function body.
+	add_to_group("crafting_ui")
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-    pass
+	pass
 
 var recipes = {
-    ["flower_red"]: "healing_potion",
-    ["flower_blue"]: "mana_potion",
-    ["flower_white"]: "white_potion",
-    ["flower_yellow"]: "yellow_potion",
-    ["flower_purple"]: "purple_potion",
+	"flower_red": "healing_potion",
+	"flower_blue": "mana_potion",
+	"flower_white": "white_potion",
+	"flower_yellow": "yellow_potion",
+	"flower_purple": "purple_potion",
+	"flower_red,flower_red": "big_healing_potion"
+}
+
+var result_textures = {
+	"healing_potion": preload("res://Assets/room 4 (brewing room with selling it)/potion/Transperent/Icon1.png"),
+	"mana_potion": preload("res://Assets/room 4 (brewing room with selling it)/potion/Transperent/Icon2.png")
 }
 
 func craft():
-    var sorted_items = current_items.duplicate()
-    sorted_items.sort()
+	var sorted_items = current_items.duplicate()
+	sorted_items.sort()
 
-    for recipe in recipes.keys():
-        var sorted_recipe = recipe.duplicate()
-        sorted_recipe.sort()
+	var key = ",".join(sorted_items)
 
-        if sorted_recipe == sorted_items:
-            var result = recipes[recipe]
-            show_result(result)
-            return
+	if recipes.has(key):
+		var result_name = recipes[key]
+		var texture = result_textures.get(result_name, null)
+		show_result(recipes[key], texture)
+		return
+	else:
+		print("No recipe found")
+		clear_craft()
 
-    print("No recipe found")
+func show_result(result_name: String, texture: Texture2D = null):
+	print("Crafted: ", result_name)
+	
+	result_panel.visible = true
+	result_label.text = result_name
 
-func show_result(result_name):
-    print("Crafted: ", result_name)
-    clear_craft()
+	if texture != null:
+		result_icon.texture = texture
+	clear_craft()
 
 func add_item_to_craft(item_name: String, item_texture: Texture2D):
-    if current_items.size() >= 9:
-        return
+	if current_items.size() >= 9:
+		return
 
-    current_items.append(item_name)
+	current_items.append(item_name)
 
-    for slot in craft_grid.get_children():
-        if slot.get_child_count() == 0:
-            var icon = TextureRect.new()
-            icon.texture = item_texture
-            icon.custom_minimum_size = Vector2(64, 64)
-            icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
-            icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
-            slot.add_child(icon)
-            return
+	for slot in craft_grid.get_children():
+		if slot.get_child_count() == 0:
+			var icon = TextureRect.new()
+			icon.texture = item_texture
+			icon.custom_minimum_size = Vector2(64, 64)
+			icon.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+			icon.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+			slot.add_child(icon)
+			return
 
 func clear_craft():
-    print("clear")
-    current_items.clear()
+	print("clear")
+	current_items.clear()
 
-    for slot in craft_grid.get_children():
-        for child in slot.get_children():
-            child.queue_free()
+	for slot in craft_grid.get_children():
+		for child in slot.get_children():
+			child.queue_free()
 
 func _on_close_pressed() -> void:
-    var room = get_parent()
-    room.crafting_ui_open = false
-    room.crafting_ui = null
-    queue_free()
-    pass # Replace with function body.
+	var room = get_parent()
+	room.crafting_ui_open = false
+	room.crafting_ui = null
+	queue_free()
+	pass # Replace with function body.
 
 
-func _on_craft_button_pressed() -> void:
-    craft()
+func _on_craft_texture_button_pressed() -> void:
+	craft()
