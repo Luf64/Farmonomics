@@ -1,1 +1,1 @@
-{"inventory":[{"amount":5.0,"id":"Corn"},{"amount":5.0,"id":"Chocolate"},{"amount":5.0,"id":"Milk"}],"market_price":{"Chocolate":3.0,"Corn":1.0,"Milk":3.0},"money":9999164,"scene":"res://rooms/crafting_ui.tscn"}
+{"inventory":[{"amount":1.0,"id":"Chocolate"},{"amount":3.0,"id":"Milk"},{"amount":5.0,"id":"Corn"}],"market_price":{"Chocolate":3.0,"Corn":1.0,"Milk":3.0},"money":9999072,"scene":"res://rooms/room_1.tscn"}
