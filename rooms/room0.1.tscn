@@ -232,11 +232,11 @@ position = Vector2(834.25, 219)
 shape = SubResource("RectangleShape2D_o6dsg")
 
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=1765496149]
-position = Vector2(448, 395)
+position = Vector2(443, 427)
 shape = SubResource("RectangleShape2D_2ux4u")
 
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=887973578]
-position = Vector2(838.25, 405.875)
+position = Vector2(840, 426)
 shape = SubResource("RectangleShape2D_wffey")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" unique_id=2045739391]
@@ -276,8 +276,8 @@ texture = ExtResource("14_6hkjl")
 
 [node name="PlantRoom0_2" type="Sprite2D" parent="." unique_id=1937813929]
 y_sort_enabled = true
-position = Vector2(645.5, 431)
-scale = Vector2(0.81644815, 0.835821)
+position = Vector2(646, 432)
+scale = Vector2(0.81763995, 0.83582073)
 texture = ExtResource("15_2blpw")
 
 [node name="PlantRoom0_3" type="Sprite2D" parent="." unique_id=179128934]
@@ -297,15 +297,15 @@ flat = true
 script = ExtResource("18_2ux4u")
 metadata/_edit_use_anchors_ = true
 
-[node name="Hole1" type="Area2D" parent="." unique_id=956491038]
+[node name="Row1_1" type="Area2D" parent="." unique_id=956491038]
 script = ExtResource("19_2ux4u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Hole1" unique_id=1495435926]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_1" unique_id=1495435926]
 z_index = 1
-position = Vector2(352, 200)
+position = Vector2(353, 202)
 shape = SubResource("CircleShape2D_2ux4u")
 
-[node name="Chocolate" type="AnimatedSprite2D" parent="Hole1" unique_id=987635788]
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_1" unique_id=987635788]
 visible = false
 z_index = 1
 y_sort_enabled = true
@@ -314,7 +314,7 @@ sprite_frames = SubResource("SpriteFrames_j80mx")
 animation = &"Chocolate"
 autoplay = "Chocolate"
 
-[node name="Milk" type="AnimatedSprite2D" parent="Hole1" unique_id=1319164495]
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_1" unique_id=1319164495]
 visible = false
 z_index = 1
 y_sort_enabled = true
@@ -325,7 +325,7 @@ sprite_frames = SubResource("SpriteFrames_cejrt")
 animation = &"Milk"
 autoplay = "Milk"
 
-[node name="Corn" type="AnimatedSprite2D" parent="Hole1" unique_id=1404408628]
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_1" unique_id=1404408628]
 visible = false
 z_index = 1
 y_sort_enabled = true
@@ -336,5 +336,1758 @@ sprite_frames = SubResource("SpriteFrames_qh5ub")
 animation = &"Corn"
 autoplay = "Corn"
 
+[node name="Row1_2" type="Area2D" parent="." unique_id=463942664]
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_2" unique_id=502021364]
+z_index = 1
+position = Vector2(400, 203)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_2" unique_id=2013913590]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(400, 185)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_2" unique_id=883318845]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(399, 184.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_2" unique_id=2117869592]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(399, 187.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row1_3" type="Area2D" parent="." unique_id=745076788]
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_3" unique_id=478141392]
+z_index = 1
+position = Vector2(445, 203)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_3" unique_id=38903313]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(445, 185)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_3" unique_id=1362064063]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(445, 184.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_3" unique_id=1964485318]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(445, 188)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row1_4" type="Area2D" parent="." unique_id=327737260]
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_4" unique_id=1787259054]
+z_index = 1
+position = Vector2(490, 203)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_4" unique_id=1693879385]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(491, 185)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_4" unique_id=554178847]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(490, 185.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_4" unique_id=272432606]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(491, 187.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row1_5" type="Area2D" parent="." unique_id=289384955]
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_5" unique_id=121860139]
+z_index = 1
+position = Vector2(536, 203)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_5" unique_id=510807406]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(537, 186)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_5" unique_id=1166207678]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(536, 184)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_5" unique_id=1255303347]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(537, 188)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row1_6" type="Area2D" parent="." unique_id=1891942309]
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_6" unique_id=784773780]
+z_index = 1
+position = Vector2(727, 203)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_6" unique_id=1006129171]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(727, 187)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_6" unique_id=1542765636]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(725, 184)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_6" unique_id=2136082029]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(727, 188.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row1_7" type="Area2D" parent="." unique_id=29285277]
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_7" unique_id=165370025]
+z_index = 1
+position = Vector2(773, 203)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_7" unique_id=503549080]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(772, 186)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_7" unique_id=155267300]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(772, 184)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_7" unique_id=1803348762]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(772.00006, 188)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row1_8" type="Area2D" parent="." unique_id=1945685455]
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_8" unique_id=103055382]
+z_index = 1
+position = Vector2(819, 203)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_8" unique_id=535535376]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(817, 187)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_8" unique_id=2069676596]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(817, 183)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_8" unique_id=2023628704]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(818, 188.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row1_9" type="Area2D" parent="." unique_id=552125413]
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_9" unique_id=184499645]
+z_index = 1
+position = Vector2(863, 203)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_9" unique_id=1419527336]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(864, 186)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_9" unique_id=1176414525]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(864, 185)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_9" unique_id=174321507]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(864, 189)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row1_10" type="Area2D" parent="." unique_id=482663532]
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_10" unique_id=1904179869]
+z_index = 1
+position = Vector2(910, 203)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_10" unique_id=568740883]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(909, 187)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_10" unique_id=555117318]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(908, 185.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_10" unique_id=1479039994]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(910, 188.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row1_11" type="Area2D" parent="." unique_id=859587317]
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row1_11" unique_id=1332872702]
+z_index = 1
+position = Vector2(955, 203)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row1_11" unique_id=1225434387]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(955, 187)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row1_11" unique_id=1663708712]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(955, 185)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row1_11" unique_id=1968850838]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(954.99994, 188)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_12" type="Area2D" parent="." unique_id=1960007152]
+position = Vector2(0, 32)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_12" unique_id=39141296]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_12" unique_id=1019631521]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_12" unique_id=2015475554]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_12" unique_id=1157892041]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_13" type="Area2D" parent="." unique_id=438587304]
+position = Vector2(46, 31)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_13" unique_id=361071782]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_13" unique_id=798068994]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_13" unique_id=674488994]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_13" unique_id=1780156004]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_14" type="Area2D" parent="." unique_id=1294442480]
+position = Vector2(91, 31)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_14" unique_id=923273260]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_14" unique_id=1307313464]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_14" unique_id=1511806544]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_14" unique_id=1668078886]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_15" type="Area2D" parent="." unique_id=275968309]
+position = Vector2(137, 32)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_15" unique_id=1593994099]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_15" unique_id=1592339969]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_15" unique_id=1432398698]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_15" unique_id=843701898]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_16" type="Area2D" parent="." unique_id=89472463]
+position = Vector2(182, 32)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_16" unique_id=929210410]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_16" unique_id=537569579]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_16" unique_id=1925681098]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_16" unique_id=743994259]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_17" type="Area2D" parent="." unique_id=1265626639]
+position = Vector2(374, 32)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_17" unique_id=2078470429]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_17" unique_id=1336420928]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_17" unique_id=730296123]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_17" unique_id=816019071]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_18" type="Area2D" parent="." unique_id=1766158462]
+position = Vector2(419, 31)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_18" unique_id=1540360978]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_18" unique_id=1151195206]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_18" unique_id=482280520]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_18" unique_id=980868092]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_19" type="Area2D" parent="." unique_id=826584744]
+position = Vector2(465, 32)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_19" unique_id=2062054579]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_19" unique_id=986546977]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_19" unique_id=1900274490]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_19" unique_id=1237847773]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_20" type="Area2D" parent="." unique_id=1703325540]
+position = Vector2(511, 32)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_20" unique_id=1939190346]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_20" unique_id=2128250752]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_20" unique_id=112044736]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_20" unique_id=1280206412]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_21" type="Area2D" parent="." unique_id=1354956598]
+position = Vector2(557, 32)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_21" unique_id=592044390]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_21" unique_id=381166434]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_21" unique_id=2015026869]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_21" unique_id=1035869932]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row2_22" type="Area2D" parent="." unique_id=384332152]
+position = Vector2(603, 53)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row2_22" unique_id=1022473783]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row2_22" unique_id=1472324611]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 195)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row2_22" unique_id=999309492]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(354.00003, 195.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row2_22" unique_id=1103169460]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(352, 199.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_23" type="Area2D" parent="." unique_id=1140138131]
+position = Vector2(0, 241)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_23" unique_id=90679349]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_23" unique_id=2090428797]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_23" unique_id=1719041118]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_23" unique_id=51033556]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_24" type="Area2D" parent="." unique_id=1439825661]
+position = Vector2(46, 241)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_24" unique_id=1344643284]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_24" unique_id=1397876531]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_24" unique_id=832969093]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_24" unique_id=102293100]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_25" type="Area2D" parent="." unique_id=1735075713]
+position = Vector2(92, 241)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_25" unique_id=1381755732]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_25" unique_id=13710336]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_25" unique_id=1562828929]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_25" unique_id=1884080913]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_26" type="Area2D" parent="." unique_id=913533031]
+position = Vector2(138, 241)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_26" unique_id=1871133945]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_26" unique_id=1937737507]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_26" unique_id=669791655]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_26" unique_id=215614142]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_27" type="Area2D" parent="." unique_id=1798564444]
+position = Vector2(184, 241)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_27" unique_id=1884174031]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_27" unique_id=1202503843]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_27" unique_id=1175620140]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_27" unique_id=1063058573]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_28" type="Area2D" parent="." unique_id=201421878]
+position = Vector2(374, 242)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_28" unique_id=2000360642]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_28" unique_id=779149953]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_28" unique_id=1315008849]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_28" unique_id=1181639558]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_29" type="Area2D" parent="." unique_id=352462489]
+position = Vector2(419, 242)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_29" unique_id=1327467355]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_29" unique_id=260454756]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_29" unique_id=1029396347]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_29" unique_id=849063225]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_30" type="Area2D" parent="." unique_id=2026231551]
+position = Vector2(465, 242)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_30" unique_id=248099088]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_30" unique_id=315095894]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_30" unique_id=1301500036]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_30" unique_id=763669401]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_31" type="Area2D" parent="." unique_id=1231445335]
+position = Vector2(511, 243)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_31" unique_id=100507070]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_31" unique_id=808543937]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_31" unique_id=853875458]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_31" unique_id=1744134921]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_32" type="Area2D" parent="." unique_id=985933585]
+position = Vector2(556, 244)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_32" unique_id=659384694]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_32" unique_id=994471501]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_32" unique_id=1607758357]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_32" unique_id=1234343512]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row4_33" type="Area2D" parent="." unique_id=193453731]
+position = Vector2(602, 243)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row4_33" unique_id=839631852]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row4_33" unique_id=155746490]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(354, 203)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row4_33" unique_id=1906203310]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(353.00003, 201.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row4_33" unique_id=1119163350]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353.00003, 206.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_1" type="Area2D" parent="." unique_id=907422295]
+position = Vector2(1, 209)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_1" unique_id=1136674503]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_1" unique_id=1988074025]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 182)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_1" unique_id=1406333324]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 181.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_1" unique_id=885227800]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 185.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_2" type="Area2D" parent="." unique_id=1403064769]
+position = Vector2(47, 210)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_2" unique_id=1124669764]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_2" unique_id=396433749]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 182)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_2" unique_id=1803570266]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 181.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_2" unique_id=2146170713]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 185.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_3" type="Area2D" parent="." unique_id=716484023]
+position = Vector2(93, 210)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_3" unique_id=1921715633]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_3" unique_id=1551048275]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 182)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_3" unique_id=816581284]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 181.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_3" unique_id=1534047112]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 185.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_4" type="Area2D" parent="." unique_id=546740247]
+position = Vector2(139, 210)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_4" unique_id=349472602]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_4" unique_id=1638535099]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 182)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_4" unique_id=1023029374]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 181.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_4" unique_id=923191487]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 185.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_5" type="Area2D" parent="." unique_id=105195650]
+position = Vector2(184, 209)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_5" unique_id=120804561]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_5" unique_id=854367953]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 182)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_5" unique_id=2129212692]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 181.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_5" unique_id=2054728446]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 185.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_6" type="Area2D" parent="." unique_id=1445121382]
+position = Vector2(374, 205)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_6" unique_id=1966284173]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_6" unique_id=403483752]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 184)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_6" unique_id=562381037]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 183.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_6" unique_id=90658806]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 187.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_7" type="Area2D" parent="." unique_id=2021904880]
+position = Vector2(420, 204)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_7" unique_id=1849842635]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_7" unique_id=254727991]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 184)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_7" unique_id=1097061574]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 183.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_7" unique_id=378067323]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 187.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_8" type="Area2D" parent="." unique_id=1698314837]
+position = Vector2(466, 205)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_8" unique_id=298649078]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_8" unique_id=2130796865]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 184)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_8" unique_id=873897922]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 183.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_8" unique_id=1065381975]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 187.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_9" type="Area2D" parent="." unique_id=1599682625]
+position = Vector2(511, 204)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_9" unique_id=1019157704]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_9" unique_id=961009983]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 184)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_9" unique_id=1001850169]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 183.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_9" unique_id=2138106916]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 187.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_10" type="Area2D" parent="." unique_id=732261678]
+position = Vector2(557, 205)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_10" unique_id=1193453705]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_10" unique_id=2014504436]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 184)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_10" unique_id=439500455]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 183.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_10" unique_id=2070837031]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 187.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
+[node name="Row3_11" type="Area2D" parent="." unique_id=1085280270]
+position = Vector2(603, 204)
+script = ExtResource("19_2ux4u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Row3_11" unique_id=571551453]
+z_index = 1
+position = Vector2(353, 202)
+shape = SubResource("CircleShape2D_2ux4u")
+
+[node name="Chocolate" type="AnimatedSprite2D" parent="Row3_11" unique_id=1238037194]
+visible = false
+z_index = 1
+y_sort_enabled = true
+position = Vector2(353, 184)
+sprite_frames = SubResource("SpriteFrames_j80mx")
+animation = &"Chocolate"
+autoplay = "Chocolate"
+
+[node name="Milk" type="AnimatedSprite2D" parent="Row3_11" unique_id=1548691106]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 2
+position = Vector2(352, 183.00002)
+scale = Vector2(1.25, 1.0909091)
+sprite_frames = SubResource("SpriteFrames_cejrt")
+animation = &"Milk"
+autoplay = "Milk"
+
+[node name="Corn" type="AnimatedSprite2D" parent="Row3_11" unique_id=77476446]
+visible = false
+z_index = 1
+y_sort_enabled = true
+texture_filter = 1
+position = Vector2(353, 187.00002)
+scale = Vector2(0.7187499, 0.6412503)
+sprite_frames = SubResource("SpriteFrames_qh5ub")
+animation = &"Corn"
+autoplay = "Corn"
+
 [connection signal="body_entered" from="Gate" to="Gate" method="_on_body_entered"]
-[connection signal="body_entered" from="Hole1" to="Hole1" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_1" to="Row1_1" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_2" to="Row1_2" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_3" to="Row1_3" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_4" to="Row1_4" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_5" to="Row1_5" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_6" to="Row1_6" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_7" to="Row1_7" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_8" to="Row1_8" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_9" to="Row1_9" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_10" to="Row1_10" method="_on_body_entered"]
+[connection signal="body_entered" from="Row1_11" to="Row1_11" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_12" to="Row2_12" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_13" to="Row2_13" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_14" to="Row2_14" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_15" to="Row2_15" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_16" to="Row2_16" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_17" to="Row2_17" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_18" to="Row2_18" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_19" to="Row2_19" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_20" to="Row2_20" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_21" to="Row2_21" method="_on_body_entered"]
+[connection signal="body_entered" from="Row2_22" to="Row2_22" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_23" to="Row4_23" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_24" to="Row4_24" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_25" to="Row4_25" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_26" to="Row4_26" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_27" to="Row4_27" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_28" to="Row4_28" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_29" to="Row4_29" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_30" to="Row4_30" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_31" to="Row4_31" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_32" to="Row4_32" method="_on_body_entered"]
+[connection signal="body_entered" from="Row4_33" to="Row4_33" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_1" to="Row3_1" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_2" to="Row3_2" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_3" to="Row3_3" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_4" to="Row3_4" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_5" to="Row3_5" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_6" to="Row3_6" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_7" to="Row3_7" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_8" to="Row3_8" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_9" to="Row3_9" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_10" to="Row3_10" method="_on_body_entered"]
+[connection signal="body_entered" from="Row3_11" to="Row3_11" method="_on_body_entered"]
