@@ -1,14 +1,10 @@
 extends CanvasLayer
 
+@onready var json = get_node("/root/json")
+@onready var container = $Control/GridContainer
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-    pass
+	add_to_group("inventory_ui")
 
 func _on_texture_button_pressed():
     Global.inventory_ui.visible = ! Global.inventory_ui.visible
