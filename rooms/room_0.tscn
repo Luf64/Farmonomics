@@ -47,13 +47,12 @@ icon_alignment = 1
 [node name="Continue" type="Button" parent="Button" unique_id=601426618]
 z_index = 2
 texture_filter = 2
-custom_minimum_size = Vector2(94, 56)
 layout_direction = 2
 layout_mode = 0
-offset_left = -128.0
-offset_top = 85.0
-offset_right = -34.0
-offset_bottom = 141.0
+offset_left = -125.0
+offset_top = 111.0
+offset_right = -12.500015
+offset_bottom = 142.0
 scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_c68s2")
@@ -65,7 +64,6 @@ alignment = 0
 [node name="New Game" type="Button" parent="Button" unique_id=1850536945]
 z_index = 2
 texture_filter = 2
-custom_minimum_size = Vector2(94, 56)
 layout_direction = 2
 layout_mode = 1
 anchors_preset = -1
@@ -73,10 +71,10 @@ anchor_left = 3.2500002
 anchor_top = 2.799
 anchor_right = 3.2500002
 anchor_bottom = 2.799
-offset_left = -259.0
-offset_top = -0.9599991
-offset_right = -142.00002
-offset_bottom = 55.04
+offset_left = -255.00002
+offset_top = 23.04
+offset_right = -138.00002
+offset_bottom = 54.04
 scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_c68s2")
@@ -88,13 +86,12 @@ alignment = 0
 [node name="Settings" type="Button" parent="Button" unique_id=1129153270]
 z_index = 2
 texture_filter = 2
-custom_minimum_size = Vector2(94, 56)
 layout_direction = 2
 layout_mode = 0
-offset_left = -130.0
-offset_top = 129.0
-offset_right = -36.0
-offset_bottom = 185.0
+offset_left = -125.0
+offset_top = 156.0
+offset_right = -55.0
+offset_bottom = 180.0
 scale = Vector2(1.1, 1.1)
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_c68s2")
@@ -105,13 +102,12 @@ alignment = 0
 [node name="Quit Game" type="Button" parent="Button" unique_id=1207303219]
 z_index = 2
 texture_filter = 2
-custom_minimum_size = Vector2(94, 56)
 layout_direction = 2
 layout_mode = 0
-offset_left = -129.0
-offset_top = 166.0
-offset_right = -12.0
-offset_bottom = 222.0
+offset_left = -125.0
+offset_top = 181.0
+offset_right = -8.0
+offset_bottom = 212.0
 scale = Vector2(0.8, 0.8)
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_c68s2")
@@ -123,13 +119,12 @@ alignment = 0
 [node name="Credits" type="Button" parent="Button" unique_id=338865722]
 z_index = 2
 texture_filter = 2
-custom_minimum_size = Vector2(94, 56)
 layout_direction = 2
 layout_mode = 0
-offset_left = -129.0
-offset_top = 185.0
-offset_right = -35.0
-offset_bottom = 241.0
+offset_left = -126.0
+offset_top = 207.0
+offset_right = -62.0
+offset_bottom = 231.0
 scale = Vector2(1.1, 1.1)
 theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_fonts/font = ExtResource("3_c68s2")
@@ -176,6 +171,6 @@ texture = ExtResource("5_iv03q")
 [connection signal="pressed" from="Button/New Game" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Button/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Button/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Button/Quit Game" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Button/Quit Game" to="." method="_on_quit_game_pressed"]
+[connection signal="pressed" from="Button/Quit Game" to="." method="_on_exit_pressed"]
 [connection signal="pressed" from="Button/Credits" to="." method="_on_credits_pressed"]

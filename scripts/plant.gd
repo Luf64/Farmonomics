@@ -6,12 +6,20 @@ var plant_ID: String = ""
 var player: bool = false
 var plant_unix_end: int = 0
 var is_animating: bool = false
-
 var plants_grow_time: Dictionary = {
     "Corn": 10,
     "Chocolate": 10,
     "Milk": 10
 }
+
+func get_state() -> Dictionary:
+    return {
+        "node_name": name,
+        "plant_ID": plant_ID,
+        "plant_stage": plant_stage,
+        "plant_unix_end": plant_unix_end,
+        "planted": planted
+    }
 
 func _ready() -> void:
     for child in get_children():
@@ -38,19 +46,19 @@ func interact():
     if sprite == null:
         print("No sprite found for: ", x)
         return
-
     is_animating = true
     sprite.stop()
     sprite.frame = 0
     sprite.visible = true
     sprite.play(x)
     Json.remove_item(x, 1)
-
+    #test
     var anim_length = float(sprite.sprite_frames.get_frame_count(x)) / float(sprite.sprite_frames.get_animation_speed(x))
     await get_tree().create_timer(anim_length).timeout
 
-    # animation done — stay on last frame
+    # animation stay on last frame after done playing
     sprite.stop()
+    #test
     sprite.frame = sprite.sprite_frames.get_frame_count(x) - 1
     sprite.visible = true
     plant_ID = x
@@ -59,7 +67,6 @@ func interact():
     is_animating = false
     print(x, " planted! Growing for ", plants_grow_time[x], " seconds...")
 
-    # start grow timer using Godot timer — no Date_Timer dependency
     await get_tree().create_timer(plants_grow_time[x]).timeout
     plant_stage = 3
     print(plant_ID, " is ready! Press F to collect.")
@@ -77,9 +84,6 @@ func collect():
     plant_stage = 0
     is_animating = false
 
-func _process(_delta: float) -> void:
-    pass  # no longer needed — timer handles grow
-
 func _input(event: InputEvent) -> void:
     if event.is_action_pressed("interaction") and player and not is_animating:
         if not planted:
@@ -90,22 +94,17 @@ func _input(event: InputEvent) -> void:
             print("Still growing...")
         get_viewport().set_input_as_handled()
 
+
+
 func _on_body_entered(body: Node2D) -> void:
     if body.name == "player":
+        body.get_node("Panel").visible = true
         player = true
 
 func _on_body_exited(body: Node2D) -> void:
     if body.name == "player":
+        body.get_node("Panel").visible = false
         player = false
-
-func get_state() -> Dictionary:
-    return {
-        "node_name": name,
-        "plant_ID": plant_ID,
-        "plant_stage": plant_stage,
-        "plant_unix_end": plant_unix_end,
-        "planted": planted
-    }
 
 func load_state(data: Dictionary):
     plant_ID = data.get("plant_ID", "")

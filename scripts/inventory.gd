@@ -7,4 +7,4 @@ func _ready() -> void:
 	add_to_group("inventory_ui")
 
 func _on_texture_button_pressed():
-	Global.open_inventory()
+    Global.inventory_ui.visible = ! Global.inventory_ui.visible
