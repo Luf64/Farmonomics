@@ -88,6 +88,7 @@ func _input(event: InputEvent) -> void:
             collect()
         elif plant_stage == 2:
             print("Still growing...")
+        get_viewport().set_input_as_handled()
 
 func _on_body_entered(body: Node2D) -> void:
     if body.name == "player":
