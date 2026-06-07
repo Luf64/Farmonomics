@@ -39,6 +39,7 @@ func get_item_count(item:String) -> int:
 		if entry["id"] == item:
 			return  entry["amount"]
 	return 0
+
 func save_game():
 	var player = get_tree().get_first_node_in_group("Player")
 	if player != null:
@@ -94,3 +95,6 @@ func money_change(x: int):
 	game.money_state.append(track)
 	if game.money_state.size() > 10:
 		game.money_state.remove_at(0)
+
+func get_inventory() -> Array:
+	return game.inventory

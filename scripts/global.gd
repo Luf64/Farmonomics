@@ -68,6 +68,9 @@ func _input(event: InputEvent) -> void:
 #open inventory
 func open_inventory() -> void:
 	inventory_ui.visible = !inventory_ui.visible
+	var ui = get_tree().get_first_node_in_group("inventory_ui")
+	if ui:
+		ui.open_inventory()
 
 #inventory JSON system
 #player status global/local

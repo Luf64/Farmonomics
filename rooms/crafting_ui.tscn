@@ -205,11 +205,12 @@ offset_right = 683.0
 offset_bottom = 454.0
 
 [node name="result_PanelContainer" type="PanelContainer" parent="Control" unique_id=1983522146]
+visible = false
 layout_mode = 0
 offset_left = 625.0
 offset_top = 498.0
-offset_right = 715.0
-offset_bottom = 590.0
+offset_right = 714.0
+offset_bottom = 586.0
 
 [node name="resultItem" type="TextureRect" parent="Control/result_PanelContainer" unique_id=902045551]
 layout_mode = 2

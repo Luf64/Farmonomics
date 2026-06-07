@@ -34,17 +34,21 @@ var result_textures = {
 func craft():
 	var sorted_items = current_items.duplicate()
 	sorted_items.sort()
-
+	
 	var key = ",".join(sorted_items)
-
+	
+	clear_craft()
+	
 	if recipes.has(key):
 		var result_name = recipes[key]
 		var texture = result_textures.get(result_name, null)
-		show_result(recipes[key], texture)
+		show_result(result_name, texture)
 		return
 	else:
 		print("No recipe found")
-		clear_craft()
+		var result_name = ("No recipe found")
+		show_result(result_name)
+
 
 func show_result(result_name: String, texture: Texture2D = null):
 	print("Crafted: ", result_name)
@@ -54,7 +58,6 @@ func show_result(result_name: String, texture: Texture2D = null):
 
 	if texture != null:
 		result_icon.texture = texture
-	clear_craft()
 
 func add_item_to_craft(item_name: String, item_texture: Texture2D):
 	if current_items.size() >= 9:
@@ -75,10 +78,13 @@ func add_item_to_craft(item_name: String, item_texture: Texture2D):
 func clear_craft():
 	print("clear")
 	current_items.clear()
-
+	
 	for slot in craft_grid.get_children():
 		for child in slot.get_children():
 			child.queue_free()
+	
+	result_icon.texture = null
+	result_label.text = ""
 
 func _on_close_pressed() -> void:
 	var room = get_parent()
