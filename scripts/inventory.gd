@@ -11,4 +11,4 @@ func _process(delta: float) -> void:
     pass
 
 func _on_texture_button_pressed():
-    Global.open_inventory()
+    Global.inventory_ui.visible = ! Global.inventory_ui.visible

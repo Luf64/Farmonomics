@@ -70,8 +70,9 @@ func _physics_process(delta: float) -> void:
         if last_direction.y < 0:
             $AnimationPlayer.play("idle_up")
     
-    if Input.is_action_just_pressed("tab"):
-        Global.open_inventory()
+    #highlight
+        if Input.is_action_just_pressed("tab"):
+            Global.open_inventory()
         pass #open_inventory() -- Bug
         
     move_and_slide()
