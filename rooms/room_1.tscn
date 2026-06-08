@@ -23,6 +23,55 @@
 [ext_resource type="AudioStream" uid="uid://v4305gwyfv68" path="res://Sound/Phua/Aisake, Dosi - Cruising [NCS Release].mp3" id="18_p1q16"]
 [ext_resource type="PackedScene" uid="uid://rv1c61cx6p8u" path="res://rooms/green_npc.tscn" id="21_n7gw8"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_afsgx"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_cn27q"]
+_limits = [0.0, 1.0, 0.0, 0.3]
+_data = [Vector2(0, 0), 0.0, 17.976416, 0, 0, Vector2(0.15, 1), 0.0, 0.0, 0, 0, Vector2(0.3, 0), -19.547153, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_0cw7g"]
+curve = SubResource("Curve_cn27q")
+
+[sub_resource type="Gradient" id="Gradient_0qk0t"]
+colors = PackedColorArray(1, 1, 1, 0.078431375, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_ybn8b"]
+gradient = SubResource("Gradient_0qk0t")
+
+[sub_resource type="Curve" id="Curve_0hh41"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_afsgx"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 15.500191), 0.0, 104.85374, 0, 0, Vector2(0.25545174, 30), 0.0, 0.0, 0, 0, Vector2(0.9937695, 29.85052), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_64hdi"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_eqpyn"]
+curve_x = SubResource("Curve_0hh41")
+curve_y = SubResource("Curve_afsgx")
+curve_z = SubResource("Curve_64hdi")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_eli7f"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -900, 0)
+emission_shape = 3
+emission_box_extents = Vector3(20000, 1, 1)
+gravity = Vector3(0, 50000, 0)
+scale_min = 0.19999999
+scale_max = 2.0
+scale_over_velocity_curve = SubResource("CurveXYZTexture_eqpyn")
+color_initial_ramp = SubResource("GradientTexture1D_ybn8b")
+alpha_curve = SubResource("CurveTexture_0cw7g")
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_cdn6i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_31r0r"]
@@ -82,7 +131,17 @@ size = Vector2(54.5, 21)
 y_sort_enabled = true
 
 [node name="GreenNPC" parent="." unique_id=236786661 instance=ExtResource("21_n7gw8")]
+visible = false
 position = Vector2(-310, -403)
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1603721148]
+z_index = 20
+material = SubResource("CanvasItemMaterial_afsgx")
+amount = 1000
+lifetime = 0.5
+preprocess = 0.5
+visibility_rect = Rect2(-350, -200, 700, 400)
+process_material = SubResource("ParticleProcessMaterial_eli7f")
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("1_31r0r")]
 position = Vector2(-962, -441)
@@ -117,8 +176,10 @@ theme_override_fonts/font = ExtResource("2_cdn6i")
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=478089098]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="player" unique_id=885640485]
+visible = false
 
 [node name="GreenNPC_dialogue" parent="player/CanvasLayer" unique_id=1292092854 instance=ExtResource("7_afsgx")]
+visible = false
 
 [node name="Farm" type="Sprite2D" parent="." unique_id=1231734030]
 position = Vector2(-1011, -538)
