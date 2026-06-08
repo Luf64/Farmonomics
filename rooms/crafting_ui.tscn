@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dj6xjmrswr80" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Craft(crafting only).png" id="1_xh8vp"]
 [ext_resource type="Texture2D" uid="uid://bw730wtsmr303" path="res://Assets/room 4 (brewing room with selling it)/flowers/pixel-art-flowers-plants-collection-260nw-2597596201-ezgif.com-webp-to-png-converter.png" id="3_uffvs"]
 [ext_resource type="Script" uid="uid://80jvdbp7gy5j" path="res://Assets/sprites/ingredients(crafting).gd" id="4_k6hpp"]
+[ext_resource type="Texture2D" uid="uid://0fu7nqu4gd4" path="res://Assets/item/Milk/milk(Object).png" id="5_qgfub"]
+[ext_resource type="Texture2D" uid="uid://cf1a0efw77hlr" path="res://Assets/item/Chocolate/chocolate(Object).png" id="6_o6p50"]
+[ext_resource type="Texture2D" uid="uid://b2ekphaaavof3" path="res://Assets/item/Corn/corn(Object).png" id="7_o6p50"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k6hpp"]
 atlas = ExtResource("3_uffvs")
@@ -74,6 +77,13 @@ texture_normal = SubResource("AtlasTexture_k6hpp")
 script = ExtResource("4_k6hpp")
 item_name = "flower_blue"
 
+[node name="Label" type="Label" parent="Control/inventory GridContainer/Panel/blueFlower" unique_id=2147161212]
+layout_mode = 0
+offset_left = 56.29629
+offset_top = 2.9629629
+offset_right = 96.296295
+offset_bottom = 42.962963
+
 [node name="Panel2" type="Panel" parent="Control/inventory GridContainer" unique_id=1262329406]
 layout_mode = 2
 
@@ -87,6 +97,13 @@ scale = Vector2(0.09, 0.09)
 texture_normal = SubResource("AtlasTexture_xhjsy")
 script = ExtResource("4_k6hpp")
 item_name = "flower_red"
+
+[node name="Label" type="Label" parent="Control/inventory GridContainer/Panel2/redFlower" unique_id=1708614956]
+layout_mode = 0
+offset_left = 51.85185
+offset_top = 2.9629629
+offset_right = 91.85185
+offset_bottom = 42.962963
 
 [node name="Panel3" type="Panel" parent="Control/inventory GridContainer" unique_id=1399278967]
 layout_mode = 2
@@ -102,6 +119,13 @@ texture_normal = SubResource("AtlasTexture_qgfub")
 script = ExtResource("4_k6hpp")
 item_name = "flower_white"
 
+[node name="Label" type="Label" parent="Control/inventory GridContainer/Panel3/whiteFlower" unique_id=1942658763]
+layout_mode = 0
+offset_left = 57.77777
+offset_top = 4.444444
+offset_right = 97.77777
+offset_bottom = 44.444443
+
 [node name="Panel4" type="Panel" parent="Control/inventory GridContainer" unique_id=426303911]
 layout_mode = 2
 
@@ -115,6 +139,13 @@ scale = Vector2(0.09, 0.09)
 texture_normal = SubResource("AtlasTexture_o6p50")
 script = ExtResource("4_k6hpp")
 item_name = "flower_yellow"
+
+[node name="Label" type="Label" parent="Control/inventory GridContainer/Panel4/yellowFlower" unique_id=1812999786]
+layout_mode = 0
+offset_left = 48.888885
+offset_top = 1.4814814
+offset_right = 88.888885
+offset_bottom = 41.48148
 
 [node name="Panel5" type="Panel" parent="Control/inventory GridContainer" unique_id=1647011100]
 layout_mode = 2
@@ -130,14 +161,69 @@ texture_normal = SubResource("AtlasTexture_r5nu3")
 script = ExtResource("4_k6hpp")
 item_name = "flower_purple"
 
-[node name="TextureButton6" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1957023012]
+[node name="Label" type="Label" parent="Control/inventory GridContainer/Panel5/purpleFlower" unique_id=204664964]
+layout_mode = 0
+offset_left = 56.29629
+offset_top = 2.9629629
+offset_right = 96.296295
+offset_bottom = 42.962963
+
+[node name="Panel6" type="Panel" parent="Control/inventory GridContainer" unique_id=930014600]
 layout_mode = 2
 
-[node name="TextureButton7" type="TextureButton" parent="Control/inventory GridContainer" unique_id=781143482]
+[node name="Milk" type="TextureButton" parent="Control/inventory GridContainer/Panel6" unique_id=1803579841]
+layout_mode = 0
+offset_left = 15.866668
+offset_top = 10.000001
+offset_right = 44.86667
+offset_bottom = 34.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("5_qgfub")
+script = ExtResource("4_k6hpp")
+item_name = "Milk"
+
+[node name="Label" type="Label" parent="Control/inventory GridContainer/Panel6/Milk" unique_id=787557342]
+layout_mode = 0
+offset_left = 15.555561
+offset_top = -8.888885
+offset_right = 39.111115
+offset_bottom = 14.111115
+
+[node name="Panel7" type="Panel" parent="Control/inventory GridContainer" unique_id=1624989165]
 layout_mode = 2
 
-[node name="TextureButton8" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1228939165]
+[node name="Chocolate" type="TextureButton" parent="Control/inventory GridContainer/Panel7" unique_id=2083028643]
+layout_mode = 0
+offset_left = 0.53333366
+offset_top = 16.000002
+offset_right = 26.533333
+offset_bottom = 41.000004
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("6_o6p50")
+script = ExtResource("4_k6hpp")
+item_name = "Chocolate"
+
+[node name="Label" type="Label" parent="Control/inventory GridContainer/Panel7/Chocolate" unique_id=568147628]
+layout_mode = 0
+offset_left = 15.999996
+offset_top = -1.5238073
+offset_right = 39.0
+offset_bottom = 21.476192
+scale = Vector2(0.5, 0.5)
+
+[node name="Panel8" type="Panel" parent="Control/inventory GridContainer" unique_id=740154947]
 layout_mode = 2
+
+[node name="Corn" type="TextureButton" parent="Control/inventory GridContainer/Panel8" unique_id=1228939165]
+layout_mode = 0
+offset_left = 8.666667
+offset_top = 16.266668
+offset_right = 32.666668
+offset_bottom = 46.26667
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("7_o6p50")
+script = ExtResource("4_k6hpp")
+item_name = "Corn"
 
 [node name="TextureButton9" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1852541933]
 layout_mode = 2
