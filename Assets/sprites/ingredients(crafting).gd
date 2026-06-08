@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _pressed():
-	print("pressed flower")
+	print("pressed")
 	var ui = get_tree().get_first_node_in_group("crafting_ui")
 	if ui:
 		ui.add_item_to_craft(item_name, texture_normal)

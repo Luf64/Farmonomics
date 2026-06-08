@@ -1,1 +1,1 @@
-{"inventory":[{"amount":3.0,"id":"Corn"},{"amount":2.0,"id":"Milk"},{"amount":5.0,"id":"Chocolate"}],"market_price":{"Chocolate":3.0,"Corn":1.0,"Milk":3.0},"money":9999999,"scene":"res://rooms/room_3.tscn"}
+{"inventory":[{"amount":10.0,"id":"Corn"},{"amount":10.0,"id":"Chocolate"},{"amount":10.0,"id":"Milk"}],"market_price":{"Chocolate":3.0,"Corn":1.0,"Milk":3.0},"money":9999999,"scene":"res://rooms/room0.1.tscn"}
