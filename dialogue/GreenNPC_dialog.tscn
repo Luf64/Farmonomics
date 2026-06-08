@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="4_rpybr"]
 
 [node name="GreenNPC_dialogue" type="Control" unique_id=1292092854]
+z_index = 9
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_k1q8p")
