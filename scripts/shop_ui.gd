@@ -14,6 +14,8 @@ func init_shop_data(market_data: Dictionary) -> void:
      update_shop_display()
 
 func update_shop_display() -> void:
+    print("Refreshing shop UI")
+    print("Orange price:", Global.crops["Orange"]["current_price"])
     if Global.crops.is_empty():
         return
         
@@ -49,7 +51,7 @@ func update_shop_display() -> void:
         if current_money < orange_price:
             orange_text.modulate = Color.RED
         else:
-            orange_text	.modulate = Color.WHITE
+            orange_text.modulate = Color.WHITE
             
     if Global.crops.has("Potato") and potato_text:
         var potato_price = Global.crops["Potato"]["current_price"]
@@ -139,7 +141,6 @@ func update_ui():
     # Update money
     if coin_label:
         coin_label.text = str(Global.money)
-        update_shop_display()
 
 func add_to_inventory(item_name):
     print("Buy sussesfully: ", item_name)
