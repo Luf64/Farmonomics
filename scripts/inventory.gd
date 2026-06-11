@@ -4,7 +4,7 @@ extends CanvasLayer
 @onready var container = $Control/GridContainer
 
 func _ready() -> void:
-	add_to_group("inventory_ui")
+    add_to_group("inventory_ui")
 
 func _on_texture_button_pressed():
 	Global.inventory_ui.visible = ! Global.inventory_ui.visible

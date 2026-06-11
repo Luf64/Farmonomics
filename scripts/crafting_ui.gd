@@ -37,6 +37,7 @@ var result_textures = {
 }
 
 func craft():
+<<<<<<< HEAD
 	var sorted_items = current_items.duplicate()
 	sorted_items.sort()
 	
@@ -56,6 +57,24 @@ func craft():
 		var result_name = ("No recipe found")
 		clear_craft()
 		show_result(result_name)
+=======
+    var sorted_items = current_items.duplicate()
+    sorted_items.sort()
+    
+    var key = ",".join(sorted_items)
+    
+    clear_craft()
+    
+    if recipes.has(key):
+        var result_name = recipes[key]
+        var texture = result_textures.get(result_name, null)
+        show_result(result_name, texture)
+        return
+    else:
+        print("No recipe found")
+        var result_name = ("No recipe found")
+        show_result(result_name)
+>>>>>>> d698c19 (Save local progress before pulling)
 
 
 func show_result(result_name: String, texture: Texture2D = null):
@@ -64,8 +83,8 @@ func show_result(result_name: String, texture: Texture2D = null):
 	result_panel.visible = true
 	result_label.text = result_name
 
-	if texture != null:
-		result_icon.texture = texture
+    if texture != null:
+        result_icon.texture = texture
 
 func add_item_to_craft(item_name: String, item_texture: Texture2D):
 	if current_items.size() >= 9:
@@ -114,15 +133,15 @@ func remove_item_from_slot(slot):
 
 
 func clear_craft():
-	print("clear")
-	current_items.clear()
-	
-	for slot in craft_grid.get_children():
-		for child in slot.get_children():
-			child.queue_free()
-	
-	result_icon.texture = null
-	result_label.text = ""
+    print("clear")
+    current_items.clear()
+    
+    for slot in craft_grid.get_children():
+        for child in slot.get_children():
+            child.queue_free()
+    
+    result_icon.texture = null
+    result_label.text = ""
 
 func _on_close_pressed() -> void:
 	var room = get_parent()

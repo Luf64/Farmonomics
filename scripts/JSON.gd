@@ -30,10 +30,10 @@ func remove_item(item:String,amount:int=1) ->void:
 			return
 
 func get_item_count(item:String) -> int:
-	for entry in game.inventory:
-		if entry["id"] == item:
-			return  entry["amount"]
-	return 0
+    for entry in game.inventory:
+        if entry["id"] == item:
+            return  entry["amount"]
+    return 0
 
 func save_game():
 	var player = get_tree().get_first_node_in_group("Player")
@@ -82,13 +82,13 @@ func apply_save():
 		player.global_position = Vector2(game.position.x,game.position.y)
 
 func money_change(x: int):
-	Global.money += x
-	game.money = Global.money
-	var sign = "+" if x > 0 else ""
-	var track = str(sign,x," ","Farmonomies","Total: ", game.money)
-	game.money_state.append(track)
-	if game.money_state.size() > 10:
-		game.money_state.remove_at(0)
+    Global.money += x
+    game.money = Global.money
+    var sign = "+" if x > 0 else ""
+    var track = str(sign,x," ","Farmonomies","Total: ", game.money)
+    game.money_state.append(track)
+    if game.money_state.size() > 10:
+        game.money_state.remove_at(0)
 
 func get_inventory() -> Array:
-	return game.inventory
+    return game.inventory
