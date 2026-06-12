@@ -5,7 +5,6 @@ signal money_changed(new_amount)
 
 var current_selected_item: String = "Corn"
 var selected_item: String = "Corn"
-var item_textures: Dictionary = {}
 var Room_1 = "res://rooms/room_1.tscn" #Hall
 var Room0_1 = "res://rooms/room0.1.tscn" # Farm
 var Room_2 = "res://rooms/room_2.tscn" # Market Store
@@ -70,7 +69,52 @@ func open_inventory() -> void:
 
 #inventory JSON system
 #player status global/local
-#level system for unlocking new equipment and seeds
+#crops
+var crops = {
+    "Corn": {
+        "grow_time": 10,
+        "base_price": 1,
+        "current_price": 1,
+        "stock": 50,
+        "ideal": 50
+        },
+    "Chocolate": {
+        "grow_time": 10,
+        "base_price": 3,
+        "current_price": 3,
+        "stock": 40,
+        "ideal": 40
+        },
+    "Milk": {
+        "grow_time": 10,
+        "base_price": 3,
+        "current_price": 3,
+        "stock": 30,
+        "ideal": 30
+        },
+    "Orange": {
+        "grow_time": 10,
+         "base_price": 30,
+        "current_price": 30,
+         "stock": 40,
+         "ideal": 40
+        },
+    "Potato": 
+        {"grow_time": 10, 
+        "base_price": 15, 
+        "current_price": 15,
+        "stock": 35, 
+        "ideal": 35
+        },
+        "Tomato": 
+        {"grow_time": 10, 
+        "base_price": 15, 
+        "current_price": 15,
+        "stock": 35, 
+        "ideal": 35
+        }
+        
+}
 
 
 func subtract_money(amount: int) -> bool:

@@ -8,22 +8,31 @@ var game = {
     "position": {"x":0,"y":0},
     "money": 100,
     "money_state": [],
-    "inventory": [],
-    "market_price":{
-        "Chocolate": 3,
-        "Corn": 1,
-        "Milk": 3
-    }
+    "inventory": [
+        #5 Slots
+        {},{},{},{},{},
+        #6-30 Slots
+        {},{},{},{},{},
+        {},{},{},{},{},
+        {},{},{},{},{},
+        {},{},{},{},{},
+        {},{},{},{},{},
+        ],
 }
 
 func add_item(item:String, amount:int = 1) -> void:
     for entry in game.inventory:
-        if entry["id"] == item:
+        if not entry.is_empty() and entry["id"] == item:
             entry["amount"] += amount
             save_game()
             return
-    game.inventory.append({"id":item,"amount":amount})
-    save_game()
+    for x in range(game.inventory.size()):
+        if game.inventory[x].is_empty():
+                game.inventory[x] = {"id":item,"amount":amount}
+                save_game()
+                return
+    print("Inventory is completely full")
+
 
 func remove_item(item:String,amount:int=1) ->void:
     for entry in game.inventory:
@@ -35,10 +44,10 @@ func remove_item(item:String,amount:int=1) ->void:
             return
 
 func get_item_count(item:String) -> int:
-	for entry in game.inventory:
-		if entry["id"] == item:
-			return  entry["amount"]
-	return 0
+    for entry in game.inventory:
+        if not entry.is_empty() and entry["id"] == item:
+            return  entry["amount"]
+    return 0
 
 func save_game():
     var player = get_tree().get_first_node_in_group("Player")
@@ -47,6 +56,7 @@ func save_game():
         game.position.y = player.global_position.y
     game.scene = get_tree().current_scene.scene_file_path
     game.money = Global.money
+    game["crops"] = Global.crops
     var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     var content = JSON.stringify(game)
     file.store_string(content)
@@ -69,10 +79,10 @@ func load_game():
         game["inventory"] = []
     if not game.has("money"):
         game["money"] = 100
-    if not game.has("market_price"):
-        game["market_price"] = {"Chocolate":3,"Corn":1,"Milk":3}
     if game.has("money"):
         Global.money = int(game["money"])
+    if game.has("crops"):
+        game["crops"] = Global.crops
     if game.has("scene"):
         print("Loaded scene:",game["scene"])
     if game.has("position"):
@@ -84,17 +94,15 @@ func apply_save():
     var player = get_tree().get_first_node_in_group("Player")
     if player != null:
         player.global_position = Vector2(game.position.x,game.position.y)
-    if player != null:
-        player.global_position = Vector2(game.position.x,game.position.y)
 
 func money_change(x: int):
-	Global.money += x
-	game.money = Global.money
-	var sign = "+" if x > 0 else ""
-	var track = str(sign,x," ","Farmonomies","Total: ", game.money)
-	game.money_state.append(track)
-	if game.money_state.size() > 10:
-		game.money_state.remove_at(0)
+    Global.money += x
+    game.money = Global.money
+    var sign = "+" if x > 0 else ""
+    var track = str(sign,x," ","Farmonomies","Total: ", game.money)
+    game.money_state.append(track)
+    if game.money_state.size() > 10:
+        game.money_state.remove_at(0)
 
 func get_inventory() -> Array:
-	return game.inventory
+    return game.inventory

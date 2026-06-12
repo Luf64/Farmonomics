@@ -158,7 +158,14 @@ radius = 20.0
 radius = 47.169907
 
 [node name="GreenNPC" type="CharacterBody2D" unique_id=236786661]
+z_index = 8
 script = ExtResource("1_f1v3p")
+
+[node name="GreenNPC_dialogue" parent="." unique_id=1292092854 instance=ExtResource("3_76bxn")]
+offset_left = -519.0
+offset_top = -198.0
+offset_right = -519.0
+offset_bottom = -198.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1348584543]
 scale = Vector2(1.5, 1.5)
@@ -178,13 +185,7 @@ shape = SubResource("CircleShape2D_yjsda")
 [node name="Timer" type="Timer" parent="." unique_id=1760698628]
 autostart = true
 
-[node name="GreenNPC_dialogue" parent="." unique_id=1292092854 instance=ExtResource("3_76bxn")]
-offset_left = -519.0
-offset_top = -198.0
-offset_right = -519.0
-offset_bottom = -198.0
-
+[connection signal="dialogue_finished" from="GreenNPC_dialogue" to="." method="_on_green_npc_dialogue_dialogue_finished"]
 [connection signal="body_entered" from="chat_detetion_area" to="." method="_on_chat_detetion_area_body_entered"]
 [connection signal="body_exited" from="chat_detetion_area" to="." method="_on_chat_detetion_area_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="dialogue_finished" from="GreenNPC_dialogue" to="." method="_on_green_npc_dialogue_dialogue_finished"]

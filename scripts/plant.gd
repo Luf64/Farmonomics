@@ -6,11 +6,7 @@ var plant_ID: String = ""
 var player: bool = false
 var plant_unix_end: int = 0
 var is_animating: bool = false
-var plants_grow_time: Dictionary = {
-    "Corn": 10,
-    "Chocolate": 10,
-    "Milk": 10
-}
+
 
 func get_state() -> Dictionary:
     return {
@@ -65,11 +61,15 @@ func interact():
     planted = true
     plant_stage = 2
     is_animating = false
-    print(x, " planted! Growing for ", plants_grow_time[x], " seconds...")
-
-    await get_tree().create_timer(plants_grow_time[x]).timeout
-    plant_stage = 3
-    print(plant_ID, " is ready! Press F to collect.")
+    if not Global.crops.has(x):
+        print("Crop not found in Global.crops: ", x)
+        return
+    else:
+        var grow_time = Global.crops[x]["grow_time"]
+        print(x, " planted! Growing for ", grow_time, " seconds...")
+        await get_tree().create_timer(grow_time).timeout
+        plant_stage = 3
+        print(plant_ID, " is ready! Press F to collect.")
 
 func collect():
     var sprite = get_sprite_for(plant_ID)

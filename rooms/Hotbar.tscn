@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://b6g4srkenqbl6"]
+
+[ext_resource type="Texture2D" uid="uid://bw1igms6fms2" path="res://Assets/Hotbar.jpeg" id="1_pq5jt"]
+
+[node name="HotbarUi" type="Node2D" unique_id=941095916]
+
+[node name="Hotbar" type="Sprite2D" parent="." unique_id=1436073175]
+position = Vector2(576, 597)
+scale = Vector2(6.737499, 6.1874995)
+texture = ExtResource("1_pq5jt")

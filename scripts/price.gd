@@ -15,13 +15,9 @@ var inventory = {
 }
 
 # market data
-var market_data = {
-    "Tomato": {"base_price": 10.0, "stock": 50, "ideal": 50, "current_price": 10.0},
-    "Corn": {"base_price": 20.0, "stock": 30, "ideal": 30, "current_price": 20.0},
-    "Apple": {"base_price": 30.0, "stock": 40, "ideal": 40, "current_price": 30.0},
-    "Orange": {"base_price": 30.0, "stock": 40, "ideal": 40, "current_price": 30.0},
-    "Potato": {"base_price": 15.0, "stock": 50, "ideal": 50, "current_price": 15.0}
-}
+var market_data = Global.crops
+
+
 
 # --- 【New: Timed Fluctuations】 ---
 const UPDATE_INTERVAL: int = 5
@@ -29,9 +25,10 @@ var next_update_unix: int = 0
 
 func _ready() -> void:
     process_mode = Node.PROCESS_MODE_ALWAYS
-    for item_name in market_data:
+    for item_name in market_data.keys():
         market_data[item_name]["current_price"] = market_data[item_name]["base_price"]
-        next_update_unix = Date_Timer.get_current() + UPDATE_INTERVAL
+        
+    next_update_unix = Date_Timer.get_current() + UPDATE_INTERVAL
         
 func _process(_delta: float) -> void:
     if Date_Timer.get_current() >= next_update_unix:
@@ -56,5 +53,3 @@ func update_market_prices() -> void:
         prices_changed.emit()
         Global.global_prices_changed.emit(market_data)
         prices_changed.emit()
-        
-        
