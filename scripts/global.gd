@@ -43,6 +43,7 @@ func _ready() -> void:
     get_tree().root.call_deferred("add_child",hotbar_ui)
     hotbar_ui.visible = false
     Json.load_game()
+    
 func _input(event: InputEvent) -> void:
     if event.is_action_pressed("ui_cancel"):
         Json.save_game()
@@ -51,7 +52,7 @@ func _input(event: InputEvent) -> void:
 
 #open inventory
 func open_inventory() -> void:
-    Global.inventory_ui.visible = ! Global.inventory_ui.visible
+    inventory_ui.visible = ! inventory_ui.visible
 
 #inventory JSON system
 #player status global/local

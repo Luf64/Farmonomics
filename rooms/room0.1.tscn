@@ -181,6 +181,7 @@ position = Vector2(577, 300)
 position = Vector2(154, 355)
 
 [node name="Panel" type="Panel" parent="player" unique_id=370238590]
+visible = false
 z_index = 7
 offset_left = 21.0
 offset_top = -12.0

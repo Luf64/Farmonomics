@@ -16,7 +16,7 @@ func _physics_process(delta: float) -> void:
     if player_in_range_npc and Input.is_action_just_pressed("interaction"):
         open_menu()
     
-    if player_in_range_tp_room1 and Input.is_action_just_pressed("interaction"):
+    if player_in_range_tp_room1:
         Global.current_room = "room3"
         get_tree().change_scene_to_file(Global.Room_1)
     
@@ -28,13 +28,11 @@ func _physics_process(delta: float) -> void:
 func _on_tp_to_room_1_body_entered(body: Node2D) -> void:
     if body.name == "player":
         player_in_range_tp_room1 = true
-        $"tp to room 1/Panel".visible = true
     pass 
 
 func _on_tp_to_room_1_body_exited(body: Node2D) -> void:
     if body.name == "player":
         player_in_range_tp_room1 = false
-        $"tp to room 1/Panel".visible = false
     pass # Replace with function body.
 
 func _on_npc_body_entered(body: Node2D) -> void:
