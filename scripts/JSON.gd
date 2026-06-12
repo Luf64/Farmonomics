@@ -36,8 +36,8 @@ func add_item(item:String, amount:int = 1) -> void:
 
 func remove_item(item:String,amount:int=1) ->void:
     for entry in game.inventory:
-        if entry["id"] == item:
-            entry["amount"]-=amount
+        if not entry.is_empty() and entry["id"] == item:
+            entry["amount"] -= amount
             if entry["amount"] <=0:
                 game.inventory.erase(entry)
             save_game()

@@ -1,10 +1,194 @@
-[gd_scene format=3 uid="uid://b6g4srkenqbl6"]
+[gd_scene format=3 uid="uid://bqbmuq50yvi1d"]
 
-[ext_resource type="Texture2D" uid="uid://bw1igms6fms2" path="res://Assets/Hotbar.jpeg" id="1_pq5jt"]
+[ext_resource type="Texture2D" uid="uid://bw1igms6fms2" path="res://Assets/Hotbar.jpeg" id="1_m7ov1"]
+[ext_resource type="Script" uid="uid://xxcx443nujfi" path="res://scripts/hotbar.gd" id="1_xn682"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="2_xn682"]
+[ext_resource type="Script" uid="uid://cuc8um1abbkh2" path="res://scripts/slot_1.gd" id="3_2dfi8"]
 
-[node name="HotbarUi" type="Node2D" unique_id=941095916]
+[node name="CanvasLayer" type="CanvasLayer" unique_id=292898355]
+script = ExtResource("1_xn682")
 
-[node name="Hotbar" type="Sprite2D" parent="." unique_id=1436073175]
-position = Vector2(576, 597)
-scale = Vector2(6.737499, 6.1874995)
-texture = ExtResource("1_pq5jt")
+[node name="Control" type="Control" parent="." unique_id=754544204]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1739978255]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 543.0
+offset_right = 838.0
+offset_bottom = 646.0
+texture = ExtResource("1_m7ov1")
+
+[node name="GridContainer" type="GridContainer" parent="Control" unique_id=506058518]
+layout_mode = 0
+offset_left = 314.0
+offset_top = 543.0
+offset_right = 838.0
+offset_bottom = 646.0
+
+[node name="Slot1" type="Panel" parent="Control/GridContainer" unique_id=1129967074]
+layout_mode = 2
+script = ExtResource("3_2dfi8")
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot1" unique_id=1894197926]
+z_index = 1
+layout_mode = 0
+offset_left = 76.0
+offset_top = 80.0
+offset_right = 97.0
+offset_bottom = 96.0
+theme_override_fonts/font = ExtResource("2_xn682")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Control/GridContainer/Slot1" unique_id=1220127001]
+z_index = 1
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 97.0
+offset_bottom = 96.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/GridContainer/Slot1" unique_id=757663221]
+visible = false
+layout_mode = 0
+offset_left = 6.0
+offset_top = 7.0
+offset_right = 97.0
+offset_bottom = 95.0
+color = Color(0.2966023, 0.2966023, 0.2966023, 1)
+
+[node name="Slot2" type="Panel" parent="Control/GridContainer" unique_id=1963175852]
+layout_mode = 2
+script = ExtResource("3_2dfi8")
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot2" unique_id=2005758320]
+z_index = 1
+layout_mode = 0
+offset_left = 182.0
+offset_top = 75.0
+offset_right = 203.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("2_xn682")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Control/GridContainer/Slot2" unique_id=1889141680]
+z_index = 1
+layout_mode = 0
+offset_left = 112.0
+offset_top = 2.0
+offset_right = 203.0
+offset_bottom = 91.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/GridContainer/Slot2" unique_id=41928168]
+visible = false
+layout_mode = 0
+offset_left = 111.0
+offset_top = 3.0
+offset_right = 202.0
+offset_bottom = 91.0
+color = Color(0.2966023, 0.2966023, 0.2966023, 1)
+
+[node name="Slot3" type="Panel" parent="Control/GridContainer" unique_id=685184335]
+layout_mode = 2
+script = ExtResource("3_2dfi8")
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot3" unique_id=110293668]
+z_index = 1
+layout_mode = 0
+offset_left = 286.0
+offset_top = 73.0
+offset_right = 307.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("2_xn682")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Control/GridContainer/Slot3" unique_id=1346181722]
+z_index = 1
+layout_mode = 0
+offset_left = 216.0
+offset_right = 307.0
+offset_bottom = 89.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/GridContainer/Slot3" unique_id=1679740444]
+visible = false
+layout_mode = 0
+offset_left = 216.0
+offset_top = 1.0
+offset_right = 307.0
+offset_bottom = 89.0
+color = Color(0.2966023, 0.2966023, 0.2966023, 1)
+
+[node name="Slot4" type="Panel" parent="Control/GridContainer" unique_id=1197858896]
+layout_mode = 2
+script = ExtResource("3_2dfi8")
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot4" unique_id=1675589510]
+z_index = 1
+layout_mode = 0
+offset_left = 391.0
+offset_top = 68.0
+offset_right = 412.0
+offset_bottom = 84.0
+theme_override_fonts/font = ExtResource("2_xn682")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Control/GridContainer/Slot4" unique_id=46359879]
+z_index = 1
+layout_mode = 0
+offset_left = 321.0
+offset_top = -5.0
+offset_right = 412.0
+offset_bottom = 84.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/GridContainer/Slot4" unique_id=1236861264]
+visible = false
+layout_mode = 0
+offset_left = 321.0
+offset_top = -3.0
+offset_right = 412.0
+offset_bottom = 85.0
+color = Color(0.2966023, 0.2966023, 0.2966023, 1)
+
+[node name="Slot5" type="Panel" parent="Control/GridContainer" unique_id=642769056]
+layout_mode = 2
+script = ExtResource("3_2dfi8")
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot5" unique_id=2028802410]
+z_index = 1
+layout_mode = 0
+offset_left = 496.0
+offset_top = 65.0
+offset_right = 517.0
+offset_bottom = 81.0
+theme_override_fonts/font = ExtResource("2_xn682")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Icon" type="TextureRect" parent="Control/GridContainer/Slot5" unique_id=294735055]
+z_index = 1
+layout_mode = 0
+offset_left = 426.0
+offset_top = -8.0
+offset_right = 517.0
+offset_bottom = 81.0
+
+[node name="ColorRect" type="ColorRect" parent="Control/GridContainer/Slot5" unique_id=1917926605]
+visible = false
+layout_mode = 0
+offset_left = 426.0
+offset_top = -8.0
+offset_right = 517.0
+offset_bottom = 80.0
+color = Color(0.2966023, 0.2966023, 0.2966023, 1)

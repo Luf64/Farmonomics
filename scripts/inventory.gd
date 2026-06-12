@@ -16,14 +16,13 @@ var item_textures = {
     "Flower_Blue": preload("res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Blue.png"),
     "Flower_Purple": preload("res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Purple.png"),
     "Flower_White": preload("res://Assets/room 4 (brewing room with selling it)/flowers/Flower_White.png"),
-
+    "Potion_Red": preload("res://Assets/room 4 (brewing room with selling it)/potion/Transperent/Icon1.png"),
+    "Potion_Yellow": preload("res://Assets/room 4 (brewing room with selling it)/potion/Transperent/Icon2.png"),
+    "Potion_Blue": preload("res://Assets/room 4 (brewing room with selling it)/potion/Transperent/Icon9.png"),
+    "Potion_Purple": preload("res://Assets/room 4 (brewing room with selling it)/potion/Transperent/Icon15.png"),
+    "Potion_White": preload("res://Assets/room 4 (brewing room with selling it)/potion/Transperent/Icon17.png")
 }
-"""
-    "Potion_Red": preload(),
-    "Potion_Yellow": preload(),
-    "Potion_Blue": preload(),
-    "Potion_Purple": preload(),
-    "Potion_White": preload()"""
+
 
 func _ready() -> void:
     var slot = container.get_children()
