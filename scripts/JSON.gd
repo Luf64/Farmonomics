@@ -8,17 +8,31 @@ var game = {
     "position": {"x":0,"y":0},
     "money": 100,
     "money_state": [],
-    "inventory": [],
+    "inventory": [
+        #5 Slots
+        {},{},{},{},{},
+        #6-30 Slots
+        {},{},{},{},{},
+        {},{},{},{},{},
+        {},{},{},{},{},
+        {},{},{},{},{},
+        {},{},{},{},{},
+        ],
 }
 
 func add_item(item:String, amount:int = 1) -> void:
     for entry in game.inventory:
-        if entry["id"] == item:
+        if not entry.is_empty() and entry["id"] == item:
             entry["amount"] += amount
             save_game()
             return
-    game.inventory.append({"id":item,"amount":amount})
-    save_game()
+    for x in range(game.inventory.size()):
+        if game.inventory[x].is_empty():
+                game.inventory[x] = {"id":item,"amount":amount}
+                save_game()
+                return
+    print("Inventory is completely full")
+
 
 func remove_item(item:String,amount:int=1) ->void:
     for entry in game.inventory:
@@ -31,7 +45,7 @@ func remove_item(item:String,amount:int=1) ->void:
 
 func get_item_count(item:String) -> int:
     for entry in game.inventory:
-        if entry["id"] == item:
+        if not entry.is_empty() and entry["id"] == item:
             return  entry["amount"]
     return 0
 
