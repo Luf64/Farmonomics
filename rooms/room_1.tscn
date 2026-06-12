@@ -131,7 +131,6 @@ size = Vector2(54.5, 21)
 y_sort_enabled = true
 
 [node name="GreenNPC" parent="." unique_id=236786661 instance=ExtResource("21_n7gw8")]
-visible = false
 position = Vector2(-310, -403)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1603721148]
