@@ -29,8 +29,14 @@ func setting_page():
 		Global.setting_open = false
 		
 
+var quit_page = preload("res://rooms/quit_game.tscn")
+
 func _on_quit_game_pressed() -> void:
-	get_tree().quit()
+	var page_quit = quit_page.instantiate()
+	add_child(page_quit)
+
+var credits_page = preload("res://rooms/Credit.tscn")
 
 func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://rooms/Credit.tscn")
+	var page_credit = credits_page.instantiate()
+	add_child(page_credit)

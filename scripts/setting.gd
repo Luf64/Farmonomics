@@ -65,35 +65,43 @@ func set_volume_level(level: int) -> void:
 
 func _on_1_pressed() -> void:
 	set_volume_level(1)
+	Json.save_game()
 
 func _on_2_pressed() -> void:
 	set_volume_level(2)
+	Json.save_game()
 
 func _on_3_pressed() -> void:
 	set_volume_level(3)
+	Json.save_game()
 
 func _on_4_pressed() -> void:
 	set_volume_level(4)
+	Json.save_game()
 
 func _on_5_pressed() -> void:
 	set_volume_level(5)
-	print(Global.sound_percent)
+	Json.save_game()
 
 func _on_6_pressed() -> void:
 	set_volume_level(6)
+	Json.save_game()
 
 func _on_7_pressed() -> void:
 	set_volume_level(7)
+	Json.save_game()
 
 func _on_8_pressed() -> void:
 	set_volume_level(8)
+	Json.save_game()
 
 func _on_9_pressed() -> void:
 	set_volume_level(9)
+	Json.save_game()
 
 func _on_10_pressed() -> void:
 	set_volume_level(10)
-	print(Global.sound_percent)
+	Json.save_game()
 
 func refresh_ui() -> void:
 	print("Refreshing UI")
