@@ -15,13 +15,13 @@ func _on_new_game_pressed() -> void:
 	pass # Replace with function body.
 	
 func _on_settings_pressed() -> void:
-	setting_page()
+	Global.open_popup_room0(Global.setting_room)
 	pass # Replace with function body.
 
 func setting_page():
 	if not Global.setting_open:
 		Global.setting = Global.setting_room.instantiate()
-		call_deferred("add_child", Global.setting)
+		add_child(Global.setting)
 		Global.setting_open = true
 	else:
 		Global.setting.queue_free()
@@ -29,8 +29,12 @@ func setting_page():
 		Global.setting_open = false
 		
 
+var quit_page = preload("res://rooms/quit_game.tscn")
+
 func _on_quit_game_pressed() -> void:
-	get_tree().quit()
+	Global.open_popup_room0(quit_page)
+
+var credits_page = preload("res://rooms/Credit.tscn")
 
 func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://rooms/Credit.tscn")
+	Global.open_popup_room0(credits_page)

@@ -1,24 +1,93 @@
 [gd_scene format=3 uid="uid://cqf6wpqvc3go5"]
 
-[ext_resource type="Script" uid="uid://cj0f7ihnft0si" path="res://scripts/Credit.gd" id="1_7plir"]
+[ext_resource type="Script" uid="uid://uwof6w6kkkuw" path="res://scripts/Credit.gd" id="1_7plir"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="1_iyr7m"]
+[ext_resource type="Texture2D" uid="uid://hgsxfafuftns" path="res://Assets/setting icon/Settings_new_empty.png" id="3_seatj"]
 
-[node name="Credit" type="Node2D" unique_id=1163145048]
-
-[node name="Label" type="Label" parent="." unique_id=336077877]
-offset_right = 1157.0
-offset_bottom = 647.0
-horizontal_alignment = 1
-autowrap_mode = 2
+[node name="CanvasLayer" type="CanvasLayer" unique_id=2127590120]
 script = ExtResource("1_7plir")
 
-[node name="Button" type="Button" parent="." unique_id=385488061]
-offset_left = 897.0
-offset_top = 519.0
-offset_right = 1104.0
-offset_bottom = 584.0
-theme_override_fonts/font = ExtResource("1_iyr7m")
-text = "Back"
-flat = true
+[node name="Control" type="Control" parent="." unique_id=1552283533]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[connection signal="pressed" from="Button" to="Label" method="_on_button_pressed"]
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=2064828426]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 7.0
+offset_right = 961.0
+offset_bottom = 647.0
+texture = ExtResource("3_seatj")
+
+[node name="Label" type="Label" parent="Control/TextureRect" unique_id=1207851559]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 25.0
+offset_right = 486.0
+offset_bottom = 101.0
+theme_override_fonts/font = ExtResource("1_iyr7m")
+theme_override_font_sizes/font_size = 75
+text = "Credit"
+
+[node name="Panel" type="Panel" parent="Control" unique_id=1318873822]
+layout_mode = 0
+offset_left = 208.0
+offset_top = 137.0
+offset_right = 929.0
+offset_bottom = 612.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control/Panel" unique_id=1235738265]
+custom_minimum_size = Vector2(400, 300)
+layout_mode = 1
+offset_right = 721.0
+offset_bottom = 475.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/Panel/ScrollContainer" unique_id=2091024195]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/Panel/ScrollContainer/VBoxContainer" unique_id=1345445270]
+custom_minimum_size = Vector2(400, 480)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("1_iyr7m")
+theme_override_font_sizes/normal_font_size = 35
+text = "Credit 1 - Used Room 1
+Song: sumu - apart [NCS Release]
+Music provided by NoCopyrightSounds
+Free Download/Stream: http://ncs.io/apart
+Watch: http://ncs.lnk.to/apartAT/youtube
+
+Credit 2 - Used Room 0
+Song: Meditation Relaxing Music - DELOSound
+Music provided by Pixabay
+Link: https://pixabay.com/music/meditationspiritual-meditation-relaxing-music-466470/
+
+Credit 3
+Song: waera - harinezumi
+Music provided by NoCopyrightSounds
+Free Download/Stream: http://ncs.io/harinezumi
+Watch: http://ncs.lnk.to/harinezumiAT/youtube
+
+Credit 4
+Song: Egzod, Maestro Chives, Neoni - Royalty [NCS Release]
+Music provided by NoCopyrightSounds
+Free Download/Stream: http://ncs.io/Royalty
+Watch: http://ncs.lnk.to/RoyaltyAT/youtube
+
+Credit 5
+Song: MXZI, Deno - FAVELA
+Music provided by NoCopyrightSounds
+Free Download/Stream: http://ncs.io/FAVELA
+Watch: http://ncs.lnk.to/FAVELAAT/youtube"
+
+[node name="close_button" type="TextureButton" parent="Control" unique_id=1720824368]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 24.0
+offset_right = 937.0
+offset_bottom = 101.0
+
+[connection signal="pressed" from="Control/close_button" to="." method="_on_close_button_pressed"]

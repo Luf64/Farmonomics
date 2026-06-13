@@ -11,7 +11,7 @@ extends CanvasLayer
 
 # used to temporarily store received market data
 func init_shop_data(market_data: Dictionary) -> void:
-	 update_shop_display()
+	update_shop_display()
 
 func update_shop_display() -> void:
 	print("Refreshing shop UI")
