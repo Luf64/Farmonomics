@@ -5,7 +5,7 @@ signal money_changed(new_amount)
 
 var current_selected_item: String = "Corn"
 var selected_item: String = "Corn"
-var Room_1 = "res://rooms/room_1.tscn" #Hall
+var Room_1 = "res://rooms/room_1.tscn" # Hall
 var Room0_1 = "res://rooms/room0.1.tscn" # Farm
 var Room_2 = "res://rooms/room_2.tscn" # Market Store
 var Room_3 = "res://rooms/room_3.tscn" # Brewing Lab
@@ -24,10 +24,10 @@ var money: int = 100:
 		money_changed.emit(money)
 
 var room = {
-	"farm" : {"scene": Room0_1, "coordinates": "Farm"},
-	"room1": {"scene": Room_1,"coordinates":"Room1"},
-	"room2": {"scene": Room_2,"coordinates":"Room2"},
-	"room3": {"scene": Room_3,"coordinates":"Room3"}
+	"farm": {"scene": Room0_1, "coordinates": "Farm"},
+	"room1": {"scene": Room_1, "coordinates": "Room1"},
+	"room2": {"scene": Room_2, "coordinates": "Room2"},
+	"room3": {"scene": Room_3, "coordinates": "Room3"}
 }
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -41,7 +41,7 @@ func _ready() -> void:
 		inventory_ui.call_deferred("refresh_all_ui")
 	#testing
 	if Json.get_item_count("Corn") == 0:
-		Json.add_item("Corn",5)
+		Json.add_item("Corn", 5)
 	if Json.get_item_count("Chocolate") == 0:
 		Json.add_item("Chocolate", 5)
 	if Json.get_item_count("Milk") == 0:
@@ -71,7 +71,7 @@ func _input(event: InputEvent) -> void:
 
 #open inventory
 func open_inventory() -> void:
-	Global.inventory_ui.visible = ! Global.inventory_ui.visible
+	inventory_ui.visible = !inventory_ui.visible
 
 #inventory JSON system
 #player status global/local
@@ -105,18 +105,18 @@ var crops = {
 		 "stock": 40,
 		 "ideal": 40
 		},
-	"Potato": 
-		{"grow_time": 10, 
-		"base_price": 15, 
+	"Potato":
+		{"grow_time": 10,
+		"base_price": 15,
 		"current_price": 15,
-		"stock": 35, 
+		"stock": 35,
 		"ideal": 35
 		},
-		"Tomato": 
-		{"grow_time": 10, 
-		"base_price": 15, 
+		"Tomato":
+		{"grow_time": 10,
+		"base_price": 15,
 		"current_price": 15,
-		"stock": 35, 
+		"stock": 35,
 		"ideal": 35
 		}
 		
@@ -126,7 +126,7 @@ var crops = {
 func subtract_money(amount: int) -> bool:
 	if money >= amount:
 		money -= amount
-		money_changed.emit(money) 
+		money_changed.emit(money)
 		return true
 	else:
 		return false
