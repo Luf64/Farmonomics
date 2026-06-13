@@ -2,40 +2,24 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass
+    pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
-	pass
+    pass
 
 func _on_continue_pressed() -> void:
-	get_tree().change_scene_to_file(Global.Room_1)
+    Global.hotbar_ui.visible =! Global.hotbar_ui.visible
+    get_tree().change_scene_to_file(Global.Room_1)
 
 func _on_new_game_pressed() -> void:
-	pass # Replace with function body.
-	
+    pass # Replace with function body.
+    
 func _on_settings_pressed() -> void:
-	setting_toggle()
-	pass # Replace with function body.
-
-var setting_open = false
-var setting = null
-var setting_room = preload("res://rooms/setting.tscn")
-
-func setting_toggle():
-	if not setting_open:
-		setting = setting_room.instantiate()
-		call_deferred("add_child", setting)
-		setting_open = true
-	else:
-		setting.queue_free()
-		setting = null
-		setting_open = false
-		
-	
-
+    pass # Replace with function body.
+    
 func _on_quit_game_pressed() -> void:
-	get_tree().quit()
+    get_tree().quit()
 
 
 func _on_credits_pressed() -> void:
-	get_tree().change_scene_to_file("res://rooms/Credit.tscn")
+    get_tree().change_scene_to_file("res://rooms/Credit.tscn")
