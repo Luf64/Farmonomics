@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://dihph8itv2uot"]
+
+[ext_resource type="Script" uid="uid://ck8es2icy8coq" path="res://scripts/user_sign_in.gd" id="1_drvkx"]
+[ext_resource type="Texture2D" uid="uid://hgsxfafuftns" path="res://Assets/setting icon/Settings_new_empty.png" id="2_tbkie"]
+[ext_resource type="VideoStream" uid="uid://fxre81urpyij" path="res://video/pixel start.ogv" id="3_tbkie"]
+
+[node name="user_sign_in" type="CanvasLayer" unique_id=940567955]
+script = ExtResource("1_drvkx")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=827850516]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 768.0
+offset_bottom = 432.0
+grow_horizontal = 2
+grow_vertical = 2
+stream = ExtResource("3_tbkie")
+
+[node name="Control" type="Control" parent="." unique_id=365191513]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1515984885]
+layout_mode = 0
+offset_left = 230.0
+offset_top = 68.0
+offset_right = 898.0
+offset_bottom = 534.0
+texture = ExtResource("2_tbkie")
+
+[node name="Label" type="Label" parent="Control/TextureRect" unique_id=1663647572]
+layout_mode = 0
+offset_left = 239.0
+offset_top = 11.0
+offset_right = 421.0
+offset_bottom = 80.0
+theme_override_font_sizes/font_size = 50
+text = "Sign Up"
+
+[node name="CenterContainer" type="CenterContainer" parent="Control" unique_id=1449997841]
+layout_mode = 0
+offset_left = 257.0
+offset_top = 162.0
+offset_right = 871.0
+offset_bottom = 509.0
+
+[node name="PanelContainer" type="PanelContainer" parent="Control/CenterContainer" unique_id=240783451]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/CenterContainer/PanelContainer" unique_id=838388254]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/CenterContainer/PanelContainer/MarginContainer" unique_id=717502090]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=96469467]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 41
+text = "Pls Enter Your Username"
+
+[node name="LineEdit" type="LineEdit" parent="Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=374061835]
+custom_minimum_size = Vector2(500, 80)
+layout_mode = 2
+theme_override_font_sizes/font_size = 45
+
+[node name="Button" type="Button" parent="Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer" unique_id=223066325]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 35
+text = "START"
+
+[node name="close_button" type="TextureButton" parent="Control" unique_id=815669452]
+layout_mode = 0
+offset_left = 816.0
+offset_top = 81.0
+offset_right = 878.0
+offset_bottom = 138.0
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_finished"]
+[connection signal="pressed" from="Control/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Control/close_button" to="." method="_on_close_button_pressed"]
