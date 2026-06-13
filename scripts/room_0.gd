@@ -14,14 +14,14 @@ func _on_new_game_pressed() -> void:
 	pass # Replace with function body.
 	
 func _on_settings_pressed() -> void:
-	setting_toggle()
+	setting_page()
 	pass # Replace with function body.
 
 var setting_open = false
 var setting = null
 var setting_room = preload("res://rooms/setting.tscn")
 
-func setting_toggle():
+func setting_page():
 	if not setting_open:
 		setting = setting_room.instantiate()
 		call_deferred("add_child", setting)

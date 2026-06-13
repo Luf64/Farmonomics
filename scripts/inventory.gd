@@ -19,11 +19,11 @@ var item_textures = {
 
 }
 """
-    "Potion_Red": preload(),
-    "Potion_Yellow": preload(),
-    "Potion_Blue": preload(),
-    "Potion_Purple": preload(),
-    "Potion_White": preload()"""
+	"Potion_Red": preload(),
+	"Potion_Yellow": preload(),
+	"Potion_Blue": preload(),
+	"Potion_Purple": preload(),
+	"Potion_White": preload()"""
 
 func _ready() -> void:
 	var slot = container.get_children()
