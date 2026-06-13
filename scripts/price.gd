@@ -1,16 +1,7 @@
 extends Node
 
 signal prices_changed
-var money = 100.0
 
-# player bag
-var inventory = {
-    "Tomato": 0,
-    "Corn": 0,
-    "Apple":0,
-    "Orange":0,
-    "Potato":0
-}
 var market_data = Global.crops
 
 const UPDATE_INTERVAL: int = 5
@@ -20,7 +11,6 @@ func _ready() -> void:
     process_mode = Node.PROCESS_MODE_ALWAYS
     for item_name in market_data.keys():
         market_data[item_name]["current_price"] = market_data[item_name]["base_price"]
-        
     next_update_unix = Date_Timer.get_current() + UPDATE_INTERVAL
         
 func _process(_delta: float) -> void:
@@ -41,4 +31,3 @@ func update_market_prices() -> void:
         print("- ", item_name, " The latest price becomes: ", item["current_price"], " (Current inventory: ", item["stock"], ")")
         prices_changed.emit()
         Global.global_prices_changed.emit(market_data)
-        prices_changed.emit()

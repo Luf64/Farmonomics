@@ -16,9 +16,9 @@ var hotbar_ui = null
 var current_room: String = ""
 var coordinates: String = ""
 var grow_time: Dictionary = {
-    "Corn": 10.0,
-    "Chocolate": 20.0,
-    "Milk": 30.0
+    "Seed_corn": 10.0,
+    "Seed_chocolate": 20.0,
+    "Seed_milk": 30.0
 }
 
 var money: int = 100:
@@ -38,6 +38,7 @@ func _ready() -> void:
     inventory_ui = inventory_room.instantiate()
     get_tree().root.call_deferred("add_child", inventory_ui)
     inventory_ui.visible = false
+    
     var hotbar_room = load("res://rooms/hotbar.tscn")
     hotbar_ui = hotbar_room.instantiate()
     get_tree().root.call_deferred("add_child",hotbar_ui)

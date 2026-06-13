@@ -55,7 +55,7 @@ func save_game():
         game.position.x = player.global_position.x
         game.position.y = player.global_position.y
     game.scene = get_tree().current_scene.scene_file_path
-    game.money = Global.money
+    game["money"] = Global.money
     game["crops"] = Global.crops
     var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     var content = JSON.stringify(game)
@@ -80,7 +80,7 @@ func load_game():
     if not game.has("money"):
         game["money"] = 100
     if game.has("money"):
-        Global.money = int(game["money"])
+        Global.money = game["money"]
     if game.has("crops"):
         game["crops"] = Global.crops
     if game.has("scene"):

@@ -16,21 +16,32 @@ func _ready() -> void:
             child.stop()
             child.frame = 0
 
-func get_sprite() -> AnimatedSprite2D:
+func get_sprite(id:String) -> AnimatedSprite2D:
     for child in get_children():
-        if child is AnimatedSprite2D and child.name == seed_ID:
+        if child is AnimatedSprite2D and child.name == id:
             return child
     return null
 
 func plant() -> void:
+    var seed_ID = Global.current_selected_item
+    if seed_ID =="":
+        print("empty")
+        return
     if Json.get_item_count(seed_ID) <= 0:
+        print("fail return")
         return
-    var sprite = get_sprite()
+    var sprite = get_sprite(seed_ID)
     if sprite == null:
+        print("found")
+        for child in get_children():
+            print("Child found: ", child.name, " type: ", child.get_class())
         return
+    self.seed_ID = seed_ID
     Json.remove_item(seed_ID,1)
     if Global.inventory_ui != null:
         Global.inventory_ui.refresh()
+    if Global.hotbar_ui != null:
+        Global.hotbar_ui.refresh()
     var grow_time = Global.grow_time.get(seed_ID,10)
     var time_per_frame = grow_time/3
 
@@ -49,7 +60,7 @@ func plant() -> void:
     sprite.frame = 2
     running_animation = false
 func harvest() -> void:
-    var sprite = get_sprite()
+    var sprite = get_sprite(seed_ID)
     if sprite != null:
         sprite.stop()
         sprite.frame = 0

@@ -143,7 +143,12 @@ func update_ui():
         coin_label.text = str(Global.money)
 
 func add_to_inventory(item_name):
-    print("Buy sussesfully: ", item_name)
+    Json.add_item(item_name,1)
+    if Global.inventory_ui != null:
+        Global.inventory_ui.refresh()
+    if Global.hotbar_ui !=null:
+        Global.hotbar_ui.refresh()
+    print("Bought: ", item_name)
 
 func _on_button_pressed() -> void:
     pass # Replace with function body.
@@ -168,6 +173,5 @@ func _on_v_box_container_mouse_entered() -> void:
 
 func _on_texture_button_pressed() -> void:
     get_tree().paused = false
-    Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
     queue_free()
     pass # Replace with function body.
