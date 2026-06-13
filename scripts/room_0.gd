@@ -15,7 +15,7 @@ func _on_new_game_pressed() -> void:
 	pass # Replace with function body.
 	
 func _on_settings_pressed() -> void:
-	Global.open_popup(Global.setting_room)
+	Global.open_popup_room0(Global.setting_room)
 	pass # Replace with function body.
 
 func setting_page():
@@ -32,9 +32,9 @@ func setting_page():
 var quit_page = preload("res://rooms/quit_game.tscn")
 
 func _on_quit_game_pressed() -> void:
-	Global.open_popup(quit_page)
+	Global.open_popup_room0(quit_page)
 
 var credits_page = preload("res://rooms/Credit.tscn")
 
 func _on_credits_pressed() -> void:
-	Global.open_popup(credits_page)
+	Global.open_popup_room0(credits_page)

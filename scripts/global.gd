@@ -28,7 +28,7 @@ var setting_room = preload("res://rooms/setting.tscn")
 var sound_percent: float = 100.0
 var is_muted: bool = false
 
-var current_popup: Node = null
+var current_popup_room0: Node = null
 
 var money: int = 100:
 	set(value):
@@ -55,12 +55,12 @@ func _ready() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		if current_popup != null:
-			current_popup.queue_free()
-			current_popup = null
+		if current_popup_room0 != null:
+			current_popup_room0.queue_free()
+			current_popup_room0 = null
 		else:
-			current_popup = setting_room.instantiate()
-			get_tree().root.add_child(current_popup)
+			current_popup_room0 = setting_room.instantiate()
+			get_tree().root.add_child(current_popup_room0)
 
 func toggle_settings():
 	if not setting_open:
@@ -146,14 +146,14 @@ func apply_volume():
 	var db = linear_to_db(sound_percent / 100.0)
 	AudioServer.set_bus_volume_db(bus, db)
 
-func open_popup(scene: PackedScene):
+func open_popup_room0(scene: PackedScene):
 	# if something already open → close it first
-	if current_popup != null:
-		current_popup.queue_free()
-		current_popup = null
+	if current_popup_room0 != null:
+		current_popup_room0.queue_free()
+		current_popup_room0 = null
 
 	# open new popup
-	current_popup = scene.instantiate()
-	get_tree().root.add_child(current_popup)
+	current_popup_room0 = scene.instantiate()
+	get_tree().root.add_child(current_popup_room0)
 
 # player starting money
