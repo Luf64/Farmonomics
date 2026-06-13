@@ -22,7 +22,6 @@
 [ext_resource type="Texture2D" uid="uid://br60pgwohjlb8" path="res://Assets/room 1 (outside)/Marketplace punya something.png" id="16_jee7h"]
 [ext_resource type="AudioStream" uid="uid://v4305gwyfv68" path="res://Sound/Phua/Aisake, Dosi - Cruising [NCS Release].mp3" id="18_p1q16"]
 [ext_resource type="PackedScene" uid="uid://rv1c61cx6p8u" path="res://rooms/green_npc.tscn" id="21_n7gw8"]
-[ext_resource type="Texture2D" uid="uid://da6p6aoc557xl" path="res://Assets/Grass005_1K-PNG_Color.png" id="23_cn27q"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_afsgx"]
 blend_mode = 1
@@ -132,7 +131,6 @@ size = Vector2(54.5, 21)
 y_sort_enabled = true
 
 [node name="GreenNPC" parent="." unique_id=236786661 instance=ExtResource("21_n7gw8")]
-y_sort_enabled = true
 position = Vector2(-310, -403)
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1603721148]
@@ -181,23 +179,6 @@ visible = false
 
 [node name="GreenNPC_dialogue" parent="player/CanvasLayer" unique_id=1292092854 instance=ExtResource("7_afsgx")]
 visible = false
-
-[node name="Panel" type="Panel" parent="player" unique_id=550047774]
-visible = false
-z_index = 7
-offset_left = 21.0
-offset_top = -12.0
-offset_right = 107.0
-offset_bottom = 6.0
-
-[node name="Label" type="Label" parent="player/Panel" unique_id=1280966158]
-layout_mode = 0
-offset_left = 1.0
-offset_top = -4.0
-offset_right = 85.0
-offset_bottom = 19.0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-text = "[PRESS \"C\"]"
 
 [node name="Farm" type="Sprite2D" parent="." unique_id=1231734030]
 position = Vector2(-1011, -538)
@@ -1414,17 +1395,7 @@ texture = ExtResource("14_gdwmo")
 stream = ExtResource("18_p1q16")
 autoplay = true
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1150674430]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="TextureRect2" type="TextureRect" parent="." unique_id=1571398261]
-z_index = -1
-offset_left = -3746.0
-offset_top = -1420.0
-offset_right = 3516.0
-offset_bottom = 1589.0
-texture = ExtResource("23_cn27q")
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1350176571]
 
 [connection signal="body_entered" from="Farm/Farm Door" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Farm/Farm Door" to="Farm/Farm Door" method="_on_body_entered"]
