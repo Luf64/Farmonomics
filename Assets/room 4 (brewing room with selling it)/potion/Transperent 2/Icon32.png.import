@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da6p6aoc557xl"
-path="res://.godot/imported/Grass005_1K-PNG_Color.png-adb4059ab29c81e4b81b63849e1778cb.ctex"
+uid="uid://bkmdekfltltm5"
+path="res://.godot/imported/Icon32.png-edb381f961819e06c8c98fb8823a557f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Grass005_1K-PNG_Color.png"
-dest_files=["res://.godot/imported/Grass005_1K-PNG_Color.png-adb4059ab29c81e4b81b63849e1778cb.ctex"]
+source_file="res://Assets/room 4 (brewing room with selling it)/potion/Transperent 2/Icon32.png"
+dest_files=["res://.godot/imported/Icon32.png-edb381f961819e06c8c98fb8823a557f.ctex"]
 
 [params]
 
