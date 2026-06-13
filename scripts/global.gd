@@ -30,6 +30,9 @@ var is_muted: bool = false
 
 var current_popup_room0: Node = null
 
+
+var player_name: String = ""
+
 var money: int = 100:
 	set(value):
 		money = value
