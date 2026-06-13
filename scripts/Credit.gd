@@ -1,6 +1,12 @@
-extends Label
-var x = '''
-Credit 1 - Used Room 1
+extends CanvasLayer
+
+@onready var credits_scroll = $Control/Panel/ScrollContainer
+
+func _process(delta):
+    credits_scroll.scroll_vertical += 50 * delta
+
+func _ready() -> void:
+    $Control/Panel/ScrollContainer/VBoxContainer/RichTextLabel.text = "Credit 1 - Used Room 1
 Song: sumu - apart [NCS Release]
 Music provided by NoCopyrightSounds
 Free Download/Stream: http://ncs.io/apart
@@ -28,10 +34,7 @@ Song: MXZI, Deno - FAVELA
 Music provided by NoCopyrightSounds
 Free Download/Stream: http://ncs.io/FAVELA
 Watch: http://ncs.lnk.to/FAVELAAT/youtube
-'''
+"
 
-func _ready() -> void:
-    text = x
-
-func _on_button_pressed() -> void:
-    get_tree().change_scene_to_file("res://rooms/room_0.tscn")
+func _on_close_button_pressed() -> void:
+    queue_free()

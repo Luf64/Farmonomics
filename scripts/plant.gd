@@ -70,6 +70,7 @@ func harvest() -> void:
     if Global.inventory_ui != null:
         Global.inventory_ui.refresh()
     stage = 0
+
 func _input(event: InputEvent) -> void:
     if event.is_action_pressed("interaction") and player_nearby and not running_animation:
         if stage == 0:
