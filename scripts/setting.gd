@@ -103,8 +103,7 @@ func refresh_ui() -> void:
 	sound.texture_normal = sound_textures["off"] if Global.is_muted else sound_textures["on"]
 
 func _on_close_button_pressed() -> void:
-	var room = get_parent()
-	room.setting_open = false
-	room.setting = null
+	Global.setting_open = false
+	Global.setting = null
 	queue_free()
 	pass # Replace with function body.
