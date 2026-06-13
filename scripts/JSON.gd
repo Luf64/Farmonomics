@@ -8,6 +8,8 @@ var game = {
     "position": {"x":0,"y":0},
     "money": 100,
     "money_state": [],
+    "volume": 100.0,
+    "is_muted": false,
     "inventory": [
         #5 Slots
         {},{},{},{},{},
@@ -55,8 +57,10 @@ func save_game():
         game.position.x = player.global_position.x
         game.position.y = player.global_position.y
     game.scene = get_tree().current_scene.scene_file_path
-    game.money = Global.money
+    game["money"] = Global.money
     game["crops"] = Global.crops
+    game["volume"] = Global.sound_percent
+    game["is_muted"] = Global.is_muted
     var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
     var content = JSON.stringify(game)
     file.store_string(content)
@@ -87,6 +91,11 @@ func load_game():
         print("Loaded scene:",game["scene"])
     if game.has("position"):
         print("Loaded position:",game["position"])
+    if game.has("volume"):
+        Global.sound_percent = float(game["volume"])
+    if game.has("is_muted"):
+        Global.is_muted = bool(game["is_muted"])
+    Global.apply_volume()
     print("Game loaded sucessfully")
     return true
 

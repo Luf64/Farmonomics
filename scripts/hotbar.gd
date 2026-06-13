@@ -4,6 +4,10 @@ extends CanvasLayer
 var selected_slot: int = 0
 
 var item_textures = {
+    "Seed_corn":preload("res://Assets/item/Corn/Seed_corn.png"),
+    "Seed_chocolate":preload("res://Assets/item/Chocolate/Seed_chocolate.png"),
+    "Seed_milk":preload("res://Assets/item/Milk/Seed_milk.png"),
+    
     "Corn": preload("res://Assets/item/Corn/corn(Object).png"),
     "Chocolate": preload("res://Assets/item/Chocolate/chocolate(Object).png"),
     "Milk": preload("res://Assets/item/Milk/milk(Object).png"),

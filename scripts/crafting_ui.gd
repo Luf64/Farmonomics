@@ -11,10 +11,12 @@ var current_items = []
 func _ready() -> void:
     add_to_group("crafting_ui")
     var inventory = Json.get_inventory()
-    for item in inventory:
-        print(item["id"])
-        print(item["amount"])
-    pass # Replace with function body.
+'''
+	for item in inventory:
+		print(item["id"])
+		print(item["amount"])
+	pass # Replace with function body.
+'''
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

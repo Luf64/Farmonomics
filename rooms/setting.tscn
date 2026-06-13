@@ -1,0 +1,207 @@
+[gd_scene format=3 uid="uid://d347htco3x2no"]
+
+[ext_resource type="Script" uid="uid://b6keek5ldn00e" path="res://scripts/setting.gd" id="1_ye3ya"]
+[ext_resource type="Texture2D" uid="uid://hgsxfafuftns" path="res://Assets/setting icon/Settings_new_empty.png" id="2_iu2rl"]
+[ext_resource type="Texture2D" uid="uid://cmvq5eps4qeq3" path="res://Assets/setting icon/Settings_sound_icon_bar.png" id="3_u53p6"]
+[ext_resource type="Texture2D" uid="uid://8rx0ue6fl3fx" path="res://Assets/setting icon/Settings_sound_icon_on.png" id="4_iu2rl"]
+[ext_resource type="Texture2D" uid="uid://hj80e5gywqh5" path="res://Assets/setting icon/Settings_sound_0.png" id="5_7bitt"]
+[ext_resource type="Texture2D" uid="uid://08qw5t6ji3uw" path="res://Assets/setting icon/Settings_sound_1.png" id="5_u53p6"]
+
+[node name="setting" type="CanvasLayer" unique_id=1469678623]
+scale = Vector2(4, 4)
+transform = Transform2D(4, 0, 0, 4, 0, 0)
+script = ExtResource("1_ye3ya")
+
+[node name="control" type="Control" parent="." unique_id=1316878768]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 90.0
+offset_top = 53.0
+offset_right = 188.0
+offset_bottom = 127.0
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="control" unique_id=1251861565]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_iu2rl")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="control/TextureRect" unique_id=2127924874]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 1.0
+offset_right = 106.0
+offset_bottom = 24.0
+scale = Vector2(0.5, 0.5)
+text = "SETTINGS"
+metadata/_edit_use_anchors_ = true
+
+[node name="save" type="TextureButton" parent="control" unique_id=1240316436]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 47.0
+offset_right = 46.0
+offset_bottom = 60.0
+texture_normal = ExtResource("3_u53p6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="control/save" unique_id=820720158]
+layout_mode = 0
+offset_left = 10.0
+offset_right = 50.0
+offset_bottom = 23.0
+scale = Vector2(0.5, 0.5)
+text = "Save"
+metadata/_edit_use_anchors_ = true
+
+[node name="close" type="TextureButton" parent="control" unique_id=787124953]
+layout_mode = 0
+offset_left = 52.0
+offset_top = 47.0
+offset_right = 91.0
+offset_bottom = 60.0
+texture_normal = ExtResource("3_u53p6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="control/close" unique_id=684298155]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 117.0
+offset_bottom = 25.0
+scale = Vector2(0.3, 0.3)
+text = "Save and Close"
+metadata/_edit_use_anchors_ = true
+
+[node name="sound" type="TextureButton" parent="control" unique_id=1794981481]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 18.0
+offset_right = 20.0
+offset_bottom = 30.0
+texture_normal = ExtResource("4_iu2rl")
+metadata/_edit_use_anchors_ = true
+
+[node name="volume" type="HBoxContainer" parent="control" unique_id=721811501]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 18.0
+offset_right = 93.0
+offset_bottom = 29.0
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="1" type="TextureButton" parent="control/volume" unique_id=1693579071]
+layout_mode = 2
+texture_normal = ExtResource("5_u53p6")
+
+[node name="2" type="TextureButton" parent="control/volume" unique_id=1337172594]
+layout_mode = 2
+texture_normal = ExtResource("5_7bitt")
+
+[node name="3" type="TextureButton" parent="control/volume" unique_id=906880658]
+layout_mode = 2
+texture_normal = ExtResource("5_7bitt")
+
+[node name="4" type="TextureButton" parent="control/volume" unique_id=298740293]
+layout_mode = 2
+texture_normal = ExtResource("5_7bitt")
+
+[node name="5" type="TextureButton" parent="control/volume" unique_id=1647241815]
+layout_mode = 2
+texture_normal = ExtResource("5_7bitt")
+
+[node name="6" type="TextureButton" parent="control/volume" unique_id=1393719848]
+layout_mode = 2
+texture_normal = ExtResource("5_7bitt")
+
+[node name="7" type="TextureButton" parent="control/volume" unique_id=1197357959]
+layout_mode = 2
+texture_normal = ExtResource("5_7bitt")
+
+[node name="8" type="TextureButton" parent="control/volume" unique_id=1994609492]
+layout_mode = 2
+texture_normal = ExtResource("5_7bitt")
+
+[node name="9" type="TextureButton" parent="control/volume" unique_id=1908671785]
+layout_mode = 2
+texture_normal = ExtResource("5_7bitt")
+
+[node name="10" type="TextureButton" parent="control/volume" unique_id=1037607058]
+layout_mode = 2
+texture_normal = ExtResource("5_7bitt")
+
+[node name="help" type="TextureButton" parent="control" unique_id=477960881]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 32.0
+offset_right = 68.0
+offset_bottom = 45.0
+texture_normal = ExtResource("3_u53p6")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="control/help" unique_id=2025862375]
+layout_mode = 0
+offset_left = 11.0
+offset_top = -1.0
+offset_right = 51.0
+offset_bottom = 22.0
+scale = Vector2(0.5, 0.5)
+text = "Help"
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="control/help" unique_id=116093588]
+visible = false
+layout_mode = 0
+offset_left = -31.0
+offset_top = -32.25
+offset_right = 70.0
+offset_bottom = 42.75
+
+[node name="Label" type="Label" parent="control/help/Panel" unique_id=458483913]
+layout_mode = 0
+offset_left = 5.25
+offset_top = 2.75
+offset_right = 310.24997
+offset_bottom = 239.41666
+scale = Vector2(0.3, 0.3)
+text = "W : Walk Up
+A: Walk Left
+S :Walk Down
+D : Walk Right
+E : Use Potion
+F/C : Interection
+TAB : Inventory
+1,2,3,4,5 : Hotbar Navigation
+ESC : Setting"
+
+[node name="close_button" type="TextureButton" parent="control" unique_id=336366183]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 2.5
+offset_right = 95.0
+offset_bottom = 11.5
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="control/save" to="." method="_on_save_pressed"]
+[connection signal="toggled" from="control/save" to="." method="_on_save_toggled"]
+[connection signal="pressed" from="control/close" to="." method="_on_close_pressed"]
+[connection signal="toggled" from="control/close" to="." method="_on_close_toggled"]
+[connection signal="pressed" from="control/sound" to="." method="_on_sound_pressed"]
+[connection signal="toggled" from="control/sound" to="." method="_on_sound_toggled"]
+[connection signal="pressed" from="control/volume/1" to="." method="_on__pressed"]
+[connection signal="pressed" from="control/volume/1" to="." method="_on_1_pressed"]
+[connection signal="pressed" from="control/volume/2" to="." method="_on_2_pressed"]
+[connection signal="pressed" from="control/volume/3" to="." method="_on_3_pressed"]
+[connection signal="pressed" from="control/volume/4" to="." method="_on_4_pressed"]
+[connection signal="pressed" from="control/volume/5" to="." method="_on_5_pressed"]
+[connection signal="pressed" from="control/volume/6" to="." method="_on_6_pressed"]
+[connection signal="pressed" from="control/volume/7" to="." method="_on_7_pressed"]
+[connection signal="pressed" from="control/volume/8" to="." method="_on_8_pressed"]
+[connection signal="pressed" from="control/volume/9" to="." method="_on_9_pressed"]
+[connection signal="pressed" from="control/volume/10" to="." method="_on_10_pressed"]
+[connection signal="pressed" from="control/help" to="." method="_on_help_pressed"]
+[connection signal="toggled" from="control/help" to="." method="_on_help_toggled"]
+[connection signal="pressed" from="control/close_button" to="." method="_on_close_button_pressed"]
