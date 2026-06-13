@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d347htco3x2no"]
 
-[ext_resource type="Script" uid="uid://bhw33am155j2r" path="res://scripts/setting.gd" id="1_ye3ya"]
+[ext_resource type="Script" uid="uid://b6keek5ldn00e" path="res://scripts/setting.gd" id="1_ye3ya"]
 [ext_resource type="Texture2D" uid="uid://hgsxfafuftns" path="res://Assets/setting icon/Settings_new_empty.png" id="2_iu2rl"]
 [ext_resource type="Texture2D" uid="uid://cmvq5eps4qeq3" path="res://Assets/setting icon/Settings_sound_icon_bar.png" id="3_u53p6"]
 [ext_resource type="Texture2D" uid="uid://8rx0ue6fl3fx" path="res://Assets/setting icon/Settings_sound_icon_on.png" id="4_iu2rl"]
@@ -15,16 +15,18 @@ script = ExtResource("1_ye3ya")
 [node name="control" type="Control" parent="." unique_id=1316878768]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 91.0
-offset_top = 41.5
-offset_right = 189.0
-offset_bottom = 115.5
+offset_left = 90.0
+offset_top = 53.0
+offset_right = 188.0
+offset_bottom = 127.0
+metadata/_edit_use_anchors_ = true
 
 [node name="TextureRect" type="TextureRect" parent="control" unique_id=1251861565]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_iu2rl")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="control/TextureRect" unique_id=2127924874]
 layout_mode = 0
@@ -34,6 +36,7 @@ offset_right = 106.0
 offset_bottom = 24.0
 scale = Vector2(0.5, 0.5)
 text = "SETTINGS"
+metadata/_edit_use_anchors_ = true
 
 [node name="save" type="TextureButton" parent="control" unique_id=1240316436]
 layout_mode = 0
@@ -42,6 +45,7 @@ offset_top = 47.0
 offset_right = 46.0
 offset_bottom = 60.0
 texture_normal = ExtResource("3_u53p6")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="control/save" unique_id=820720158]
 layout_mode = 0
@@ -50,6 +54,7 @@ offset_right = 50.0
 offset_bottom = 23.0
 scale = Vector2(0.5, 0.5)
 text = "Save"
+metadata/_edit_use_anchors_ = true
 
 [node name="close" type="TextureButton" parent="control" unique_id=787124953]
 layout_mode = 0
@@ -58,6 +63,7 @@ offset_top = 47.0
 offset_right = 91.0
 offset_bottom = 60.0
 texture_normal = ExtResource("3_u53p6")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="control/close" unique_id=684298155]
 layout_mode = 0
@@ -67,6 +73,7 @@ offset_right = 117.0
 offset_bottom = 25.0
 scale = Vector2(0.3, 0.3)
 text = "Save and Close"
+metadata/_edit_use_anchors_ = true
 
 [node name="sound" type="TextureButton" parent="control" unique_id=1794981481]
 layout_mode = 0
@@ -75,6 +82,7 @@ offset_top = 18.0
 offset_right = 20.0
 offset_bottom = 30.0
 texture_normal = ExtResource("4_iu2rl")
+metadata/_edit_use_anchors_ = true
 
 [node name="volume" type="HBoxContainer" parent="control" unique_id=721811501]
 layout_mode = 0
@@ -83,6 +91,7 @@ offset_top = 18.0
 offset_right = 93.0
 offset_bottom = 29.0
 alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="1" type="TextureButton" parent="control/volume" unique_id=1693579071]
 layout_mode = 2
@@ -131,6 +140,7 @@ offset_top = 32.0
 offset_right = 68.0
 offset_bottom = 45.0
 texture_normal = ExtResource("3_u53p6")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="control/help" unique_id=2025862375]
 layout_mode = 0
@@ -140,6 +150,7 @@ offset_right = 51.0
 offset_bottom = 22.0
 scale = Vector2(0.5, 0.5)
 text = "Help"
+metadata/_edit_use_anchors_ = true
 
 [node name="Panel" type="Panel" parent="control/help" unique_id=116093588]
 visible = false
@@ -161,7 +172,7 @@ A: Walk Left
 S :Walk Down
 D : Walk Right
 E : Use Potion
-F : Interection
+F/C : Interection
 TAB : Inventory
 1,2,3,4,5 : Hotbar Navigation
 ESC : Setting"
@@ -172,6 +183,7 @@ offset_left = 86.0
 offset_top = 2.5
 offset_right = 95.0
 offset_bottom = 11.5
+metadata/_edit_use_anchors_ = true
 
 [connection signal="pressed" from="control/save" to="." method="_on_save_pressed"]
 [connection signal="toggled" from="control/save" to="." method="_on_save_toggled"]

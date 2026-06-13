@@ -168,9 +168,9 @@ texture = ExtResource("5_iv03q")
 
 [connection signal="pressed" from="Button/Continue" to="." method="_on_continue_pressed"]
 [connection signal="pressed" from="Button/Continue" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Button/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Button/New Game" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Button/New Game" to="." method="_on_new_game_pressed"]
 [connection signal="pressed" from="Button/Settings" to="." method="_on_settings_pressed"]
-[connection signal="pressed" from="Button/Quit Game" to="." method="_on_quit_game_pressed"]
 [connection signal="pressed" from="Button/Quit Game" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Button/Quit Game" to="." method="_on_quit_game_pressed"]
 [connection signal="pressed" from="Button/Credits" to="." method="_on_credits_pressed"]
