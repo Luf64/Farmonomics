@@ -15,6 +15,10 @@ var inventory_ui = null
 var current_room: String = ""
 var coordinates: String = ""
 
+var setting_open = false 
+var setting = null 
+var setting_room = preload("res://rooms/setting.tscn") 
+
 var sound_percent: float = 100.0
 var is_muted: bool = false
 
@@ -52,9 +56,15 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		Json.save_game()
-		await get_tree().create_timer(1.0).timeout
-		get_tree().quit()
+		if event.is_action_pressed("ui_cancel"): 
+			if not setting_open: 
+				setting = setting_room.instantiate() 
+				call_deferred("add_child", setting) 
+				setting_open = true 
+			else: 
+				setting.queue_free() 
+				setting = null 
+				setting_open = false
 	#test
 	if event.is_action_pressed("1"):
 		current_selected_item = "Corn"

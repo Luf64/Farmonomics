@@ -17,19 +17,15 @@ func _on_settings_pressed() -> void:
 	setting_page()
 	pass # Replace with function body.
 
-var setting_open = false
-var setting = null
-var setting_room = preload("res://rooms/setting.tscn")
-
 func setting_page():
-	if not setting_open:
-		setting = setting_room.instantiate()
-		call_deferred("add_child", setting)
-		setting_open = true
+	if not Global.setting_open:
+		Global.setting = Global.setting_room.instantiate()
+		call_deferred("add_child", Global.setting)
+		Global.setting_open = true
 	else:
-		setting.queue_free()
-		setting = null
-		setting_open = false
+		Global.setting.queue_free()
+		Global.setting = null
+		Global.setting_open = false
 		
 	
 
