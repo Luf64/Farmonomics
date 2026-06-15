@@ -8,7 +8,6 @@
 script = ExtResource("1_drvkx")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=827850516]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -16,6 +15,7 @@ offset_right = 768.0
 offset_bottom = 432.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.6, 0.6)
 stream = ExtResource("3_tbkie")
 
 [node name="Control" type="Control" parent="." unique_id=365191513]
