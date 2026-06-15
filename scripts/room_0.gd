@@ -29,9 +29,6 @@ func _on_new_game_pressed() -> void:
 	Global.inventory_ui.refresh()
 	Global.hotbar_ui.refresh()
 	Global.open_popup_room0(newgame)
-	Global.hotbar_ui.visible =! Global.hotbar_ui.visible
-	get_tree().change_scene_to_file(Global.Room_1)
-
 
 func _on_settings_pressed() -> void:
 	Global.open_popup_room0(Global.setting_room)

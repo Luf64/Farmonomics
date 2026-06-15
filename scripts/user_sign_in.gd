@@ -15,14 +15,19 @@ func _on_button_pressed() -> void:
 		return
 	else:
 		Global.player_name = username
+		Json.save_game()
 		$Control.visible = false
 		video_player.visible = true
 		video_player.play()
+		
 
 func _on_video_finished():
 	Global.hotbar_ui.visible = !Global.hotbar_ui.visible
 	video_player.visible = false
+	Global.hotbar_ui.visible =! Global.hotbar_ui.visible
 	get_tree().change_scene_to_file(Global.Room_1)
+	
+
 
 func _on_close_button_pressed() -> void:
 	queue_free()
