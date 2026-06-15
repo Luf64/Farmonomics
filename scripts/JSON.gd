@@ -3,6 +3,7 @@ extends Node
 const SAVE_FILE = "res://scripts/main.json"
 
 var game = {
+	"username": "",
 	"id": "",
 	"scene": "res://rooms/room_0.tscn",
 	"position": {"x":0,"y":0},
@@ -61,6 +62,7 @@ func save_game():
 	game["crops"] = Global.crops
 	game["volume"] = Global.sound_percent
 	game["is_muted"] = Global.is_muted
+	game["username"] = Global.player_name
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
 	var content = JSON.stringify(game)
 	file.store_string(content)
@@ -83,6 +85,8 @@ func load_game():
 		game["inventory"] = []
 	if not game.has("money"):
 		game["money"] = 100
+	if game.has("username"):
+		Global.player_name = game["username"]
 	if game.has("money"):
 		Global.money = int(game["money"])
 	if game.has("crops"):
@@ -96,6 +100,8 @@ func load_game():
 	if game.has("is_muted"):
 		Global.is_muted = bool(game["is_muted"])
 	Global.apply_volume()
+	if game.has("username"):
+		Global.player_name = game[("username")]
 	print("Game loaded sucessfully")
 	return true
 
