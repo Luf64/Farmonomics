@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://d64ixuie8fv0"]
+
+[ext_resource type="Script" path="res://black_dialogue/weird_guy_dialog.gd" id="1_y14kt"]
+[ext_resource type="Texture2D" uid="uid://drqbh8x7b53ov" path="res://Assets/sprites/black guy.png" id="2_cp374"]
+[ext_resource type="Texture2D" uid="uid://chjq5786ja8jd" path="res://Assets/Pic/shop ui1.png" id="2_y14kt"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="4_53d1i"]
+[ext_resource type="Texture2D" uid="uid://cebs6kf7xm0qh" path="res://Assets/Pic/390dc56603c15331eb9c329b0e4a4fb9-removebg-preview.png" id="4_y14kt"]
+
+[node name="black_guy_dialog" type="Control" unique_id=2045093427]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y14kt")
+
+[node name="Panel" type="TextureRect" parent="." unique_id=708012016]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 1150.0
+offset_bottom = 639.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=2122300401]
+layout_mode = 0
+offset_left = 711.0
+offset_top = -154.0
+offset_right = 1215.0
+offset_bottom = 328.0
+texture = ExtResource("2_cp374")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel" unique_id=1895747657]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 323.0
+offset_right = 1155.0
+offset_bottom = 648.0
+texture = ExtResource("2_y14kt")
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/TextureRect2" unique_id=307014499]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 25.0
+offset_right = 1083.0
+offset_bottom = 301.0
+texture = ExtResource("4_y14kt")
+
+[node name="Text" type="RichTextLabel" parent="Panel/TextureRect2/TextureRect3" unique_id=758568399]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 68.0
+offset_right = 837.0
+offset_bottom = 368.0
+theme_override_fonts/normal_font = ExtResource("4_53d1i")
+theme_override_font_sizes/normal_font_size = 38
+text = "Chatting...."
+
+[node name="Name" type="RichTextLabel" parent="Panel/TextureRect2/TextureRect3" unique_id=1080021787]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 24.0
+offset_right = 568.0
+offset_bottom = 188.0
+theme_override_fonts/normal_font = ExtResource("4_53d1i")
+theme_override_font_sizes/normal_font_size = 40
+text = "Name:"

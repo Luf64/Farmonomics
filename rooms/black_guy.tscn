@@ -1,0 +1,180 @@
+[gd_scene format=3 uid="uid://bdj8hcyxfkhnq"]
+
+[ext_resource type="Texture2D" uid="uid://cmp3pn8oddsq8" path="res://Assets/sprites/black shirt guy.png" id="1_phgwk"]
+[ext_resource type="Script" uid="uid://d07idaihryy4b" path="res://scripts/black_guy.gd" id="1_q4c5i"]
+[ext_resource type="PackedScene" uid="uid://vlorpcvset72" path="res://black_dialogue/black_guy_dialog.tscn" id="3_0sc5t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4c5i"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(214, 0, 214, 231)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0sc5t"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(0, 450, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kemrm"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(214, 450, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_37kxj"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(428, 450, 214, 225)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ldso"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(0, 675, 210, 221)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoxdj"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(212, 675, 210, 221)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xtp81"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(424, 675, 210, 221)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6vgn"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(0, 0, 214, 234)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbgf1"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(214, 0, 214, 234)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ritr"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(428, 0, 214, 234)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1r12t"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(0, 229, 214, 229)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4cghy"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(214, 229, 214, 229)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5yltl"]
+atlas = ExtResource("1_phgwk")
+region = Rect2(428, 229, 214, 229)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivmrw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4c5i")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0sc5t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kemrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_37kxj")
+}],
+"loop": true,
+"name": &"walk_e",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ldso")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoxdj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xtp81")
+}],
+"loop": true,
+"name": &"walk_n",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6vgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sbgf1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ritr")
+}],
+"loop": true,
+"name": &"walk_s",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1r12t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4cghy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5yltl")
+}],
+"loop": true,
+"name": &"walk_w",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pnpjf"]
+radius = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rmwp2"]
+radius = 50.635956
+
+[node name="black_guy" type="CharacterBody2D" unique_id=295794188]
+script = ExtResource("1_q4c5i")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1543712231]
+scale = Vector2(0.35, 0.35)
+sprite_frames = SubResource("SpriteFrames_ivmrw")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=604449235]
+position = Vector2(1, 12)
+shape = SubResource("CircleShape2D_pnpjf")
+
+[node name="chat_detection_area" type="Area2D" parent="." unique_id=622903538]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chat_detection_area" unique_id=2018034648]
+position = Vector2(1, -1)
+shape = SubResource("CircleShape2D_rmwp2")
+
+[node name="Timer" type="Timer" parent="." unique_id=528389616]
+autostart = true
+
+[node name="black_guy_dialog" parent="." unique_id=2045093427 instance=ExtResource("3_0sc5t")]
+offset_left = -475.0
+offset_top = -202.0
+offset_right = -475.0
+offset_bottom = -202.0
+
+[node name="BtnRefuse" type="Button" parent="." unique_id=2067312849]
+visible = false
+offset_left = -152.0
+offset_top = 7.0
+offset_right = 4.0
+offset_bottom = 38.0
+text = "Dony 't give money"
+
+[node name="BtnGive" type="Button" parent="." unique_id=1210728221]
+visible = false
+offset_left = -151.0
+offset_top = -27.0
+offset_right = -52.0
+offset_bottom = 4.0
+text = "Give money"
+
+[connection signal="body_entered" from="chat_detection_area" to="." method="_on_chat_detection_area_body_entered"]
+[connection signal="body_exited" from="chat_detection_area" to="." method="_on_chat_detection_area_body_exited"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="dialogue_finished" from="black_guy_dialog" to="." method="_on_black_guy_dialog_dialogue_finished"]
+[connection signal="pressed" from="BtnRefuse" to="." method="_on_btn_refuse_pressed"]
+[connection signal="pressed" from="BtnGive" to="." method="_on_btn_give_pressed"]
