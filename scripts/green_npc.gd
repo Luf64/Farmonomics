@@ -46,12 +46,16 @@ func _process(delta):
 				dir = choose([Vector2.RIGHT,Vector2.UP,Vector2.LEFT,Vector2.DOWN])
 			MOVE:
 				move(delta)
-	if Input.is_action_just_pressed("chat"):
-		print("chatting with npc")
-		$GreenNPC_dialogue.start()
-		is_roaming = false
-		is_chatting = true
-		$AnimatedSprite2D.play("idle")
+
+func _input(event):
+	if event.is_action_pressed("chat") and not event.is_echo():
+		if player_in_chat_zone and not is_chatting:
+			print("chatting with green npc")
+			$GreenNPC_dialogue.start()
+			is_roaming = false
+			is_chatting = true
+			$AnimatedSprite2D.play("idle")
+			get_viewport().set_input_as_handled()
 		
 func choose(array):
 	array.shuffle()

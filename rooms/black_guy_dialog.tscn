@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://dvwi4m07hobwg"]
+
+[ext_resource type="Texture2D" uid="uid://drqbh8x7b53ov" path="res://Assets/sprites/black guy.png" id="1_fg754"]
+[ext_resource type="Texture2D" uid="uid://chjq5786ja8jd" path="res://Assets/Pic/shop ui1.png" id="2_d1wfi"]
+[ext_resource type="Texture2D" uid="uid://cebs6kf7xm0qh" path="res://Assets/Pic/390dc56603c15331eb9c329b0e4a4fb9-removebg-preview.png" id="3_jv7w6"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="4_qok3u"]
+
+[node name="black_guy_dialog" type="Control" unique_id=294306463]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="TextureRect" parent="." unique_id=853172585]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 1150.0
+offset_bottom = 639.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=1023072436]
+layout_mode = 0
+offset_left = 744.0
+offset_top = -146.0
+offset_right = 1216.0
+offset_bottom = 331.0
+texture = ExtResource("1_fg754")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel" unique_id=482460767]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 323.0
+offset_right = 1155.0
+offset_bottom = 648.0
+texture = ExtResource("2_d1wfi")
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/TextureRect2" unique_id=313389127]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 25.0
+offset_right = 1083.0
+offset_bottom = 301.0
+texture = ExtResource("3_jv7w6")
+
+[node name="Text" type="RichTextLabel" parent="Panel/TextureRect2/TextureRect3" unique_id=1885941218]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 68.0
+offset_right = 837.0
+offset_bottom = 368.0
+theme_override_fonts/normal_font = ExtResource("4_qok3u")
+theme_override_font_sizes/normal_font_size = 38
+text = "Chatting...."
+
+[node name="Name" type="RichTextLabel" parent="Panel/TextureRect2/TextureRect3" unique_id=136266610]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 24.0
+offset_right = 568.0
+offset_bottom = 188.0
+theme_override_fonts/normal_font = ExtResource("4_qok3u")
+theme_override_font_sizes/normal_font_size = 40
+text = "Name:"
