@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cmnffj1d1t2s4" path="res://Assets/room 1 (outside)/Room0.1(House).png" id="2_j6sld"]
 [ext_resource type="PackedScene" uid="uid://bpr04seeqcl6e" path="res://rooms/market_notification.tscn" id="2_jlk02"]
 [ext_resource type="Texture2D" uid="uid://doplhhvs8b0m8" path="res://Assets/room 1 (outside)/Room3(House punya something).png" id="2_p6f22"]
-[ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/button.gd" id="3_p1q16"]
+[ext_resource type="Script" uid="uid://b11p3q4cx5p28" path="res://scripts/button.gd" id="3_p1q16"]
 [ext_resource type="Texture2D" uid="uid://b1ojfi80oa7cw" path="res://Assets/room 1 (outside)/Room0.1(House punya something).png" id="4_h00nm"]
 [ext_resource type="PackedScene" uid="uid://dx6e5oxpxyl8h" path="res://rooms/total_money.tscn" id="4_jlk02"]
 [ext_resource type="Texture2D" uid="uid://jf87jlrtc66o" path="res://Assets/room 1 (outside)/Room0.1(House punya it apa).png" id="5_1j48i"]
@@ -27,7 +27,7 @@
 [ext_resource type="PackedScene" uid="uid://rv1c61cx6p8u" path="res://rooms/green_npc.tscn" id="21_n7gw8"]
 [ext_resource type="Texture2D" uid="uid://da6p6aoc557xl" path="res://Assets/Grass005_1K-PNG_Color.png" id="23_cn27q"]
 [ext_resource type="PackedScene" uid="uid://sbvotma16o74" path="res://rooms/flower.tscn" id="25_ybn8b"]
-[ext_resource type="Script" uid="uid://cs4vcltifh1dv" path="res://scripts/flower_spawn.gd" id="26_0hh41"]
+[ext_resource type="Script" uid="uid://buusx2q7h8kgn" path="res://scripts/flower_spawn.gd" id="26_0hh41"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_afsgx"]
 blend_mode = 1
@@ -122,7 +122,7 @@ size = Vector2(288.75, 26.679688)
 size = Vector2(256, 130)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1icg"]
-size = Vector2(62, 132)
+size = Vector2(746, 374)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64hdi"]
 size = Vector2(64, 134)
@@ -150,9 +150,6 @@ size = Vector2(249, 2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jee7h"]
 size = Vector2(54.5, 21)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1icg"]
-size = Vector2(746, 374)
 
 [node name="Room1" type="Node2D" unique_id=1710378233]
 y_sort_enabled = true
