@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bdj8hcyxfkhnq"]
 
 [ext_resource type="Texture2D" uid="uid://cmp3pn8oddsq8" path="res://Assets/sprites/black shirt guy.png" id="1_phgwk"]
-[ext_resource type="Script" uid="uid://d07idaihryy4b" path="res://scripts/black_guy.gd" id="1_q4c5i"]
-[ext_resource type="PackedScene" uid="uid://vlorpcvset72" path="res://black_dialogue/black_guy_dialog.tscn" id="3_0sc5t"]
+[ext_resource type="Script" uid="uid://c1geg5e6df310" path="res://scripts/black_guy.gd" id="1_q4c5i"]
+[ext_resource type="PackedScene" uid="uid://d64ixuie8fv0" path="res://black_dialogue/black_guy_dialog.tscn" id="3_0sc5t"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q4c5i"]
 atlas = ExtResource("1_phgwk")
@@ -151,13 +151,13 @@ shape = SubResource("CircleShape2D_rmwp2")
 autostart = true
 
 [node name="black_guy_dialog" parent="." unique_id=2045093427 instance=ExtResource("3_0sc5t")]
+visible = true
 offset_left = -475.0
 offset_top = -202.0
 offset_right = -475.0
 offset_bottom = -202.0
 
 [node name="BtnRefuse" type="Button" parent="." unique_id=2067312849]
-visible = false
 offset_left = -152.0
 offset_top = 7.0
 offset_right = 4.0
@@ -165,7 +165,6 @@ offset_bottom = 38.0
 text = "Dony 't give money"
 
 [node name="BtnGive" type="Button" parent="." unique_id=1210728221]
-visible = false
 offset_left = -151.0
 offset_top = -27.0
 offset_right = -52.0

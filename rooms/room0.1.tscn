@@ -305,10 +305,10 @@ scale = Vector2(0.8318585, 0.84424096)
 texture = ExtResource("16_tsncp")
 
 [node name="Button" type="Button" parent="." unique_id=1664977083]
-offset_left = 1043.0
-offset_top = -12.0
-offset_right = 1123.0
-offset_bottom = 15.0
+offset_left = 1024.0
+offset_top = -11.0
+offset_right = 1104.0
+offset_bottom = 16.0
 theme_override_fonts/font = ExtResource("17_sgmoi")
 icon = SubResource("ViewportTexture_wffey")
 flat = true

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://batevh733jjip"]
 
 [ext_resource type="Texture2D" uid="uid://d2x6amdmv31oy" path="res://Assets/sprites/green hair girl face(1).png" id="1_72su7"]
-[ext_resource type="Script" uid="uid://bhgqdtb4vlo0v" path="res://dialogue/Natasha_dialog.gd" id="1_k1q8p"]
+[ext_resource type="Script" uid="uid://bkc0ucj7togty" path="res://dialogue/Natasha_dialog.gd" id="1_k1q8p"]
 [ext_resource type="Texture2D" uid="uid://chjq5786ja8jd" path="res://Assets/Pic/shop ui1.png" id="2_k1q8p"]
 [ext_resource type="Texture2D" uid="uid://cebs6kf7xm0qh" path="res://Assets/Pic/390dc56603c15331eb9c329b0e4a4fb9-removebg-preview.png" id="3_glucn"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="4_rpybr"]
@@ -13,6 +13,7 @@ anchors_preset = 0
 script = ExtResource("1_k1q8p")
 
 [node name="Panel" type="TextureRect" parent="." unique_id=955236293]
+visible = false
 layout_mode = 0
 offset_left = -3.0
 offset_right = 1150.0
