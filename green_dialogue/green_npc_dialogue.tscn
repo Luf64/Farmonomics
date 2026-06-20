@@ -13,6 +13,7 @@ anchors_preset = 0
 script = ExtResource("1_b5imt")
 
 [node name="Panel" type="TextureRect" parent="." unique_id=955236293]
+visible = false
 layout_mode = 0
 offset_left = -3.0
 offset_right = 1150.0

@@ -151,13 +151,13 @@ shape = SubResource("CircleShape2D_rmwp2")
 autostart = true
 
 [node name="black_guy_dialog" parent="." unique_id=2045093427 instance=ExtResource("3_0sc5t")]
+visible = true
 offset_left = -475.0
 offset_top = -202.0
 offset_right = -475.0
 offset_bottom = -202.0
 
 [node name="BtnRefuse" type="Button" parent="." unique_id=2067312849]
-visible = false
 offset_left = -152.0
 offset_top = 7.0
 offset_right = 4.0
@@ -165,7 +165,6 @@ offset_bottom = 38.0
 text = "Dony 't give money"
 
 [node name="BtnGive" type="Button" parent="." unique_id=1210728221]
-visible = false
 offset_left = -151.0
 offset_top = -27.0
 offset_right = -52.0

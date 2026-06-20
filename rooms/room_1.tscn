@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cmnffj1d1t2s4" path="res://Assets/room 1 (outside)/Room0.1(House).png" id="2_j6sld"]
 [ext_resource type="PackedScene" uid="uid://bpr04seeqcl6e" path="res://rooms/market_notification.tscn" id="2_jlk02"]
 [ext_resource type="Texture2D" uid="uid://doplhhvs8b0m8" path="res://Assets/room 1 (outside)/Room3(House punya something).png" id="2_p6f22"]
-[ext_resource type="Script" uid="uid://b11p3q4cx5p28" path="res://scripts/button.gd" id="3_p1q16"]
+[ext_resource type="Script" uid="uid://cojawbhq4dkr6" path="res://scripts/button.gd" id="3_p1q16"]
 [ext_resource type="Texture2D" uid="uid://b1ojfi80oa7cw" path="res://Assets/room 1 (outside)/Room0.1(House punya something).png" id="4_h00nm"]
 [ext_resource type="PackedScene" uid="uid://dx6e5oxpxyl8h" path="res://rooms/total_money.tscn" id="4_jlk02"]
 [ext_resource type="Texture2D" uid="uid://jf87jlrtc66o" path="res://Assets/room 1 (outside)/Room0.1(House punya it apa).png" id="5_1j48i"]
@@ -26,6 +26,8 @@
 [ext_resource type="Script" uid="uid://buskoeybgpuvk" path="res://scripts/lift_animation.gd" id="20_n1icg"]
 [ext_resource type="PackedScene" uid="uid://rv1c61cx6p8u" path="res://rooms/green_npc.tscn" id="21_n7gw8"]
 [ext_resource type="Texture2D" uid="uid://da6p6aoc557xl" path="res://Assets/Grass005_1K-PNG_Color.png" id="23_cn27q"]
+[ext_resource type="PackedScene" uid="uid://sbvotma16o74" path="res://rooms/flower.tscn" id="25_ybn8b"]
+[ext_resource type="Script" uid="uid://cs4vcltifh1dv" path="res://scripts/flower_spawn.gd" id="26_0hh41"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_afsgx"]
 blend_mode = 1
@@ -149,6 +151,9 @@ size = Vector2(249, 2)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jee7h"]
 size = Vector2(54.5, 21)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1icg"]
+size = Vector2(746, 374)
+
 [node name="Room1" type="Node2D" unique_id=1710378233]
 y_sort_enabled = true
 
@@ -180,10 +185,11 @@ offset_bottom = 8.0
 [node name="market_notification" parent="player/Button3" unique_id=1446910186 instance=ExtResource("2_jlk02")]
 
 [node name="Button" type="Button" parent="player" unique_id=1486784470]
-offset_left = 467.0
-offset_top = -312.0
-offset_right = 547.0
-offset_bottom = -285.0
+z_index = 15
+offset_left = 447.0
+offset_top = -310.0
+offset_right = 527.0
+offset_bottom = -283.0
 theme_override_fonts/font = ExtResource("2_cdn6i")
 text = "	"
 icon = SubResource("ViewportTexture_cdn6i")
@@ -223,6 +229,23 @@ offset_right = 85.0
 offset_bottom = 19.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "[PRESS \"C\"]"
+
+[node name="Panel2" type="Panel" parent="player" unique_id=181393073]
+visible = false
+z_index = 7
+offset_left = 21.0
+offset_top = -12.0
+offset_right = 107.0
+offset_bottom = 6.0
+
+[node name="Label" type="Label" parent="player/Panel2" unique_id=1774413312]
+layout_mode = 0
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 85.0
+offset_bottom = 19.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+text = "[PRESS \"F\"]"
 
 [node name="Farm" type="Sprite2D" parent="." unique_id=1231734030]
 position = Vector2(-1011, -538)
@@ -1501,11 +1524,23 @@ offset_bottom = 40.0
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=1571398261]
 z_index = -1
-offset_left = -3746.0
-offset_top = -1420.0
-offset_right = 3516.0
-offset_bottom = 1589.0
+offset_left = -3742.0
+offset_top = -1450.0
+offset_right = 3520.0
+offset_bottom = 1559.0
 texture = ExtResource("23_cn27q")
+
+[node name="FlowerPlantRegion" parent="." unique_id=1274987797 instance=ExtResource("25_ybn8b")]
+position = Vector2(-808, -296)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=346024597]
+y_sort_enabled = true
+position = Vector2(-808, -296)
+script = ExtResource("26_0hh41")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1272059152]
+position = Vector2(-4, 27)
+shape = SubResource("RectangleShape2D_n1icg")
 
 [connection signal="body_entered" from="Farm/Farm Door" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Farm/Farm Door" to="Farm/Farm Door" method="_on_body_entered"]

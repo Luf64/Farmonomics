@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d64ixuie8fv0"]
 
-[ext_resource type="Script" path="res://black_dialogue/weird_guy_dialog.gd" id="1_y14kt"]
+[ext_resource type="Script" uid="uid://s127agnbisnt" path="res://black_dialogue/weird_guy_dialog.gd" id="1_y14kt"]
 [ext_resource type="Texture2D" uid="uid://drqbh8x7b53ov" path="res://Assets/sprites/black guy.png" id="2_cp374"]
 [ext_resource type="Texture2D" uid="uid://chjq5786ja8jd" path="res://Assets/Pic/shop ui1.png" id="2_y14kt"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="4_53d1i"]
@@ -16,6 +16,7 @@ grow_vertical = 2
 script = ExtResource("1_y14kt")
 
 [node name="Panel" type="TextureRect" parent="." unique_id=708012016]
+visible = false
 layout_mode = 0
 offset_left = -3.0
 offset_right = 1150.0
