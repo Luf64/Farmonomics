@@ -21,8 +21,6 @@ var grow_time: Dictionary = {
 	"Seed_milk": 30.0
 }
 
-var setting_open = false 
-var setting = null 
 var setting_room = preload("res://rooms/setting.tscn") 
 
 var sound_percent: float = 100.0
@@ -60,23 +58,13 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
+		print("ESC received! popup=", current_popup_room0)
 		if current_popup_room0 != null:
 			current_popup_room0.queue_free()
 			current_popup_room0 = null
 		else:
 			current_popup_room0 = setting_room.instantiate()
 			get_tree().root.add_child(current_popup_room0)
-
-func toggle_settings():
-	if not setting_open:
-		setting = setting_room.instantiate()
-		get_tree().root.add_child(setting)
-		setting_open = true
-	else:
-		if setting:
-			setting.queue_free()
-			setting = null
-		setting_open = false
 
 #open inventory
 func open_inventory() -> void:
@@ -130,7 +118,6 @@ var crops = {
 		}
 		
 }
-
 
 func subtract_money(amount: int) -> bool:
 	if money >= amount:

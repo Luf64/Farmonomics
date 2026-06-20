@@ -22,12 +22,15 @@ func _on_button_pressed() -> void:
 		
 
 func _on_video_finished():
-	Global.hotbar_ui.visible = !Global.hotbar_ui.visible
 	video_player.visible = false
-	Global.hotbar_ui.visible =! Global.hotbar_ui.visible
+	Global.hotbar_ui.visible = true
+	if Global.current_popup_room0 == self:
+		Global.current_popup_room0 = null
 	get_tree().change_scene_to_file(Global.Room_1)
-	
+	queue_free()
 
 
 func _on_close_button_pressed() -> void:
+	if Global.current_popup_room0 == self:
+		Global.current_popup_room0 = null
 	queue_free()

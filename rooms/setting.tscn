@@ -190,8 +190,6 @@ metadata/_edit_use_anchors_ = true
 [connection signal="pressed" from="control/close" to="." method="_on_close_pressed"]
 [connection signal="toggled" from="control/close" to="." method="_on_close_toggled"]
 [connection signal="pressed" from="control/sound" to="." method="_on_sound_pressed"]
-[connection signal="toggled" from="control/sound" to="." method="_on_sound_toggled"]
-[connection signal="pressed" from="control/volume/1" to="." method="_on__pressed"]
 [connection signal="pressed" from="control/volume/1" to="." method="_on_1_pressed"]
 [connection signal="pressed" from="control/volume/2" to="." method="_on_2_pressed"]
 [connection signal="pressed" from="control/volume/3" to="." method="_on_3_pressed"]

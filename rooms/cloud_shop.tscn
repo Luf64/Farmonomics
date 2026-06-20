@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bp74gaf370ylx"]
+
+[ext_resource type="Texture2D" uid="uid://cuytooq8ngygl" path="res://Assets/sky shop.png" id="1_d8w2l"]
+
+[node name="CloudShop" type="Node2D" unique_id=1995569739]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=266674024]
+position = Vector2(577, 300)
+scale = Vector2(0.82285714, 0.92571425)
+texture = ExtResource("1_d8w2l")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1731383166]
+position = Vector2(577, 300)

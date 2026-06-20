@@ -20,7 +20,7 @@ config/icon="res://icon.svg"
 Global="*res://scripts/global.gd"
 Date_Timer="*res://scripts/date_timer.gd"
 Json="*res://scripts/JSON.gd"
-Dialogic="*uid://ds2q0uclmolvu"
+Dialogic="*uid://b3gppbrrtuq5h"
 
 [dialogic]
 
