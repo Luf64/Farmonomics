@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://cnseoys5gm037"]
+
+[ext_resource type="Script" uid="uid://bhgqdtb4vlo0v" path="res://green_dialogue/Natasha_dialog.gd" id="1_b5imt"]
+[ext_resource type="Texture2D" uid="uid://d2x6amdmv31oy" path="res://Assets/sprites/green hair girl face(1).png" id="2_8uq8b"]
+[ext_resource type="Texture2D" uid="uid://chjq5786ja8jd" path="res://Assets/Pic/shop ui1.png" id="3_1vkkm"]
+[ext_resource type="Texture2D" uid="uid://cebs6kf7xm0qh" path="res://Assets/Pic/390dc56603c15331eb9c329b0e4a4fb9-removebg-preview.png" id="4_j8eg7"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="5_krcl2"]
+
+[node name="GreenNPC_dialogue" type="Control" unique_id=1292092854]
+z_index = 9
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_b5imt")
+
+[node name="Panel" type="TextureRect" parent="." unique_id=955236293]
+layout_mode = 0
+offset_left = -3.0
+offset_right = 1150.0
+offset_bottom = 639.0
+
+[node name="TextureRect" type="TextureRect" parent="Panel" unique_id=691514209]
+layout_mode = 0
+offset_left = 893.0
+offset_top = 38.0
+offset_right = 1167.0
+offset_bottom = 336.0
+texture = ExtResource("2_8uq8b")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="Panel" unique_id=272703196]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 323.0
+offset_right = 1155.0
+offset_bottom = 648.0
+texture = ExtResource("3_1vkkm")
+
+[node name="TextureRect3" type="TextureRect" parent="Panel/TextureRect2" unique_id=986525476]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 25.0
+offset_right = 1083.0
+offset_bottom = 301.0
+texture = ExtResource("4_j8eg7")
+
+[node name="Text" type="RichTextLabel" parent="Panel/TextureRect2/TextureRect3" unique_id=477621528]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 68.0
+offset_right = 837.0
+offset_bottom = 368.0
+theme_override_fonts/normal_font = ExtResource("5_krcl2")
+theme_override_font_sizes/normal_font_size = 38
+text = "Chatting...."
+
+[node name="Name" type="RichTextLabel" parent="Panel/TextureRect2/TextureRect3" unique_id=752183562]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 24.0
+offset_right = 568.0
+offset_bottom = 188.0
+theme_override_fonts/normal_font = ExtResource("5_krcl2")
+theme_override_font_sizes/normal_font_size = 40
+text = "Name:"

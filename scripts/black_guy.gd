@@ -19,7 +19,12 @@ enum{
 
 func _ready():
 	randomize()
+	if Global.npc_positions.has(self.name):
+		self.global_position = Global.npc_positions[self.name]
 	start_pos = position
+	
+	
+
 func _process(delta):
 	if is_chatting:
 		$AnimatedSprite2D.play("idle")
@@ -117,4 +122,9 @@ func _on_btn_give_pressed() -> void:
 func _on_btn_refuse_pressed() -> void:
 	is_chatting = false
 	is_roaming = true
+	pass # Replace with function body.
+
+
+func _on_tree_exited() -> void:
+	Global.npc_positions[self.name] = self.global_position
 	pass # Replace with function body.

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c4ayvh7nt8183"]
 
-[ext_resource type="PackedScene" path="res://rooms/black_guy.tscn" id="1_0cw7g"]
+[ext_resource type="PackedScene" uid="uid://vc688i2dutjd" path="res://rooms/black_guy.tscn" id="1_0cw7g"]
 [ext_resource type="Texture2D" uid="uid://cx8ar81qefsfa" path="res://Assets/room 1 (outside)/Room3.png" id="1_2otyv"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="1_31r0r"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="2_cdn6i"]
@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://jf87jlrtc66o" path="res://Assets/room 1 (outside)/Room0.1(House punya it apa).png" id="5_1j48i"]
 [ext_resource type="Texture2D" uid="uid://cja0g8aipee15" path="res://Assets/room 1 (outside)/Marketplace.png" id="6_brp25"]
 [ext_resource type="Script" uid="uid://d2xd321kfckg5" path="res://scripts/room_1.gd" id="6_ttp18"]
-[ext_resource type="PackedScene" uid="uid://batevh733jjip" path="res://dialogue/GreenNPC_dialog.tscn" id="7_afsgx"]
+[ext_resource type="PackedScene" uid="uid://cnseoys5gm037" path="res://green_dialogue/green_npc_dialogue.tscn" id="7_afsgx"]
 [ext_resource type="Texture2D" uid="uid://2yngs730mj5s" path="res://Assets/room 1 (outside)/Fence(left).png" id="8_c48p8"]
 [ext_resource type="Texture2D" uid="uid://1c8sowap4qwq" path="res://Assets/room 1 (outside)/Fence(Down).png" id="9_7ecps"]
 [ext_resource type="Texture2D" uid="uid://u8duun5jybnv" path="res://Assets/room 1 (outside)/Fence(Straight).png" id="10_gdwmo"]

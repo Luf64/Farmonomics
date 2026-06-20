@@ -1,0 +1,11 @@
+join Natasha rightmost
+Hello there! I'm just came out of the market.
+Do you want to know what is going on in market stock?
+- yes... of course!!
+	join tomato center
+	There are still have tomato of 20% left on the market! Looks like we'll have to cut the price and sell them off!
+	leave tomato
+	Quick go to the market now!!
+	[signal arg="idk"]
+- No thanks
+	Ouhh Okay, byebye
