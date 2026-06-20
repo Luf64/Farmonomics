@@ -30,6 +30,7 @@ var is_muted: bool = false
 
 var current_popup_room0: Node = null
 
+var npc_positions = {}
 
 var player_name: String = ""
 

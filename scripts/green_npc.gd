@@ -19,7 +19,10 @@ enum{
 
 func _ready():
 	randomize()
+	if Global.npc_positions.has(self.name):
+		self.global_position = Global.npc_positions[self.name]
 	start_pos = position
+	
 func _process(delta):
 	if is_chatting:
 		$AnimatedSprite2D.play("idle")
@@ -50,17 +53,29 @@ func _process(delta):
 func _input(event):
 	if event.is_action_pressed("chat") and not event.is_echo():
 		if player_in_chat_zone and not is_chatting:
-			print("chatting with green npc")
-			$GreenNPC_dialogue.start()
-			is_roaming = false
-			is_chatting = true
+			run_dialogue("Natasha Chatting")
 			$AnimatedSprite2D.play("idle")
 			get_viewport().set_input_as_handled()
 		
+		
+func run_dialogue(dialogue_string):
+	
+	is_chatting = true
+	is_roaming = false
+	
+	Dialogic.start(dialogue_string)
+	if not Dialogic.timeline_ended.is_connected(_on_dialogic_ended):
+		Dialogic.timeline_ended.connect(_on_dialogic_ended)
+	
+	
+	
+
 func choose(array):
 	array.shuffle()
 	return array.front()
 	
+	
+
 	
 func move(delta):
 	if is_chatting:
@@ -95,7 +110,15 @@ func _on_timer_timeout() -> void:
 		velocity = Vector2.ZERO
 		current_state = IDLE
 
-
-func _on_green_npc_dialogue_dialogue_finished() -> void:
+func _on_dialogic_ended() -> void:
+	if Dialogic.timeline_ended.is_connected(_on_dialogic_ended):
+		Dialogic.timeline_ended.disconnect(_on_dialogic_ended)
 	is_chatting = false
 	is_roaming = true
+
+
+
+
+func _on_tree_exited() -> void:
+	Global.npc_positions[self.name] = self.global_position
+	pass # Replace with function body.
