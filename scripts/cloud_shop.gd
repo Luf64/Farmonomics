@@ -27,3 +27,11 @@ func _on_animation_body_exited(body: Node2D) -> void:
 		sprite.texture = frames[1]
 		await get_tree().create_timer(1.0).timeout
 		sprite.texture = frames[0]
+
+
+func _on_lift_door_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
+
+
+func _on_lift_door_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
