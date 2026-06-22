@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://ds4duhly7yaop"]
+
+[ext_resource type="Script" uid="uid://bpa7l1dl4wmtc" path="res://scripts/day_and_night.gd" id="1_wsebf"]
+
+[sub_resource type="Animation" id="Animation_2qq27"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.5882353)]
+}
+
+[sub_resource type="Animation" id="Animation_q26r8"]
+resource_name = "daytonight"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 0.5882353)]
+}
+
+[sub_resource type="Animation" id="Animation_3tre3"]
+resource_name = "nighttoday"
+length = 3.0333333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0.5882353), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q76ho"]
+_data = {
+&"RESET": SubResource("Animation_2qq27"),
+&"daytonight": SubResource("Animation_q26r8"),
+&"nighttoday": SubResource("Animation_3tre3")
+}
+
+[node name="day_and_night" type="StaticBody2D" unique_id=1221182236]
+script = ExtResource("1_wsebf")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=805227768]
+offset_left = -3013.0
+offset_top = -2088.0
+offset_right = 3878.0
+offset_bottom = 1888.0
+color = Color(0, 0, 0, 0.5882353)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1685954258]
+libraries/ = SubResource("AnimationLibrary_q76ho")
+
+[node name="Timer" type="Timer" parent="." unique_id=1046958322]
+wait_time = 3.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
