@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://6d0x2y5wnhle"]
+
+[ext_resource type="Texture2D" uid="uid://bjo3mudwnc3cr" path="res://Assets/Sky.png" id="1_lfvx6"]
+
+[node name="background" type="Node2D" unique_id=1573931230]
+
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1720348617]
+repeat_size = Vector2(270, 0)
+autoscroll = Vector2(5, 0)
+repeat_times = 4
+ignore_camera_scroll = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=388204038]
+position = Vector2(6.999999, -58)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_lfvx6")
