@@ -3,18 +3,20 @@
 [ext_resource type="Texture2D" uid="uid://cuytooq8ngygl" path="res://Assets/sky shop.png" id="1_d8w2l"]
 [ext_resource type="Script" uid="uid://c0f6svmy8sbre" path="res://scripts/cloud_shop.gd" id="1_x52j8"]
 [ext_resource type="Texture2D" uid="uid://bnhuy85ayedga" path="res://Assets/lift_1.png" id="3_8bfre"]
+[ext_resource type="Texture2D" uid="uid://csf11x3ws55a5" path="res://Assets/god.png" id="3_csdkr"]
+[ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="4_8bfre"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_csdkr"]
-size = Vector2(256, 130)
+size = Vector2(256, 304)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e088i"]
-size = Vector2(62, 132)
+size = Vector2(62, 102)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p1u02"]
-size = Vector2(64, 134)
+size = Vector2(64, 98)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bssnt"]
-size = Vector2(264, 208)
+size = Vector2(264, 174)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aty1m"]
 size = Vector2(38, 64)
@@ -22,56 +24,69 @@ size = Vector2(38, 64)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_chgrx"]
 size = Vector2(462, 224)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8bfre"]
+b = Vector2(1301, -5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_csdkr"]
+b = Vector2(1308, -5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jjdlv"]
+size = Vector2(20, 635)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sshq4"]
+size = Vector2(20, 679)
+
 [node name="CloudShop" type="Node2D" unique_id=1995569739]
 script = ExtResource("1_x52j8")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=266674024]
-position = Vector2(577, 300)
-scale = Vector2(0.82285714, 0.92571425)
+[node name="background" type="Sprite2D" parent="." unique_id=793933709]
+position = Vector2(577, 303)
 texture = ExtResource("1_d8w2l")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1731383166]
-position = Vector2(577, 300)
+[node name="god" type="Sprite2D" parent="." unique_id=1409973882]
+position = Vector2(1046, 479)
+scale = Vector2(4, 4)
+texture = ExtResource("3_csdkr")
 
 [node name="lift" type="Sprite2D" parent="." unique_id=1349726948]
 position = Vector2(106, 519)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_8bfre")
 
-[node name="lift door" type="Area2D" parent="lift" unique_id=515677737]
+[node name="lift_door" type="Area2D" parent="lift" unique_id=515677737]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="lift/lift door" unique_id=735111157]
-position = Vector2(22, 89)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lift/lift_door" unique_id=735111157]
+position = Vector2(22, 2)
 shape = SubResource("RectangleShape2D_csdkr")
 
-[node name="Panel" type="Panel" parent="lift/lift door" unique_id=1843619039]
+[node name="Panel" type="Panel" parent="lift/lift_door" unique_id=1843619039]
 visible = false
 offset_left = -94.0
 offset_top = -70.0
 offset_right = 142.0
 offset_bottom = -37.0
 
-[node name="Label" type="Label" parent="lift/lift door/Panel" unique_id=1894400952]
+[node name="Label" type="Label" parent="lift/lift_door/Panel" unique_id=1894400952]
 layout_mode = 0
 offset_left = 4.0
 offset_top = 1.0
 offset_right = 350.0
 offset_bottom = 43.0
 theme_override_font_sizes/font_size = 20
-text = "[PRESS \"F\" to enter \"???\""
+text = "[PRESS \"F\" to enter overworld]"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="lift" unique_id=1410085129]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lift/StaticBody2D" unique_id=1872948995]
-position = Vector2(-77, -18)
+position = Vector2(-77, -33)
 shape = SubResource("RectangleShape2D_e088i")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="lift/StaticBody2D" unique_id=2005915094]
-position = Vector2(122, -15)
+position = Vector2(122, -33)
 shape = SubResource("RectangleShape2D_p1u02")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="lift/StaticBody2D" unique_id=749416883]
-position = Vector2(24, -52)
+position = Vector2(24, -69)
 shape = SubResource("RectangleShape2D_bssnt")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="lift/StaticBody2D" unique_id=238827952]
@@ -84,7 +99,30 @@ shape = SubResource("RectangleShape2D_aty1m")
 position = Vector2(21, 96)
 shape = SubResource("RectangleShape2D_chgrx")
 
-[connection signal="body_entered" from="lift/lift door" to="." method="_on_lift_door_body_entered"]
-[connection signal="body_exited" from="lift/lift door" to="." method="_on_lift_door_body_exited"]
+[node name="player" parent="." unique_id=1637164717 instance=ExtResource("4_8bfre")]
+position = Vector2(260, 568)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2007946496]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2064593172]
+position = Vector2(0, 527)
+shape = SubResource("SegmentShape2D_8bfre")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=818305918]
+position = Vector2(0, 604)
+shape = SubResource("SegmentShape2D_csdkr")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2135554600]
+position = Vector2(0, 307.5)
+shape = SubResource("RectangleShape2D_jjdlv")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1836739051]
+position = Vector2(1153, 329.5)
+shape = SubResource("RectangleShape2D_sshq4")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=360190879]
+
+[connection signal="body_entered" from="lift/lift_door" to="." method="_on_lift_door_body_entered"]
+[connection signal="body_exited" from="lift/lift_door" to="." method="_on_lift_door_body_exited"]
 [connection signal="body_entered" from="lift/animation" to="." method="_on_animation_body_entered"]
 [connection signal="body_exited" from="lift/animation" to="." method="_on_animation_body_exited"]

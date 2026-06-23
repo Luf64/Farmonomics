@@ -9,6 +9,7 @@ var Room_1 = "res://rooms/room_1.tscn" # Hall
 var Room0_1 = "res://rooms/room0.1.tscn" # Farm
 var Room_2 = "res://rooms/room_2.tscn" # Market Store
 var Room_3 = "res://rooms/room_3.tscn" # Brewing Lab
+var sky_shop = "res://rooms/cloud_shop.tscn" # shop
 var Inventory = "res://rooms/inventory.tscn"
 # to locate previous room for inventory
 var inventory_ui = null
@@ -46,7 +47,8 @@ var room = {
 	"farm": {"scene": Room0_1, "coordinates": "Farm"},
 	"room1": {"scene": Room_1, "coordinates": "Room1"},
 	"room2": {"scene": Room_2, "coordinates": "Room2"},
-	"room3": {"scene": Room_3, "coordinates": "Room3"}
+	"room3": {"scene": Room_3, "coordinates": "Room3"},
+	"sky_shop": {"scene": sky_shop, "coordinates": "SkyShop"}
 }
 
 var crops = {

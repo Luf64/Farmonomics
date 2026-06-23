@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://br60pgwohjlb8" path="res://Assets/room 1 (outside)/Marketplace punya something.png" id="16_jee7h"]
 [ext_resource type="Texture2D" uid="uid://bnhuy85ayedga" path="res://Assets/lift_1.png" id="17_0hh41"]
 [ext_resource type="AudioStream" uid="uid://v4305gwyfv68" path="res://Sound/Phua/Aisake, Dosi - Cruising [NCS Release].mp3" id="18_p1q16"]
-[ext_resource type="Script" uid="uid://c04gbgp6neb64" path="res://scripts/lift_animation.gd" id="20_n1icg"]
+[ext_resource type="Script" uid="uid://buskoeybgpuvk" path="res://scripts/lift_animation.gd" id="20_n1icg"]
 [ext_resource type="PackedScene" uid="uid://rv1c61cx6p8u" path="res://rooms/green_npc.tscn" id="21_n7gw8"]
 [ext_resource type="Texture2D" uid="uid://da6p6aoc557xl" path="res://Assets/Grass005_1K-PNG_Color.png" id="23_cn27q"]
 [ext_resource type="Script" uid="uid://buusx2q7h8kgn" path="res://scripts/flower_spawn.gd" id="26_0hh41"]
@@ -122,7 +122,7 @@ size = Vector2(288.75, 26.679688)
 size = Vector2(256, 130)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n1icg"]
-size = Vector2(746, 374)
+size = Vector2(745, 379)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64hdi"]
 size = Vector2(64, 134)
@@ -396,12 +396,12 @@ offset_top = 1.0
 offset_right = 350.0
 offset_bottom = 43.0
 theme_override_font_sizes/font_size = 20
-text = "[PRESS \"F\" to enter \"???\""
+text = "[PRESS \"F\" to enter \"???\"]"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="lift" unique_id=1526206454]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="lift/StaticBody2D" unique_id=582979938]
-position = Vector2(-77, -18)
+position = Vector2(-75, -15)
 shape = SubResource("RectangleShape2D_n1icg")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="lift/StaticBody2D" unique_id=1130660151]
@@ -433,7 +433,7 @@ position = Vector2(1265, 71)
 [node name="Room3" type="Marker2D" parent="Spawn" unique_id=746379862]
 position = Vector2(74, -462)
 
-[node name="lift" type="Marker2D" parent="Spawn" unique_id=186885179]
+[node name="SkyShop" type="Marker2D" parent="Spawn" unique_id=186885179]
 position = Vector2(1031, -434)
 
 [node name="Fence" type="Node2D" parent="." unique_id=2003181310]
@@ -1533,11 +1533,11 @@ position = Vector2(-808, -296)
 script = ExtResource("26_0hh41")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1272059152]
-position = Vector2(-4, 27)
+position = Vector2(-3.5, 26.5)
 shape = SubResource("RectangleShape2D_n1icg")
 
 [node name="day_and_night" parent="." unique_id=1221182236 instance=ExtResource("28_n1icg")]
-position = Vector2(-125, -298)
+position = Vector2(-231, -295)
 
 [connection signal="body_entered" from="Farm/Farm Door" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Farm/Farm Door" to="Farm/Farm Door" method="_on_body_entered"]
