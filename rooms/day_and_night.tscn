@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ds4duhly7yaop"]
 
-[ext_resource type="Script" uid="uid://bpa7l1dl4wmtc" path="res://scripts/day_and_night.gd" id="1_wsebf"]
+[ext_resource type="Script" path="res://scripts/day_and_night.gd" id="1_wsebf"]
 
 [sub_resource type="Animation" id="Animation_2qq27"]
 length = 0.001
@@ -60,10 +60,10 @@ _data = {
 script = ExtResource("1_wsebf")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=805227768]
-offset_left = -3013.0
-offset_top = -2088.0
-offset_right = 3878.0
-offset_bottom = 1888.0
+offset_left = -32581.0
+offset_top = -18984.0
+offset_right = 51149.0
+offset_bottom = 25496.0
 color = Color(0, 0, 0, 0.5882353)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1685954258]

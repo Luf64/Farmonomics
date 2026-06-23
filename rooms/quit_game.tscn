@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c2dilodjd84q3"]
 
-[ext_resource type="Script" uid="uid://baxg24n0prxtv" path="res://scripts/quit_game.gd" id="1_o3ufk"]
+[ext_resource type="Script" uid="uid://b2o12hhykby8g" path="res://scripts/quit_game.gd" id="1_o3ufk"]
 [ext_resource type="Texture2D" uid="uid://hgsxfafuftns" path="res://Assets/setting icon/Settings_new_empty.png" id="2_fm8si"]
 [ext_resource type="Texture2D" uid="uid://cmvq5eps4qeq3" path="res://Assets/setting icon/Settings_sound_icon_bar.png" id="3_5kps3"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="3_fm8si"]
@@ -16,37 +16,41 @@ offset_bottom = 40.0
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=1319009994]
 layout_mode = 0
-offset_left = 401.0
-offset_top = 134.0
-offset_right = 736.0
-offset_bottom = 372.0
+offset_left = 418.0
+offset_top = 204.0
+offset_right = 753.0
+offset_bottom = 442.0
 texture = ExtResource("2_fm8si")
 
 [node name="Label" type="Label" parent="Control/TextureRect" unique_id=371794877]
 layout_mode = 0
-offset_left = 113.0
-offset_top = 13.0
-offset_right = 202.0
-offset_bottom = 36.0
+offset_left = 97.0
+offset_top = 10.0
+offset_right = 216.0
+offset_bottom = 33.0
 scale = Vector2(1.2, 1.2)
 theme_override_fonts/font = ExtResource("3_fm8si")
+theme_override_font_sizes/font_size = 22
 text = "QUIT GAME"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="Control/TextureRect" unique_id=1854757532]
 layout_mode = 0
-offset_left = 39.0
-offset_top = 83.0
-offset_right = 299.0
-offset_bottom = 106.0
+offset_left = 35.0
+offset_top = 91.0
+offset_right = 295.0
+offset_bottom = 114.0
 
 [node name="Label2" type="Label" parent="Control/TextureRect/Panel" unique_id=1186958399]
 layout_mode = 0
-offset_left = 3.0
-offset_top = 3.0
-offset_right = 250.0
-offset_bottom = 26.0
+offset_left = 9.0
+offset_right = 256.0
+offset_bottom = 23.0
 theme_override_fonts/font = ExtResource("3_fm8si")
 text = "Do you really want to quit game?"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="yes" type="TextureButton" parent="Control/TextureRect" unique_id=1078631463]
 layout_mode = 0

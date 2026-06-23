@@ -100,6 +100,17 @@ texture = ExtResource("13_cnnmw")
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("4_13qvk")]
 position = Vector2(-198, 269)
 
+[node name="interaction" type="Label" parent="player" unique_id=1568840607]
+visible = false
+modulate = Color(0, 0, 0, 1)
+offset_left = 19.0
+offset_top = -12.0
+offset_right = 102.0
+offset_bottom = 11.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("16_hu2qu")
+text = "[PRESS \"F\"]"
+
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=947854336]
 
 [node name="CollisionShape (block)" type="StaticBody2D" parent="CharacterBody2D" unique_id=931146190]
@@ -199,15 +210,6 @@ position = Vector2(-339.75, 140.125)
 shape = SubResource("RectangleShape2D_txl2c")
 debug_color = Color(0.62755585, 0.348856, 1, 0.41960785)
 
-[node name="interaction" type="Label" parent="Shop_UI" unique_id=1568840607]
-modulate = Color(0, 0, 0, 1)
-offset_left = -344.0
-offset_top = 53.0
-offset_right = -304.0
-offset_bottom = 76.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "[PRESS \"F\"]"
-
 [node name="ShopMenu" type="Control" parent="Shop_UI" unique_id=1153984570]
 process_mode = 3
 layout_mode = 3
@@ -255,12 +257,13 @@ process_mode = 3
 stream = ExtResource("13_kq7a6")
 
 [node name="Market_Notification" type="Button" parent="." unique_id=1980295662]
-visible = false
 offset_right = 8.0
 offset_bottom = 8.0
 
 [node name="market_notification" parent="Market_Notification" unique_id=1446910186 instance=ExtResource("14_h87l2")]
 
+[connection signal="tree_entered" from="player" to="." method="_on_player_tree_entered"]
+[connection signal="tree_entered" from="player" to="Shop_UI/CollisionShape2D" method="_on_player_tree_entered"]
 [connection signal="body_entered" from="tp" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Shop_UI" to="." method="_on_shop_ui_body_entered"]
 [connection signal="body_exited" from="Shop_UI" to="." method="_on_shop_ui_body_exited"]
