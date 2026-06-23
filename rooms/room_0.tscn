@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3ge72d2jsbe7"]
 
-[ext_resource type="Script" uid="uid://cesjf18lbdqpr" path="res://scripts/room_0.gd" id="1_oa8wf"]
+[ext_resource type="Script" uid="uid://csdvgmyume013" path="res://scripts/room_0.gd" id="1_oa8wf"]
 [ext_resource type="PackedScene" uid="uid://6d0x2y5wnhle" path="res://rooms/background.tscn" id="2_iv03q"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="3_c68s2"]
 [ext_resource type="AudioStream" uid="uid://bve2jgjox778n" path="res://Sound/Phua/delosound-meditation-relaxing-music-466470.mp3" id="4_853v1"]

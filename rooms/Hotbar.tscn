@@ -60,7 +60,7 @@ offset_left = 6.0
 offset_top = 7.0
 offset_right = 97.0
 offset_bottom = 95.0
-color = Color(0.2966023, 0.2966023, 0.2966023, 1)
+color = Color(0.29803923, 0.29803923, 0.29803923, 1)
 
 [node name="Slot2" type="Panel" parent="Control/GridContainer" unique_id=1963175852]
 layout_mode = 2

@@ -8,7 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://bwwdwv8o6k0ps" path="res://Assets/Pic/coin 3.png" id="4_pxn6d"]
 [ext_resource type="Texture2D" uid="uid://b2ekphaaavof3" path="res://Assets/item/Corn/corn(Object).png" id="5_6a1ug"]
 [ext_resource type="Texture2D" uid="uid://bf6h3kbppacj0" path="res://Assets/item/Tomato.png" id="5_pxn6d"]
-[ext_resource type="Texture2D" uid="uid://tpuwkhcxd3iy" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Inventory(Changed).png" id="8_pxn6d"]
 [ext_resource type="Texture2D" uid="uid://cosj8xbnfj1b7" path="res://Assets/Pic/Down.png" id="9_2rj55"]
 [ext_resource type="Texture2D" uid="uid://j58gqqyiyw2s" path="res://Assets/Pic/Up.png" id="10_5jfs2"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="10_18nhq"]
@@ -16,6 +15,8 @@
 [ext_resource type="AudioStream" uid="uid://b3na8gxvl7xp5" path="res://Sound/buying-clinking-coins-4-468430.mp3" id="14_pigwl"]
 [ext_resource type="Texture2D" uid="uid://bh77u11eh427p" path="res://Assets/item/Orange.png" id="14_qx7ap"]
 [ext_resource type="Texture2D" uid="uid://dmv8krt74ecpp" path="res://Assets/item/potato.png" id="15_se1wg"]
+[ext_resource type="PackedScene" uid="uid://tgrxpaqlgev2" path="res://rooms/inventory.tscn" id="16_se1wg"]
+[ext_resource type="Script" uid="uid://jgllpsu0f4o" path="res://scripts/buttonshop.gd" id="17_qi2nu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jfs2"]
 
@@ -47,52 +48,16 @@ layout_mode = 0
 offset_left = 11.0
 offset_top = 1.0
 offset_right = 512.0
-offset_bottom = 652.0
+offset_bottom = 547.0
 texture = ExtResource("1_cg2ta")
 expand_mode = 1
-
-[node name="Inventory(example)" type="TextureRect" parent="." unique_id=712075489]
-anchors_preset = -1
-anchor_left = 14.786
-anchor_top = 8.195001
-anchor_right = 14.786
-anchor_bottom = 8.195001
-offset_left = -16533.473
-offset_top = -5304.3604
-offset_right = -16432.473
-offset_bottom = -5201.3604
-scale = Vector2(6.365, 6.365)
-texture = ExtResource("8_pxn6d")
-
-[node name="TextureRect" type="TextureRect" parent="Inventory(example)" unique_id=399601767]
-visible = false
-layout_mode = 0
-offset_left = 12.097404
-offset_top = 16.967793
-offset_right = 25.923012
-offset_bottom = 30.950512
-
-[node name="Label" type="Label" parent="Inventory(example)" unique_id=964547760]
-visible = false
-layout_mode = 0
-offset_left = 21.995289
-offset_top = 24.037706
-offset_right = 43.990288
-offset_bottom = 47.037704
-theme_override_font_sizes/font_size = 5
-
-[node name="TextureButton" type="TextureButton" parent="." unique_id=1599703225]
-offset_left = 1060.0
-offset_top = 19.0
-offset_right = 1118.0
-offset_bottom = 77.0
 
 [node name="TextureRect4" type="TextureRect" parent="." unique_id=1789566359]
 modulate = Color(0.62352943, 0.33333334, 0.18039216, 1)
 offset_left = 481.0
 offset_top = 65.0
 offset_right = 489.0
-offset_bottom = 585.0
+offset_bottom = 492.0
 texture = ExtResource("2_qf5tm")
 expand_mode = 1
 
@@ -118,8 +83,9 @@ flat = true
 
 [node name="TextureRect2" type="TextureRect" parent="DownButton" unique_id=955885284]
 layout_mode = 0
+offset_top = -89.0
 offset_right = 20.0
-offset_bottom = 25.0
+offset_bottom = -64.0
 texture = ExtResource("9_2rj55")
 
 [node name="VSlider" type="VSlider" parent="." unique_id=1987513403]
@@ -127,9 +93,9 @@ anchors_preset = -1
 anchor_right = 0.423
 anchor_bottom = 1.024
 offset_left = 494.99997
-offset_top = 589.0526
-offset_right = 19.034973
-offset_bottom = 189.14648
+offset_top = 491.9732
+offset_right = 17.703949
+offset_bottom = 43.527466
 rotation = 3.1415927
 scale = Vector2(2, 2)
 theme_override_constants/center_grabber = 0
@@ -446,7 +412,20 @@ text = "15"
 [node name="BuySound" type="AudioStreamPlayer2D" parent="." unique_id=1194135101]
 stream = ExtResource("14_pigwl")
 
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="CanvasLayer" parent="." unique_id=948162825 instance=ExtResource("16_se1wg")]
+offset = Vector2(250, 0)
+transform = Transform2D(1, 0, 0, 1, 250, 0)
+
+[node name="Button" type="Button" parent="." unique_id=1986700641]
+z_index = 10
+offset_left = 1061.0
+offset_top = 20.000002
+offset_right = 1069.0
+offset_bottom = 28.451431
+scale = Vector2(5.657868, 4.387866)
+flat = true
+script = ExtResource("17_qi2nu")
+
 [connection signal="pressed" from="UpButton" to="." method="_on_up_button_pressed"]
 [connection signal="pressed" from="DownButton" to="." method="_on_down_button_pressed"]
 [connection signal="value_changed" from="VSlider" to="." method="_on_v_slider_value_changed"]
@@ -455,3 +434,4 @@ stream = ExtResource("14_pigwl")
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Apple_Button" to="." method="_on_apple_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Orange_Button" to="." method="_on_orange_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Potato_Button" to="." method="_on_potato_button_pressed"]
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
