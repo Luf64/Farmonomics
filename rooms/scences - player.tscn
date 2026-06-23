@@ -196,6 +196,7 @@ libraries/ = SubResource("AnimationLibrary_b64px")
 stream = ExtResource("3_yfs5g")
 
 [node name="name" type="Label" parent="." unique_id=1382650302]
+z_index = 100
 offset_left = -365.0
 offset_top = -67.0
 offset_right = 360.0
