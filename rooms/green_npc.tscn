@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://rv1c61cx6p8u"]
 
 [ext_resource type="Texture2D" uid="uid://be7chgo6qb261" path="res://Assets/sprites/green hair girl.png" id="1_6lr6x"]
-[ext_resource type="Script" uid="uid://g14l7eu7nxpn" path="res://scripts/green_npc.gd" id="1_f1v3p"]
+[ext_resource type="Script" uid="uid://7ky430s1k2dt" path="res://scripts/green_npc.gd" id="1_f1v3p"]
 [ext_resource type="PackedScene" uid="uid://cnseoys5gm037" path="res://green_dialogue/green_npc_dialogue.tscn" id="2_76bxn"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f1v3p"]
