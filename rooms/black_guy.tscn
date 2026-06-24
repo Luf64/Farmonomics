@@ -151,6 +151,7 @@ shape = SubResource("CircleShape2D_rmwp2")
 autostart = true
 
 [node name="black_guy_dialog" parent="." unique_id=2045093427 instance=ExtResource("3_0sc5t")]
+visible = false
 offset_left = -475.0
 offset_top = -202.0
 offset_right = -475.0

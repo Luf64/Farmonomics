@@ -1595,7 +1595,7 @@ position = Vector2(-1.5, 23)
 shape = SubResource("RectangleShape2D_n1icg")
 
 [node name="day_and_night" parent="." unique_id=1221182236 instance=ExtResource("28_n1icg")]
-visible = false
+z_index = 1
 position = Vector2(-195, -224)
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=64080094]
