@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://br60pgwohjlb8" path="res://Assets/room 1 (outside)/Marketplace punya something.png" id="16_jee7h"]
 [ext_resource type="Texture2D" uid="uid://bnhuy85ayedga" path="res://Assets/lift_1.png" id="17_0hh41"]
 [ext_resource type="AudioStream" uid="uid://v4305gwyfv68" path="res://Sound/Phua/Aisake, Dosi - Cruising [NCS Release].mp3" id="18_p1q16"]
-[ext_resource type="Script" uid="uid://c04gbgp6neb64" path="res://scripts/lift_animation.gd" id="20_n1icg"]
+[ext_resource type="Script" uid="uid://buskoeybgpuvk" path="res://scripts/lift_animation.gd" id="20_n1icg"]
 [ext_resource type="PackedScene" uid="uid://rv1c61cx6p8u" path="res://rooms/green_npc.tscn" id="21_n7gw8"]
 [ext_resource type="Texture2D" uid="uid://da6p6aoc557xl" path="res://Assets/Grass005_1K-PNG_Color.png" id="23_cn27q"]
 [ext_resource type="Script" uid="uid://buusx2q7h8kgn" path="res://scripts/flower_spawn.gd" id="26_0hh41"]
@@ -125,8 +125,8 @@ size = Vector2(288.75, 26.679688)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0hh41"]
 size = Vector2(256, 130)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1icg"]
-size = Vector2(743, 370)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lwdxx"]
+size = Vector2(56, 124)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_64hdi"]
 size = Vector2(64, 134)
@@ -155,6 +155,9 @@ size = Vector2(322, 2)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jee7h"]
 size = Vector2(54.5, 21)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n1icg"]
+size = Vector2(743, 370)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eqpyn"]
 texture = ExtResource("29_64hdi")
 0:0/0 = 0
@@ -177,43 +180,17 @@ radius = 43.011627
 a = Vector2(-199, 532)
 b = Vector2(-205, -224)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_lwdxx"]
-a = Vector2(-70, 585)
-b = Vector2(-67, 49)
-
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_hcklc"]
 a = Vector2(1811, 220)
 b = Vector2(-440, 222)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_bkoxy"]
-a = Vector2(-338, 624)
-b = Vector2(476, 620)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_sw43w"]
-a = Vector2(1167, 575)
-b = Vector2(199, 577)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_vdcyf"]
-a = Vector2(165, 560)
-b = Vector2(157, -479)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_p8ol8"]
-a = Vector2(70, -774)
-b = Vector2(81, 269)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_bieq8"]
-a = Vector2(1206, 569)
-b = Vector2(177, 572)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_61f41"]
-a = Vector2(30, 444)
-b = Vector2(26, -77)
-
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i5hb3"]
-a = Vector2(1322, 36)
+a = Vector2(1352, -632)
 b = Vector2(1330, 676)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_qpi1v"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_lwdxx"]
+a = Vector2(-412, -540)
+b = Vector2(1389, -551)
 
 [node name="Room1" type="Node2D" unique_id=1710378233]
 y_sort_enabled = true
@@ -465,9 +442,9 @@ text = "[PRESS \"F\" to enter \"???\"]"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="lift" unique_id=1526206454]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="lift/StaticBody2D" unique_id=582979938]
-position = Vector2(-75, -22)
-shape = SubResource("RectangleShape2D_n1icg")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="lift/StaticBody2D" unique_id=290121562]
+position = Vector2(-74, -26)
+shape = SubResource("RectangleShape2D_lwdxx")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="lift/StaticBody2D" unique_id=1130660151]
 position = Vector2(122, -15)
@@ -1789,7 +1766,7 @@ stretch_mode = 1
 [node name="Verticle_stone11" type="TextureRect" parent="." unique_id=959175581]
 y_sort_enabled = true
 offset_left = 1285.0
-offset_top = -56.0
+offset_top = -481.0
 offset_right = 1421.0
 offset_bottom = 698.0
 texture = ExtResource("31_xtbka")
@@ -1798,7 +1775,7 @@ stretch_mode = 1
 [node name="Verticle_stone12" type="TextureRect" parent="." unique_id=93954844]
 y_sort_enabled = true
 offset_left = 1285.0
-offset_top = 14.0
+offset_top = -556.0
 offset_right = 1421.0
 offset_bottom = 726.0
 texture = ExtResource("31_xtbka")
@@ -1860,6 +1837,25 @@ offset_bottom = 620.0
 texture = ExtResource("31_xtbka")
 stretch_mode = 1
 
+[node name="Horizontal_stone7" type="TextureRect" parent="." unique_id=502989967]
+y_sort_enabled = true
+offset_left = -443.0
+offset_top = -624.0
+offset_right = 1371.0
+offset_bottom = -481.0
+texture = ExtResource("31_xtbka")
+stretch_mode = 1
+
+[node name="Horizontal_stone8" type="TextureRect" parent="." unique_id=972712191]
+z_index = -1
+y_sort_enabled = true
+offset_left = -379.0
+offset_top = -627.0
+offset_right = 1435.0
+offset_bottom = -484.0
+texture = ExtResource("31_xtbka")
+stretch_mode = 1
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=258137013]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2113415186]
@@ -1867,50 +1863,17 @@ y_sort_enabled = true
 position = Vector2(-666, 145)
 shape = SubResource("SegmentShape2D_xtbka")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2139875395]
-y_sort_enabled = true
-position = Vector2(-709, -10)
-shape = SubResource("SegmentShape2D_lwdxx")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=490077670]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=490077670]
 y_sort_enabled = true
 position = Vector2(-452, 464)
 shape = SubResource("SegmentShape2D_hcklc")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=2103018992]
-y_sort_enabled = true
-position = Vector2(-425, -50)
-shape = SubResource("SegmentShape2D_bkoxy")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1957636615]
-y_sort_enabled = true
-shape = SubResource("SegmentShape2D_sw43w")
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1243887872]
-y_sort_enabled = true
-shape = SubResource("SegmentShape2D_vdcyf")
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1106290797]
-y_sort_enabled = true
-position = Vector2(-26, 291)
-shape = SubResource("SegmentShape2D_p8ol8")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=2088085332]
-y_sort_enabled = true
-shape = SubResource("SegmentShape2D_bieq8")
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=984505806]
-y_sort_enabled = true
-position = Vector2(1185, 112)
-shape = SubResource("SegmentShape2D_61f41")
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=848435234]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=848435234]
 y_sort_enabled = true
 shape = SubResource("SegmentShape2D_i5hb3")
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=1179062902]
-y_sort_enabled = true
-shape = SubResource("SegmentShape2D_qpi1v")
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1381165859]
+shape = SubResource("SegmentShape2D_lwdxx")
 
 [connection signal="body_entered" from="Farm/Farm Door" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Farm/Farm Door" to="Farm/Farm Door" method="_on_body_entered"]
