@@ -2,7 +2,7 @@ class_name red_shirt_guy extends CharacterBody2D
 @onready var run_sound: AudioStreamPlayer2D = $Run
 var sound_volume: float
 var move_speed : float = 100.0
-var sprint_speed : float = 210.0
+var sprint_multiplier : float = 2.1
 var last_direction : Vector2 = Vector2.DOWN
 
 # Called when the node enters the scene tree for the first time.
@@ -33,7 +33,7 @@ func _process(delta: float) -> void:
 	
 	# hold"Shift" 
 	if Input.is_action_pressed("Shift(run)") and direction != Vector2.ZERO:
-		current_speed = sprint_speed
+		current_speed = move_speed * sprint_multiplier
 		run_sound.pitch_scale = 1.3  
 	else:
 		run_sound.pitch_scale = 1.0  

@@ -123,7 +123,7 @@ var flower = {
 		"stock": 50,
 		"ideal": 50
 	},
-	"Pink_flower": {
+	"White_flower": {
 		"base_price": 1,
 		"current_price": 1,
 		"stock": 50,

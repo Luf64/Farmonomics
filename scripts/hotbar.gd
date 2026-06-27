@@ -58,6 +58,7 @@ func select_slot(number:int) -> void:
 		else:
 			Global.current_selected_item = ""
 		return
+
 func refresh() -> void:
 	var inventory = Json.get_inventory()
 	var slot = container.get_children()
@@ -75,3 +76,7 @@ func refresh() -> void:
 		else:
 			count.text = ""
 			icon.texture = null
+	if selected_slot < inventory.size() and inventory[selected_slot].has("id"):
+		Global.current_selected_item = inventory[selected_slot]["id"]
+	else:
+		Global.current_selected_item = ""
