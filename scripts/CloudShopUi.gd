@@ -2,6 +2,8 @@ extends CanvasLayer
 
 @onready var container = $Control/GridContainer
 
+signal closed
+
 # items that CANNOT be sold (seeds)
 const UNSELLABLE = ["Seed_corn", "Seed_chocolate", "Seed_milk"]
 
@@ -89,4 +91,5 @@ func _on_help_pressed() -> void:
 	$Control/help/Panel.visible = false
 
 func _on_close_pressed() -> void:
-	pass # Replace with function body.
+	closed.emit()
+	queue_free()
