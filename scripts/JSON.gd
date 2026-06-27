@@ -9,6 +9,7 @@ var game = {
     "position": {"x":0,"y":0},
     "money": 100,
     "money_state": [],
+    "plant":{},
     "volume": 100.0,
     "is_muted": false,
     "inventory": [
@@ -22,6 +23,13 @@ var game = {
         {},{},{},{},{},
         ],
 }
+
+func save_plant(plant_data:Dictionary) -> void:
+    game["plant"] = plant_data
+    save_game()
+
+func load_plant() -> Dictionary:
+    return game.get("plant",{})
 
 func add_item(item:String, amount:int = 1) -> void:
     for entry in game.inventory:

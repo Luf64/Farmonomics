@@ -15,6 +15,7 @@ func _ready() -> void:
         if child is AnimatedSprite2D:
             child.stop()
             child.frame = 0
+            child.visible = false
             
 
 func get_sprite(id:String) -> AnimatedSprite2D:
@@ -80,6 +81,37 @@ func _input(event: InputEvent) -> void:
             harvest()
         elif stage == 1 or stage == 2:
             print("Still growing")
+
+func restore(saved_seed_ID: String, saved_stage: int) -> void:
+    if saved_seed_ID == "" or saved_stage == 0:
+        return
+    seed_ID = saved_seed_ID
+    stage = saved_stage
+    var crop_name = Global.seed_to_product.get(seed_ID, seed_ID)
+    var sprite = get_sprite(crop_name)
+    if sprite == null:
+        return
+    sprite.visible = true
+    sprite.frame = saved_stage - 1  # stage 1→frame 0, stage 2→frame 1, stage 3→frame 2
+    
+    # If still growing, resume the timer from current stage
+    if saved_stage < 3:
+        resume_growing(sprite, saved_stage)
+
+func resume_growing(sprite: AnimatedSprite2D, from_stage:int) -> void:
+    var grow_time = Global.grow_time.get(seed_ID,10.0)
+    var time_per_frame = grow_time/3
+    running_animation = true
+    if from_stage == 1:
+        await get_tree().create_timer(time_per_frame).timeout
+        stage = 2
+        sprite.frame = 1
+        await get_tree().create_timer(time_per_frame).timeout
+    elif from_stage == 2:
+        await get_tree().create_timer(time_per_frame).timeout
+    stage = 3
+    sprite.frame = 2
+    running_animation = false
 
 func _on_body_entered(body:Node2D) -> void:
     if body.name == "player":
