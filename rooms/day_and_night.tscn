@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://ds4duhly7yaop"]
 
-[ext_resource type="Script" path="res://scripts/day_and_night.gd" id="1_wsebf"]
+[ext_resource type="Script" uid="uid://bpa7l1dl4wmtc" path="res://scripts/day_and_night.gd" id="1_wsebf"]
 
 [sub_resource type="Animation" id="Animation_2qq27"]
-length = 0.001
+length = 10.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

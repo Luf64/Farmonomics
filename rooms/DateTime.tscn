@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://bq0q6boca1ckp"]
+
+[ext_resource type="Texture2D" uid="uid://bi8ni634s8nt8" path="res://Assets/night.png" id="1_f10gm"]
+[ext_resource type="Script" uid="uid://bd5r65ky7q72h" path="res://scripts/datentime.gd" id="1_nhwvl"]
+[ext_resource type="Texture2D" uid="uid://b5d7wwvey4d55" path="res://Assets/midnight.png" id="2_nhwvl"]
+[ext_resource type="Texture2D" uid="uid://dyytwsr5chemr" path="res://Assets/morning.png" id="3_8k0jc"]
+[ext_resource type="Texture2D" uid="uid://1q3040ruya4o" path="res://Assets/afternoon.png" id="4_eef1n"]
+[ext_resource type="Texture2D" uid="uid://cwofquqdbxrbf" path="res://Assets/Show date.png" id="5_1hw43"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="6_hvugc"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1060542103]
+script = ExtResource("1_nhwvl")
+
+[node name="night" type="TextureRect" parent="." unique_id=131523688]
+offset_left = 927.0
+offset_top = 32.000015
+offset_right = 1663.0
+offset_bottom = 768.0
+scale = Vector2(0.319, 0.319)
+texture = ExtResource("1_f10gm")
+
+[node name="midnight" type="TextureRect" parent="." unique_id=336224164]
+offset_left = 915.0
+offset_top = 12.0
+offset_right = 1651.0
+offset_bottom = 748.0
+scale = Vector2(0.319, 0.319)
+texture = ExtResource("2_nhwvl")
+
+[node name="morning" type="TextureRect" parent="." unique_id=1119039067]
+offset_left = 905.00006
+offset_top = 2.0
+offset_right = 1641.0
+offset_bottom = 738.0
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_8k0jc")
+
+[node name="afternoon" type="TextureRect" parent="." unique_id=824402020]
+offset_left = 914.0
+offset_top = 34.0
+offset_right = 1650.0
+offset_bottom = 770.0
+scale = Vector2(0.32, 0.32)
+texture = ExtResource("4_eef1n")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=761957845]
+offset_left = 755.0
+offset_top = -115.0
+offset_right = 1165.0
+offset_bottom = 72.0
+texture = ExtResource("5_1hw43")
+expand_mode = 1
+stretch_mode = 1
+
+[node name="time" type="Label" parent="." unique_id=1844721903]
+unique_name_in_owner = true
+offset_left = 1026.0
+offset_top = 18.0
+offset_right = 1117.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("6_hvugc")
+theme_override_font_sizes/font_size = 32
+text = "00:00"
+
+[node name="day" type="Label" parent="." unique_id=1957600416]
+unique_name_in_owner = true
+offset_left = 955.0
+offset_top = 18.0
+offset_right = 1024.0
+offset_bottom = 52.0
+theme_override_fonts/font = ExtResource("6_hvugc")
+theme_override_font_sizes/font_size = 32
+text = "MON"
