@@ -227,7 +227,6 @@ offset_right = 1140.0
 offset_bottom = 363.0
 
 [node name="Control" parent="player/Button4" unique_id=1897661009 instance=ExtResource("1_hcklc")]
-visible = false
 
 [node name="Button3" type="Button" parent="player" unique_id=1839670325]
 visible = false
