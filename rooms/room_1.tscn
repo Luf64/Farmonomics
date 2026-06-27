@@ -32,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://bky4p7q64cflc" path="res://Assets/Stone1.png" id="30_eqpyn"]
 [ext_resource type="Texture2D" uid="uid://5e5qlms00ayj" path="res://Assets/Stone2.png" id="31_xtbka"]
 [ext_resource type="Texture2D" uid="uid://dhcx108f3yrit" path="res://Assets/Stone3.png" id="32_lwdxx"]
+[ext_resource type="Texture2D" uid="uid://n3hxjrwf8fa5" path="res://Assets/river.png" id="33_lwdxx"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_afsgx"]
 blend_mode = 1
@@ -177,20 +178,20 @@ sources/0 = SubResource("TileSetAtlasSource_eqpyn")
 radius = 43.011627
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_xtbka"]
-a = Vector2(-199, 532)
+a = Vector2(-228, 996)
 b = Vector2(-205, -224)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_hcklc"]
-a = Vector2(1811, 220)
-b = Vector2(-440, 222)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i5hb3"]
 a = Vector2(1352, -632)
-b = Vector2(1330, 676)
+b = Vector2(1345, 1211)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lwdxx"]
 a = Vector2(-412, -540)
 b = Vector2(1389, -551)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hcklc"]
+a = Vector2(716, -68)
+b = Vector2(3915, -64)
 
 [node name="Room1" type="Node2D" unique_id=1710378233]
 y_sort_enabled = true
@@ -1792,7 +1793,6 @@ texture = ExtResource("31_xtbka")
 stretch_mode = 1
 
 [node name="Horizontal_stone2" type="TextureRect" parent="." unique_id=614646877]
-z_index = 1
 y_sort_enabled = true
 offset_left = -956.0
 offset_top = 589.0
@@ -1863,17 +1863,58 @@ y_sort_enabled = true
 position = Vector2(-666, 145)
 shape = SubResource("SegmentShape2D_xtbka")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=490077670]
-y_sort_enabled = true
-position = Vector2(-452, 464)
-shape = SubResource("SegmentShape2D_hcklc")
-
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=848435234]
 y_sort_enabled = true
 shape = SubResource("SegmentShape2D_i5hb3")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1381165859]
 shape = SubResource("SegmentShape2D_lwdxx")
+
+[node name="river" type="Sprite2D" parent="." unique_id=2113883859]
+z_index = -1
+position = Vector2(-1816, 896)
+texture = ExtResource("33_lwdxx")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="river" unique_id=1879395603]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="river/StaticBody2D" unique_id=631769498]
+shape = SubResource("SegmentShape2D_hcklc")
+
+[node name="Sprite2D" type="Sprite2D" parent="river" unique_id=180476034]
+position = Vector2(513, 0)
+texture = ExtResource("33_lwdxx")
+
+[node name="Sprite2D2" type="Sprite2D" parent="river" unique_id=244149911]
+position = Vector2(1023, -1)
+texture = ExtResource("33_lwdxx")
+
+[node name="Sprite2D3" type="Sprite2D" parent="river" unique_id=146469925]
+position = Vector2(1520, -7)
+texture = ExtResource("33_lwdxx")
+
+[node name="Sprite2D4" type="Sprite2D" parent="river" unique_id=410954230]
+position = Vector2(2033, -5)
+texture = ExtResource("33_lwdxx")
+
+[node name="Sprite2D5" type="Sprite2D" parent="river" unique_id=1571808213]
+position = Vector2(2546, -4)
+texture = ExtResource("33_lwdxx")
+
+[node name="Sprite2D6" type="Sprite2D" parent="river" unique_id=1982841282]
+position = Vector2(3057, -4)
+texture = ExtResource("33_lwdxx")
+
+[node name="Sprite2D7" type="Sprite2D" parent="river" unique_id=1944741964]
+position = Vector2(3570, -3)
+texture = ExtResource("33_lwdxx")
+
+[node name="Sprite2D8" type="Sprite2D" parent="river" unique_id=593565779]
+position = Vector2(4085, -2)
+texture = ExtResource("33_lwdxx")
+
+[node name="Sprite2D9" type="Sprite2D" parent="river" unique_id=1641972324]
+position = Vector2(4600, -2)
+texture = ExtResource("33_lwdxx")
 
 [connection signal="body_entered" from="Farm/Farm Door" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Farm/Farm Door" to="Farm/Farm Door" method="_on_body_entered"]
