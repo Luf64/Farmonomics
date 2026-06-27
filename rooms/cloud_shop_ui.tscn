@@ -36,10 +36,10 @@ text = "?"
 
 [node name="GridContainer" type="GridContainer" parent="Control" unique_id=1388538378]
 layout_mode = 0
-offset_left = 345.0
-offset_top = 110.0
-offset_right = 826.0
-offset_bottom = 597.0
+offset_left = 336.0
+offset_top = 104.0
+offset_right = 817.0
+offset_bottom = 591.0
 columns = 5
 
 [node name="Slot1" type="Panel" parent="Control/GridContainer" unique_id=127449984]

@@ -28,9 +28,12 @@ func _drop_data(at_position:Vector2, data)->void:
 		inventory.append({})
 	while inventory.size() <= put:
 		inventory.append({})
-
 	var hover_image = inventory[take]
 	inventory[take] = inventory[put]
 	inventory[put] = hover_image
 	Json.save_game()
-	get_parent().get_parent().get_parent().refresh()
+	
+	if Global.inventory_ui:
+		Global.inventory_ui.refresh()
+	if Global.hotbar_ui:
+		Global.hotbar_ui.refresh()
