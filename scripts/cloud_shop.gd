@@ -3,6 +3,7 @@ extends Node2D
 @onready var sprite: Sprite2D = $lift
 
 var player_in_range_tp_room1 = false
+var player_in_range_god = false
 
 var frames = [
 	preload("res://Assets/lift_1.png"),
@@ -17,6 +18,8 @@ func _process(delta: float) -> void:
 	if player_in_range_tp_room1 and Input.is_action_just_pressed("interaction"):
 		Global.current_room = "sky_shop"
 		get_tree().change_scene_to_file(Global.Room_1)
+	if player_in_range_god and Input.is_action_just_pressed("interaction"):
+		pass
 
 func _on_animation_body_entered(body: Node2D) -> void:
 	if body.name == "player":
@@ -43,3 +46,15 @@ func _on_lift_door_body_exited(body: Node2D) -> void:
 	if body.name == "player":
 		player_in_range_tp_room1 = false
 		$lift/lift_door/Panel.visible = false
+
+
+func _on_interaction_body_entered(body: Node2D) -> void:
+	if body.name == "player":
+		$god/interaction/Label.visible = true
+		player_in_range_god = true
+
+
+func _on_interaction_body_exited(body: Node2D) -> void:
+	if body.name == "player":
+		$god/interaction/Label.visible = false
+		player_in_range_god = false
