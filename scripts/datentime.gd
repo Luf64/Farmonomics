@@ -109,3 +109,23 @@ func _on_tree_exited() -> void:
 		"current_period_index": period_idx
 	}
 	print("Time data has been saved to Global.time")
+
+
+
+func player_sleep() -> void:
+	var hour = _get_current_hour()
+	
+	# day to night
+	if hour >= 6 and hour < 18:
+		total_minutes = 18.0 * 60.0
+		print("The player took a nap, and time skipped to the evening. 18:00")
+		
+	# night to morning
+	else:
+		total_minutes = 6.0 * 60.0
+		# day2 + 1
+		current_day_index = (current_day_index + 1) % 7
+		print("The player had a long sleep, and time skipped ahead to the next morning. 6:00")
+	
+	# Force an immediate update of the UI and animations to prevent screen flickering or lag.
+	_update_time_system(0.0)

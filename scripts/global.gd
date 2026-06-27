@@ -9,6 +9,7 @@ var Room_1 = "res://rooms/room_1.tscn" # Hall
 var Room0_1 = "res://rooms/room0.1.tscn" # Farm
 var Room_2 = "res://rooms/room_2.tscn" # Market Store
 var Room_3 = "res://rooms/room_3.tscn" # Brewing Lab
+var Bedroom = "res://rooms/bedroom.tscn" # Bedroom
 var sky_shop = "res://rooms/cloud_shop.tscn"
 var Inventory = "res://rooms/inventory.tscn"
 # to locate previous room for inventory
