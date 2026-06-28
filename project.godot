@@ -29,6 +29,7 @@ directories/dch_directory={
 "Black_guy": "res://black_dialogue/Black_guy.dch",
 "Natasha": "res://green_dialogue/Natasha.dch",
 "character3": "res://Assets/sprites/character3.dch",
+"god_dialogue": "res://god_dialogue.dch",
 "tomato": "res://green_dialogue/tomato.dch"
 }
 directories/dtl_directory={

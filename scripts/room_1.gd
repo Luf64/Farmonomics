@@ -5,7 +5,7 @@ var player_in_range = false
 func _process(delta: float) -> void:
 	if player_in_range and Input.is_action_just_pressed("interaction"):
 		Global.current_room = "sky_shop"
-		get_tree().change_scene_to_file(Global.sky_shop)
+		get_tree().change_scene_to_file(Global.liftup)
 
 
 func _on_body_entered(body: Node2D) -> void:

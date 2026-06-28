@@ -21,9 +21,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player_in_range_tp_room1 and Input.is_action_just_pressed("interaction"):
 		Global.current_room = "sky_shop"
-		get_tree().change_scene_to_file(Global.Room_1)
+		get_tree().change_scene_to_file(Global.liftdown)
 	if player_in_range_god and Input.is_action_just_pressed("interaction"):
-		cloud_shop_toggle()
+		$god/interaction/Label.visible = false
+		$god/interaction/choice.visible = true
+	if player_in_range_god and Input.is_action_just_pressed("2"):
+			cloud_shop_toggle()
 
 func _on_animation_body_entered(body: Node2D) -> void:
 	if body.name == "player":
@@ -62,6 +65,7 @@ func _on_interaction_body_entered(body: Node2D) -> void:
 func _on_interaction_body_exited(body: Node2D) -> void:
 	if body.name == "player":
 		$god/interaction/Label.visible = false
+		$god/interaction/choice.visible = false
 		player_in_range_god = false
 
 
@@ -75,3 +79,23 @@ func cloud_shop_toggle():
 		cloud_shop_ui.queue_free()
 		cloud_shop_ui = null
 		cloud_shop_open = false
+
+
+func _on_speech_1_body_entered(body: Node2D) -> void:
+	if body.name == "player":
+		$god/speech1/Label.visible = true
+
+
+func _on_speech_1_body_exited(body: Node2D) -> void:
+	if body.name == "player":
+		$god/speech1/Label.visible = false
+
+
+func _on_speech_2_body_entered(body: Node2D) -> void:
+	if body.name == "player":
+		$god/speech2/Label.visible = true
+
+
+func _on_speech_2_body_exited(body: Node2D) -> void:
+	if body.name == "player":
+		$god/speech2/Label.visible = false

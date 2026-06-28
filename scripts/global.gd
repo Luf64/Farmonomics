@@ -11,6 +11,8 @@ var Room_2 = "res://rooms/room_2.tscn" # Market Store
 var Room_3 = "res://rooms/room_3.tscn" # Brewing Lab
 var Bedroom = "res://rooms/bedroom.tscn" # Bedroom
 var sky_shop = "res://rooms/cloud_shop.tscn"
+var liftup = "res://rooms/lift_video(up).tscn"
+var liftdown = "res://rooms/lift_video(down).tscn"
 var Inventory = "res://rooms/inventory.tscn"
 # to locate previous room for inventory
 var inventory_ui = null
