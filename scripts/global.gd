@@ -15,6 +15,7 @@ var Inventory = "res://rooms/inventory.tscn"
 # to locate previous room for inventory
 var inventory_ui = null
 var hotbar_ui = null
+var player: Node = null
 var current_room: String = ""
 var coordinates: String = ""
 
