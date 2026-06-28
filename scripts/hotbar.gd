@@ -28,12 +28,17 @@ var item_textures = {
 	"Potion_White": preload("res://Assets/room 4 (brewing room with selling it)/potion/Transperent/Icon17.png")
 }
 
+var potion_timer: Timer = null
+var active_potion: String = ""
+
 func _ready() -> void:
 	var slot = container.get_children()
 	for i in slot.size():
 		slot[i].slot_number = i
 	select_slot(0)
 	refresh()
+	_setup_potion_timers()
+
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("1"):
@@ -46,7 +51,9 @@ func _input(event: InputEvent) -> void:
 		select_slot(3)
 	elif event.is_action_pressed("5"):
 		select_slot(4)
-		
+	elif event.is_action_pressed("use_potion"):
+		use_selected_potion()
+
 func select_slot(number:int) -> void:
 		var slot = container.get_children()
 		slot[selected_slot].get_node("ColorRect").visible = false
@@ -80,3 +87,91 @@ func refresh() -> void:
 		Global.current_selected_item = inventory[selected_slot]["id"]
 	else:
 		Global.current_selected_item = ""
+
+func use_selected_potion() -> void:
+	var item_id = Global.current_selected_item
+	if item_id == "" or not item_id.begins_with("Potion_"):
+		return
+
+	if Global.player == null:
+		print("No player reference set, cannot apply potion")
+		return
+
+	match item_id:
+		"Potion_Red":
+			apply_big()
+		"Potion_Yellow":
+			apply_speed(2.0)
+		"Potion_White":
+			apply_speed(3.0)
+		"Potion_Purple":
+			apply_invisible()
+		"Potion_Blue":
+			reset_player_effects()
+		_:
+			return
+	consume_selected_potion()
+
+func consume_selected_potion() -> void:
+	var inventory = Json.get_inventory()
+	if selected_slot >= inventory.size():
+		return
+	var slot_data = inventory[selected_slot]
+	if not slot_data.has("amount"):
+		return
+	
+	slot_data["amount"] -= 1
+	if slot_data["amount"] <= 0:
+		inventory[selected_slot] = {}
+	
+	Json.save_game()
+	if Global.inventory_ui:
+		Global.inventory_ui.refresh()
+	if Global.hotbar_ui:
+		Global.hotbar_ui.refresh()
+
+func apply_big() -> void:
+	Global.player.scale = Global.player.base_scale * 3.0
+	potion_timers["big"].start(20.0)
+
+func apply_speed(multiplier: float) -> void:
+	Global.player.move_speed = Global.player.base_move_speed * multiplier
+	potion_timers["speed"].start(20.0)
+
+func apply_invisible() -> void:
+	Global.player.modulate.a = 0.3
+	potion_timers["invisible"].start(20.0)
+
+func reset_player_effects() -> void:
+	if Global.player == null:
+		return
+	Global.player.scale = Global.player.base_scale
+	Global.player.move_speed = Global.player.base_move_speed
+	Global.player.modulate.a = 1.0
+	for key in potion_timers:
+		potion_timers[key].stop()
+
+func _on_big_timeout() -> void:
+	if Global.player:
+		Global.player.scale = Global.player.base_scale
+
+func _on_speed_timeout() -> void:
+	if Global.player:
+		Global.player.move_speed = Global.player.base_move_speed
+
+func _on_invisible_timeout() -> void:
+	if Global.player:
+		Global.player.modulate.a = 1.0
+
+var potion_timers: Dictionary = {}  # e.g. "big": Timer, "speed": Timer, "invisible": Timer
+
+func _setup_potion_timers() -> void:
+	for key in ["big", "speed", "invisible"]:
+		var t = Timer.new()
+		t.one_shot = true
+		add_child(t)
+		potion_timers[key] = t
+
+	potion_timers["big"].timeout.connect(_on_big_timeout)
+	potion_timers["speed"].timeout.connect(_on_speed_timeout)
+	potion_timers["invisible"].timeout.connect(_on_invisible_timeout)

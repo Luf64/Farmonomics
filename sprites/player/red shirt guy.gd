@@ -2,11 +2,16 @@ class_name red_shirt_guy extends CharacterBody2D
 @onready var run_sound: AudioStreamPlayer2D = $Run
 var sound_volume: float
 var move_speed : float = 100.0
-var sprint_multiplier : float = 2.1
+var sprint_multiplier : float = 1.5
 var last_direction : Vector2 = Vector2.DOWN
+
+var base_move_speed : float = 100.0
+var base_scale : Vector2
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	Global.player = self
+	base_scale = scale
 	teleport_to_spawn()
 	Json.load_game()
 	$name.text = Global.player_name
