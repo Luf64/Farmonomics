@@ -134,7 +134,6 @@ func _on_dialogic_ended() -> void:
 
 func move_home(delta):
 	if not house_node:
-		# 如果忘记在Inspector里绑定房子，就走回初始位置
 		var to_start = start_pos - position
 		if to_start.length() > home_tolerance:
 			dir = to_start.normalized()
@@ -145,7 +144,6 @@ func move_home(delta):
 			current_state = IDLE
 		return
 
-	# 计算往房子（家）走的方向
 	var to_house = house_node.global_position - global_position
 	
 	if to_house.length() > home_tolerance:
@@ -153,11 +151,10 @@ func move_home(delta):
 		velocity = dir * speed
 		move_and_slide()
 	else:
-		# 到了房子门口，进入屋子避雨，隐形
 		velocity = Vector2.ZERO
 		current_state = INSIDE_HOUSE
 		is_roaming = false 
-		print(self.name, " 已经进屋避雨")
+		print(self.name, " inside house")
 
 func set_rain_status(raining: bool):
 	is_raining = raining
@@ -165,7 +162,6 @@ func set_rain_status(raining: bool):
 		current_state = GO_HOME
 		$Timer.stop()
 	else:
-		# 雨停了，把 NPC 从屋子里“放出来”
 		is_roaming = true
 		current_state = IDLE
 		$Timer.start(randf_range(1.5, 3.0))

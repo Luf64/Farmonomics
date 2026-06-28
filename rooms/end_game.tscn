@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bprc3ynhc4suo"]
+
+[ext_resource type="Script" uid="uid://b8owcsoikc6w8" path="res://scripts/end_game.gd" id="1_f2och"]
+[ext_resource type="VideoStream" path="res://video/pixel end.ogv" id="1_f2wrj"]
+
+[node name="end_game" type="Node2D" unique_id=1886185866]
+script = ExtResource("1_f2och")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=36630179]
+offset_left = -960.0
+offset_top = -540.0
+offset_right = 960.0
+offset_bottom = 540.0
+stream = ExtResource("1_f2wrj")
+autoplay = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=202024431]
+zoom = Vector2(0.6, 0.6)
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

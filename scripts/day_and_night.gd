@@ -39,12 +39,12 @@ func _ready() -> void:
 func change_to_day() -> void:
 	if anim_player.has_animation("nighttoday"):
 		anim_player.play("nighttoday")
-		print("环境滤镜：正在切换为白天...")
+		print("Environment Filter: Switching to daytime....")
 
 func change_to_night() -> void:
 	if anim_player.has_animation("daytonight"):
 		anim_player.play("daytonight")
-		print("环境滤镜：正在切换为黑夜...")
+		print("Environment Filter: Switching to nighttime....")
 
 
 
