@@ -23,7 +23,18 @@ offset_bottom = 111.0
 scale = Vector2(6, 6)
 texture = ExtResource("1_wbchg")
 
-[node name="Label" type="Label" parent="Control" unique_id=437553259]
+[node name="title" type="Label" parent="Control" unique_id=947960059]
+layout_mode = 0
+offset_left = 437.0
+offset_top = 34.0
+offset_right = 728.0
+offset_bottom = 74.0
+theme_override_constants/outline_size = 7
+theme_override_fonts/font = ExtResource("3_xaxjc")
+theme_override_font_sizes/font_size = 39
+text = "BLESSED SHOP"
+
+[node name="?" type="Label" parent="Control" unique_id=437553259]
 layout_mode = 0
 offset_left = 329.0
 offset_top = 30.0
@@ -36,10 +47,10 @@ text = "?"
 
 [node name="GridContainer" type="GridContainer" parent="Control" unique_id=1388538378]
 layout_mode = 0
-offset_left = 345.0
-offset_top = 110.0
-offset_right = 826.0
-offset_bottom = 597.0
+offset_left = 336.0
+offset_top = 104.0
+offset_right = 817.0
+offset_bottom = 591.0
 columns = 5
 
 [node name="Slot1" type="Panel" parent="Control/GridContainer" unique_id=127449984]
@@ -52,620 +63,845 @@ z_index = 1
 layout_mode = 0
 offset_left = 1.0
 offset_top = 1.0000019
-offset_right = 87.849335
-offset_bottom = 101.03932
+offset_right = 93.97986
+offset_bottom = 112.01926
 scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
 [node name="Count" type="Label" parent="Control/GridContainer/Slot1" unique_id=752086925]
 layout_mode = 0
-offset_left = 63.0
-offset_top = 67.0
-offset_right = 86.0
-offset_bottom = 88.780014
-scale = Vector2(0.97870654, 0.81967777)
-theme_override_fonts/font = ExtResource("3_xaxjc")
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Slot2" type="Panel" parent="Control/GridContainer" unique_id=1637549024]
-custom_minimum_size = Vector2(92.5, 85)
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot2" unique_id=688613995]
-z_index = 1
-layout_mode = 0
-offset_left = 1.0
-offset_top = 2.000002
-offset_right = 86.827545
-offset_bottom = 102.03931
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot2" unique_id=2037618868]
-layout_mode = 0
 offset_left = 69.0
-offset_top = 66.0
+offset_top = 74.0
 offset_right = 92.0
-offset_bottom = 87.780014
+offset_bottom = 95.780014
 scale = Vector2(0.97870654, 0.81967777)
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Slot3" type="Panel" parent="Control/GridContainer" unique_id=1419634903]
-custom_minimum_size = Vector2(92.5, 0)
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot3" unique_id=1685549037]
-z_index = 1
+[node name="price" type="Label" parent="Control/GridContainer/Slot1" unique_id=466474136]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 1.9999943
-offset_right = 85.849304
-offset_bottom = 102.0393
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot3" unique_id=1370578143]
-layout_mode = 0
-offset_left = 63.0
-offset_top = 68.0
-offset_right = 86.0
-offset_bottom = 89.780014
-scale = Vector2(0.97870654, 0.81967777)
+offset_right = 19.0
+offset_bottom = 16.0
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
 
-[node name="Slot4" type="Panel" parent="Control/GridContainer" unique_id=68547166]
-custom_minimum_size = Vector2(92.5, 0)
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot4" unique_id=383948234]
-z_index = 1
-layout_mode = 0
-offset_left = 1.0
-offset_top = 2.0000029
-offset_right = 86.827576
-offset_bottom = 104.47931
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot4" unique_id=1256222429]
-layout_mode = 0
-offset_left = 61.0
-offset_top = 65.0
-offset_right = 84.0
-offset_bottom = 86.780014
-scale = Vector2(0.97870654, 0.81967777)
-theme_override_fonts/font = ExtResource("3_xaxjc")
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Slot5" type="Panel" parent="Control/GridContainer" unique_id=1495625823]
-custom_minimum_size = Vector2(92.5, 0)
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot5" unique_id=1638986271]
-z_index = 1
-layout_mode = 0
-offset_left = 2.0
-offset_top = 0.9999943
-offset_right = 85.78406
-offset_bottom = 102.2593
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot5" unique_id=218866080]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 64.0
-offset_right = 85.0
-offset_bottom = 85.780014
-scale = Vector2(0.97870654, 0.81967777)
-theme_override_fonts/font = ExtResource("3_xaxjc")
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Slot6" type="Panel" parent="Control/GridContainer" unique_id=1279316320]
+[node name="Slot2" type="Panel" parent="Control/GridContainer" unique_id=1599655222]
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot6" unique_id=298729087]
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot2" unique_id=865168442]
 z_index = 1
 layout_mode = 0
 offset_left = 1.0
-offset_top = 1.0
-offset_right = 85.80582
-offset_bottom = 102.25931
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
 scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="Count" type="Label" parent="Control/GridContainer/Slot6" unique_id=1407325119]
+[node name="Count" type="Label" parent="Control/GridContainer/Slot2" unique_id=524463935]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 64.999985
-offset_right = 85.0
-offset_bottom = 86.78
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
 scale = Vector2(0.97870654, 0.81967777)
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Slot7" type="Panel" parent="Control/GridContainer" unique_id=384584979]
+[node name="price" type="Label" parent="Control/GridContainer/Slot2" unique_id=2023870013]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot3" type="Panel" parent="Control/GridContainer" unique_id=347449697]
+custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot7" unique_id=1810756604]
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot3" unique_id=972500185]
 z_index = 1
 layout_mode = 0
 offset_left = 1.0
-offset_top = 1.9999695
-offset_right = 86.827545
-offset_bottom = 104.47928
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
 scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="Count" type="Label" parent="Control/GridContainer/Slot7" unique_id=278193578]
+[node name="Count" type="Label" parent="Control/GridContainer/Slot3" unique_id=886675831]
 layout_mode = 0
-offset_left = 61.0
-offset_top = 64.999985
-offset_right = 84.0
-offset_bottom = 86.78
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
 scale = Vector2(0.97870654, 0.81967777)
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Slot8" type="Panel" parent="Control/GridContainer" unique_id=436421916]
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot8" unique_id=1344637373]
-z_index = 1
+[node name="price" type="Label" parent="Control/GridContainer/Slot3" unique_id=1998026239]
 layout_mode = 0
-offset_left = -1.0
-offset_top = 1.0
-offset_right = 84.827576
-offset_bottom = 103.47928
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot8" unique_id=792279743]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 64.999985
-offset_right = 85.0
-offset_bottom = 86.78
-scale = Vector2(0.97870654, 0.81967777)
+offset_right = 19.0
+offset_bottom = 16.0
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
 
-[node name="Slot9" type="Panel" parent="Control/GridContainer" unique_id=680899092]
+[node name="Slot4" type="Panel" parent="Control/GridContainer" unique_id=1548120449]
+custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot9" unique_id=743740953]
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot4" unique_id=1608936667]
 z_index = 1
 layout_mode = 0
 offset_left = 1.0
-offset_top = 0.9999695
-offset_right = 85.805786
-offset_bottom = 101.03932
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
 scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="Count" type="Label" parent="Control/GridContainer/Slot9" unique_id=692591321]
+[node name="Count" type="Label" parent="Control/GridContainer/Slot4" unique_id=73516850]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 64.999985
-offset_right = 85.0
-offset_bottom = 86.78
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
 scale = Vector2(0.97870654, 0.81967777)
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Slot10" type="Panel" parent="Control/GridContainer" unique_id=1638556500]
+[node name="price" type="Label" parent="Control/GridContainer/Slot4" unique_id=1096455674]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot5" type="Panel" parent="Control/GridContainer" unique_id=1341357099]
+custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot10" unique_id=1854230857]
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot5" unique_id=322713772]
 z_index = 1
 layout_mode = 0
 offset_left = 1.0
-offset_top = 0.9999924
-offset_right = 85.80585
-offset_bottom = 102.25932
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
 scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="Count" type="Label" parent="Control/GridContainer/Slot10" unique_id=371317171]
+[node name="Count" type="Label" parent="Control/GridContainer/Slot5" unique_id=174580202]
 layout_mode = 0
-offset_left = 63.0
-offset_top = 65.999985
-offset_right = 86.0
-offset_bottom = 87.78
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
 scale = Vector2(0.97870654, 0.81967777)
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Slot11" type="Panel" parent="Control/GridContainer" unique_id=182141343]
-custom_minimum_size = Vector2(0, 92.5)
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot11" unique_id=478455192]
-z_index = 1
+[node name="price" type="Label" parent="Control/GridContainer/Slot5" unique_id=997251379]
 layout_mode = 0
-offset_left = 2.0
-offset_top = 0.99998474
-offset_right = 88.849335
-offset_bottom = 103.47928
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot11" unique_id=1329940569]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 64.99997
-offset_right = 85.0
-offset_bottom = 86.78
-scale = Vector2(0.97870654, 0.81967777)
+offset_right = 19.0
+offset_bottom = 16.0
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
 
-[node name="Slot12" type="Panel" parent="Control/GridContainer" unique_id=15333804]
+[node name="Slot6" type="Panel" parent="Control/GridContainer" unique_id=2100070263]
+custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot12" unique_id=1631885686]
-z_index = 1
-layout_mode = 0
-offset_left = 2.0
-offset_top = 1.9999237
-offset_right = 87.827545
-offset_bottom = 99.59927
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot12" unique_id=753233731]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 64.0
-offset_right = 85.0
-offset_bottom = 85.78003
-scale = Vector2(0.97870654, 0.81967777)
-theme_override_fonts/font = ExtResource("3_xaxjc")
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Slot13" type="Panel" parent="Control/GridContainer" unique_id=1745149827]
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot13" unique_id=2046575111]
-z_index = 1
-layout_mode = 0
-offset_left = 2.0
-offset_top = 0.99998474
-offset_right = 86.805786
-offset_bottom = 103.47928
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot13" unique_id=1385118848]
-layout_mode = 0
-offset_left = 61.0
-offset_top = 64.99997
-offset_right = 84.0
-offset_bottom = 86.78
-scale = Vector2(0.97870654, 0.81967777)
-theme_override_fonts/font = ExtResource("3_xaxjc")
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Slot14" type="Panel" parent="Control/GridContainer" unique_id=1476157243]
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot14" unique_id=310927178]
-z_index = 1
-layout_mode = 0
-offset_top = -1.5258789e-05
-offset_right = 86.849365
-offset_bottom = 102.47928
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot14" unique_id=1845006371]
-layout_mode = 0
-offset_left = 61.0
-offset_top = 64.99997
-offset_right = 84.0
-offset_bottom = 86.78
-scale = Vector2(0.97870654, 0.81967777)
-theme_override_fonts/font = ExtResource("3_xaxjc")
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Slot15" type="Panel" parent="Control/GridContainer" unique_id=452278645]
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot15" unique_id=1761432468]
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot6" unique_id=1456073912]
 z_index = 1
 layout_mode = 0
 offset_left = 1.0
-offset_top = 1.9999237
-offset_right = 86.827576
-offset_bottom = 100.819244
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
 scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="Count" type="Label" parent="Control/GridContainer/Slot15" unique_id=1327217500]
+[node name="Count" type="Label" parent="Control/GridContainer/Slot6" unique_id=840934000]
 layout_mode = 0
-offset_left = 61.0
-offset_top = 64.99997
-offset_right = 84.0
-offset_bottom = 86.78
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
 scale = Vector2(0.97870654, 0.81967777)
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Slot16" type="Panel" parent="Control/GridContainer" unique_id=1412635193]
-custom_minimum_size = Vector2(0, 92.5)
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot16" unique_id=465709114]
-z_index = 1
+[node name="price" type="Label" parent="Control/GridContainer/Slot6" unique_id=1955408121]
 layout_mode = 0
-offset_left = 1.999939
-offset_top = 6.1035156e-05
-offset_right = 86.805725
-offset_bottom = 102.479385
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot16" unique_id=980416136]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 66.0
-offset_right = 85.0
-offset_bottom = 87.78003
-scale = Vector2(0.97870654, 0.81967777)
+offset_right = 19.0
+offset_bottom = 16.0
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
 
-[node name="Slot17" type="Panel" parent="Control/GridContainer" unique_id=1542062377]
+[node name="Slot7" type="Panel" parent="Control/GridContainer" unique_id=215531776]
+custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot17" unique_id=1957312109]
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot7" unique_id=664220286]
 z_index = 1
 layout_mode = 0
 offset_left = 1.0
-offset_right = 85.805786
-offset_bottom = 101.25933
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
 scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="Count" type="Label" parent="Control/GridContainer/Slot17" unique_id=1852419779]
+[node name="Count" type="Label" parent="Control/GridContainer/Slot7" unique_id=1702919482]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 65.99999
-offset_right = 85.0
-offset_bottom = 87.78002
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
 scale = Vector2(0.97870654, 0.81967777)
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Slot18" type="Panel" parent="Control/GridContainer" unique_id=336371344]
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot18" unique_id=1081961972]
-z_index = 1
+[node name="price" type="Label" parent="Control/GridContainer/Slot7" unique_id=83434790]
 layout_mode = 0
-offset_right = 86.849304
-offset_bottom = 103.69934
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot18" unique_id=209401930]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 66.0
-offset_right = 85.0
-offset_bottom = 87.78003
-scale = Vector2(0.97870654, 0.81967777)
+offset_right = 19.0
+offset_bottom = 16.0
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
 
-[node name="Slot19" type="Panel" parent="Control/GridContainer" unique_id=2126041445]
+[node name="Slot8" type="Panel" parent="Control/GridContainer" unique_id=1269971062]
+custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot19" unique_id=1019725686]
-z_index = 1
-layout_mode = 0
-offset_left = 2.0
-offset_top = 1.999939
-offset_right = 87.827576
-offset_bottom = 102.039276
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot19" unique_id=1567813254]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 65.0
-offset_right = 85.0
-offset_bottom = 86.78003
-scale = Vector2(0.97870654, 0.81967777)
-theme_override_fonts/font = ExtResource("3_xaxjc")
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Slot20" type="Panel" parent="Control/GridContainer" unique_id=341923437]
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot20" unique_id=1735714839]
-z_index = 1
-layout_mode = 0
-offset_top = 0.99993896
-offset_right = 85.827576
-offset_bottom = 104.69928
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot20" unique_id=472293621]
-layout_mode = 0
-offset_left = 63.0
-offset_top = 65.99997
-offset_right = 86.0
-offset_bottom = 87.78
-scale = Vector2(0.97870654, 0.81967777)
-theme_override_fonts/font = ExtResource("3_xaxjc")
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Slot21" type="Panel" parent="Control/GridContainer" unique_id=279642637]
-custom_minimum_size = Vector2(0, 92.5)
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot21" unique_id=832695751]
-z_index = 1
-layout_mode = 0
-offset_right = 84.80582
-offset_bottom = 102.47931
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot21" unique_id=1295992177]
-layout_mode = 0
-offset_left = 61.0
-offset_top = 64.0
-offset_right = 84.0
-offset_bottom = 85.78003
-scale = Vector2(0.97870654, 0.81967777)
-theme_override_fonts/font = ExtResource("3_xaxjc")
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Slot22" type="Panel" parent="Control/GridContainer" unique_id=1031836018]
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot22" unique_id=1684817174]
-z_index = 1
-layout_mode = 0
-offset_left = 2.0
-offset_top = 0.9999995
-offset_right = 87.827576
-offset_bottom = 103.47931
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot22" unique_id=1899812904]
-layout_mode = 0
-offset_left = 62.0
-offset_top = 66.0
-offset_right = 85.0
-offset_bottom = 87.78003
-scale = Vector2(0.97870654, 0.81967777)
-theme_override_fonts/font = ExtResource("3_xaxjc")
-text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
-
-[node name="Slot23" type="Panel" parent="Control/GridContainer" unique_id=342183486]
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot23" unique_id=203911941]
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot8" unique_id=1916551120]
 z_index = 1
 layout_mode = 0
 offset_left = 1.0
-offset_right = 86.827576
-offset_bottom = 103.69928
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
 scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="Count" type="Label" parent="Control/GridContainer/Slot23" unique_id=1059380600]
+[node name="Count" type="Label" parent="Control/GridContainer/Slot8" unique_id=1045449707]
 layout_mode = 0
-offset_left = 62.0
-offset_top = 66.0
-offset_right = 85.0
-offset_bottom = 87.78003
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
 scale = Vector2(0.97870654, 0.81967777)
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[node name="Slot24" type="Panel" parent="Control/GridContainer" unique_id=1642101321]
-layout_mode = 2
-script = ExtResource("3_s1yx0")
-
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot24" unique_id=832865445]
-z_index = 1
+[node name="price" type="Label" parent="Control/GridContainer/Slot8" unique_id=1813118906]
 layout_mode = 0
-offset_top = 0.9999995
-offset_right = 86.849365
-offset_bottom = 101.03931
-scale = Vector2(0.97870654, 0.81967777)
-
-[node name="Count" type="Label" parent="Control/GridContainer/Slot24" unique_id=4388982]
-layout_mode = 0
-offset_left = 63.0
-offset_top = 67.0
-offset_right = 86.0
-offset_bottom = 88.78003
-scale = Vector2(0.97870654, 0.81967777)
+offset_right = 19.0
+offset_bottom = 16.0
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
-horizontal_alignment = 1
-vertical_alignment = 2
 
-[node name="Slot25" type="Panel" parent="Control/GridContainer" unique_id=5890119]
+[node name="Slot9" type="Panel" parent="Control/GridContainer" unique_id=1804006204]
+custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
-[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot25" unique_id=886210694]
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot9" unique_id=1576878246]
 z_index = 1
 layout_mode = 0
 offset_left = 1.0
-offset_top = 1.0
-offset_right = 86.827576
-offset_bottom = 104.69928
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
 scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="Count" type="Label" parent="Control/GridContainer/Slot25" unique_id=534158907]
+[node name="Count" type="Label" parent="Control/GridContainer/Slot9" unique_id=1133090095]
 layout_mode = 0
-offset_left = 63.0
-offset_top = 66.0
-offset_right = 86.0
-offset_bottom = 87.78003
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
 scale = Vector2(0.97870654, 0.81967777)
 theme_override_fonts/font = ExtResource("3_xaxjc")
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot9" unique_id=1326884582]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot10" type="Panel" parent="Control/GridContainer" unique_id=1971356143]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot10" unique_id=1513344606]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot10" unique_id=532918839]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot10" unique_id=1756660970]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot11" type="Panel" parent="Control/GridContainer" unique_id=1542390484]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot11" unique_id=256364322]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot11" unique_id=391138286]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot11" unique_id=1415039398]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot12" type="Panel" parent="Control/GridContainer" unique_id=189192135]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot12" unique_id=1528071714]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot12" unique_id=1023587004]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot12" unique_id=2074887127]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot13" type="Panel" parent="Control/GridContainer" unique_id=827436436]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot13" unique_id=213279959]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot13" unique_id=148080674]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot13" unique_id=2091476071]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot14" type="Panel" parent="Control/GridContainer" unique_id=2089871968]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot14" unique_id=1293260613]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot14" unique_id=2044133878]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot14" unique_id=414275430]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot15" type="Panel" parent="Control/GridContainer" unique_id=409505333]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot15" unique_id=1001747106]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot15" unique_id=1394533692]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot15" unique_id=158554302]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot16" type="Panel" parent="Control/GridContainer" unique_id=1517327567]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot16" unique_id=1552836952]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot16" unique_id=867221009]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot16" unique_id=484981169]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot17" type="Panel" parent="Control/GridContainer" unique_id=622583444]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot17" unique_id=1884046562]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot17" unique_id=1654078262]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot17" unique_id=1659769917]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot18" type="Panel" parent="Control/GridContainer" unique_id=21021319]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot18" unique_id=1390676530]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot18" unique_id=1861279549]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot18" unique_id=555176876]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot19" type="Panel" parent="Control/GridContainer" unique_id=1260063951]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot19" unique_id=300906814]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot19" unique_id=772057776]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot19" unique_id=1598748504]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot20" type="Panel" parent="Control/GridContainer" unique_id=797256377]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot20" unique_id=478743186]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot20" unique_id=1540934219]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot20" unique_id=1595757562]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot21" type="Panel" parent="Control/GridContainer" unique_id=704957457]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot21" unique_id=671667887]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot21" unique_id=1431598809]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot21" unique_id=1759318905]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot22" type="Panel" parent="Control/GridContainer" unique_id=1210078179]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot22" unique_id=1971664869]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot22" unique_id=362958444]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot22" unique_id=1259129996]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot23" type="Panel" parent="Control/GridContainer" unique_id=136433527]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot23" unique_id=1444743524]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot23" unique_id=406493624]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot23" unique_id=1982476426]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot24" type="Panel" parent="Control/GridContainer" unique_id=1552956426]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot24" unique_id=1072003618]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot24" unique_id=1813241820]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot24" unique_id=1679793801]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+
+[node name="Slot25" type="Panel" parent="Control/GridContainer" unique_id=1470870111]
+custom_minimum_size = Vector2(92.5, 92.5)
+layout_mode = 2
+script = ExtResource("3_s1yx0")
+
+[node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot25" unique_id=2139188621]
+z_index = 1
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0000019
+offset_right = 93.97986
+offset_bottom = 112.01926
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/GridContainer/Slot25" unique_id=562224586]
+layout_mode = 0
+offset_left = 69.0
+offset_top = 74.0
+offset_right = 92.0
+offset_bottom = 95.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="price" type="Label" parent="Control/GridContainer/Slot25" unique_id=1868693471]
+layout_mode = 0
+offset_right = 19.0
+offset_bottom = 16.0
+theme_override_fonts/font = ExtResource("3_xaxjc")
+text = "99"
 
 [node name="help" type="TextureButton" parent="Control" unique_id=1746352468]
 layout_mode = 0

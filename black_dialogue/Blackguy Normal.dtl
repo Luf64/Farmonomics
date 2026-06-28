@@ -1,0 +1,12 @@
+join Black_guy rightmost
+Hello there, where you want to go?
+Don't be afraid，I don't want to know where you're going or what you're doing.
+But you have money just give me.
+Now did you have money?
+- Yes
+    if {player_money} >= 300.0:
+        jump Blackguy/
+    else:
+        You lied to me, you don't have any money at all!
+- No
+    Ok then, Bye.

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://5qlxa87bdnsc"]
+
+[ext_resource type="VideoStream" uid="uid://cb5wtd63mlnhh" path="res://video/ground_to_sky.ogv" id="1_uub6b"]
+[ext_resource type="Script" uid="uid://dlrdtmpulbsb2" path="res://scripts/LiftUp.gd" id="1_xmtun"]
+
+[node name="LiftVideo(up)" type="Node2D" unique_id=450296971]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1181036761]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=465373423]
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 579.0
+offset_bottom = 324.0
+scale = Vector2(0.9, 0.9)
+stream = ExtResource("1_uub6b")
+script = ExtResource("1_xmtun")
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]

@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://bgfb1hyfgy8u2"]
 
-[ext_resource type="Script" uid="uid://8krl5pa7lx4r" path="res://scripts/crafting_ui.gd" id="1_ntsyr"]
+[ext_resource type="Script" uid="uid://datjtjorby1nm" path="res://scripts/crafting_ui.gd" id="1_ntsyr"]
 [ext_resource type="Texture2D" uid="uid://dj6xjmrswr80" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Craft(crafting only).png" id="1_xh8vp"]
+[ext_resource type="Script" uid="uid://dbhbundbfmxqs" path="res://scripts/crafting_slots(inventory).gd" id="3_k6hpp"]
+[ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="4_xhjsy"]
+[ext_resource type="Script" uid="uid://dt0p2dity7vr" path="res://scripts/crafting_grid_slot.gd" id="5_xhjsy"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=915512477]
 script = ExtResource("1_ntsyr")
@@ -29,96 +32,504 @@ offset_top = 21.0
 offset_right = 736.0
 offset_bottom = 71.0
 
-[node name="inventory GridContainer" type="GridContainer" parent="Control" unique_id=314853896]
+[node name="inventory GridContainer" type="GridContainer" parent="Control" unique_id=1854797728]
 layout_mode = 0
-offset_left = 87.0
-offset_top = 184.0
-offset_right = 120.86667
-offset_bottom = 241.20001
-scale = Vector2(7.5, 7.5)
+offset_left = 72.0
+offset_top = 143.0
+offset_right = 350.0
+offset_bottom = 609.0
 columns = 3
 
-[node name="Panel" type="Panel" parent="Control/inventory GridContainer" unique_id=942757981]
+[node name="Slot1" type="Panel" parent="Control/inventory GridContainer" unique_id=1244631224]
+custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
+script = ExtResource("3_k6hpp")
 
-[node name="Panel2" type="Panel" parent="Control/inventory GridContainer" unique_id=1262329406]
-layout_mode = 2
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot1" unique_id=799458623]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="Panel3" type="Panel" parent="Control/inventory GridContainer" unique_id=1399278967]
-layout_mode = 2
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot1" unique_id=282266196]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
 
-[node name="Panel4" type="Panel" parent="Control/inventory GridContainer" unique_id=426303911]
+[node name="Slot2" type="Panel" parent="Control/inventory GridContainer" unique_id=927094854]
+custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
+script = ExtResource("3_k6hpp")
 
-[node name="Panel5" type="Panel" parent="Control/inventory GridContainer" unique_id=1647011100]
-layout_mode = 2
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot2" unique_id=1785413604]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="Panel6" type="Panel" parent="Control/inventory GridContainer" unique_id=930014600]
-layout_mode = 2
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot2" unique_id=1338714908]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
 
-[node name="Panel7" type="Panel" parent="Control/inventory GridContainer" unique_id=1624989165]
+[node name="Slot3" type="Panel" parent="Control/inventory GridContainer" unique_id=1430290423]
+custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
+script = ExtResource("3_k6hpp")
 
-[node name="Panel8" type="Panel" parent="Control/inventory GridContainer" unique_id=740154947]
-layout_mode = 2
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot3" unique_id=541467876]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="TextureButton9" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1852541933]
-layout_mode = 2
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot3" unique_id=1959029286]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
 
-[node name="TextureButton10" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1728153090]
+[node name="Slot4" type="Panel" parent="Control/inventory GridContainer" unique_id=768887172]
+custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
+script = ExtResource("3_k6hpp")
 
-[node name="TextureButton11" type="TextureButton" parent="Control/inventory GridContainer" unique_id=392436251]
-layout_mode = 2
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot4" unique_id=508911127]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="TextureButton12" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1171683799]
-layout_mode = 2
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot4" unique_id=1228424127]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
 
-[node name="TextureButton13" type="TextureButton" parent="Control/inventory GridContainer" unique_id=271395470]
+[node name="Slot5" type="Panel" parent="Control/inventory GridContainer" unique_id=84513710]
+custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
+script = ExtResource("3_k6hpp")
 
-[node name="TextureButton14" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1045684951]
-layout_mode = 2
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot5" unique_id=143366778]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
 
-[node name="TextureButton15" type="TextureButton" parent="Control/inventory GridContainer" unique_id=1290887952]
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot5" unique_id=1797302737]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot6" type="Panel" parent="Control/inventory GridContainer" unique_id=1801359180]
+custom_minimum_size = Vector2(90, 90)
 layout_mode = 2
+script = ExtResource("3_k6hpp")
+
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot6" unique_id=962458970]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot6" unique_id=1471710482]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot7" type="Panel" parent="Control/inventory GridContainer" unique_id=378357160]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("3_k6hpp")
+
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot7" unique_id=2043170368]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot7" unique_id=2035880153]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot8" type="Panel" parent="Control/inventory GridContainer" unique_id=1241008721]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("3_k6hpp")
+
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot8" unique_id=2047389413]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot8" unique_id=1436729596]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot9" type="Panel" parent="Control/inventory GridContainer" unique_id=897216749]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("3_k6hpp")
+
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot9" unique_id=640293948]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot9" unique_id=760821457]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot10" type="Panel" parent="Control/inventory GridContainer" unique_id=997742598]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("3_k6hpp")
+
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot10" unique_id=1636686017]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot10" unique_id=486686329]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot11" type="Panel" parent="Control/inventory GridContainer" unique_id=368228729]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("3_k6hpp")
+
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot11" unique_id=2033529641]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot11" unique_id=1402485193]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.78003
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot12" type="Panel" parent="Control/inventory GridContainer" unique_id=19397073]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("3_k6hpp")
+
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot12" unique_id=1805217570]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot12" unique_id=1233874822]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.78003
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot13" type="Panel" parent="Control/inventory GridContainer" unique_id=676211938]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("3_k6hpp")
+
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot13" unique_id=390081211]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot13" unique_id=1490941121]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.78003
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot14" type="Panel" parent="Control/inventory GridContainer" unique_id=2041088472]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("3_k6hpp")
+
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot14" unique_id=1385448325]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot14" unique_id=1015086645]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.78003
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot15" type="Panel" parent="Control/inventory GridContainer" unique_id=844672617]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("3_k6hpp")
+
+[node name="Icon" type="TextureButton" parent="Control/inventory GridContainer/Slot15" unique_id=1321479767]
+z_index = 1
+layout_mode = 0
+offset_right = 92.0
+offset_bottom = 110.0
+scale = Vector2(0.97870654, 0.81967777)
+stretch_mode = 5
+
+[node name="Count" type="Label" parent="Control/inventory GridContainer/Slot15" unique_id=107848046]
+layout_mode = 0
+offset_left = 68.0
+offset_top = 72.0
+offset_right = 91.0
+offset_bottom = 93.78003
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("4_xhjsy")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [node name="craftingGrid" type="GridContainer" parent="Control" unique_id=681755418]
 layout_mode = 0
-offset_left = 437.0
-offset_top = 97.0
-offset_right = 691.0
+offset_left = 440.0
+offset_top = 102.0
+offset_right = 688.0
 offset_bottom = 350.0
-theme_override_constants/h_separation = 90
-theme_override_constants/v_separation = 90
 columns = 3
 
-[node name="Panel" type="Panel" parent="Control/craftingGrid" unique_id=1612958447]
+[node name="slot1" type="Panel" parent="Control/craftingGrid" unique_id=1612958447]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+script = ExtResource("5_xhjsy")
 
-[node name="Panel2" type="Panel" parent="Control/craftingGrid" unique_id=852583393]
-layout_mode = 2
+[node name="Icon" type="TextureButton" parent="Control/craftingGrid/slot1" unique_id=178148319]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Panel3" type="Panel" parent="Control/craftingGrid" unique_id=253071864]
+[node name="slot2" type="Panel" parent="Control/craftingGrid" unique_id=1733290504]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+script = ExtResource("5_xhjsy")
 
-[node name="Panel4" type="Panel" parent="Control/craftingGrid" unique_id=1902281481]
-layout_mode = 2
+[node name="Icon" type="TextureButton" parent="Control/craftingGrid/slot2" unique_id=1782665007]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Panel5" type="Panel" parent="Control/craftingGrid" unique_id=2059164017]
+[node name="slot3" type="Panel" parent="Control/craftingGrid" unique_id=477494859]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+script = ExtResource("5_xhjsy")
 
-[node name="Panel6" type="Panel" parent="Control/craftingGrid" unique_id=990330687]
-layout_mode = 2
+[node name="Icon" type="TextureButton" parent="Control/craftingGrid/slot3" unique_id=2067553452]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Panel7" type="Panel" parent="Control/craftingGrid" unique_id=1218471067]
+[node name="slot4" type="Panel" parent="Control/craftingGrid" unique_id=667425519]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+script = ExtResource("5_xhjsy")
 
-[node name="Panel8" type="Panel" parent="Control/craftingGrid" unique_id=1127425228]
-layout_mode = 2
+[node name="Icon" type="TextureButton" parent="Control/craftingGrid/slot4" unique_id=1273906949]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+ignore_texture_size = true
+stretch_mode = 5
 
-[node name="Panel9" type="Panel" parent="Control/craftingGrid" unique_id=2010221217]
+[node name="slot5" type="Panel" parent="Control/craftingGrid" unique_id=2144054522]
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
+script = ExtResource("5_xhjsy")
+
+[node name="Icon" type="TextureButton" parent="Control/craftingGrid/slot5" unique_id=1775470246]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="slot6" type="Panel" parent="Control/craftingGrid" unique_id=2032646819]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+script = ExtResource("5_xhjsy")
+
+[node name="Icon" type="TextureButton" parent="Control/craftingGrid/slot6" unique_id=211404356]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="slot7" type="Panel" parent="Control/craftingGrid" unique_id=1909641558]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+script = ExtResource("5_xhjsy")
+
+[node name="Icon" type="TextureButton" parent="Control/craftingGrid/slot7" unique_id=2133095305]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="slot8" type="Panel" parent="Control/craftingGrid" unique_id=664127543]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+script = ExtResource("5_xhjsy")
+
+[node name="Icon" type="TextureButton" parent="Control/craftingGrid/slot8" unique_id=1805291655]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="slot9" type="Panel" parent="Control/craftingGrid" unique_id=390734935]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+script = ExtResource("5_xhjsy")
+
+[node name="Icon" type="TextureButton" parent="Control/craftingGrid/slot9" unique_id=896211668]
+layout_mode = 0
+offset_right = 80.0
+offset_bottom = 80.0
+ignore_texture_size = true
+stretch_mode = 5
 
 [node name="craftTextureButton" type="TextureButton" parent="Control" unique_id=69010615]
 layout_mode = 0
@@ -147,4 +558,28 @@ offset_right = 729.0
 offset_bottom = 613.0
 
 [connection signal="pressed" from="Control/close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot1/Icon" to="Control/inventory GridContainer/Slot1" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot2/Icon" to="Control/inventory GridContainer/Slot2" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot3/Icon" to="Control/inventory GridContainer/Slot3" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot4/Icon" to="Control/inventory GridContainer/Slot4" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot5/Icon" to="Control/inventory GridContainer/Slot5" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot6/Icon" to="Control/inventory GridContainer/Slot6" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot7/Icon" to="Control/inventory GridContainer/Slot7" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot8/Icon" to="Control/inventory GridContainer/Slot8" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot9/Icon" to="Control/inventory GridContainer/Slot9" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot10/Icon" to="Control/inventory GridContainer/Slot10" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot11/Icon" to="Control/inventory GridContainer/Slot11" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot12/Icon" to="Control/inventory GridContainer/Slot12" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot13/Icon" to="Control/inventory GridContainer/Slot13" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot14/Icon" to="Control/inventory GridContainer/Slot14" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/inventory GridContainer/Slot15/Icon" to="Control/inventory GridContainer/Slot15" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/craftingGrid/slot1/Icon" to="Control/craftingGrid/slot1" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/craftingGrid/slot2/Icon" to="Control/craftingGrid/slot2" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/craftingGrid/slot3/Icon" to="Control/craftingGrid/slot3" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/craftingGrid/slot4/Icon" to="Control/craftingGrid/slot4" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/craftingGrid/slot5/Icon" to="Control/craftingGrid/slot5" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/craftingGrid/slot6/Icon" to="Control/craftingGrid/slot6" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/craftingGrid/slot7/Icon" to="Control/craftingGrid/slot7" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/craftingGrid/slot8/Icon" to="Control/craftingGrid/slot8" method="_on_icon_pressed"]
+[connection signal="pressed" from="Control/craftingGrid/slot9/Icon" to="Control/craftingGrid/slot9" method="_on_icon_pressed"]
 [connection signal="pressed" from="Control/craftTextureButton" to="." method="_on_craft_texture_button_pressed"]
