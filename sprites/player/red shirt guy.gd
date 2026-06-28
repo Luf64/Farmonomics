@@ -12,6 +12,8 @@ var base_scale : Vector2
 func _ready() -> void:
 	Global.player = self
 	base_scale = scale
+	if Global.hotbar_ui:
+		Global.hotbar_ui.apply_active_effects_to_player()
 	teleport_to_spawn()
 	Json.load_game()
 	$name.text = Global.player_name

@@ -28,9 +28,6 @@ var item_textures = {
 	"Potion_White": preload("res://Assets/room 4 (brewing room with selling it)/potion/Transperent/Icon17.png")
 }
 
-var potion_timer: Timer = null
-var active_potion: String = ""
-
 func _ready() -> void:
 	var slot = container.get_children()
 	for i in slot.size():
@@ -130,40 +127,11 @@ func consume_selected_potion() -> void:
 	if Global.hotbar_ui:
 		Global.hotbar_ui.refresh()
 
-func apply_big() -> void:
-	Global.player.scale = Global.player.base_scale * 3.0
-	potion_timers["big"].start(20.0)
+var is_big: bool = false
+var speed_multiplier: float = 1.0
+var is_invisible: bool = false
 
-func apply_speed(multiplier: float) -> void:
-	Global.player.move_speed = Global.player.base_move_speed * multiplier
-	potion_timers["speed"].start(20.0)
-
-func apply_invisible() -> void:
-	Global.player.modulate.a = 0.3
-	potion_timers["invisible"].start(20.0)
-
-func reset_player_effects() -> void:
-	if Global.player == null:
-		return
-	Global.player.scale = Global.player.base_scale
-	Global.player.move_speed = Global.player.base_move_speed
-	Global.player.modulate.a = 1.0
-	for key in potion_timers:
-		potion_timers[key].stop()
-
-func _on_big_timeout() -> void:
-	if Global.player:
-		Global.player.scale = Global.player.base_scale
-
-func _on_speed_timeout() -> void:
-	if Global.player:
-		Global.player.move_speed = Global.player.base_move_speed
-
-func _on_invisible_timeout() -> void:
-	if Global.player:
-		Global.player.modulate.a = 1.0
-
-var potion_timers: Dictionary = {}  # e.g. "big": Timer, "speed": Timer, "invisible": Timer
+var potion_timers: Dictionary = {}
 
 func _setup_potion_timers() -> void:
 	for key in ["big", "speed", "invisible"]:
@@ -175,3 +143,52 @@ func _setup_potion_timers() -> void:
 	potion_timers["big"].timeout.connect(_on_big_timeout)
 	potion_timers["speed"].timeout.connect(_on_speed_timeout)
 	potion_timers["invisible"].timeout.connect(_on_invisible_timeout)
+
+func apply_big() -> void:
+	is_big = true
+	Global.player.scale = Global.player.base_scale * 3.0
+	potion_timers["big"].start(20.0)
+
+func apply_speed(multiplier: float) -> void:
+	speed_multiplier = multiplier
+	Global.player.move_speed = Global.player.base_move_speed * multiplier
+	potion_timers["speed"].start(20.0)
+
+func apply_invisible() -> void:
+	is_invisible = true
+	Global.player.modulate.a = 0.3
+	potion_timers["invisible"].start(20.0)
+
+func reset_player_effects() -> void:
+	is_big = false
+	speed_multiplier = 1.0
+	is_invisible = false
+	for key in potion_timers:
+		potion_timers[key].stop()
+	if Global.player == null:
+		return
+	Global.player.scale = Global.player.base_scale
+	Global.player.move_speed = Global.player.base_move_speed
+	Global.player.modulate.a = 1.0
+
+func _on_big_timeout() -> void:
+	is_big = false
+	if Global.player:
+		Global.player.scale = Global.player.base_scale
+
+func _on_speed_timeout() -> void:
+	speed_multiplier = 1.0
+	if Global.player:
+		Global.player.move_speed = Global.player.base_move_speed
+
+func _on_invisible_timeout() -> void:
+	is_invisible = false
+	if Global.player:
+		Global.player.modulate.a = 1.0
+
+func apply_active_effects_to_player() -> void:
+	if Global.player == null:
+		return
+	Global.player.scale = Global.player.base_scale * (3.0 if is_big else 1.0)
+	Global.player.move_speed = Global.player.base_move_speed * speed_multiplier
+	Global.player.modulate.a = 0.3 if is_invisible else 1.0
