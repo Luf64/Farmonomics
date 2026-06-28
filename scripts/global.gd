@@ -103,31 +103,31 @@ var crops = {
 }
 
 var flower = {
-	"Red_flower": {
+	"Flower_Red": {
 		"base_price": 1,
 		"current_price": 1,
 		"stock": 50,
 		"ideal": 50
 	},
-	"Blue_flower": {
+	"Flower_Blue": {
 		"base_price": 1,
 		"current_price": 1,
 		"stock": 50,
 		"ideal": 50
 	},
-	"Yellow_flower": {
+	"Flower_Yellow": {
 		"base_price": 1,
 		"current_price": 1,
 		"stock": 50,
 		"ideal": 50
 	},
-	"Purple_flower": {
+	"Flower_Purple": {
 		"base_price": 1,
 		"current_price": 1,
 		"stock": 50,
 		"ideal": 50
 	},
-	"White_flower": {
+	"Flower_White": {
 		"base_price": 1,
 		"current_price": 1,
 		"stock": 50,

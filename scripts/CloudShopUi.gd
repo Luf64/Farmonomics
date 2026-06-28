@@ -42,7 +42,6 @@ func _ready() -> void:
 func refresh() -> void:
 	var inventory = Json.get_inventory()
 	var slot = container.get_children()
-
 	for i in slot.size():
 		var icon = slot[i].get_node("Icon")
 		var count = slot[i].get_node("Count")
@@ -53,13 +52,15 @@ func refresh() -> void:
 			if item_textures.has(item_id):
 				icon.texture_normal = item_textures[item_id]
 			else:
-				icon.texture = null
+				icon.texture_normal = null
 			slot[i].modulate = Color.WHITE if sellable else Color(1, 1, 1, 0.4)
 			slot[i].sellable = sellable
+			slot[i].set_price(get_sell_price(item_id) if sellable else 0)
 		else:
 			count.text = ""
 			icon.texture_normal = null
 			slot[i].sellable = false
+			slot[i].set_price(0)
 
 func _on_slot_sell_pressed(slot_number: int) -> void:
 	var inventory = Json.get_inventory()
@@ -81,12 +82,12 @@ func _on_slot_sell_pressed(slot_number: int) -> void:
 func get_sell_price(item_id: String) -> int:
 	if Global.crops.has(item_id):
 		return int(Global.crops[item_id]["current_price"])
+	elif Global.flower.has(item_id):
+		return int(Global.flower[item_id]["current_price"])
 	# fallback flat prices for potions/flowers not in Global.crops
 	var flat_prices = {
-		"Flower_Red": 5, "Flower_Yellow": 5, "Flower_Blue": 5,
-		"Flower_Purple": 5, "Flower_White": 5,
-		"Potion_Red": 20, "Potion_Yellow": 20, "Potion_Blue": 20,
-		"Potion_Purple": 20, "Potion_White": 20
+		"Potion_Red": 10, "Potion_Yellow": 50, "Potion_Blue": 100,
+		"Potion_Purple": 10, "Potion_White": 80
 	}
 	return flat_prices.get(item_id, 0)
 

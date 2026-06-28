@@ -437,6 +437,7 @@ position = Vector2(22, 89)
 shape = SubResource("RectangleShape2D_0hh41")
 
 [node name="Panel" type="Panel" parent="lift/lift door" unique_id=832230148]
+visible = false
 offset_left = -94.0
 offset_top = -70.0
 offset_right = 142.0
