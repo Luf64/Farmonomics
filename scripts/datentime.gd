@@ -20,7 +20,13 @@ var current_state = "" # "day" or "night"
 }
 
 func _ready() -> void:
-	total_minutes = start_minutes
+	add_to_group("TimeSystem")
+	if Global.time != null and not Global.time.is_empty():
+		total_minutes = Global.time.get("total_minutes", start_minutes)
+		current_day_index = Global.time.get("current_day_index", 0)
+	else:
+		total_minutes = start_minutes
+		current_day_index = 0
 	
 	# Initialize the check for day/night status.
 	var hour = _get_current_hour()
@@ -41,7 +47,7 @@ func _update_time_system(delta: float) -> void:
 	var minutes_per_second = 1440.0 / DAY_DURATION_SECS
 	total_minutes += minutes_per_second * delta
 	
-	if total_minutes >= 1440.0:
+	while total_minutes >= 1440.0:
 		total_minutes -= 1440.0
 		current_day_index = (current_day_index + 1) % 7
 		
@@ -79,22 +85,48 @@ func _update_images(hour: int) -> void:
 			period_images[key].visible = (key == current_period_key)
 
 ## Detect the time and play the daybreak/nightfall animation.
+#func _check_state_changes(hour: int) -> void:
+	# Daytime is from 6:00 a.m. to 6:00 p.m.
+#	if hour >= 6 and hour < 18:
+#		if current_state != "day":
+#			current_state = "day"
+#			if anim_player.has_animation("nighttoday"):
+#				anim_player.play("nighttoday")
+#	# The remaining time is night.
+#	else:
+#		if current_state != "night":
+#			current_state = "night"
+#			if anim_player.has_animation("daytonight"):
+#				anim_player.play("daytonight")
+
 func _check_state_changes(hour: int) -> void:
 	# Daytime is from 6:00 a.m. to 6:00 p.m.
 	if hour >= 6 and hour < 18:
 		if current_state != "day":
 			current_state = "day"
-			if anim_player.has_animation("nighttoday"):
+			if anim_player and anim_player.has_animation("nighttoday"):
 				anim_player.play("nighttoday")
+			
+			# 2. [Core Integration] Notify the environment filter to brighten.
+			get_tree().call_group("DayNightFilter", "change_to_day")
+			
 	# The remaining time is night.
 	else:
 		if current_state != "night":
 			current_state = "night"
-			if anim_player.has_animation("daytonight"):
+			if anim_player and anim_player.has_animation("daytonight"):
 				anim_player.play("daytonight")
+				
+			get_tree().call_group("DayNightFilter", "change_to_night")
+
+
+
+
+
+
 
 ## Save data to the global script when exiting the scene.
-func _on_tree_exited() -> void:
+func save_time_to_global() -> void:
 	# Calculate the index for the current time slot (compatible with your existing data structure).
 	var hour = _get_current_hour()
 	var period_idx = 0

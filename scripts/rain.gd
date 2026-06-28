@@ -17,13 +17,13 @@ func _ready() -> void:
 func weather_loop() -> void:
 	while true:
 		# 1. Rain
-		emitting = true
+		change_weather(true)
 		var rain_time = randf_range(min_rain_duration, max_rain_duration)
 		print("Start of rainfall and duration: ", rain_time, " sec")
 		await get_tree().create_timer(rain_time).timeout
 		
 		# 2. Stop rain
-		emitting = false
+		change_weather(false)
 		var clear_time = randf_range(min_clear_duration, max_clear_duration)
 		print("The rain has stopped; duration of the clear weather: ", clear_time, " sec")
 		await get_tree().create_timer(clear_time).timeout
@@ -31,7 +31,6 @@ func weather_loop() -> void:
 func change_weather(raining: bool):
 	emitting = raining
 	
-	# 寻找当前房间里所有的 NPC（寻找带 set_rain_status 方法的节点）
 	for child in room_node.get_children():
 		if child.has_method("set_rain_status"):
 			child.set_rain_status(raining)

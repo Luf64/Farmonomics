@@ -1,5 +1,7 @@
 extends CharacterBody2D
-@export var house_node: Node2D
+#@export var house_node: Node2D
+@export var home_path: Array[Node2D] 
+var current_path_index = 0
 @export var home_tolerance = 5.0
 @export var dialogue_ui: Control
 const speed = 30
@@ -62,6 +64,9 @@ func _process(delta):
 				dir = choose([Vector2.RIGHT,Vector2.UP,Vector2.LEFT,Vector2.DOWN])
 			MOVE:
 				move(delta)
+				
+	if current_state == GO_HOME:
+		move_home(delta)
 
 func _input(event):
 	if event.is_action_pressed("chat") and not event.is_echo():
@@ -132,45 +137,79 @@ func _on_dialogic_ended() -> void:
 	is_chatting = false
 	is_roaming = true
 
+#func move_home(delta):
+#	if not house_node:
+#		var to_start = start_pos - position
+#		if to_start.length() > home_tolerance:
+#			dir = to_start.normalized()
+#			velocity = dir * speed
+#			move_and_slide()
+#		else:
+#			velocity = Vector2.ZERO
+#			current_state = IDLE
+#		return
+
+
 func move_home(delta):
-	if not house_node:
-		# 如果忘记在Inspector里绑定房子，就走回初始位置
-		var to_start = start_pos - position
-		if to_start.length() > home_tolerance:
-			dir = to_start.normalized()
-			velocity = dir * speed
-			move_and_slide()
-		else:
-			velocity = Vector2.ZERO
-			current_state = IDLE
+	if home_path.is_empty():
+		velocity = Vector2.ZERO
 		return
 
-	# 计算往房子（家）走的方向
-	var to_house = house_node.global_position - global_position
+	var current_target = home_path[current_path_index]
+	var to_target = current_target.global_position - global_position
 	
-	if to_house.length() > home_tolerance:
-		dir = to_house.normalized()
+	if to_target.length() > home_tolerance:
+		dir = to_target.normalized()
 		velocity = dir * speed
 		move_and_slide()
 	else:
-		# 到了房子门口，进入屋子避雨，隐形
-		velocity = Vector2.ZERO
-		current_state = INSIDE_HOUSE
-		is_roaming = false 
-		print(self.name, " 已经进屋避雨")
+		# first
+		if current_path_index < home_path.size() - 1:
+			current_path_index += 1
+		else:
+			# last point
+			velocity = Vector2.ZERO
+			current_state = INSIDE_HOUSE
+			is_roaming = false 
+			print(self.name, " in side the house！")
+
+
+
+
+
+
+#	var to_house = house_node.global_position - global_position
+	
+#	if to_house.length() > home_tolerance:
+#		dir = to_house.normalized()
+#		velocity = dir * speed
+#		move_and_slide()
+#	else:
+#		velocity = Vector2.ZERO
+#		current_state = INSIDE_HOUSE
+#		is_roaming = false 
+#		print(self.name, " inside house")
+
+#func set_rain_status(raining: bool):
+#	is_raining = raining
+#	if is_raining:
+#		current_state = GO_HOME
+#		$Timer.stop()
+#	else:
+#		is_roaming = true
+#		current_state = IDLE
+#		$Timer.start(randf_range(1.5, 3.0))
 
 func set_rain_status(raining: bool):
 	is_raining = raining
 	if is_raining:
+		current_path_index = 0
 		current_state = GO_HOME
 		$Timer.stop()
 	else:
-		# 雨停了，把 NPC 从屋子里“放出来”
 		is_roaming = true
 		current_state = IDLE
 		$Timer.start(randf_range(1.5, 3.0))
-
-
 
 func _on_tree_exited() -> void:
 	Global.npc_positions[self.name] = self.global_position

@@ -7,6 +7,7 @@ var game = {
 	"id": "",
 	"scene": "res://rooms/room_0.tscn",
 	"position": {"x":0,"y":0},
+	"time":{},
 	"money": 100,
 	"money_state": [],
 	"plant":{},
@@ -61,6 +62,9 @@ func get_item_count(item:String) -> int:
 	return 0
 
 func save_game():
+	var time_node = get_tree().get_first_node_in_group("TimeSystem")
+	if time_node != null:
+		time_node.save_time_to_global()
 	var player = get_tree().get_first_node_in_group("Player")
 	if player != null:
 		game.position.x = player.global_position.x
@@ -71,6 +75,7 @@ func save_game():
 	game["volume"] = Global.sound_percent
 	game["is_muted"] = Global.is_muted
 	game["username"] = Global.player_name
+	game["time"] = Global.time
 	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
 	var content = JSON.stringify(game)
 	file.store_string(content)
@@ -97,6 +102,8 @@ func load_game():
 		Global.player_name = game["username"]
 	if game.has("money"):
 		Global.money = int(game["money"])
+	if game.has("time"):
+		Global.time = game["time"]
 	if game.has("crops"):
 		Global.crops = game["crops"]
 	if game.has("scene"):
