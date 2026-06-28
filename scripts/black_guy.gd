@@ -79,16 +79,17 @@ func _on_dialogic_ended() -> void:
 
 func _on_dialogic_signal(argument: String):
 	if argument == "game_over_scene":
-		Global.money -= 300 # 扣除300块钱
+		Global.money -= 300 # - money
 		
 		# 如果你有播放影片的逻辑，可以写在这里
-		# play_video() 
+		get_tree().change_scene_to_file("res://rooms/end_game.tscn")
 		
-		# 切换回 room0.1
-		get_tree().change_scene_to_file("res://rooms/room_0.tscn")
+		# change back to room_0
+		#get_tree().change_scene_to_file("res://rooms/room_0.tscn")
 		Global.hotbar_ui.visible = false
 
-
+func play_video():
+	$CanvasLayer/VideoCutscenePlayer.play()
 
 func choose(array):
 	array.shuffle()

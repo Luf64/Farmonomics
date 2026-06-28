@@ -31,7 +31,6 @@ func weather_loop() -> void:
 func change_weather(raining: bool):
 	emitting = raining
 	
-	# 寻找当前房间里所有的 NPC（寻找带 set_rain_status 方法的节点）
 	for child in room_node.get_children():
 		if child.has_method("set_rain_status"):
 			child.set_rain_status(raining)
