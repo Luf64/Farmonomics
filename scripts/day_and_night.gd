@@ -15,7 +15,7 @@ var change_state = false
 #		$ColorRect.color.a = 150
 
 func _ready() -> void:
-	add_to_group("DayNightFilter")
+    add_to_group("DayNightFilter")
 
 
 #func _on_timer_timeout() -> void:
@@ -25,8 +25,8 @@ func _ready() -> void:
 #		state = "day"
 #		
 #	change_state = true
-	
-	
+    
+    
 #func _process(delta):
 #	if change_state == true:
 #		change_state = false
@@ -34,16 +34,16 @@ func _ready() -> void:
 #			change_to_day()
 #		elif state == "night":
 #			change_to_night()
-			
+            
 func change_to_day() -> void:
-	if anim_player.has_animation("nighttoday"):
-		anim_player.play("nighttoday")
-		print("Environment Filter: Switching to daytime....")
+    if anim_player.has_animation("nighttoday"):
+        anim_player.play("nighttoday")
+        print("Environment Filter: Switching to daytime....")
 
 func change_to_night() -> void:
-	if anim_player.has_animation("daytonight"):
-		anim_player.play("daytonight")
-		print("Environment Filter: Switching to nighttime....")
+    if anim_player.has_animation("daytonight"):
+        anim_player.play("daytonight")
+        print("Environment Filter: Switching to nighttime....")
 
 
 
@@ -52,7 +52,7 @@ func change_to_night() -> void:
 #	$AnimationPlayer.play("nighttoday")
 #	$Timer.wait_time = length_of_day
 #	$Timer.start()
-	
+    
 #func change_to_night():
 #	$AnimationPlayer.play("daytonight")
 #	$Timer.wait_time = length_of_night
