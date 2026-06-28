@@ -85,19 +85,48 @@ func _update_images(hour: int) -> void:
 			period_images[key].visible = (key == current_period_key)
 
 ## Detect the time and play the daybreak/nightfall animation.
+#func _check_state_changes(hour: int) -> void:
+	# Daytime is from 6:00 a.m. to 6:00 p.m.
+#	if hour >= 6 and hour < 18:
+#		if current_state != "day":
+#			current_state = "day"
+#			if anim_player.has_animation("nighttoday"):
+#				anim_player.play("nighttoday")
+#	# The remaining time is night.
+#	else:
+#		if current_state != "night":
+#			current_state = "night"
+#			if anim_player.has_animation("daytonight"):
+#				anim_player.play("daytonight")
+
 func _check_state_changes(hour: int) -> void:
 	# Daytime is from 6:00 a.m. to 6:00 p.m.
 	if hour >= 6 and hour < 18:
 		if current_state != "day":
 			current_state = "day"
-			if anim_player.has_animation("nighttoday"):
+			# 1. 播放右上角时钟小UI的动画（如果存在）
+			if anim_player and anim_player.has_animation("nighttoday"):
 				anim_player.play("nighttoday")
+			
+			# 2. 【核心结合】通知环境滤镜变亮
+			get_tree().call_group("DayNightFilter", "change_to_day")
+			
 	# The remaining time is night.
 	else:
 		if current_state != "night":
 			current_state = "night"
-			if anim_player.has_animation("daytonight"):
+			# 1. 播放右上角时钟小UI的动画（如果存在）
+			if anim_player and anim_player.has_animation("daytonight"):
 				anim_player.play("daytonight")
+				
+			# 2. 【核心结合】通知环境滤镜变暗
+			get_tree().call_group("DayNightFilter", "change_to_night")
+
+
+
+
+
+
 
 ## Save data to the global script when exiting the scene.
 func save_time_to_global() -> void:

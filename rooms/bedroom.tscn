@@ -16,6 +16,9 @@
 radius = 23.0
 height = 80.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ppjx1"]
+size = Vector2(9.142857, 18.285717)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_87nnv"]
 size = Vector2(17.92858, 22.428566)
 
@@ -63,6 +66,14 @@ texture = ExtResource("2_78uxc")
 position = Vector2(592, 570)
 scale = Vector2(3.7348485, 3.901515)
 texture = ExtResource("3_cns8q")
+
+[node name="Area2D3" type="Area2D" parent="." unique_id=236870031]
+position = Vector2(150, 266)
+scale = Vector2(6.9999995, 6.9999995)
+
+[node name="SleepArea" type="CollisionShape2D" parent="Area2D3" unique_id=66579768]
+position = Vector2(48.999992, -1.0000029)
+shape = SubResource("RectangleShape2D_ppjx1")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1589565295]
 position = Vector2(150, 266)
@@ -116,6 +127,7 @@ theme_override_fonts/font = ExtResource("9_cddlw")
 [node name="Total_money" parent="Button2" unique_id=655785980 instance=ExtResource("10_ppjx1")]
 
 [node name="Bkr3" type="Sprite2D" parent="." unique_id=938432401]
+visible = false
 z_index = -3
 position = Vector2(584, 296)
 scale = Vector2(0.6119791, 0.66944444)
@@ -146,6 +158,19 @@ shape = SubResource("SegmentShape2D_x1cj4")
 position = Vector2(68.14285, 51.571426)
 shape = SubResource("SegmentShape2D_x1cj4")
 
+[node name="InteractionPrompt" type="Label" parent="." unique_id=1993000730]
+visible = false
+offset_left = 528.0
+offset_top = 233.00006
+offset_right = 589.0
+offset_bottom = 256.00006
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("9_cddlw")
+theme_override_font_sizes/font_size = 16
+text = "【Press F】 "
+
+[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
+[connection signal="body_exited" from="Area2D3" to="." method="_on_area_2d_3_body_exited"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
