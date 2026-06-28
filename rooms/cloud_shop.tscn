@@ -71,10 +71,15 @@ position = Vector2(-146.875, 20.5)
 shape = SubResource("RectangleShape2D_jf0mo")
 
 [node name="Label" type="Label" parent="god/speech1" unique_id=268937169]
-offset_left = -165.75
-offset_top = -83.0
-offset_right = -125.75
-offset_bottom = -60.0
+visible = false
+offset_left = -259.25
+offset_top = -50.250004
+offset_right = 342.75
+offset_bottom = -14.250004
+scale = Vector2(0.4, 0.4)
+theme_override_fonts/font = ExtResource("7_bssnt")
+theme_override_font_sizes/font_size = 35
+text = "Greeting Mortal from another world"
 
 [node name="speech2" type="Area2D" parent="god" unique_id=1396147273]
 
@@ -83,10 +88,17 @@ position = Vector2(-78.25, 20.75)
 shape = SubResource("RectangleShape2D_jf0mo")
 
 [node name="Label" type="Label" parent="god/speech2" unique_id=814626350]
-offset_left = -164.5
-offset_top = -83.0
-offset_right = -124.5
-offset_bottom = -60.0
+visible = false
+offset_left = -251.50002
+offset_top = -74.0
+offset_right = 2035.5
+offset_bottom = 483.0
+scale = Vector2(0.1, 0.1)
+theme_override_font_sizes/font_size = 100
+text = "In the world, most of the mortal are greedy, 
+so i grant you the permission to trade with me, 
+and i will grant you coins that you can use 
+in this world."
 
 [node name="interaction" type="Area2D" parent="god" unique_id=841107794]
 scale = Vector2(0.5, 0.5)
@@ -101,9 +113,24 @@ offset_left = -351.5
 offset_top = -90.0
 offset_right = -131.5
 offset_bottom = -67.0
+scale = Vector2(0.5, 0.5)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 40
 text = "[Press \"F\" to interect with ...]"
+
+[node name="choice" type="Label" parent="god/interaction" unique_id=1466769924]
+visible = false
+offset_left = -135.0
+offset_top = -49.5
+offset_right = 72.0
+offset_bottom = 15.5
+scale = Vector2(0.5, 0.5)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("7_bssnt")
+theme_override_font_sizes/font_size = 30
+text = "1. Talk to ...
+2. Trade with ..."
 
 [node name="lift" type="Sprite2D" parent="." unique_id=1349726948]
 position = Vector2(106, 519)
@@ -185,6 +212,10 @@ theme_override_fonts/font = ExtResource("7_bssnt")
 
 [node name="Total_money" parent="Button2" unique_id=655785980 instance=ExtResource("8_aty1m")]
 
+[connection signal="body_entered" from="god/speech1" to="." method="_on_speech_1_body_entered"]
+[connection signal="body_exited" from="god/speech1" to="." method="_on_speech_1_body_exited"]
+[connection signal="body_entered" from="god/speech2" to="." method="_on_speech_2_body_entered"]
+[connection signal="body_exited" from="god/speech2" to="." method="_on_speech_2_body_exited"]
 [connection signal="body_entered" from="god/interaction" to="." method="_on_interaction_body_entered"]
 [connection signal="body_exited" from="god/interaction" to="." method="_on_interaction_body_exited"]
 [connection signal="body_entered" from="lift/lift_door" to="." method="_on_lift_door_body_entered"]

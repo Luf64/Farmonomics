@@ -156,7 +156,7 @@ func apply_speed(multiplier: float) -> void:
 
 func apply_invisible() -> void:
 	is_invisible = true
-	Global.player.modulate.a = 0.3
+	Global.player.modulate.a = 0.0
 	potion_timers["invisible"].start(20.0)
 
 func reset_player_effects() -> void:
@@ -191,4 +191,4 @@ func apply_active_effects_to_player() -> void:
 		return
 	Global.player.scale = Global.player.base_scale * (3.0 if is_big else 1.0)
 	Global.player.move_speed = Global.player.base_move_speed * speed_multiplier
-	Global.player.modulate.a = 0.3 if is_invisible else 1.0
+	Global.player.modulate.a = 0.0 if is_invisible else 1.0
