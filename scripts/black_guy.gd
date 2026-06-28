@@ -86,6 +86,7 @@ func _on_dialogic_signal(argument: String):
 		
 		# 切换回 room0.1
 		get_tree().change_scene_to_file("res://rooms/room_0.tscn")
+		Global.hotbar_ui.visible = false
 
 
 
@@ -150,8 +151,4 @@ func _on_btn_refuse_pressed() -> void:
 
 func _on_tree_exited() -> void:
 	Global.npc_positions[self.name] = self.global_position
-	pass # Replace with function body.
-
-
-func _on_lift_door_area_exited(area: Area2D) -> void:
 	pass # Replace with function body.
