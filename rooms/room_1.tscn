@@ -35,6 +35,8 @@
 [ext_resource type="Texture2D" uid="uid://5e5qlms00ayj" path="res://Assets/Stone2.png" id="31_xtbka"]
 [ext_resource type="Texture2D" uid="uid://dhcx108f3yrit" path="res://Assets/Stone3.png" id="32_lwdxx"]
 [ext_resource type="Texture2D" uid="uid://n3hxjrwf8fa5" path="res://Assets/river.png" id="33_lwdxx"]
+[ext_resource type="Texture2D" uid="uid://hhpxo3rjh1ru" path="res://Assets/room 1 (outside)/greennpchouse.png" id="36_sw43w"]
+[ext_resource type="Texture2D" uid="uid://hryogmiphw07" path="res://Assets/room 1 (outside)/greennpchouse（roof）.png" id="37_vdcyf"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_afsgx"]
 blend_mode = 1
@@ -195,17 +197,21 @@ b = Vector2(1389, -551)
 a = Vector2(716, -68)
 b = Vector2(3915, -64)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw43w"]
+size = Vector2(154, 25)
+
 [node name="Room1" type="Node2D" unique_id=1710378233]
 y_sort_enabled = true
 position = Vector2(346, 661)
 
 [node name="black_guy" parent="." unique_id=295794188 instance=ExtResource("1_0cw7g")]
 z_index = 10
-position = Vector2(-60, -420)
+position = Vector2(-199, -150)
 
-[node name="GreenNPC" parent="." unique_id=236786661 instance=ExtResource("21_n7gw8")]
+[node name="GreenNPC" parent="." unique_id=236786661 node_paths=PackedStringArray("house_node") instance=ExtResource("21_n7gw8")]
 y_sort_enabled = true
-position = Vector2(-282, -319)
+position = Vector2(785, 298)
+house_node = NodePath("../Green_NPC_House")
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1603721148]
 z_index = 20
@@ -249,6 +255,7 @@ script = ExtResource("3_p1q16")
 metadata/_edit_use_anchors_ = true
 
 [node name="day_and_night" parent="player" unique_id=1221182236 instance=ExtResource("28_n1icg")]
+visible = false
 z_index = 21
 position = Vector2(795, 332)
 
@@ -1603,7 +1610,7 @@ metadata/_edit_lock_ = true
 
 [node name="Stone1" type="Sprite2D" parent="." unique_id=1206976985]
 y_sort_enabled = true
-position = Vector2(-317, -426)
+position = Vector2(391, -95)
 texture = ExtResource("30_eqpyn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Stone1" unique_id=102849039]
@@ -1614,7 +1621,7 @@ shape = SubResource("CircleShape2D_eli7f")
 
 [node name="Stone3" type="Sprite2D" parent="." unique_id=2022792307]
 y_sort_enabled = true
-position = Vector2(-174, -430)
+position = Vector2(-195, -351)
 texture = ExtResource("30_eqpyn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Stone3" unique_id=1090005587]
@@ -1927,6 +1934,23 @@ texture = ExtResource("33_lwdxx")
 [node name="Sprite2D9" type="Sprite2D" parent="river" unique_id=1641972324]
 position = Vector2(4600, -2)
 texture = ExtResource("33_lwdxx")
+
+[node name="Green_NPC_House" type="StaticBody2D" parent="." unique_id=966426577]
+
+[node name="Sprite2D" type="Sprite2D" parent="Green_NPC_House" unique_id=79218371]
+position = Vector2(578.00006, 231)
+scale = Vector2(0.54483706, 0.42391303)
+texture = ExtResource("36_sw43w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Green_NPC_House" unique_id=729298943]
+position = Vector2(572, 288.5)
+shape = SubResource("RectangleShape2D_sw43w")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Green_NPC_House" unique_id=835157486]
+z_index = 10
+position = Vector2(573, 220)
+scale = Vector2(0.5460319, 0.42741933)
+texture = ExtResource("37_vdcyf")
 
 [connection signal="body_entered" from="Farm/Farm Door" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Farm/Farm Door" to="Farm/Farm Door" method="_on_body_entered"]

@@ -34,13 +34,18 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "Blackguy": "res://black_dialogue/Blackguy.dtl",
-"Natasha Chatting": "res://green_dialogue/Natasha Chatting.dtl"
+"Blackguy Normal": "res://black_dialogue/Blackguy Normal.dtl",
+"Blackguy Rain": "res://black_dialogue/Blackguy Rain.dtl",
+"Natasha Chatting": "res://green_dialogue/Natasha Chatting.dtl",
+"Natasha Rain": "res://green_dialogue/Natasha Rain.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
-variables={}
+variables={
+"player_money": 0
+}
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
 text/text_reveal_skip_delay=0.1

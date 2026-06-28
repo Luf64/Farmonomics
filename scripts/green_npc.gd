@@ -1,9 +1,12 @@
 extends CharacterBody2D
+@export var house_node: Node2D
+@export var home_tolerance = 5.0
 @export var dialogue_ui: Control
 const speed = 30
 var current_state = IDLE
 var dir = Vector2.RIGHT
 var start_pos
+var is_raining = false
 
 var is_roaming = true
 var is_chatting = false
@@ -14,7 +17,9 @@ var player_in_chat_zone = false
 enum{
 	IDLE,
 	NEW_DIR,
-	MOVE
+	MOVE,
+	GO_HOME,
+	INSIDE_HOUSE
 }
 
 func _ready():
@@ -24,6 +29,14 @@ func _ready():
 	start_pos = position
 	
 func _process(delta):
+	if current_state == INSIDE_HOUSE:
+		visible = false
+		velocity = Vector2.ZERO
+		return
+	else:
+		visible = true
+	
+	
 	if is_chatting:
 		$AnimatedSprite2D.play("idle")
 		return
@@ -52,8 +65,11 @@ func _process(delta):
 
 func _input(event):
 	if event.is_action_pressed("chat") and not event.is_echo():
-		if player_in_chat_zone and not is_chatting:
-			run_dialogue("Natasha Chatting")
+		if player_in_chat_zone and not is_chatting and current_state != INSIDE_HOUSE:
+			if is_raining:
+				run_dialogue("Natasha Rain")
+			else:
+				run_dialogue("Natasha Chatting")
 			$AnimatedSprite2D.play("idle")
 			get_viewport().set_input_as_handled()
 		
@@ -116,6 +132,43 @@ func _on_dialogic_ended() -> void:
 	is_chatting = false
 	is_roaming = true
 
+func move_home(delta):
+	if not house_node:
+		# 如果忘记在Inspector里绑定房子，就走回初始位置
+		var to_start = start_pos - position
+		if to_start.length() > home_tolerance:
+			dir = to_start.normalized()
+			velocity = dir * speed
+			move_and_slide()
+		else:
+			velocity = Vector2.ZERO
+			current_state = IDLE
+		return
+
+	# 计算往房子（家）走的方向
+	var to_house = house_node.global_position - global_position
+	
+	if to_house.length() > home_tolerance:
+		dir = to_house.normalized()
+		velocity = dir * speed
+		move_and_slide()
+	else:
+		# 到了房子门口，进入屋子避雨，隐形
+		velocity = Vector2.ZERO
+		current_state = INSIDE_HOUSE
+		is_roaming = false 
+		print(self.name, " 已经进屋避雨")
+
+func set_rain_status(raining: bool):
+	is_raining = raining
+	if is_raining:
+		current_state = GO_HOME
+		$Timer.stop()
+	else:
+		# 雨停了，把 NPC 从屋子里“放出来”
+		is_roaming = true
+		current_state = IDLE
+		$Timer.start(randf_range(1.5, 3.0))
 
 
 
