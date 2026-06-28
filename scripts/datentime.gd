@@ -20,7 +20,13 @@ var current_state = "" # "day" or "night"
 }
 
 func _ready() -> void:
-	total_minutes = start_minutes
+	add_to_group("TimeSystem")
+	if Global.time != null and not Global.time.is_empty():
+		total_minutes = Global.time.get("total_minutes", start_minutes)
+		current_day_index = Global.time.get("current_day_index", 0)
+	else:
+		total_minutes = start_minutes
+		current_day_index = 0
 	
 	# Initialize the check for day/night status.
 	var hour = _get_current_hour()
@@ -41,7 +47,7 @@ func _update_time_system(delta: float) -> void:
 	var minutes_per_second = 1440.0 / DAY_DURATION_SECS
 	total_minutes += minutes_per_second * delta
 	
-	if total_minutes >= 1440.0:
+	while total_minutes >= 1440.0:
 		total_minutes -= 1440.0
 		current_day_index = (current_day_index + 1) % 7
 		
@@ -94,7 +100,7 @@ func _check_state_changes(hour: int) -> void:
 				anim_player.play("daytonight")
 
 ## Save data to the global script when exiting the scene.
-func _on_tree_exited() -> void:
+func save_time_to_global() -> void:
 	# Calculate the index for the current time slot (compatible with your existing data structure).
 	var hour = _get_current_hour()
 	var period_idx = 0
