@@ -77,10 +77,10 @@ curve_z = SubResource("Curve_64hdi")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_eli7f"]
 particle_flag_disable_z = true
-emission_shape_offset = Vector3(0, -900, 0)
+emission_shape_offset = Vector3(0, -500, 0)
 emission_shape = 3
 emission_box_extents = Vector3(20000, 1, 1)
-gravity = Vector3(0, 50000, 0)
+gravity = Vector3(0, 80000, 0)
 scale_min = 0.19999999
 scale_max = 2.0
 scale_over_velocity_curve = SubResource("CurveXYZTexture_eqpyn")
@@ -212,10 +212,10 @@ position = Vector2(-167, -109)
 z_index = 10
 position = Vector2(-199, -150)
 
-[node name="GreenNPC" parent="." unique_id=236786661 node_paths=PackedStringArray("house_node") instance=ExtResource("21_n7gw8")]
+[node name="GreenNPC" parent="." unique_id=236786661 node_paths=PackedStringArray("home_path") instance=ExtResource("21_n7gw8")]
 y_sort_enabled = true
-position = Vector2(785, 298)
-house_node = NodePath("../Green_NPC_House")
+position = Vector2(-419, 85)
+home_path = [NodePath("../Green_NPC_House/greenhouse_point"), NodePath("../Green_NPC_House/greenhouse_node")]
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1603721148]
 z_index = 20
@@ -1950,6 +1950,12 @@ z_index = 10
 position = Vector2(573, 220)
 scale = Vector2(0.5460319, 0.42741933)
 texture = ExtResource("37_vdcyf")
+
+[node name="greenhouse_node" type="Marker2D" parent="Green_NPC_House" unique_id=1849322175]
+position = Vector2(553, 339)
+
+[node name="greenhouse_point" type="Marker2D" parent="Green_NPC_House" unique_id=1724409683]
+position = Vector2(557, 445)
 
 [connection signal="body_entered" from="Farm/Farm Door" to="player" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Farm/Farm Door" to="Farm/Farm Door" method="_on_body_entered"]

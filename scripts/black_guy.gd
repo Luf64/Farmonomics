@@ -4,7 +4,7 @@ const speed = 30
 var current_state = IDLE
 var dir = Vector2.RIGHT
 var start_pos
-
+var is_raining = false
 var is_roaming = true
 var is_chatting = false
 
@@ -57,12 +57,14 @@ func _input(event):
 	if event.is_action_pressed("chat") and not event.is_echo():
 		if player_in_chat_zone and not is_chatting:
 			Dialogic.VAR.set("player_money", Global.money)
+		if is_raining:
+			run_dialogue("Blackguy Rain") 
+		else:
 			run_dialogue("Blackguy Normal")
 			$AnimatedSprite2D.play("idle")
 			get_viewport().set_input_as_handled()
 		
 func run_dialogue(dialogue_string):
-	
 	is_chatting = true
 	is_roaming = false
 	
@@ -81,7 +83,6 @@ func _on_dialogic_signal(argument: String):
 	if argument == "game_over_scene":
 		Global.money -= 300 # - money
 		
-		# 如果你有播放影片的逻辑，可以写在这里
 		get_tree().change_scene_to_file("res://rooms/end_game.tscn")
 		
 		# change back to room_0
@@ -141,7 +142,8 @@ func _on_black_guy_dialog_dialogue_finished() -> void:
 	is_roaming = true
 	pass # Replace with function body.
 
-
+func set_rain_status(raining: bool):
+	is_raining = raining
 
 
 func _on_btn_refuse_pressed() -> void:
