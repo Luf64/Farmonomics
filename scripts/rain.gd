@@ -7,6 +7,9 @@ extends GPUParticles2D
 @export var min_clear_duration: float = 15.0 # Short no rain
 @export var max_clear_duration: float = 45.0 # Long no rain
 
+@onready var room_node = get_parent()
+
+
 func _ready() -> void:
 	# start loop
 	weather_loop()
@@ -24,3 +27,11 @@ func weather_loop() -> void:
 		var clear_time = randf_range(min_clear_duration, max_clear_duration)
 		print("The rain has stopped; duration of the clear weather: ", clear_time, " sec")
 		await get_tree().create_timer(clear_time).timeout
+		
+func change_weather(raining: bool):
+	emitting = raining
+	
+	# 寻找当前房间里所有的 NPC（寻找带 set_rain_status 方法的节点）
+	for child in room_node.get_children():
+		if child.has_method("set_rain_status"):
+			child.set_rain_status(raining)

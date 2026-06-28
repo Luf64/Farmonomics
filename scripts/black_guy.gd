@@ -22,7 +22,7 @@ func _ready():
 	if Global.npc_positions.has(self.name):
 		self.global_position = Global.npc_positions[self.name]
 	start_pos = position
-	
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 	
 
 func _process(delta):
@@ -56,7 +56,8 @@ func _process(delta):
 func _input(event):
 	if event.is_action_pressed("chat") and not event.is_echo():
 		if player_in_chat_zone and not is_chatting:
-			run_dialogue("Blackguy")
+			Dialogic.VAR.set("player_money", Global.money)
+			run_dialogue("Blackguy Normal")
 			$AnimatedSprite2D.play("idle")
 			get_viewport().set_input_as_handled()
 		
@@ -75,7 +76,18 @@ func _on_dialogic_ended() -> void:
 	is_chatting = false
 	is_roaming = true
 	
-	
+
+func _on_dialogic_signal(argument: String):
+	if argument == "game_over_scene":
+		Global.money -= 300 # 扣除300块钱
+		
+		# 如果你有播放影片的逻辑，可以写在这里
+		# play_video() 
+		
+		# 切换回 room0.1
+		get_tree().change_scene_to_file("res://rooms/room_0.tscn")
+
+
 
 func choose(array):
 	array.shuffle()
@@ -128,10 +140,6 @@ func _on_black_guy_dialog_dialogue_finished() -> void:
 	pass # Replace with function body.
 
 
-func _on_btn_give_pressed() -> void:
-	Global.money -= 30000 
-	get_tree().change_scene_to_file("res://rooms/end.tscn")
-	pass # Replace with function body.
 
 
 func _on_btn_refuse_pressed() -> void:

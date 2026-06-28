@@ -6,11 +6,8 @@ join character3 leftmost
 - yes... of course!!
 	leave character3
 	join Natasha rightmost
-	join tomato center
-	There are still have tomato of 20% left on the market! Looks like we'll have to cut the price and sell them off!
-	leave tomato
-	Quick go to the market now!!
-	[signal arg="idk"]
+	Haha, I also don't know.
+	But you better go to the market now!!
 - No thanks
 	leave character3
 	join Natasha rightmost

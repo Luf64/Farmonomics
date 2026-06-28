@@ -1,5 +1,4 @@
 join Black_guy rightmost
-Hello there!!
 Congratulations on making so much money. Thanks for that. But honestly, I'm too lazy to send you back to your world, and I'm too lazy to keep dealing with you because you're so boring.
 leave Black_guy
 join character3 (New portrait) leftmost
@@ -13,3 +12,4 @@ Wait WHATTT? Please NO
 leave character3
 join Black_guy center
 Bye-bye
+[signal arg="game_over_scene"]

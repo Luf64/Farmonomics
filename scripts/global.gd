@@ -195,5 +195,3 @@ func open_popup_room0(scene: PackedScene):
 	# open new popup
 	current_popup_room0 = scene.instantiate()
 	get_tree().root.add_child(current_popup_room0)
-
-# player starting money
