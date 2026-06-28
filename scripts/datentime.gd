@@ -107,7 +107,7 @@ func _check_state_changes(hour: int) -> void:
 			if anim_player and anim_player.has_animation("nighttoday"):
 				anim_player.play("nighttoday")
 			
-			# 2. 【核心结合】通知环境滤镜变亮
+			# 2. [Core Integration] Notify the environment filter to brighten.
 			get_tree().call_group("DayNightFilter", "change_to_day")
 			
 	# The remaining time is night.

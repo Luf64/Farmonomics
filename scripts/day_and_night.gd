@@ -15,7 +15,6 @@ var change_state = false
 #		$ColorRect.color.a = 150
 
 func _ready() -> void:
-	# 将自己加入群组，方便全局调用
 	add_to_group("DayNightFilter")
 
 

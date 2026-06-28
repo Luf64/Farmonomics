@@ -17,13 +17,13 @@ func _ready() -> void:
 func weather_loop() -> void:
 	while true:
 		# 1. Rain
-		emitting = true
+		change_weather(true)
 		var rain_time = randf_range(min_rain_duration, max_rain_duration)
 		print("Start of rainfall and duration: ", rain_time, " sec")
 		await get_tree().create_timer(rain_time).timeout
 		
 		# 2. Stop rain
-		emitting = false
+		change_weather(false)
 		var clear_time = randf_range(min_clear_duration, max_clear_duration)
 		print("The rain has stopped; duration of the clear weather: ", clear_time, " sec")
 		await get_tree().create_timer(clear_time).timeout
