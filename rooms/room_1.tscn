@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://vc688i2dutjd" path="res://rooms/black_guy.tscn" id="1_0cw7g"]
 [ext_resource type="Texture2D" uid="uid://cx8ar81qefsfa" path="res://Assets/room 1 (outside)/Room3.png" id="1_2otyv"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="1_31r0r"]
-[ext_resource type="PackedScene" path="res://rooms/DateTime.tscn" id="1_hcklc"]
+[ext_resource type="PackedScene" uid="uid://bq0q6boca1ckp" path="res://rooms/DateTime.tscn" id="1_hcklc"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="2_cdn6i"]
 [ext_resource type="Texture2D" uid="uid://cmnffj1d1t2s4" path="res://Assets/room 1 (outside)/Room0.1(House).png" id="2_j6sld"]
 [ext_resource type="PackedScene" uid="uid://bpr04seeqcl6e" path="res://rooms/market_notification.tscn" id="2_jlk02"]
@@ -205,7 +205,6 @@ y_sort_enabled = true
 position = Vector2(346, 661)
 
 [node name="day_and_night" parent="." unique_id=1221182236 instance=ExtResource("28_n1icg")]
-visible = false
 z_index = 21
 position = Vector2(-167, -109)
 
