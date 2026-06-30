@@ -1,0 +1,18 @@
+join god_dialogue center
+god_dialogue: There is a mortal in black shirt who want to destroy the world !! Do you believe me?
+- YES
+	god_dialogue: Do you want to save the world, mortal from another world? (need 30000 coins)
+	[signal arg="god_stop_talk"]
+	- YES
+		if {player_money} >= 30000.0:
+			god_dialogue: Great !
+			[signal arg="good_ending"]
+		else:
+			god_dialogue: Please be hard work to save the world from evil mortal.
+			[signal arg="god_stop_talk"]
+	- NO
+		That is sad that you mortal don't care about the world.
+		[signal arg="god_stop_talk"]
+- NO
+	god_dialogue: That's sad that you mortal don't believe in a god like me.
+	[signal arg="god_stop_talk"]

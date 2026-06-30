@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://sn48vmpxx5ko"]
+
+[ext_resource type="VideoStream" uid="uid://cdtrk4tcmc8ma" path="res://video/god clear.ogv" id="1_s3amn"]
+[ext_resource type="Script" uid="uid://diq0wd3chi0l3" path="res://scripts/good_ending.gd" id="2_s3amn"]
+
+[node name="LiftVideo(up)" type="Node2D" unique_id=450296971]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1181036761]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=465373423]
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 579.0
+offset_bottom = 324.0
+scale = Vector2(0.9, 0.9)
+stream = ExtResource("1_s3amn")
+script = ExtResource("2_s3amn")
+
+[connection signal="finished" from="VideoStreamPlayer" to="VideoStreamPlayer" method="_on_finished"]
