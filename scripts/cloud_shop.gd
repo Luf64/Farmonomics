@@ -84,6 +84,7 @@ func _on_interaction_body_exited(body: Node2D) -> void:
 		$god/interaction/Label.visible = false
 		$god/interaction/choice.visible = false
 		player_in_range_god = false
+		interaction = false
 
 
 func cloud_shop_toggle():
@@ -130,6 +131,6 @@ func _on_dialogic_signal(argument: String):
 		get_tree().change_scene_to_file(Global.good_ending)
 	if argument == "god_stop_talk":
 		god_chat = false
-		await get_tree().create_timer(3).timeout
+		await get_tree().create_timer(4).timeout
 		press_f = true
 		
