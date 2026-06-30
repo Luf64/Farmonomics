@@ -152,10 +152,10 @@ size = Vector2(448.5, 13)
 size = Vector2(6.5, 369)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gdwmo"]
-size = Vector2(341, 4)
+size = Vector2(280, 3)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brp25"]
-size = Vector2(322, 2)
+size = Vector2(302, 2)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jee7h"]
 size = Vector2(54.5, 21)
@@ -182,8 +182,8 @@ sources/0 = SubResource("TileSetAtlasSource_eqpyn")
 radius = 43.011627
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_xtbka"]
-a = Vector2(-228, 996)
-b = Vector2(-205, -224)
+a = Vector2(-223.33417, 751.58673)
+b = Vector2(-232.34766, -232.32977)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_i5hb3"]
 a = Vector2(1352, -632)
@@ -715,11 +715,11 @@ position = Vector2(-1191.25, -297.5)
 shape = SubResource("RectangleShape2D_7ecps")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Fences collision" unique_id=706807631]
-position = Vector2(-606.5, -79)
+position = Vector2(-576, -79.5)
 shape = SubResource("RectangleShape2D_gdwmo")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Fences collision" unique_id=1212191482]
-position = Vector2(-1034, -79)
+position = Vector2(-1044, -79)
 shape = SubResource("RectangleShape2D_brp25")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Fences collision" unique_id=1839208918]
@@ -1878,7 +1878,8 @@ stretch_mode = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2113415186]
 y_sort_enabled = true
-position = Vector2(-666, 145)
+position = Vector2(-658, 126)
+scale = Vector2(0.9985038, 0.8608454)
 shape = SubResource("SegmentShape2D_xtbka")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=848435234]
