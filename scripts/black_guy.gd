@@ -7,7 +7,7 @@ var start_pos
 var is_raining = false
 var is_roaming = true
 var is_chatting = false
-
+var press_c = false
 var player
 var player_in_chat_zone = false
 
@@ -18,6 +18,7 @@ enum{
 }
 
 func _ready():
+	press_c = false
 	randomize()
 	if Global.npc_positions.has(self.name):
 		self.global_position = Global.npc_positions[self.name]
@@ -57,13 +58,15 @@ func _input(event):
 	if event.is_action_pressed("chat") and not event.is_echo():
 		if player_in_chat_zone and not is_chatting:
 			Dialogic.VAR.set("player_money", Global.money)
-		if is_raining:
-			run_dialogue("Blackguy Rain") 
-		else:
-			run_dialogue("Blackguy Normal")
+			if is_raining:
+				press_c = false
+				run_dialogue("Blackguy Rain") 
+			else:
+				press_c = false
+				run_dialogue("Blackguy Normal")
 			$AnimatedSprite2D.play("idle")
 			get_viewport().set_input_as_handled()
-		
+
 func run_dialogue(dialogue_string):
 	is_chatting = true
 	is_roaming = false

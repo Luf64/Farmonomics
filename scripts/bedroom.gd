@@ -17,7 +17,7 @@ func _process(_delta: float) -> void:
 
 # sleep
 func trigger_sleep() -> void:
-	print("sleepping...")
+	print("sleeping...")
 	
 	get_tree().call_group("TimeSystem", "player_sleep")
 	
@@ -43,6 +43,8 @@ func _on_area_2d_3_body_exited(body: Node2D) -> void:
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "player":
+		Json.save_game()
 		Global.current_room = "Bedroom"
 		get_tree().change_scene_to_file(Global.Room_1)
+		
 	pass # Replace with function body.

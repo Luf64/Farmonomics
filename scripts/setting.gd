@@ -41,7 +41,10 @@ func _on_save_pressed() -> void:
 func _on_close_pressed() -> void:
 	Json.save_game()
 	await get_tree().create_timer(1.0).timeout
-	get_tree().quit()
+	get_tree().change_scene_to_file("res://rooms/room_0.tscn")
+	Global.hotbar_ui.visible = false
+	Global.current_popup_room0 = null
+	queue_free()
 
 func _on_sound_pressed() -> void:
 	Global.is_muted = !Global.is_muted

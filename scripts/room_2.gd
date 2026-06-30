@@ -58,8 +58,10 @@ func _on_shop_ui_body_exited(body: Node2D) -> void:
 		
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.name == "player":
+		Json.save_game()
 		Global.current_room = "room2"
 		get_tree().change_scene_to_file(Global.Room_1)
+		Json.load_game()
 
 func _on_player_tree_entered() -> void:
 	pass # Replace with function body.

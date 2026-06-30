@@ -1,15 +1,15 @@
 join Black_guy rightmost
-Congratulations on making so much money. Thanks for that. But honestly, I'm too lazy to send you back to your world, and I'm too lazy to keep dealing with you because you're so boring.
+Black_guy: Congratulations on making so much money. Thanks for that. But honestly, I'm too lazy to send you back to your world, and I'm too lazy to keep dealing with you because you're so boring.
 leave Black_guy
 join character3 (New portrait) leftmost
-So what you want to do now?
+character3: So what you want to do now?
 leave character3
 join Black_guy rightmost
 I took all your money, bought a bomb, and now I'm going to blow up the whole world.
 leave Black_guy
 join character3 (shock) leftmost
-Wait WHATTT? Please NO
+character3: Wait WHATTT? Please NO
 leave character3
 join Black_guy center
-Bye-bye
+Black_guy: Bye-bye
 [signal arg="game_over_scene"]

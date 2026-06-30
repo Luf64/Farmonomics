@@ -71,3 +71,5 @@ offset_bottom = 52.0
 theme_override_fonts/font = ExtResource("6_hvugc")
 theme_override_font_sizes/font_size = 32
 text = "MON"
+
+[connection signal="tree_exited" from="." to="." method="_on_tree_exited"]

@@ -1,28 +1,13 @@
 extends Node2D
 
-
-
 func _on_continue_pressed() -> void:
-	Json.load_game()
+	Json.save_game()
 	Global.hotbar_ui.visible =! Global.hotbar_ui.visible
 	get_tree().change_scene_to_file(Global.Room_1)
+	Json.load_game()
 
 var newgame = preload("res://rooms/user_sign_in.tscn")
 func _on_new_game_pressed() -> void:
-	Json.game["money"] = 100
-	Json.game["inventory"] = [
-		{},{},{},{},{},
-		{},{},{},{},{},
-		{},{},{},{},{},
-		{},{},{},{},{},
-		{},{},{},{},{},
-		{},{},{},{},{},
-	]
-	Json.game["scene"] = Global.Room_1
-	Global.money = 100
-	Json.save_game()
-	Global.inventory_ui.refresh()
-	Global.hotbar_ui.refresh()
 	Global.open_popup_room0(newgame)
 
 func _on_settings_pressed() -> void:
