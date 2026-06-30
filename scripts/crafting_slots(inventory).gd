@@ -6,5 +6,5 @@ signal item_pressed(slot_number: int)
 var has_item: bool = false  
 
 func _on_icon_pressed() -> void:
-	if has_item:
-		item_pressed.emit(slot_number)
+    if has_item:
+        item_pressed.emit(slot_number)

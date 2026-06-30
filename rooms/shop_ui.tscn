@@ -4,7 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://chjq5786ja8jd" path="res://Assets/Pic/shop ui1.png" id="1_cg2ta"]
 [ext_resource type="Texture2D" uid="uid://oq1fv4cuxw6r" path="res://Assets/Pic/Block UI.png" id="2_qf5tm"]
 [ext_resource type="Texture2D" uid="uid://47h7e8afm4wk" path="res://Assets/Pic/item.png" id="3_5wht7"]
-[ext_resource type="Texture2D" uid="uid://btnqoebd1tnse" path="res://Assets/item/apple (1).png" id="4_5wht7"]
 [ext_resource type="Texture2D" uid="uid://bwwdwv8o6k0ps" path="res://Assets/Pic/coin 3.png" id="4_pxn6d"]
 [ext_resource type="Texture2D" uid="uid://b2ekphaaavof3" path="res://Assets/item/Corn/corn(Object).png" id="5_6a1ug"]
 [ext_resource type="Texture2D" uid="uid://bf6h3kbppacj0" path="res://Assets/item/Tomato.png" id="5_pxn6d"]
@@ -14,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://b82cpg5gsh13v" path="res://Assets/Pic/SrollButton.png" id="11_18nhq"]
 [ext_resource type="AudioStream" uid="uid://b3na8gxvl7xp5" path="res://Sound/buying-clinking-coins-4-468430.mp3" id="14_pigwl"]
 [ext_resource type="Texture2D" uid="uid://bh77u11eh427p" path="res://Assets/item/Orange.png" id="14_qx7ap"]
-[ext_resource type="Texture2D" uid="uid://dmv8krt74ecpp" path="res://Assets/item/potato.png" id="15_se1wg"]
 [ext_resource type="PackedScene" uid="uid://tgrxpaqlgev2" path="res://rooms/inventory.tscn" id="16_se1wg"]
 [ext_resource type="Script" uid="uid://jgllpsu0f4o" path="res://scripts/buttonshop.gd" id="17_qi2nu"]
 
@@ -125,62 +123,6 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.0
 theme_override_constants/separation = 90
 
-[node name="Tomato_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=348468710]
-layout_mode = 2
-
-[node name="TextureRect5" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=291282665]
-modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
-layout_mode = 0
-offset_right = 426.0
-offset_bottom = 90.0
-texture = ExtResource("2_qf5tm")
-
-[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=1384688598]
-layout_mode = 0
-offset_left = 9.0
-offset_top = 9.0
-offset_right = 84.0
-offset_bottom = 84.0
-texture = SubResource("CompressedTexture2D_pigwl")
-
-[node name="TextureRect10" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=27650684]
-layout_mode = 0
-offset_left = -2.0
-offset_right = 94.0
-offset_bottom = 94.0
-texture = ExtResource("5_pxn6d")
-expand_mode = 1
-
-[node name="Coin" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=276042882]
-layout_mode = 0
-offset_left = 379.0
-offset_top = 20.0
-offset_right = 414.0
-offset_bottom = 70.0
-texture = ExtResource("4_pxn6d")
-expand_mode = 1
-
-[node name="tomato_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=1738425512]
-layout_mode = 0
-offset_left = 339.0
-offset_top = 29.0
-offset_right = 379.0
-offset_bottom = 68.0
-theme_override_fonts/font = ExtResource("10_18nhq")
-theme_override_font_sizes/font_size = 38
-text = "10"
-
-[node name="TextEdit" type="TextEdit" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=989515487]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 88.0
-offset_top = 10.0
-offset_right = 244.0
-offset_bottom = 69.0
-mouse_filter = 2
-theme_override_font_sizes/font_size = 38
-text = "Tomato"
-
 [node name="Corn_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1568633286]
 layout_mode = 2
 
@@ -238,62 +180,61 @@ offset_bottom = 71.0
 texture = ExtResource("5_6a1ug")
 expand_mode = 1
 
-[node name="Apple_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1364817204]
+[node name="Tomato_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=348468710]
 layout_mode = 2
 
-[node name="TextureRect7" type="TextureRect" parent="ScrollContainer/VBoxContainer/Apple_Button" unique_id=1656230512]
+[node name="TextureRect5" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=291282665]
 modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
 layout_mode = 0
 offset_right = 426.0
 offset_bottom = 90.0
 texture = ExtResource("2_qf5tm")
 
-[node name="TextureRect4" type="TextureRect" parent="ScrollContainer/VBoxContainer/Apple_Button" unique_id=1184996251]
+[node name="TextureRect2" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=1384688598]
 layout_mode = 0
 offset_left = 9.0
 offset_top = 9.0
 offset_right = 84.0
 offset_bottom = 84.0
-texture = ExtResource("3_5wht7")
+texture = SubResource("CompressedTexture2D_pigwl")
 
-[node name="TextureRect9" type="TextureRect" parent="ScrollContainer/VBoxContainer/Apple_Button" unique_id=2078323478]
+[node name="TextureRect10" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=27650684]
 layout_mode = 0
-offset_left = 21.0
-offset_top = 17.0
-offset_right = 73.0
-offset_bottom = 76.0
-texture = ExtResource("4_5wht7")
+offset_left = -2.0
+offset_right = 94.0
+offset_bottom = 94.0
+texture = ExtResource("5_pxn6d")
 expand_mode = 1
 
-[node name="Coin3" type="TextureRect" parent="ScrollContainer/VBoxContainer/Apple_Button" unique_id=151779044]
+[node name="Coin" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=276042882]
 layout_mode = 0
 offset_left = 379.0
-offset_top = 18.0
+offset_top = 20.0
 offset_right = 414.0
-offset_bottom = 68.0
+offset_bottom = 70.0
 texture = ExtResource("4_pxn6d")
 expand_mode = 1
 
-[node name="TextEdit3" type="TextEdit" parent="ScrollContainer/VBoxContainer/Apple_Button" unique_id=455338060]
-self_modulate = Color(1, 1, 1, 0)
+[node name="tomato_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=1738425512]
 layout_mode = 0
-offset_left = 90.0
-offset_top = 9.0
-offset_right = 216.0
-offset_bottom = 70.0
-mouse_filter = 2
-theme_override_font_sizes/font_size = 38
-text = "Apple"
-
-[node name="apple_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Apple_Button" unique_id=525388971]
-layout_mode = 0
-offset_left = 330.0
-offset_top = 27.0
-offset_right = 390.0
-offset_bottom = 87.0
+offset_left = 339.0
+offset_top = 29.0
+offset_right = 379.0
+offset_bottom = 68.0
 theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
-text = "30"
+text = "10"
+
+[node name="TextEdit" type="TextEdit" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=989515487]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 88.0
+offset_top = 10.0
+offset_right = 244.0
+offset_bottom = 69.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 38
+text = "Tomato"
 
 [node name="Orange_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=532372990]
 layout_mode = 2
@@ -352,63 +293,6 @@ theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "30"
 
-[node name="Potato_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1882075171]
-layout_mode = 2
-
-[node name="TextureRect13" type="TextureRect" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=1638222110]
-modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
-layout_mode = 0
-offset_right = 426.0
-offset_bottom = 90.0
-texture = ExtResource("2_qf5tm")
-
-[node name="TextureRect14" type="TextureRect" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=424350219]
-layout_mode = 0
-offset_left = 9.0
-offset_top = 9.0
-offset_right = 84.0
-offset_bottom = 84.0
-texture = ExtResource("3_5wht7")
-
-[node name="TextureRect15" type="TextureRect" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=828678732]
-layout_mode = 0
-offset_left = 11.0
-offset_top = 15.0
-offset_right = 77.0
-offset_bottom = 78.0
-texture = ExtResource("15_se1wg")
-expand_mode = 1
-
-[node name="Coin5" type="TextureRect" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=187774798]
-layout_mode = 0
-offset_left = 379.0
-offset_top = 18.0
-offset_right = 414.0
-offset_bottom = 68.0
-texture = ExtResource("4_pxn6d")
-expand_mode = 1
-
-[node name="TextEdit5" type="TextEdit" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=1994615104]
-self_modulate = Color(1, 1, 1, 0)
-layout_mode = 0
-offset_left = 90.0
-offset_top = 9.0
-offset_right = 233.0
-offset_bottom = 70.0
-mouse_filter = 2
-theme_override_font_sizes/font_size = 38
-text = "Potato"
-
-[node name="potato_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Potato_Button" unique_id=1398193000]
-layout_mode = 0
-offset_left = 339.0
-offset_top = 29.0
-offset_right = 399.0
-offset_bottom = 89.0
-theme_override_fonts/font = ExtResource("10_18nhq")
-theme_override_font_sizes/font_size = 38
-text = "15"
-
 [node name="BuySound" type="AudioStreamPlayer2D" parent="." unique_id=1194135101]
 stream = ExtResource("14_pigwl")
 
@@ -429,9 +313,7 @@ script = ExtResource("17_qi2nu")
 [connection signal="pressed" from="UpButton" to="." method="_on_up_button_pressed"]
 [connection signal="pressed" from="DownButton" to="." method="_on_down_button_pressed"]
 [connection signal="value_changed" from="VSlider" to="." method="_on_v_slider_value_changed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/Tomato_Button" to="." method="_on_tomato_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Corn_Button" to="." method="_on_corn_button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/Apple_Button" to="." method="_on_apple_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Tomato_Button" to="." method="_on_tomato_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Orange_Button" to="." method="_on_orange_button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/Potato_Button" to="." method="_on_potato_button_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

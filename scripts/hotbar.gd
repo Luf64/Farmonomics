@@ -11,11 +11,9 @@ var item_textures = {
     "Corn": preload("res://Assets/item/Corn/corn(Object).png"),
     "Chocolate": preload("res://Assets/item/Chocolate/chocolate(Object).png"),
     "Milk": preload("res://Assets/item/Milk/milk(Object).png"),
-    
-    "Apple": preload("res://Assets/item/apple (1).png"),
     "Tomato": preload("res://Assets/item/Tomato.png"),
-    "Potato": preload("res://Assets/item/potato.png"),
     "Orange": preload("res://Assets/item/Orange.png"),
+
     "Flower_Red": preload("res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Red.png"),
     "Flower_Yellow": preload("res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Yellow.png"),
     "Flower_Blue": preload("res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Blue.png"),

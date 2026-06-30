@@ -87,13 +87,6 @@ var crops = {
         "stock": 50,
         "ideal": 50
     },
-    "Potato": {
-        "grow_time": 20,
-        "base_price": 20,
-        "current_price": 1,
-        "stock": 50,
-        "ideal": 50
-    },
     "Tomato": {
         "grow_time": 40,
         "base_price": 20,
