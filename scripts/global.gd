@@ -20,7 +20,6 @@ var hotbar_ui = null
 var player: Node = null
 var current_room: String = ""
 var coordinates: String = ""
-
 var seed_to_product: Dictionary = {
     "Seed_corn": "Corn",
     "Seed_chocolate": "Chocolate",
