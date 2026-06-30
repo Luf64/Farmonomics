@@ -11,7 +11,7 @@ func _ready() -> void:
         Global.from_underground = false
 
 func _process(_delta: float) -> void:
-    if player_in_range and Input.is_action_just_pressed("interact"):
+    if player_in_range and Input.is_action_just_pressed("interaction"):
         trigger_sleep()
 
 

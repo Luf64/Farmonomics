@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpr04seeqcl6e"]
 
 [ext_resource type="Texture2D" uid="uid://cebs6kf7xm0qh" path="res://Assets/Pic/390dc56603c15331eb9c329b0e4a4fb9-removebg-preview.png" id="1_gvv0n"]
-[ext_resource type="Script" uid="uid://dhqqbjod4x6ra" path="res://scripts/market_notification.gd" id="1_u8o3x"]
+[ext_resource type="Script" uid="uid://bilqjjvlmffv3" path="res://scripts/market_notification.gd" id="1_u8o3x"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="3_mmqft"]
 
 [node name="market_notification" type="CanvasLayer" unique_id=1446910186]
@@ -10,10 +10,10 @@ script = ExtResource("1_u8o3x")
 [node name="Control" type="Control" parent="." unique_id=745618363]
 layout_mode = 3
 anchors_preset = 0
-offset_left = 823.0
-offset_top = 33.0
-offset_right = 863.0
-offset_bottom = 73.0
+offset_left = 822.0
+offset_top = 169.0
+offset_right = 862.0
+offset_bottom = 209.0
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=565654676]
 layout_mode = 0
