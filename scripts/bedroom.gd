@@ -46,5 +46,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		Json.save_game()
 		Global.current_room = "Bedroom"
 		get_tree().change_scene_to_file(Global.Room_1)
-		
+		Json.load_game()
 	pass # Replace with function body.
