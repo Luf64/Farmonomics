@@ -142,8 +142,6 @@ func _ready() -> void:
     hotbar_ui.visible = false
     Json.load_game()
     apply_volume()
-    if inventory_ui:
-        inventory_ui.call_deferred("refresh_all_ui")
 
 func _input(event: InputEvent) -> void:
     if event.is_action_pressed("ui_cancel"):
