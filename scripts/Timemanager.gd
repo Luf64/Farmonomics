@@ -38,11 +38,12 @@ func _process(delta: float) -> void:
  
 func _advance_period() -> void:
 	Global.time["period_index"] = (int(Global.time["period_index"]) + 1) % PERIODS.size()
- 
+
 	if Global.time["period_index"] == 0:
 		Global.time["day"] = int(Global.time["day"]) + 1
+		print("DAY ADVANCED to: ", Global.time["day"])  # debug
 		day_changed.emit(Global.time["day"])
- 
+
 	period_changed.emit(get_current_period())
  
  
@@ -73,8 +74,6 @@ func get_weekday_string() -> String:
 	return WEEKDAYS[index]
  
  
-# Call after Global.time has just been set from a save file
-# (e.g. right after Json.load_game()).
 func load_time_from_global() -> void:
 	if typeof(Global.time) != TYPE_DICTIONARY:
 		Global.time = {}
@@ -115,11 +114,9 @@ func player_sleep() -> void:
 	var period = get_current_period()
 
 	if period == "morning" or period == "afternoon":
-		# 白天睡觉 -> 跳到当天晚上 (night, 18:00)
 		set_period("night")
 		print("The player took a nap, and time skipped to the evening. 18:00")
 	else:
-		# midnight 或 night 睡觉 -> 跳到第二天早上 (morning, 6:00)
 		Global.time["day"] = int(Global.time["day"]) + 1
 		set_period("morning")
 		day_changed.emit(Global.time["day"])

@@ -41,5 +41,5 @@ func _update_visuals() -> void:
 func _update_labels() -> void:
 	if has_node("time"):
 		$time.text = Timemanager.get_clock_time_string()
-	if has_node("date"):
-		$date.text = Timemanager.get_weekday_string()
+	if has_node("day"):
+		$day.text = Timemanager.get_weekday_string()
