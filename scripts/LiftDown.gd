@@ -6,5 +6,7 @@ func _ready() -> void:
 	play()
 
 func _on_finished() -> void:
+	Json.save_game()
 	get_tree().change_scene_to_file(Global.Room_1)
+	Json.load_game()
 	Global.hotbar_ui.visible = true

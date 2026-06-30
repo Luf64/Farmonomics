@@ -15,6 +15,20 @@ func _on_button_pressed() -> void:
 		return
 	else:
 		Global.player_name = username
+		Json.game["money"] = 100
+		Json.game["inventory"] = [
+			{},{},{},{},{},
+			{},{},{},{},{},
+			{},{},{},{},{},
+			{},{},{},{},{},
+			{},{},{},{},{},
+			{},{},{},{},{},
+		]
+		Json.game["scene"] = Global.Room_1
+		Global.money = 100
+		Json.save_game()
+		Global.inventory_ui.refresh()
+		Global.hotbar_ui.refresh()
 		Json.save_game()
 		$Control.visible = false
 		video_player.visible = true

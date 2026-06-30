@@ -17,8 +17,10 @@ func _process(delta: float) -> void:
 		open_menu()
 	
 	if player_in_range_tp_room1:
+		Json.save_game()
 		Global.current_room = "room3"
 		get_tree().change_scene_to_file(Global.Room_1)
+		Json.load_game()
 	
 	if interaction_menu and Input.is_action_just_pressed("1"):
 		crafting_ui_toggle()

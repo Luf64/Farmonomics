@@ -43,7 +43,7 @@ var current_popup_room0: Node = null
 
 var npc_positions = {}
 
-var time = {}
+var time = {} 
 
 var player_name: String = ""
 

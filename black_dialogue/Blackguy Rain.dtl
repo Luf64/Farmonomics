@@ -1,4 +1,12 @@
 join Black_guy rightmost
-Hello, it is raining now, you wanna come to my "house"?
-Just kidding
-I don't have house. Bye.
+Black_guy: Hello, it is raining now, you wanna come to my "house"?
+Black_guy: Just kidding
+Black_guy: I don't have house.
+Black_guy: So, do you have money?
+- Yes
+	if {player_money} >= 300.0:
+		jump Blackguy/
+	else:
+		Black_guy: You lied to me, you don't have any money at all!
+- No
+	Black_guy: Ok then, Bye.
