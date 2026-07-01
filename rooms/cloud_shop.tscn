@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://bp74gaf370ylx"]
 
 [ext_resource type="Texture2D" uid="uid://cuytooq8ngygl" path="res://Assets/sky shop.png" id="1_d8w2l"]
-[ext_resource type="Script" uid="uid://c0f6svmy8sbre" path="res://scripts/cloud_shop.gd" id="1_x52j8"]
+[ext_resource type="Script" uid="uid://d4jvbdgf3mjdp" path="res://scripts/cloud_shop.gd" id="1_x52j8"]
 [ext_resource type="Texture2D" uid="uid://bnhuy85ayedga" path="res://Assets/lift_1.png" id="3_8bfre"]
 [ext_resource type="Texture2D" uid="uid://csf11x3ws55a5" path="res://Assets/god.png" id="3_csdkr"]
 [ext_resource type="PackedScene" uid="uid://d0nwm3n4vavnb" path="res://rooms/scences - player.tscn" id="4_8bfre"]
 [ext_resource type="Texture2D" uid="uid://8yajqfih8vop" path="res://Assets/god_light.png" id="4_e088i"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="7_bssnt"]
 [ext_resource type="PackedScene" uid="uid://dx6e5oxpxyl8h" path="res://rooms/total_money.tscn" id="8_aty1m"]
+[ext_resource type="PackedScene" uid="uid://bq0q6boca1ckp" path="res://rooms/DateTime.tscn" id="9_aty1m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jf0mo"]
 size = Vector2(42.25, 20)
@@ -211,6 +212,8 @@ offset_bottom = 8.0
 theme_override_fonts/font = ExtResource("7_bssnt")
 
 [node name="Total_money" parent="Button2" unique_id=655785980 instance=ExtResource("8_aty1m")]
+
+[node name="CanvasLayer" parent="." unique_id=1060542103 instance=ExtResource("9_aty1m")]
 
 [connection signal="body_entered" from="god/speech1" to="." method="_on_speech_1_body_entered"]
 [connection signal="body_exited" from="god/speech1" to="." method="_on_speech_1_body_exited"]

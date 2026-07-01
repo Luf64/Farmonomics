@@ -1,60 +1,36 @@
 extends StaticBody2D
-
 var state = "day" #day night
 @onready var anim_player = $AnimationPlayer
 var change_state = false
 
-#var length_of_day = 600 #sec
-#var length_of_night = 300 #sec
-
-
-#func _ready() -> void:
-#	if state == "day":
-#		$ColorRect.color.a = 0
-#	if state == "night":
-#		$ColorRect.color.a = 150
-
 func _ready() -> void:
 	add_to_group("DayNightFilter")
 	$ColorRect.visible = false
+	# Sync to whatever period TimeManager is already in (handles scene reloads mid-day)
+	_on_period_changed(Timemanager.get_current_period())
+	Timemanager.period_changed.connect(_on_period_changed)
 
-#func _on_timer_timeout() -> void:
-#	if state == "day":
-#		state = "night"
-#	elif state == "night":
-#		state = "day"
-#		
-#	change_state = true
-	
-	
-#func _process(delta):
-#	if change_state == true:
-#		change_state = false
-#		if state == "day":
-#			change_to_day()
-#		elif state == "night":
-#			change_to_night()
+func _on_period_changed(period_name: String) -> void:
+	match period_name:
+		"morning", "afternoon":
+			change_to_day()
+		"night", "midnight":
+			change_to_night()
 
 func change_to_day() -> void:
+	if state == "day":
+		return
+	state = "day"
 	if anim_player.has_animation("nighttoday"):
 		anim_player.play("nighttoday")
-		print("Environment Filter: Switching to daytime....")
-		$ColorRect.visible = true
+	print("Environment Filter: Switching to daytime....")
+	$ColorRect.visible = false
 
 func change_to_night() -> void:
+	if state == "night":
+		return
+	state = "night"
 	if anim_player.has_animation("daytonight"):
 		anim_player.play("daytonight")
-		print("Environment Filter: Switching to nighttime....")
-		$ColorRect.visible = false
-
-
-
-#func change_to_day():
-#	$AnimationPlayer.play("nighttoday")
-#	$Timer.wait_time = length_of_day
-#	$Timer.start()
-	
-#func change_to_night():
-#	$AnimationPlayer.play("daytonight")
-#	$Timer.wait_time = length_of_night
-#	$Timer.start()
+	print("Environment Filter: Switching to nighttime....")
+	$ColorRect.visible = true
