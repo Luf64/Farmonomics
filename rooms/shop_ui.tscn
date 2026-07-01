@@ -11,8 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://j58gqqyiyw2s" path="res://Assets/Pic/Up.png" id="10_5jfs2"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="10_18nhq"]
 [ext_resource type="Texture2D" uid="uid://b82cpg5gsh13v" path="res://Assets/Pic/SrollButton.png" id="11_18nhq"]
+[ext_resource type="Texture2D" uid="uid://0fu7nqu4gd4" path="res://Assets/item/Milk/milk(Object).png" id="13_se1wg"]
 [ext_resource type="AudioStream" uid="uid://b3na8gxvl7xp5" path="res://Sound/buying-clinking-coins-4-468430.mp3" id="14_pigwl"]
+[ext_resource type="Texture2D" uid="uid://cf1a0efw77hlr" path="res://Assets/item/Chocolate/chocolate(Object).png" id="14_qi2nu"]
 [ext_resource type="Texture2D" uid="uid://bh77u11eh427p" path="res://Assets/item/Orange.png" id="14_qx7ap"]
+[ext_resource type="Texture2D" uid="uid://x81xnfrexvp" path="res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Red.png" id="15_slh2l"]
 [ext_resource type="PackedScene" uid="uid://tgrxpaqlgev2" path="res://rooms/inventory.tscn" id="16_se1wg"]
 [ext_resource type="Script" uid="uid://jgllpsu0f4o" path="res://scripts/buttonshop.gd" id="17_qi2nu"]
 
@@ -112,8 +115,8 @@ anchor_right = 0.41000003
 anchor_bottom = 0.92300004
 offset_left = 0.52799606
 offset_top = 12.136
-offset_right = -0.32003784
-offset_bottom = -72.104004
+offset_right = 15.679962
+offset_bottom = 191.896
 size_flags_horizontal = 3
 follow_focus = true
 
@@ -180,6 +183,18 @@ offset_bottom = 71.0
 texture = ExtResource("5_6a1ug")
 expand_mode = 1
 
+[node name="corn_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Corn_Button" unique_id=102377659]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Tomato_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=348468710]
 layout_mode = 2
 
@@ -200,9 +215,10 @@ texture = SubResource("CompressedTexture2D_pigwl")
 
 [node name="TextureRect10" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=27650684]
 layout_mode = 0
-offset_left = -2.0
-offset_right = 94.0
-offset_bottom = 94.0
+offset_left = 18.0
+offset_top = 18.0
+offset_right = 76.0
+offset_bottom = 74.0
 texture = ExtResource("5_pxn6d")
 expand_mode = 1
 
@@ -235,6 +251,18 @@ offset_bottom = 69.0
 mouse_filter = 2
 theme_override_font_sizes/font_size = 38
 text = "Tomato"
+
+[node name="tomato_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=28548801]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Orange_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=532372990]
 layout_mode = 2
@@ -293,6 +321,225 @@ theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "30"
 
+[node name="orange_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Orange_Button" unique_id=1598272039]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Milk_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=235413950]
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=840216417]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
+texture = ExtResource("2_qf5tm")
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=631440093]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = ExtResource("3_5wht7")
+
+[node name="Coin2" type="TextureRect" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=2092317624]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 21.0
+offset_right = 414.0
+offset_bottom = 71.0
+texture = ExtResource("4_pxn6d")
+expand_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=1174660577]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 88.0
+offset_top = 14.0
+offset_right = 204.0
+offset_bottom = 71.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 38
+text = "Milk"
+
+[node name="milk_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=1087197183]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 30.0
+offset_right = 394.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 38
+text = "20"
+
+[node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=1547925102]
+layout_mode = 0
+offset_left = 19.0
+offset_top = 22.0
+offset_right = 74.0
+offset_bottom = 71.0
+texture = ExtResource("13_se1wg")
+expand_mode = 1
+
+[node name="milk_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=533438807]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Chocolate_Button2" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1199024114]
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=1126412095]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
+texture = ExtResource("2_qf5tm")
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=36587786]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = ExtResource("3_5wht7")
+
+[node name="Coin2" type="TextureRect" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=948381274]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 21.0
+offset_right = 414.0
+offset_bottom = 71.0
+texture = ExtResource("4_pxn6d")
+expand_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=628066268]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 88.0
+offset_top = 14.0
+offset_right = 308.0
+offset_bottom = 71.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 38
+text = "Chocolate"
+
+[node name="chocolate_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=216809089]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 30.0
+offset_right = 394.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 38
+text = "20"
+
+[node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=1612217696]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 75.0
+offset_bottom = 75.0
+texture = ExtResource("14_qi2nu")
+expand_mode = 1
+
+[node name="chocolate_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=600583402]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Flower_RedButton3" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=271291166]
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=1303254809]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
+texture = ExtResource("2_qf5tm")
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=668225366]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = ExtResource("3_5wht7")
+
+[node name="Coin2" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=1092192217]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 21.0
+offset_right = 414.0
+offset_bottom = 71.0
+texture = ExtResource("4_pxn6d")
+expand_mode = 1
+
+[node name="TextEdit2" type="TextEdit" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=1708343469]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 88.0
+offset_top = 14.0
+offset_right = 312.0
+offset_bottom = 71.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 38
+text = "Red Flower"
+
+[node name="flower_red_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=993174498]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 30.0
+offset_right = 394.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 38
+text = "20"
+
+[node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=1482157651]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 75.0
+offset_bottom = 75.0
+texture = ExtResource("15_slh2l")
+expand_mode = 1
+
+[node name="flower_red_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=19504831]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="BuySound" type="AudioStreamPlayer2D" parent="." unique_id=1194135101]
 stream = ExtResource("14_pigwl")
 
@@ -316,4 +563,7 @@ script = ExtResource("17_qi2nu")
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Corn_Button" to="." method="_on_corn_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Tomato_Button" to="." method="_on_tomato_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Orange_Button" to="." method="_on_orange_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Milk_Button" to="." method="_on_milk_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Chocolate_Button2" to="." method="_on_chocolate_button_2_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Flower_RedButton3" to="." method="_on_flower_red_button_3_pressed"]
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
