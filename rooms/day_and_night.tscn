@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://ds4duhly7yaop"]
 
-[ext_resource type="Script" uid="uid://b1jap50cr72fx" path="res://scripts/day_and_night.gd" id="1_wsebf"]
+[ext_resource type="Script" uid="uid://bpa7l1dl4wmtc" path="res://scripts/day_and_night.gd" id="1_wsebf"]
 
 [sub_resource type="Animation" id="Animation_2qq27"]
 length = 10.0
