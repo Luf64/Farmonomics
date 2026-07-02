@@ -112,12 +112,17 @@ func set_period(period_name: String) -> void:
  
 func player_sleep() -> void:
 	var period = get_current_period()
-
 	if period == "morning" or period == "afternoon":
 		set_period("night")
+		last_slept_period = "night"
 		print("The player took a nap, and time skipped to the evening. 18:00")
 	else:
 		Global.time["day"] = int(Global.time["day"]) + 1
 		set_period("morning")
+		last_slept_period = "morning"
 		day_changed.emit(Global.time["day"])
-		print("The player had a long sleep, and time skipped ahead to the next morning. 6:00")
+
+var last_slept_period: String = ""  # the period we landed on after sleeping; "" = no restriction
+
+func can_player_sleep() -> bool:
+	return get_current_period() != last_slept_period

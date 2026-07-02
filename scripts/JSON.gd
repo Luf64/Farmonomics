@@ -1,4 +1,5 @@
 extends Node
+
 const SAVE_FILE = "res://scripts/main.json"
 var game = {
 	"username": "",
@@ -22,11 +23,14 @@ var game = {
 		{},{},{},{},{},
 		],
 }
+
 func save_plant(plant_data:Dictionary) -> void:
 	game["plant"] = plant_data
 	save_game()
+
 func load_plant() -> Dictionary:
 	return game.get("plant",{})
+
 func add_item(item:String, amount:int = 1) -> void:
 	for entry in game.inventory:
 		if not entry.is_empty() and entry["id"] == item:
@@ -39,6 +43,7 @@ func add_item(item:String, amount:int = 1) -> void:
 				save_game()
 				return
 	print("Inventory is completely full")
+
 func remove_item(item:String,amount:int=1) ->void:
 	for entry in game.inventory:
 		if not entry.is_empty() and entry["id"] == item:
@@ -47,11 +52,13 @@ func remove_item(item:String,amount:int=1) ->void:
 				game.inventory.erase(entry)
 			save_game()
 			return
+
 func get_item_count(item:String) -> int:
 	for entry in game.inventory:
 		if not entry.is_empty() and entry["id"] == item:
 			return  entry["amount"]
 	return 0
+
 func save_game():
 	Timemanager.save_time_to_global()
 	var player = get_tree().get_first_node_in_group("Player")
@@ -71,6 +78,7 @@ func save_game():
 	file.store_string(content)
 	file.close()
 	print("Game Saved")
+
 func load_game():
 	if not FileAccess.file_exists(SAVE_FILE):
 		print("File could not be found.")
@@ -112,10 +120,12 @@ func load_game():
 	Timemanager.load_time_from_global()
 	print("Game loaded sucessfully")
 	return true
+
 func apply_save():
 	var player = get_tree().get_first_node_in_group("Player")
 	if player != null:
 		player.global_position = Vector2(game.position.x,game.position.y)
+
 func money_change(x: int):
 	Global.money += x
 	game.money = Global.money
@@ -124,6 +134,7 @@ func money_change(x: int):
 	game.money_state.append(track)
 	if game.money_state.size() > 10:
 		game.money_state.remove_at(0)
+
 func get_inventory() -> Array:
 	return game.inventory
  

@@ -19,6 +19,7 @@ func _process(delta: float) -> void:
 	if player_in_range_tp_room1:
 		Json.save_game()
 		Global.current_room = "room3"
+		Global.coordinates = "Room3"
 		get_tree().change_scene_to_file(Global.Room_1)
 		Json.load_game()
 	
