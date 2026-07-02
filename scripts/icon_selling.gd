@@ -6,9 +6,9 @@ signal sell_pressed(slot_number: int)
 var sellable: bool = false
 
 func _on_icon_pressed() -> void:
-    if sellable:
-        sell_pressed.emit(slot_number)
+	if sellable:
+		sell_pressed.emit(slot_number)
 
 func set_price(value: int) -> void:
-    $price.text = str(value) if value > 0 else ""
-    $Coin2.visible = value > 0
+	$price.text = str(value) if value > 0 else ""
+	$Coin2.visible = value > 0

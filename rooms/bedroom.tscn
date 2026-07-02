@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://c47w002fpii6h"]
 
 [ext_resource type="Texture2D" uid="uid://ctqhis8ai6wmd" path="res://Assets/bedroomfloor.png" id="1_ahsja"]
-[ext_resource type="Script" uid="uid://bbrac0i88qh1x" path="res://scripts/bedroom.gd" id="1_cns8q"]
+[ext_resource type="Script" uid="uid://c24lne1m4u7em" path="res://scripts/bedroom.gd" id="1_cns8q"]
 [ext_resource type="Texture2D" uid="uid://cys8vxlfugsqn" path="res://Assets/plantbed.png" id="2_78uxc"]
+[ext_resource type="VideoStream" uid="uid://dhxwq2xjbufp1" path="res://video/blink eye.ogv" id="2_x1cj4"]
 [ext_resource type="Texture2D" uid="uid://deh4ipjm1ir0g" path="res://Assets/floormap.png" id="3_cns8q"]
 [ext_resource type="Texture2D" uid="uid://bv3s3asdhqp6i" path="res://Assets/Bed.png" id="4_csdsa"]
 [ext_resource type="Texture2D" uid="uid://do8h6afoqog2x" path="res://Assets/undergroundleder.png" id="5_g1xlt"]
@@ -11,7 +12,7 @@
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="9_cddlw"]
 [ext_resource type="PackedScene" uid="uid://dx6e5oxpxyl8h" path="res://rooms/total_money.tscn" id="10_ppjx1"]
 [ext_resource type="Texture2D" uid="uid://dmkmmumjiphu1" path="res://Assets/BKR3.png" id="11_cddlw"]
-[ext_resource type="Script" uid="uid://b0iovyc7f5aya" path="res://scripts/Underground.gd" id="12_ppjx1"]
+[ext_resource type="Script" uid="uid://3u3plyorjwb6" path="res://scripts/Underground.gd" id="12_ppjx1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i7dl8"]
 radius = 23.0
@@ -46,151 +47,161 @@ size = Vector2(70, 15)
 [node name="Node2D" type="Node2D" unique_id=684549265]
 script = ExtResource("1_cns8q")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=1504802304]
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1447108153]
+offset_left = -376.0
+offset_top = -168.0
+offset_right = 1544.0
+offset_bottom = 912.0
+stream = ExtResource("2_x1cj4")
+
+[node name="Bedroom" type="Node2D" parent="." unique_id=1772928469]
+
+[node name="Camera2D" type="Camera2D" parent="Bedroom" unique_id=1504802304]
 position = Vector2(576, 323)
 
-[node name="floor" type="Sprite2D" parent="." unique_id=1423775834]
+[node name="floor" type="Sprite2D" parent="Bedroom" unique_id=1423775834]
 position = Vector2(593.5469, 326.48438)
 scale = Vector2(4.216576, 5.217296)
 texture = ExtResource("1_ahsja")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=650234580]
+[node name="StaticBody2D" type="StaticBody2D" parent="Bedroom" unique_id=650234580]
 position = Vector2(1056, 553)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=290942623]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bedroom/StaticBody2D" unique_id=290942623]
 position = Vector2(-292, 10)
 shape = SubResource("CapsuleShape2D_i7dl8")
 
-[node name="plant" type="Sprite2D" parent="StaticBody2D/CollisionShape2D" unique_id=42542455]
+[node name="plant" type="Sprite2D" parent="Bedroom/StaticBody2D/CollisionShape2D" unique_id=42542455]
 position = Vector2(8, -1.9073486e-06)
 scale = Vector2(3, 3)
 texture = ExtResource("2_78uxc")
 
-[node name="map" type="Sprite2D" parent="." unique_id=843347264]
+[node name="map" type="Sprite2D" parent="Bedroom" unique_id=843347264]
 position = Vector2(592, 570)
 scale = Vector2(3.7348485, 3.901515)
 texture = ExtResource("3_cns8q")
 
-[node name="Area2D3" type="Area2D" parent="." unique_id=236870031]
+[node name="Area2D3" type="Area2D" parent="Bedroom" unique_id=236870031]
 position = Vector2(150, 266)
 scale = Vector2(6.9999995, 6.9999995)
 
-[node name="SleepArea" type="CollisionShape2D" parent="Area2D3" unique_id=66579768]
+[node name="SleepArea" type="CollisionShape2D" parent="Bedroom/Area2D3" unique_id=66579768]
 position = Vector2(48.999992, -1.0000029)
 shape = SubResource("RectangleShape2D_ppjx1")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1589565295]
+[node name="StaticBody2D2" type="StaticBody2D" parent="Bedroom" unique_id=1589565295]
 position = Vector2(150, 266)
 scale = Vector2(7, 7)
 
-[node name="CollisionShapeBed" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1705493321]
+[node name="CollisionShapeBed" type="CollisionShape2D" parent="Bedroom/StaticBody2D2" unique_id=1705493321]
 position = Vector2(43.749996, -1)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_87nnv")
 
-[node name="bed" type="Sprite2D" parent="StaticBody2D2/CollisionShapeBed" unique_id=551697182]
+[node name="bed" type="Sprite2D" parent="Bedroom/StaticBody2D2/CollisionShapeBed" unique_id=551697182]
 position = Vector2(0.25000346, -1.7142868)
 scale = Vector2(0.70000005, 0.70598006)
 texture = ExtResource("4_csdsa")
 
-[node name="Area2D2" type="Area2D" parent="." unique_id=1306356417]
+[node name="Area2D2" type="Area2D" parent="Bedroom" unique_id=1306356417]
 
-[node name="undergaound" type="CollisionShape2D" parent="Area2D2" unique_id=795327412]
+[node name="undergaound" type="CollisionShape2D" parent="Bedroom/Area2D2" unique_id=795327412]
 position = Vector2(759, 233)
 shape = SubResource("RectangleShape2D_cddlw")
 
-[node name="underground" type="Sprite2D" parent="Area2D2/undergaound" unique_id=406704940]
+[node name="underground" type="Sprite2D" parent="Bedroom/Area2D2/undergaound" unique_id=406704940]
 position = Vector2(2, -0.5)
 scale = Vector2(2, 2)
 texture = ExtResource("5_g1xlt")
 
-[node name="player" parent="." unique_id=1637164717 instance=ExtResource("7_csdsa")]
+[node name="player" parent="Bedroom" unique_id=1637164717 instance=ExtResource("7_csdsa")]
 position = Vector2(597, 577)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=750198928]
+[node name="Area2D" type="Area2D" parent="Bedroom" unique_id=750198928]
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=1841940465]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bedroom/Area2D" unique_id=1841940465]
 position = Vector2(593, 623)
 shape = SubResource("RectangleShape2D_csdsa")
 
-[node name="Button4" type="Button" parent="." unique_id=1899144333]
+[node name="Button4" type="Button" parent="Bedroom" unique_id=1899144333]
 visible = false
 offset_left = 1050.0
 offset_top = 330.0
 offset_right = 1140.0
 offset_bottom = 363.0
 
-[node name="Control" parent="Button4" unique_id=1060542103 instance=ExtResource("8_87nnv")]
+[node name="Control" parent="Bedroom/Button4" unique_id=1060542103 instance=ExtResource("8_87nnv")]
 
-[node name="Button2" type="Button" parent="." unique_id=50825525]
+[node name="Button2" type="Button" parent="Bedroom" unique_id=50825525]
 visible = false
 offset_right = 8.0
 offset_bottom = 8.0
 theme_override_fonts/font = ExtResource("9_cddlw")
 
-[node name="Total_money" parent="Button2" unique_id=655785980 instance=ExtResource("10_ppjx1")]
+[node name="Total_money" parent="Bedroom/Button2" unique_id=655785980 instance=ExtResource("10_ppjx1")]
 
-[node name="Bkr3" type="Sprite2D" parent="." unique_id=938432401]
+[node name="Bkr3" type="Sprite2D" parent="Bedroom" unique_id=938432401]
 visible = false
 z_index = -3
 position = Vector2(584, 296)
 scale = Vector2(0.6119791, 0.66944444)
 texture = ExtResource("11_cddlw")
 
-[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1372235663]
+[node name="StaticBody2D3" type="StaticBody2D" parent="Bedroom" unique_id=1372235663]
 position = Vector2(150, 266)
 scale = Vector2(7, 7)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1733417156]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bedroom/StaticBody2D3" unique_id=1733417156]
 position = Vector2(30.714283, -25.714285)
 shape = SubResource("SegmentShape2D_cddlw")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D3" unique_id=191551071]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Bedroom/StaticBody2D3" unique_id=191551071]
 position = Vector2(96.285706, -25.857143)
 scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("SegmentShape2D_cddlw")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1408569415]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Bedroom/StaticBody2D3" unique_id=1408569415]
 position = Vector2(39.57143, -17.000002)
 shape = SubResource("SegmentShape2D_ppjx1")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1714715721]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Bedroom/StaticBody2D3" unique_id=1714715721]
 position = Vector2(32.285713, 51.42857)
 shape = SubResource("SegmentShape2D_x1cj4")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1645380675]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Bedroom/StaticBody2D3" unique_id=1645380675]
 position = Vector2(68.14285, 51.571426)
 shape = SubResource("SegmentShape2D_x1cj4")
 
-[node name="InteractionPrompt" type="Label" parent="." unique_id=1993000730]
+[node name="InteractionPrompt" type="Label" parent="Bedroom" unique_id=1993000730]
 visible = false
 offset_left = 528.0
 offset_top = 233.00006
-offset_right = 589.0
+offset_right = 606.0
 offset_bottom = 256.00006
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("9_cddlw")
 theme_override_font_sizes/font_size = 16
 text = "【Press F】 "
 
-[node name="Bkr4" type="Sprite2D" parent="." unique_id=1931521347]
+[node name="Bkr4" type="Sprite2D" parent="Bedroom" unique_id=1931521347]
 z_index = -3
 position = Vector2(588, 374)
 texture = ExtResource("11_cddlw")
 
-[node name="Area2D4" type="Area2D" parent="." unique_id=1481864970]
+[node name="Area2D4" type="Area2D" parent="Bedroom" unique_id=1481864970]
 script = ExtResource("12_ppjx1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D4" unique_id=1964096484]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bedroom/Area2D4" unique_id=1964096484]
 position = Vector2(762, 213)
 shape = SubResource("RectangleShape2D_x1cj4")
 
-[node name="Underground" type="Marker2D" parent="." unique_id=923059870]
+[node name="Underground" type="Marker2D" parent="Bedroom" unique_id=923059870]
 position = Vector2(761, 262)
 
-[connection signal="body_entered" from="Area2D3" to="." method="_on_area_2d_3_body_entered"]
-[connection signal="body_exited" from="Area2D3" to="." method="_on_area_2d_3_body_exited"]
-[connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="Area2D4" to="Area2D4" method="_on_body_entered"]
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="body_entered" from="Bedroom/Area2D3" to="." method="_on_area_2d_3_body_entered"]
+[connection signal="body_exited" from="Bedroom/Area2D3" to="." method="_on_area_2d_3_body_exited"]
+[connection signal="body_entered" from="Bedroom/Area2D2" to="." method="_on_area_2d_2_body_entered"]
+[connection signal="area_entered" from="Bedroom/Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="body_entered" from="Bedroom/Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Bedroom/Area2D4" to="Bedroom/Area2D4" method="_on_body_entered"]
