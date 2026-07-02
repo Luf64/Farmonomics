@@ -63,5 +63,5 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		get_tree().change_scene_to_file(Global.Room_1)
 		Json.load_game()
 
-func _on_player_tree_entered() -> void:
-	pass # Replace with function body.
+func close_shop_ui() -> void:
+	current_shop = null

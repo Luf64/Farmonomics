@@ -100,7 +100,9 @@ var crops = {
 		"stock": 5,
 		"ideal": 5,
 		"rarity":5
-	},
+	}
+}
+var seed ={
 	"Seed_corn": {
 		"base_price": 1,
 		"current_price": 1,
