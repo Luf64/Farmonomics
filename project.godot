@@ -23,7 +23,7 @@ Date_Timer="*res://scripts/date_timer.gd"
 Json="*res://scripts/JSON.gd"
 Dialogic="*uid://b3gppbrrtuq5h"
 Timemanager="*res://scripts/Timemanager.gd"
-MarketStock="*uid://dy2w1tm5pw7sj"
+MarketStock="*res://scripts/Market_Stock.gd"
 
 [dialogic]
 
