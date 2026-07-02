@@ -9,9 +9,18 @@ extends Area2D
 var active_flowers: Array = []
 var spawn_timer: float = 0.0
 var time_until_next_spawn: float = 0.0
+var is_night:bool = false
 
 func _ready():
 	time_until_next_spawn = randf_range(spawn_interval_min, spawn_interval_max)
+	is_night = period_is_night(Timemanager.get_current_period())
+	Timemanager.period_changed.connect(on_period_changed)
+
+func on_period_changed(period_name:String) -> void:
+	is_night = period_is_night(period_name)
+	
+func period_is_night(period_name: String) -> bool:
+	return period_name == "night" or period_name == "midnight"
 
 func _physics_process(delta:float) -> void:
 	for i in range(active_flowers.size()-1,-1,-1):
@@ -19,7 +28,7 @@ func _physics_process(delta:float) -> void:
 			active_flowers.remove_at(i)
 	spawn_timer += delta
 	if spawn_timer >= time_until_next_spawn:
-		if active_flowers.size() < max_flowers:
+		if active_flowers.size() < max_flowers and not is_night:
 			spawn_flowers()
 		spawn_timer = 0.0
 		time_until_next_spawn = randf_range(spawn_interval_min, spawn_interval_max)

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c3ge72d2jsbe7"]
 
-[ext_resource type="Script" uid="uid://cesjf18lbdqpr" path="res://scripts/room_0.gd" id="1_oa8wf"]
+[ext_resource type="Script" uid="uid://csdvgmyume013" path="res://scripts/room_0.gd" id="1_oa8wf"]
 [ext_resource type="PackedScene" uid="uid://6d0x2y5wnhle" path="res://rooms/background.tscn" id="2_iv03q"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="3_c68s2"]
 [ext_resource type="AudioStream" uid="uid://bve2jgjox778n" path="res://Sound/Phua/delosound-meditation-relaxing-music-466470.mp3" id="4_853v1"]
@@ -16,7 +16,6 @@ position = Vector2(131.74648, 92.747246)
 scale = Vector2(2.014066, 2.0109673)
 
 [node name="Parallax2D" type="Parallax2D" parent="." unique_id=2070819624]
-visible = false
 repeat_size = Vector2(600, 0)
 repeat_times = 2
 ignore_camera_scroll = true
@@ -27,7 +26,6 @@ scale = Vector2(0.45, 0.45)
 texture = ExtResource("5_iv03q")
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="." unique_id=191081068]
-visible = false
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2" unique_id=589835659]
 motion_mirroring = Vector2(600, 0)

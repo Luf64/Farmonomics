@@ -29,14 +29,6 @@ scale = Vector2(6.2180853, 5.338749)
 texture = ExtResource("1_4rd18")
 stretch_mode = 5
 
-[node name="TextureButton" type="TextureButton" parent="Control" unique_id=439941384]
-layout_mode = 0
-offset_left = 812.0
-offset_top = 20.0
-offset_right = 856.0
-offset_bottom = 57.0
-ignore_texture_size = true
-
 [node name="GridContainer" type="GridContainer" parent="Control" unique_id=992410524]
 layout_mode = 0
 offset_left = 334.0
@@ -642,4 +634,11 @@ text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
 
-[connection signal="pressed" from="Control/TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="Button" type="Button" parent="." unique_id=1612164916]
+offset_left = 815.0
+offset_top = 23.0
+offset_right = 853.0
+offset_bottom = 54.0
+flat = true
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
