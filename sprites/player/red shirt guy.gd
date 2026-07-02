@@ -80,8 +80,10 @@ func _process(delta: float) -> void:
             $AnimationPlayer.play("idle_up")
     
     if Input.is_action_just_pressed("tab"):
+
         Global.open_inventory()
-        pass #open_inventory() -- Bug
+        
+
         
     move_and_slide()
     pass

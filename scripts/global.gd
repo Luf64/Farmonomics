@@ -180,12 +180,23 @@ func _ready() -> void:
 
 func _input(event: InputEvent) -> void:
     if event.is_action_pressed("ui_cancel"):
+        inventory_ui.visible = false
         if current_popup_room0 != null:
             current_popup_room0.queue_free()
             current_popup_room0 = null
+
         else:
             current_popup_room0 = setting_room.instantiate()
             get_tree().root.add_child(current_popup_room0)
+    elif event.is_action_pressed("tab"):
+        var current_scene = get_tree().current_scene.scene_file_path if get_tree().current_scene else ""
+        var forbidden_room = "res://rooms/room_0.tscn"
+        
+        if current_scene == forbidden_room:
+            return
+        if current_popup_room0 != null:
+            current_popup_room0.queue_free()
+            current_popup_room0 = null
 
 #open inventory
 func open_inventory() -> void:

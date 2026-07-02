@@ -633,12 +633,3 @@ theme_override_fonts/font = ExtResource("3_mx1hd")
 text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
-
-[node name="Button" type="Button" parent="." unique_id=1612164916]
-offset_left = 815.0
-offset_top = 23.0
-offset_right = 853.0
-offset_bottom = 54.0
-flat = true
-
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

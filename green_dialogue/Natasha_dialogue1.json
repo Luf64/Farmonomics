@@ -1,6 +1,6 @@
 [
-	{"name": "Natasha", "text": "Hello there!"},
-	{"name": "Natasha", "text": "Good heavens, there are still %d units of %s left on the market! Looks like we'll have to cut the price and sell them off!"},
-	{"name": "You", "text": "WHAT?!?!?"},
-	{"name": "Natasha", "text": "Yeah but I've got to get back home so, byebye"},
+    {"name": "Natasha", "text": "Hello there!"},
+    {"name": "Natasha", "text": "Good heavens, there are still %d units of %s left on the market! Looks like we'll have to cut the price and sell them off!"},
+    {"name": "You", "text": "WHAT?!?!?"},
+    {"name": "Natasha", "text": "Yeah but I've got to get back home so, byebye"},
 ]

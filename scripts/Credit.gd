@@ -3,10 +3,10 @@ extends CanvasLayer
 @onready var credits_scroll = $Control/Panel/ScrollContainer
 
 func _process(delta):
-	credits_scroll.scroll_vertical += 50 * delta
+    credits_scroll.scroll_vertical += 50 * delta
 
 func _ready() -> void:
-	$Control/Panel/ScrollContainer/VBoxContainer/RichTextLabel.text = "Credit 1 - Used Room 1
+    $Control/Panel/ScrollContainer/VBoxContainer/RichTextLabel.text = "Credit 1 - Used Room 1
 Song: sumu - apart [NCS Release]
 Music provided by NoCopyrightSounds
 Free Download/Stream: http://ncs.io/apart
@@ -37,4 +37,4 @@ Watch: http://ncs.lnk.to/FAVELAAT/youtube
 "
 
 func _on_close_button_pressed() -> void:
-	queue_free()
+    queue_free()

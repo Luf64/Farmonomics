@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cnseoys5gm037"]
 
-[ext_resource type="Script" uid="uid://bhgqdtb4vlo0v" path="res://green_dialogue/Natasha_dialog.gd" id="1_b5imt"]
+[ext_resource type="Script" uid="uid://l3any8qxbrp" path="res://green_dialogue/Natasha_dialog.gd" id="1_b5imt"]
 [ext_resource type="Texture2D" uid="uid://d2x6amdmv31oy" path="res://Assets/sprites/green hair girl face(1).png" id="2_8uq8b"]
 [ext_resource type="Texture2D" uid="uid://chjq5786ja8jd" path="res://Assets/Pic/shop ui1.png" id="3_1vkkm"]
 [ext_resource type="Texture2D" uid="uid://cebs6kf7xm0qh" path="res://Assets/Pic/390dc56603c15331eb9c329b0e4a4fb9-removebg-preview.png" id="4_j8eg7"]
