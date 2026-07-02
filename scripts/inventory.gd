@@ -50,8 +50,3 @@ func refresh() -> void:
         else:
             count.text = ""
             icon.texture = null
-
-
-
-func _on_button_pressed() -> void:
-    Global.inventory_ui.visible =!Global.inventory_ui.visible

@@ -8,121 +8,121 @@ const PERIOD_DURATION: float = 5.0 * 60.0  # 5 minutes in seconds
 const PERIODS: Array[String] = ["midnight", "morning", "afternoon", "night"]
  
 const PERIOD_HOUR_RANGE := {
-	"midnight": [0, 6],
-	"morning": [6, 12],
-	"afternoon": [12, 18],
-	"night": [18, 24],
+    "midnight": [0, 6],
+    "morning": [6, 12],
+    "afternoon": [12, 18],
+    "night": [18, 24],
 }
  
 const WEEKDAYS: Array[String] = [
-	"MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"
+    "MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"
 ]
  
  
 func _ready() -> void:
-	load_time_from_global()
-	add_to_group("TimeSystem")
+    load_time_from_global()
+    add_to_group("TimeSystem")
  
  
 func _process(delta: float) -> void:
-	if not Global.time.has("time_in_period"):
-		load_time_from_global()
-		return
+    if not Global.time.has("time_in_period"):
+        load_time_from_global()
+        return
  
-	Global.time["time_in_period"] += delta
+    Global.time["time_in_period"] += delta
  
-	if Global.time["time_in_period"] >= PERIOD_DURATION:
-		Global.time["time_in_period"] -= PERIOD_DURATION
-		_advance_period()
+    if Global.time["time_in_period"] >= PERIOD_DURATION:
+        Global.time["time_in_period"] -= PERIOD_DURATION
+        _advance_period()
  
  
 func _advance_period() -> void:
-	Global.time["period_index"] = (int(Global.time["period_index"]) + 1) % PERIODS.size()
+    Global.time["period_index"] = (int(Global.time["period_index"]) + 1) % PERIODS.size()
 
-	if Global.time["period_index"] == 0:
-		Global.time["day"] = int(Global.time["day"]) + 1
-		print("DAY ADVANCED to: ", Global.time["day"])  # debug
-		day_changed.emit(Global.time["day"])
+    if Global.time["period_index"] == 0:
+        Global.time["day"] = int(Global.time["day"]) + 1
+        print("DAY ADVANCED to: ", Global.time["day"])  # debug
+        day_changed.emit(Global.time["day"])
 
-	period_changed.emit(get_current_period())
+    period_changed.emit(get_current_period())
  
  
 func get_current_period() -> String:
-	return PERIODS[int(Global.time["period_index"])]
+    return PERIODS[int(Global.time["period_index"])]
  
  
 func get_period_progress() -> float:
-	return float(Global.time["time_in_period"]) / PERIOD_DURATION
+    return float(Global.time["time_in_period"]) / PERIOD_DURATION
  
  
 func get_clock_time_string() -> String:
-	var range = PERIOD_HOUR_RANGE[get_current_period()]
-	var start_hour: float = range[0]
-	var end_hour: float = range[1]
+    var range = PERIOD_HOUR_RANGE[get_current_period()]
+    var start_hour: float = range[0]
+    var end_hour: float = range[1]
  
-	var progress: float = get_period_progress()
-	var current_hour_float: float = lerp(start_hour, end_hour, progress)
+    var progress: float = get_period_progress()
+    var current_hour_float: float = lerp(start_hour, end_hour, progress)
  
-	var hour: int = int(current_hour_float)
-	var minute: int = int((current_hour_float - hour) * 60.0)
+    var hour: int = int(current_hour_float)
+    var minute: int = int((current_hour_float - hour) * 60.0)
  
-	return "%02d:%02d" % [hour, minute]
+    return "%02d:%02d" % [hour, minute]
  
  
 func get_weekday_string() -> String:
-	var index: int = (int(Global.time["day"]) - 1) % WEEKDAYS.size()
-	return WEEKDAYS[index]
+    var index: int = (int(Global.time["day"]) - 1) % WEEKDAYS.size()
+    return WEEKDAYS[index]
  
  
 func load_time_from_global() -> void:
-	if typeof(Global.time) != TYPE_DICTIONARY:
-		Global.time = {}
+    if typeof(Global.time) != TYPE_DICTIONARY:
+        Global.time = {}
  
-	if not Global.time.has("period_index"):
-		Global.time["period_index"] = 1  # default: start at "morning" (6:00)
-	else:
-		Global.time["period_index"] = int(Global.time["period_index"])
+    if not Global.time.has("period_index"):
+        Global.time["period_index"] = 1  # default: start at "morning" (6:00)
+    else:
+        Global.time["period_index"] = int(Global.time["period_index"])
  
-	if not Global.time.has("time_in_period"):
-		Global.time["time_in_period"] = 0.0
-	else:
-		Global.time["time_in_period"] = float(Global.time["time_in_period"])
+    if not Global.time.has("time_in_period"):
+        Global.time["time_in_period"] = 0.0
+    else:
+        Global.time["time_in_period"] = float(Global.time["time_in_period"])
  
-	if not Global.time.has("day"):
-		Global.time["day"] = 1
-	else:
-		Global.time["day"] = int(Global.time["day"])
+    if not Global.time.has("day"):
+        Global.time["day"] = 1
+    else:
+        Global.time["day"] = int(Global.time["day"])
  
  
 # Called by Json.save_game() right before it writes Global.time to disk.
 func save_time_to_global() -> void:
-	pass  # state already lives directly in Global.time as we go
+    pass  # state already lives directly in Global.time as we go
  
  
 # Optional: jump straight to a specific period (e.g. sleeping/skipping)
 func set_period(period_name: String) -> void:
-	var index: int = PERIODS.find(period_name)
-	if index == -1:
-		push_warning("Unknown period: " + period_name)
-		return
+    var index: int = PERIODS.find(period_name)
+    if index == -1:
+        push_warning("Unknown period: " + period_name)
+        return
  
-	Global.time["period_index"] = index
-	Global.time["time_in_period"] = 0.0
-	period_changed.emit(get_current_period())
+    Global.time["period_index"] = index
+    Global.time["time_in_period"] = 0.0
+    period_changed.emit(get_current_period())
  
 func player_sleep() -> void:
-	var period = get_current_period()
-	if period == "morning" or period == "afternoon":
-		set_period("night")
-		last_slept_period = "night"
-		print("The player took a nap, and time skipped to the evening. 18:00")
-	else:
-		Global.time["day"] = int(Global.time["day"]) + 1
-		set_period("morning")
-		last_slept_period = "morning"
-		day_changed.emit(Global.time["day"])
+    var period = get_current_period()
+    if period == "morning" or period == "afternoon":
+        set_period("night")
+        last_slept_period = "night"
+        print("The player took a nap, and time skipped to the evening. 18:00")
+    else:
+        Global.time["day"] = int(Global.time["day"]) + 1
+        set_period("morning")
+        last_slept_period = "morning"
+        day_changed.emit(Global.time["day"])
 
 var last_slept_period: String = ""  # the period we landed on after sleeping; "" = no restriction
 
 func can_player_sleep() -> bool:
-	return get_current_period() != last_slept_period
+    return get_current_period() != last_slept_period

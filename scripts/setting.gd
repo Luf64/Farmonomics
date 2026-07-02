@@ -41,7 +41,12 @@ func _on_save_pressed() -> void:
 func _on_close_pressed() -> void:
     Json.save_game()
     await get_tree().create_timer(1.0).timeout
-    get_tree().change_scene_to_file("res://rooms/room_0.tscn")
+    var current_scene = get_tree().current_scene.scene_file_path if get_tree().current_scene else ""
+    var target_room = "res://rooms/room_0.tscn"
+    if current_scene != target_room:
+        get_tree().change_scene_to_file(target_room)
+    else:
+        get_tree().quit()
     Global.hotbar_ui.visible = false
     Global.current_popup_room0 = null
     queue_free()
