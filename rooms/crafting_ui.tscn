@@ -569,6 +569,51 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 
+[node name="recipes" type="Panel" parent="Control" unique_id=960836857]
+layout_mode = 0
+offset_left = 772.0
+offset_top = 98.0
+offset_right = 1057.0
+offset_bottom = 145.0
+
+[node name="Label" type="Label" parent="Control/recipes" unique_id=2096105002]
+layout_mode = 0
+offset_right = 285.0
+offset_bottom = 47.0
+theme_override_fonts/font = ExtResource("4_xhjsy")
+theme_override_font_sizes/font_size = 34
+text = "RECIPES"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Control/recipes" unique_id=93252000]
+layout_mode = 0
+offset_top = 51.0
+offset_right = 285.0
+offset_bottom = 507.0
+
+[node name="Label" type="Label" parent="Control/recipes/Panel" unique_id=1077225886]
+layout_mode = 0
+offset_right = 282.0
+offset_bottom = 453.0
+text = "Red potion : Red flower
+(Enlarge body size)
+Blue potion : Blue flower + Purple 
+                         flower + Red flower + 
+                         White flower + Yellow 
+                         flower
+(Reset effect)
+Yellow potion : Chocolate +  Corn +  
+                            Flower white + Milk 
+(Speed boost I)
+White potion : Chocolate +  Corn +  
+                           Flower white + Milk + 
+                           Orange + Tomato
+(Speed boost II)
+Purple potion : Purple flower + 
+                            chocolate
+(Invisible)"
+
 [connection signal="pressed" from="Control/close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Control/inventory GridContainer/Slot1/Icon" to="Control/inventory GridContainer/Slot1" method="_on_icon_pressed"]
 [connection signal="pressed" from="Control/inventory GridContainer/Slot2/Icon" to="Control/inventory GridContainer/Slot2" method="_on_icon_pressed"]

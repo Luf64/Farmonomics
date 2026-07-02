@@ -16,8 +16,12 @@
 [ext_resource type="AudioStream" uid="uid://b3na8gxvl7xp5" path="res://Sound/buying-clinking-coins-4-468430.mp3" id="14_pigwl"]
 [ext_resource type="Texture2D" uid="uid://bh77u11eh427p" path="res://Assets/item/Orange.png" id="14_qx7ap"]
 [ext_resource type="Texture2D" uid="uid://x81xnfrexvp" path="res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Red.png" id="15_slh2l"]
+[ext_resource type="Texture2D" uid="uid://couc8uehle00h" path="res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Blue.png" id="16_q4qqb"]
+[ext_resource type="Texture2D" uid="uid://t8aipwjkgycy" path="res://Assets/room 4 (brewing room with selling it)/flowers/Flower_White.png" id="17_7wl1f"]
+[ext_resource type="Texture2D" uid="uid://coxhktuy2x6a2" path="res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Purple.png" id="18_d5uch"]
 [ext_resource type="Texture2D" uid="uid://tpuwkhcxd3iy" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Inventory(Changed).png" id="19_7wl1f"]
-[ext_resource type="Script" uid="uid://cuc8um1abbkh2" path="res://scripts/slot_1.gd" id="20_160h6"]
+[ext_resource type="Texture2D" uid="uid://dvdvjyo0omb42" path="res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Yellow.png" id="19_wsnes"]
+[ext_resource type="Script" uid="uid://kudt3pv7q0v" path="res://scripts/slot_1.gd" id="20_160h6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jfs2"]
 
@@ -115,7 +119,7 @@ anchor_bottom = 1.217
 offset_left = 42.0
 offset_top = 14.136
 offset_right = 15.679962
-offset_bottom = -279.61603
+offset_bottom = -272.61603
 size_flags_horizontal = 3
 follow_focus = true
 
@@ -510,7 +514,7 @@ theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "Red Flower"
 
-[node name="flower_red_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=993174498]
+[node name="flower_red_price_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=993174498]
 layout_mode = 0
 offset_left = 329.0
 offset_top = 30.0
@@ -530,6 +534,282 @@ texture = ExtResource("15_slh2l")
 expand_mode = 1
 
 [node name="flower_red_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=19504831]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Flower_BlueButton" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=645697724]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_BlueButton" unique_id=273382529]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
+texture = ExtResource("2_qf5tm")
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_BlueButton" unique_id=920753950]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = ExtResource("3_5wht7")
+
+[node name="Coin2" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_BlueButton" unique_id=1293107305]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 21.0
+offset_right = 414.0
+offset_bottom = 71.0
+texture = ExtResource("4_pxn6d")
+expand_mode = 1
+
+[node name="TextEdit2" type="Label" parent="ScrollContainer/VBoxContainer/Flower_BlueButton" unique_id=281662912]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 34.0
+offset_right = 310.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 38
+text = "Blue Flower"
+
+[node name="flower_blue_price_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_BlueButton" unique_id=1324891984]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 30.0
+offset_right = 394.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 38
+text = "20"
+
+[node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_BlueButton" unique_id=1831814953]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 75.0
+offset_bottom = 75.0
+texture = ExtResource("16_q4qqb")
+expand_mode = 1
+
+[node name="flower_blue_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_BlueButton" unique_id=1898021083]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Flower_WhiteButton" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=32012706]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_WhiteButton" unique_id=1214763937]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
+texture = ExtResource("2_qf5tm")
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_WhiteButton" unique_id=47318931]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = ExtResource("3_5wht7")
+
+[node name="Coin2" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_WhiteButton" unique_id=1453535878]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 21.0
+offset_right = 414.0
+offset_bottom = 71.0
+texture = ExtResource("4_pxn6d")
+expand_mode = 1
+
+[node name="TextEdit2" type="Label" parent="ScrollContainer/VBoxContainer/Flower_WhiteButton" unique_id=1728745110]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 34.0
+offset_right = 310.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 34
+text = "White Flower"
+
+[node name="flower_white_price_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_WhiteButton" unique_id=1719329950]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 30.0
+offset_right = 394.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 38
+text = "20"
+
+[node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_WhiteButton" unique_id=142147854]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 75.0
+offset_bottom = 75.0
+texture = ExtResource("17_7wl1f")
+expand_mode = 1
+
+[node name="flower_white_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_WhiteButton" unique_id=339433987]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Flower_PurpleButton" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1041463987]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_PurpleButton" unique_id=878750106]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
+texture = ExtResource("2_qf5tm")
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_PurpleButton" unique_id=1328831959]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = ExtResource("3_5wht7")
+
+[node name="Coin2" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_PurpleButton" unique_id=1964463833]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 21.0
+offset_right = 414.0
+offset_bottom = 71.0
+texture = ExtResource("4_pxn6d")
+expand_mode = 1
+
+[node name="TextEdit2" type="Label" parent="ScrollContainer/VBoxContainer/Flower_PurpleButton" unique_id=1273396911]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 34.0
+offset_right = 310.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 34
+text = "White Flower"
+
+[node name="flower_purple_price_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_PurpleButton" unique_id=2145610442]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 30.0
+offset_right = 394.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 38
+text = "20"
+
+[node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_PurpleButton" unique_id=1039478543]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 75.0
+offset_bottom = 75.0
+texture = ExtResource("18_d5uch")
+expand_mode = 1
+
+[node name="flower_purple_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_PurpleButton" unique_id=1556374280]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 60.0
+offset_right = 83.0
+offset_bottom = 83.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Flower_YellowButton" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1185414576]
+custom_minimum_size = Vector2(0, 90)
+layout_mode = 2
+
+[node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_YellowButton" unique_id=1466768199]
+modulate = Color(0.9008673, 0.6325211, 0.42756736, 1)
+layout_mode = 0
+offset_right = 426.0
+offset_bottom = 90.0
+texture = ExtResource("2_qf5tm")
+
+[node name="TextureRect3" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_YellowButton" unique_id=175371496]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 84.0
+offset_bottom = 84.0
+texture = ExtResource("3_5wht7")
+
+[node name="Coin2" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_YellowButton" unique_id=678228251]
+layout_mode = 0
+offset_left = 379.0
+offset_top = 21.0
+offset_right = 414.0
+offset_bottom = 71.0
+texture = ExtResource("4_pxn6d")
+expand_mode = 1
+
+[node name="TextEdit2" type="Label" parent="ScrollContainer/VBoxContainer/Flower_YellowButton" unique_id=465214581]
+layout_mode = 0
+offset_left = 86.0
+offset_top = 34.0
+offset_right = 310.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 34
+text = "White Flower"
+
+[node name="flower_yellow_price_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_YellowButton" unique_id=1464339452]
+layout_mode = 0
+offset_left = 329.0
+offset_top = 30.0
+offset_right = 394.0
+offset_bottom = 97.0
+theme_override_fonts/font = ExtResource("10_18nhq")
+theme_override_font_sizes/font_size = 38
+text = "20"
+
+[node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_YellowButton" unique_id=1346883625]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 18.0
+offset_right = 75.0
+offset_bottom = 75.0
+texture = ExtResource("19_wsnes")
+expand_mode = 1
+
+[node name="flower_yellow_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Flower_YellowButton" unique_id=1820877723]
 layout_mode = 0
 offset_left = 53.0
 offset_top = 60.0
@@ -1189,4 +1469,8 @@ scale = Vector2(5.657868, 4.387866)
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Milk_Button" to="." method="_on_milk_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Chocolate_Button2" to="." method="_on_chocolate_button_2_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Flower_RedButton3" to="." method="_on_flower_red_button_3_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Flower_BlueButton" to="." method="_on_flower_blue_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Flower_WhiteButton" to="." method="_on_flower_white_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Flower_PurpleButton" to="." method="_on_flower_purple_button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Flower_YellowButton" to="." method="_on_flower_yellow_button_pressed"]
 [connection signal="pressed" from="close_button" to="." method="_on_close_button_pressed"]

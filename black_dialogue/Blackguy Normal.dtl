@@ -4,7 +4,7 @@ Black_guy: Don't be afraid，I don't want to know where you're going or what you
 Black_guy: But you have money just give me.
 Black_guy: Now did you have money?
 - Yes
-    if {player_money} >= 300.0:
+    if {player_money} >= 3000.0:
         jump Blackguy/
     else:
         Black_guy: You lied to me, you don't have any money at all!

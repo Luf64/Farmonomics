@@ -130,36 +130,36 @@ var flower = {
 	"Flower_Red": {
 		"base_price": 1,
 		"current_price": 1,
-		"stock": 5,
-		"ideal": 5,
+		"stock": 10,
+		"ideal": 10,
 		"rarity":1
 	},
 	"Flower_Blue": {
 		"base_price": 1,
 		"current_price": 1,
-		"stock": 5,
-		"ideal": 5,
+		"stock": 10,
+		"ideal": 10,
 		"rarity":1
 	},
 	"Flower_Yellow": {
 		"base_price": 1,
 		"current_price": 1,
-		"stock": 5,
-		"ideal": 5,
+		"stock": 10,
+		"ideal": 10,
 		"rarity":1
 	},
 	"Flower_Purple": {
 		"base_price": 1,
 		"current_price": 1,
-		"stock": 5,
-		"ideal": 5,
+		"stock": 10,
+		"ideal": 10,
 		"rarity":1
 	},
 	"Flower_White": {
 		"base_price": 1,
 		"current_price": 1,
-		"stock": 5,
-		"ideal": 5,
+		"stock": 10,
+		"ideal": 10,
 		"rarity":1
 	}
 }

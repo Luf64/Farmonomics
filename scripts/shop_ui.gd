@@ -7,13 +7,21 @@ extends CanvasLayer
 @onready var orange_text = $ScrollContainer/VBoxContainer/Orange_Button/orange_price_label2
 @onready var milk_text = $ScrollContainer/VBoxContainer/Milk_Button/milk_price_label2
 @onready var chocolate_text = $ScrollContainer/VBoxContainer/Chocolate_Button2/chocolate_price_label2
-@onready var flower_red_text = $ScrollContainer/VBoxContainer/Flower_RedButton3/flower_red_price_label2
+@onready var flower_red_text = $ScrollContainer/VBoxContainer/Flower_RedButton3/flower_red_price_label
+@onready var flower_blue_text = $ScrollContainer/VBoxContainer/Flower_BlueButton/flower_blue_price_label
+@onready var flower_white_text = $ScrollContainer/VBoxContainer/Flower_WhiteButton/flower_white_price_label
+@onready var flower_purple_text = $ScrollContainer/VBoxContainer/Flower_PurpleButton/flower_purple_price_label
+@onready var flower_yellow_text = $ScrollContainer/VBoxContainer/Flower_YellowButton/flower_yellow_price_label
 @onready var corn_stock_text = $ScrollContainer/VBoxContainer/Corn_Button/corn_stock_label
 @onready var tomato_stock_text =$ScrollContainer/VBoxContainer/Tomato_Button/tomato_stock_label
 @onready var orange_stock_text = $ScrollContainer/VBoxContainer/Orange_Button/orange_stock_label
 @onready var milk_stock_text = $ScrollContainer/VBoxContainer/Milk_Button/milk_stock_label
 @onready var chocolate_stock_text = $ScrollContainer/VBoxContainer/Chocolate_Button2/chocolate_stock_label
 @onready var flower_red_stock_text = $ScrollContainer/VBoxContainer/Flower_RedButton3/flower_red_stock_label
+@onready var flower_blue_stock_text = $ScrollContainer/VBoxContainer/Flower_BlueButton/flower_blue_stock_label
+@onready var flower_white_stock_text = $ScrollContainer/VBoxContainer/Flower_WhiteButton/flower_white_stock_label
+@onready var flower_purple_stock_text = $ScrollContainer/VBoxContainer/Flower_PurpleButton/flower_purple_stock_label
+@onready var flower_yellow_stock_text = $ScrollContainer/VBoxContainer/Flower_YellowButton/flower_yellow_stock_label
 @onready var container = $inventory/GridContainer
 
 
@@ -88,6 +96,47 @@ func update_shop_display() -> void:
 		else:
 			flower_red_text.modulate = Color.WHITE
 		$ScrollContainer/VBoxContainer/Flower_RedButton3.disabled = Global.flower["Flower_Red"]["stock"] <= 0
+	
+	if Global.flower.has("Flower_Blue") and flower_blue_text:
+		var flower_blue_price = Global.flower["Flower_Blue"]["current_price"]
+		flower_blue_text.text = "%d" % flower_blue_price
+		flower_blue_stock_text.text = "%d" % Global.flower["Flower_Blue"]["stock"]
+		if current_money < flower_blue_price:
+			flower_blue_text.modulate = Color.RED
+		else:
+			flower_blue_text.modulate = Color.WHITE
+		$ScrollContainer/VBoxContainer/Flower_BlueButton.disabled = Global.flower["Flower_Blue"]["stock"] <= 0
+		
+	if Global.flower.has("Flower_White") and flower_white_text:
+		var flower_white_price = Global.flower["Flower_White"]["current_price"]
+		flower_white_text.text = "%d" % flower_white_price
+		flower_white_stock_text.text = "%d" % Global.flower["Flower_White"]["stock"]
+		if current_money < flower_white_price:
+			flower_white_text.modulate = Color.RED
+		else:
+			flower_white_text.modulate = Color.WHITE
+		$ScrollContainer/VBoxContainer/Flower_WhiteButton.disabled = Global.flower["Flower_White"]["stock"] <= 0
+	
+	if Global.flower.has("Flower_Purple") and flower_purple_text:
+		var flower_purple_price = Global.flower["Flower_Purple"]["current_price"]
+		flower_purple_text.text = "%d" % flower_purple_price
+		flower_purple_stock_text.text = "%d" % Global.flower["Flower_Purple"]["stock"]
+		if current_money < flower_purple_price:
+			flower_purple_text.modulate = Color.RED
+		else:
+			flower_purple_text.modulate = Color.WHITE
+		$ScrollContainer/VBoxContainer/Flower_PurpleButton.disabled = Global.flower["Flower_Purple"]["stock"] <= 0
+	
+	if Global.flower.has("Flower_Yellow") and flower_yellow_text:
+		var flower_yellow_price = Global.flower["Flower_Yellow"]["current_price"]
+		flower_yellow_text.text = "%d" % flower_yellow_price
+		flower_yellow_stock_text.text = "%d" % Global.flower["Flower_Yellow"]["stock"]
+		if current_money < flower_yellow_price:
+			flower_yellow_text.modulate = Color.RED
+		else:
+			flower_yellow_text.modulate = Color.WHITE
+		$ScrollContainer/VBoxContainer/Flower_YellowButton.disabled = Global.flower["Flower_Yellow"]["stock"] <= 0
+
 
 func _ready():
 	var slot = container.get_children()
@@ -206,6 +255,71 @@ func _on_flower_red_button_3_pressed() -> void:
 		Global.hotbar_ui.refresh()
 	else:
 		print("Not enough money to buy Flower Red")
+
+func _on_flower_blue_button_pressed() -> void:
+	var price = Global.flower["Flower_Blue"]["current_price"]
+	if Global.subtract_money(price):
+		if buy_sound:
+			buy_sound.play()
+		update_ui()
+		add_to_inventory("Flower_Blue")
+		Global.flower["Flower_Blue"]["stock"] -= 1
+		MarketStock.refresh_price("Flower_Blue")
+		update_shop_display()
+		Global.inventory_ui.refresh()
+		refresh()
+		Global.hotbar_ui.refresh()
+	else:
+		print("Not enough money to buy Flower Blue")
+
+func _on_flower_white_button_pressed() -> void:
+	var price = Global.flower["Flower_White"]["current_price"]
+	if Global.subtract_money(price):
+		if buy_sound:
+			buy_sound.play()
+		update_ui()
+		add_to_inventory("Flower_White")
+		Global.flower["Flower_White"]["stock"] -= 1
+		MarketStock.refresh_price("Flower_White")
+		update_shop_display()
+		Global.inventory_ui.refresh()
+		refresh()
+		Global.hotbar_ui.refresh()
+	else:
+		print("Not enough money to buy Flower White")
+
+func _on_flower_purple_button_pressed() -> void:
+	var price = Global.flower["Flower_Purple"]["current_price"]
+	if Global.subtract_money(price):
+		if buy_sound:
+			buy_sound.play()
+		update_ui()
+		add_to_inventory("Flower_Purple")
+		Global.flower["Flower_Purple"]["stock"] -= 1
+		MarketStock.refresh_price("Flower_Purple")
+		update_shop_display()
+		Global.inventory_ui.refresh()
+		refresh()
+		Global.hotbar_ui.refresh()
+	else:
+		print("Not enough money to buy Flower Purple")
+
+func _on_flower_yellow_button_pressed() -> void:
+	var price = Global.flower["Flower_Yellow"]["current_price"]
+	if Global.subtract_money(price):
+		if buy_sound:
+			buy_sound.play()
+		update_ui()
+		add_to_inventory("Flower_Yellow")
+		Global.flower["Flower_Yellow"]["stock"] -= 1
+		MarketStock.refresh_price("Flower_Yellow")
+		update_shop_display()
+		Global.inventory_ui.refresh()
+		refresh()
+		Global.hotbar_ui.refresh()
+	else:
+		print("Not enough money to buy Flower Yellow")
+
 func update_ui():
 	# Update money
 	if coin_label:
