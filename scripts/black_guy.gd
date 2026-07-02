@@ -84,7 +84,7 @@ func _on_dialogic_ended() -> void:
 
 func _on_dialogic_signal(argument: String):
 	if argument == "game_over_scene":
-		Global.money -= 300 # - money
+		Global.money -= 3000 # - money
 		
 		get_tree().change_scene_to_file("res://rooms/end_game.tscn")
 		
