@@ -34,10 +34,10 @@ var item_textures = {
 
 var recipes = {
 	"Flower_Red": "Potion_Red",
-	"Flower_Blue": "Potion_Blue",
-	"Flower_White": "Potion_White",
-	"Flower_Yellow": "Potion_Yellow",
-	"Flower_Purple": "Potion_Purple",
+	"Flower_Blue,Flower_Purple,Flower_Red,Flower_White,Flower_Yellow": "Potion_Blue",
+	"Chocolate,Corn,Flower_White,Milk,Orange,Tomato": "Potion_White",
+	"Chocolate,Corn,Flower_Yellow,Milk": "Potion_Yellow",
+	"Chocolate,Flower_Purple": "Potion_Purple",
 }
 
 func _ready() -> void:

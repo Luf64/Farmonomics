@@ -106,22 +106,22 @@ var seed ={
 	"Seed_corn": {
 		"base_price": 1,
 		"current_price": 1,
-		"stock": 25,
-		"ideal": 25,
+		"stock": 40,
+		"ideal": 60,
 		"rarity":1
 	},
 	"Seed_chocolate": {
-		"base_price": 1,
-		"current_price": 1,
-		"stock": 20,
-		"ideal": 20,
+		"base_price": 5,
+		"current_price": 5,
+		"stock": 25,
+		"ideal": 50,
 		"rarity": 2
 	},
 	"Seed_milk": {
-		"base_price": 1,
-		"current_price": 1,
+		"base_price": 10,
+		"current_price": 10,
 		"stock": 15,
-		"ideal": 15,
+		"ideal": 50,
 		"rarity": 3
 	}
 }
