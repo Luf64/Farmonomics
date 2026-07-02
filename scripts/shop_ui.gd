@@ -39,15 +39,15 @@ func update_shop_display() -> void:
 			tomato_text.modulate = Color.WHITE
 		$ScrollContainer/VBoxContainer/Tomato_Button.disabled = Global.crops["Tomato"]["stock"] <= 0
 
-	if Global.crops.has("Seed_corn") and corn_text:
-		var corn_price = Global.crops["Seed_corn"]["current_price"]
+	if Global.seed.has("Seed_corn") and corn_text:
+		var corn_price = Global.seed["Seed_corn"]["current_price"]
 		corn_text.text = "%d" % corn_price
-		corn_stock_text.text = "%d" % Global.crops["Seed_corn"]["stock"]
+		corn_stock_text.text = "%d" % Global.seed["Seed_corn"]["stock"]
 		if current_money < corn_price:
 			corn_text.modulate = Color.RED
 		else:
 			corn_text.modulate = Color.WHITE
-		$ScrollContainer/VBoxContainer/Corn_Button.disabled = Global.crops["Seed_corn"]["stock"] <= 0
+		$ScrollContainer/VBoxContainer/Corn_Button.disabled = Global.seed["Seed_corn"]["stock"] <= 0
 			
 	if Global.crops.has("Orange") and orange_text:
 		var orange_price = Global.crops["Orange"]["current_price"]
@@ -59,25 +59,25 @@ func update_shop_display() -> void:
 			orange_text.modulate = Color.WHITE
 		$ScrollContainer/VBoxContainer/Orange_Button.disabled = Global.crops["Orange"]["stock"] <= 0
 	
-	if Global.crops.has("Seed_milk") and milk_text:
-		var milk_price = Global.crops["Seed_milk"]["current_price"]
+	if Global.seed.has("Seed_milk") and milk_text:
+		var milk_price = Global.seed["Seed_milk"]["current_price"]
 		milk_text.text = "%d" % milk_price
-		milk_stock_text.text = "%d" % Global.crops["Seed_milk"]["stock"]
+		milk_stock_text.text = "%d" % Global.seed["Seed_milk"]["stock"]
 		if current_money < milk_price:
 			milk_text.modulate = Color.RED
 		else:
 			milk_text.modulate = Color.WHITE
-		$ScrollContainer/VBoxContainer/Milk_Button.disabled = Global.crops["Seed_milk"]["stock"] <= 0
+		$ScrollContainer/VBoxContainer/Milk_Button.disabled = Global.seed["Seed_milk"]["stock"] <= 0
 			
-	if Global.crops.has("Seed_chocolate") and chocolate_text:
-		var chocolate_price = Global.crops["Seed_chocolate"]["current_price"]
+	if Global.seed.has("Seed_chocolate") and chocolate_text:
+		var chocolate_price = Global.seed["Seed_chocolate"]["current_price"]
 		chocolate_text.text = "%d" % chocolate_price
-		chocolate_stock_text.text = "%d" % Global.crops["Seed_chocolate"]["stock"]
+		chocolate_stock_text.text = "%d" % Global.seed["Seed_chocolate"]["stock"]
 		if current_money < chocolate_price:
 			chocolate_text.modulate = Color.RED
 		else:
 			chocolate_text.modulate = Color.WHITE
-		$ScrollContainer/VBoxContainer/Chocolate_Button2.disabled = Global.crops["Seed_chocolate"]["stock"] <= 0
+		$ScrollContainer/VBoxContainer/Chocolate_Button2.disabled = Global.seed["Seed_chocolate"]["stock"] <= 0
 			
 	if Global.flower.has("Flower_Red") and flower_red_text:
 		var flower_red_price = Global.flower["Flower_Red"]["current_price"]
@@ -127,13 +127,13 @@ func _on_tomato_button_pressed():
 		print("Not enough money to buy Tomato")
 
 func _on_corn_button_pressed():
-	var price = Global.crops["Seed_corn"]["current_price"]
+	var price = Global.seed["Seed_corn"]["current_price"]
 	if Global.subtract_money(price):
 		if buy_sound:
 			buy_sound.play()
 		update_ui()
 		add_to_inventory("Seed_corn")
-		Global.crops["Seed_corn"]["stock"] -= 1 
+		Global.seed["Seed_corn"]["stock"] -= 1 
 		MarketStock.refresh_price("Seed_corn")
 		update_shop_display()
 		Global.inventory_ui.refresh()
@@ -159,13 +159,13 @@ func _on_orange_button_pressed():
 		print("Not enough money to buy Orange")
 
 func _on_milk_button_pressed() -> void:
-	var price = Global.crops["Seed_milk"]["current_price"]
+	var price = Global.seed["Seed_milk"]["current_price"]
 	if Global.subtract_money(price):
 		if buy_sound:
 			buy_sound.play()
 		update_ui()
 		add_to_inventory("Seed_milk")
-		Global.crops["Seed_milk"]["stock"] -= 1
+		Global.seed["Seed_milk"]["stock"] -= 1
 		MarketStock.refresh_price("Seed_milk")
 		update_shop_display()
 		Global.inventory_ui.refresh()
@@ -176,13 +176,13 @@ func _on_milk_button_pressed() -> void:
 
 
 func _on_chocolate_button_2_pressed() -> void:
-	var price = Global.crops["Seed_chocolate"]["current_price"]
+	var price = Global.seed["Seed_chocolate"]["current_price"]
 	if Global.subtract_money(price):
 		if buy_sound:
 			buy_sound.play()
 		update_ui()
 		add_to_inventory("Seed_chocolate")
-		Global.crops["Seed_chocolate"]["stock"] -= 1
+		Global.seed["Seed_chocolate"]["stock"] -= 1
 		MarketStock.refresh_price("Seed_chocolate")
 		update_shop_display()
 		Global.inventory_ui.refresh()
@@ -215,8 +215,6 @@ func add_to_inventory(item_name):
 	Json.add_item(item_name,1)
 	print("Bought: ", item_name)
 
-func _on_button_pressed() -> void:
-	pass # Replace with function body.
 	
 func _on_up_button_pressed():
 	$VSlider.value -= 1 
@@ -283,3 +281,12 @@ func refresh() -> void:
 		else:
 			count.text = ""
 			icon.texture = null
+
+
+func _on_close_button_pressed() -> void:
+	print("press")
+	var room = get_parent()
+	get_tree().paused = false
+	if room.has_method("close_shop_ui"):
+		room.close_shop_ui()
+	queue_free()

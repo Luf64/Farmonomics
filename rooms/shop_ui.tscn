@@ -16,7 +16,6 @@
 [ext_resource type="AudioStream" uid="uid://b3na8gxvl7xp5" path="res://Sound/buying-clinking-coins-4-468430.mp3" id="14_pigwl"]
 [ext_resource type="Texture2D" uid="uid://bh77u11eh427p" path="res://Assets/item/Orange.png" id="14_qx7ap"]
 [ext_resource type="Texture2D" uid="uid://x81xnfrexvp" path="res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Red.png" id="15_slh2l"]
-[ext_resource type="Script" uid="uid://cj71kd5cfy3dn" path="res://scripts/buttonshop.gd" id="17_qi2nu"]
 [ext_resource type="Texture2D" uid="uid://tpuwkhcxd3iy" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Inventory(Changed).png" id="19_7wl1f"]
 [ext_resource type="Script" uid="uid://kudt3pv7q0v" path="res://scripts/slot_1.gd" id="20_160h6"]
 
@@ -110,24 +109,22 @@ theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_18nhq")
 
 [node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=74725491]
 anchors_preset = -1
-anchor_left = 0.036000002
 anchor_top = 0.043
 anchor_right = 0.41000003
-anchor_bottom = 0.92300004
-offset_left = 0.52799606
-offset_top = 12.136
+anchor_bottom = 1.217
+offset_left = 42.0
+offset_top = 14.136
 offset_right = 15.679962
-offset_bottom = 241.896
+offset_bottom = -279.61603
 size_flags_horizontal = 3
 follow_focus = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=1653297746]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_stretch_ratio = 0.0
-theme_override_constants/separation = 90
 
 [node name="Corn_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1568633286]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
 
 [node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Corn_Button" unique_id=1798123748]
@@ -154,14 +151,13 @@ offset_bottom = 71.0
 texture = ExtResource("4_pxn6d")
 expand_mode = 1
 
-[node name="TextEdit2" type="TextEdit" parent="ScrollContainer/VBoxContainer/Corn_Button" unique_id=1388211373]
-self_modulate = Color(1, 1, 1, 0)
+[node name="TextEdit2" type="Label" parent="ScrollContainer/VBoxContainer/Corn_Button" unique_id=1942641042]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 14.0
-offset_right = 324.0
-offset_bottom = 71.0
-mouse_filter = 2
+offset_left = 86.0
+offset_top = 34.0
+offset_right = 322.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "Seed_corn"
 
@@ -198,6 +194,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Tomato_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=348468710]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
 
 [node name="TextureRect5" type="TextureRect" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=291282665]
@@ -243,14 +240,13 @@ theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "10"
 
-[node name="TextEdit" type="TextEdit" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=989515487]
-self_modulate = Color(1, 1, 1, 0)
+[node name="TextEdit" type="Label" parent="ScrollContainer/VBoxContainer/Tomato_Button" unique_id=1773300342]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 10.0
-offset_right = 244.0
-offset_bottom = 69.0
-mouse_filter = 2
+offset_left = 86.0
+offset_top = 30.0
+offset_right = 242.0
+offset_bottom = 89.0
+theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "Tomato"
 
@@ -267,6 +263,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Orange_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=532372990]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
 
 [node name="TextureRect10" type="TextureRect" parent="ScrollContainer/VBoxContainer/Orange_Button" unique_id=1892711613]
@@ -302,14 +299,13 @@ offset_bottom = 68.0
 texture = ExtResource("4_pxn6d")
 expand_mode = 1
 
-[node name="TextEdit4" type="TextEdit" parent="ScrollContainer/VBoxContainer/Orange_Button" unique_id=464275134]
-self_modulate = Color(1, 1, 1, 0)
+[node name="TextEdit4" type="Label" parent="ScrollContainer/VBoxContainer/Orange_Button" unique_id=143339322]
 layout_mode = 0
-offset_left = 90.0
-offset_top = 9.0
-offset_right = 233.0
-offset_bottom = 70.0
-mouse_filter = 2
+offset_left = 88.0
+offset_top = 29.0
+offset_right = 231.0
+offset_bottom = 90.0
+theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "Orange"
 
@@ -336,6 +332,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Milk_Button" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=235413950]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
 
 [node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=840216417]
@@ -362,14 +359,13 @@ offset_bottom = 71.0
 texture = ExtResource("4_pxn6d")
 expand_mode = 1
 
-[node name="TextEdit2" type="TextEdit" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=1174660577]
-self_modulate = Color(1, 1, 1, 0)
+[node name="TextEdit2" type="Label" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=140778016]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 14.0
-offset_right = 324.0
-offset_bottom = 71.0
-mouse_filter = 2
+offset_left = 86.0
+offset_top = 34.0
+offset_right = 322.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "Seed_milk"
 
@@ -406,6 +402,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Chocolate_Button2" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=1199024114]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
 
 [node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=1126412095]
@@ -432,15 +429,14 @@ offset_bottom = 71.0
 texture = ExtResource("4_pxn6d")
 expand_mode = 1
 
-[node name="TextEdit2" type="TextEdit" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=628066268]
-self_modulate = Color(1, 1, 1, 0)
+[node name="TextEdit2" type="Label" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=1502279018]
 layout_mode = 0
-offset_left = 87.0
-offset_top = 20.0
-offset_right = 382.0
-offset_bottom = 83.75
+offset_left = 86.0
+offset_top = 33.0
+offset_right = 381.0
+offset_bottom = 96.75
 scale = Vector2(0.8, 0.8)
-mouse_filter = 2
+theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "Seed_chocolate"
 
@@ -477,6 +473,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Flower_RedButton3" type="Button" parent="ScrollContainer/VBoxContainer" unique_id=271291166]
+custom_minimum_size = Vector2(0, 90)
 layout_mode = 2
 
 [node name="TextureRect6" type="TextureRect" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=1303254809]
@@ -503,14 +500,13 @@ offset_bottom = 71.0
 texture = ExtResource("4_pxn6d")
 expand_mode = 1
 
-[node name="TextEdit2" type="TextEdit" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=1708343469]
-self_modulate = Color(1, 1, 1, 0)
+[node name="TextEdit2" type="Label" parent="ScrollContainer/VBoxContainer/Flower_RedButton3" unique_id=834605032]
 layout_mode = 0
-offset_left = 88.0
-offset_top = 14.0
-offset_right = 312.0
-offset_bottom = 71.0
-mouse_filter = 2
+offset_left = 86.0
+offset_top = 34.0
+offset_right = 310.0
+offset_bottom = 91.0
+theme_override_fonts/font = ExtResource("10_18nhq")
 theme_override_font_sizes/font_size = 38
 text = "Red Flower"
 
@@ -547,16 +543,6 @@ vertical_alignment = 1
 
 [node name="BuySound" type="AudioStreamPlayer2D" parent="." unique_id=1194135101]
 stream = ExtResource("14_pigwl")
-
-[node name="Button" type="Button" parent="." unique_id=1986700641]
-z_index = 10
-offset_left = 1061.0
-offset_top = 20.000002
-offset_right = 1069.0
-offset_bottom = 28.451431
-scale = Vector2(5.657868, 4.387866)
-flat = true
-script = ExtResource("17_qi2nu")
 
 [node name="inventory" type="Control" parent="." unique_id=1273213646]
 layout_mode = 3
@@ -1186,6 +1172,14 @@ text = "99"
 horizontal_alignment = 1
 vertical_alignment = 2
 
+[node name="close_button" type="TextureButton" parent="." unique_id=141815288]
+z_index = 1
+offset_left = 1058.0
+offset_top = 18.999998
+offset_right = 1068.2512
+offset_bottom = 30.167158
+scale = Vector2(5.657868, 4.387866)
+
 [connection signal="pressed" from="UpButton" to="." method="_on_up_button_pressed"]
 [connection signal="pressed" from="DownButton" to="." method="_on_down_button_pressed"]
 [connection signal="value_changed" from="VSlider" to="." method="_on_v_slider_value_changed"]
@@ -1195,4 +1189,4 @@ vertical_alignment = 2
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Milk_Button" to="." method="_on_milk_button_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Chocolate_Button2" to="." method="_on_chocolate_button_2_pressed"]
 [connection signal="pressed" from="ScrollContainer/VBoxContainer/Flower_RedButton3" to="." method="_on_flower_red_button_3_pressed"]
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="close_button" to="." method="_on_close_button_pressed"]

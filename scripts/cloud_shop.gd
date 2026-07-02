@@ -31,6 +31,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if player_in_range_tp_room1 and Input.is_action_just_pressed("interaction"):
 		Global.current_room = "sky_shop"
+		Global.coordinates = "SkyShop"
 		get_tree().change_scene_to_file(Global.liftdown)
 	if player_in_range_god and Input.is_action_just_pressed("interaction"):
 		$god/interaction/Label.visible = false

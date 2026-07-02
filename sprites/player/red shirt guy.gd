@@ -86,12 +86,31 @@ func _process(delta: float) -> void:
 	move_and_slide()
 	pass
 @onready var Spawn_node = get_tree().root.find_child("Spawn", true, false)
-func teleport_to_spawn(): # this is coordinates teleport between room
+
+func teleport_to_spawn():
+	if Global.from_underground:
+		var underground_marker = get_tree().current_scene.get_node_or_null("Underground")
+		if underground_marker:
+			global_position = underground_marker.global_position
+		Global.current_room = "Bedroom"
+		Global.from_underground = false
+		return
+
 	if Global.current_room == "":
 		return
 	if Spawn_node == null:
 		Global.current_room = ""
 		return
+
+	if Global.current_room == "room1" and Global.coordinates != "":
+		var marker = Spawn_node.get_node_or_null(Global.coordinates)
+		if marker:
+			global_position = marker.global_position
+		else:
+			print("Marker not found:", Global.coordinates)
+		Global.coordinates = ""
+		return
+
 	if Global.room.has(Global.current_room):
 		var marker_name = Global.room[Global.current_room]["coordinates"]
 		var marker = Spawn_node.get_node_or_null(marker_name)
@@ -100,4 +119,3 @@ func teleport_to_spawn(): # this is coordinates teleport between room
 			Global.current_room = ""
 			return
 		global_position = marker.global_position
-	Global.current_room = Global.Room_1

@@ -27,6 +27,7 @@ func is_open_period(period_name: String) -> bool:
 func refill_all_stock() -> void:
 	refill_category(Global.crops)
 	refill_category(Global.flower)
+	refill_category(Global.seed)
 
 func refill_category(category:Dictionary)-> void:
 	for item_name in category.keys():
@@ -44,6 +45,7 @@ func refill_item(item:Dictionary) ->void:
 func update_all_price() -> void:
 	update_category_price(Global.crops)
 	update_category_price(Global.flower)
+	update_category_price(Global.seed)
 	Global.global_prices_changed.emit(snapshot())
 
 func update_category_price(category:Dictionary) -> void:
@@ -76,10 +78,13 @@ func find_item(item_name: String) -> Dictionary:
 		return Global.crops[item_name]
 	if Global.flower.has(item_name):
 		return Global.flower[item_name]
+	if Global.seed.has(item_name):
+		return Global.seed[item_name]
 	return{}
 func snapshot() -> Dictionary:
 	return{
 		"crops":Global.crops,
 		"flower":Global.flower,
+		"seed": Global.seed,
 		"market_open": market_open
 	}
