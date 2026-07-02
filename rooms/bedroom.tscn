@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c47w002fpii6h"]
 
 [ext_resource type="Texture2D" uid="uid://ctqhis8ai6wmd" path="res://Assets/bedroomfloor.png" id="1_ahsja"]
-[ext_resource type="Script" uid="uid://b7q0pio5fi8i" path="res://scripts/bedroom.gd" id="1_cns8q"]
+[ext_resource type="Script" uid="uid://bbrac0i88qh1x" path="res://scripts/bedroom.gd" id="1_cns8q"]
 [ext_resource type="Texture2D" uid="uid://cys8vxlfugsqn" path="res://Assets/plantbed.png" id="2_78uxc"]
 [ext_resource type="Texture2D" uid="uid://deh4ipjm1ir0g" path="res://Assets/floormap.png" id="3_cns8q"]
 [ext_resource type="Texture2D" uid="uid://bv3s3asdhqp6i" path="res://Assets/Bed.png" id="4_csdsa"]
@@ -11,7 +11,7 @@
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="9_cddlw"]
 [ext_resource type="PackedScene" uid="uid://dx6e5oxpxyl8h" path="res://rooms/total_money.tscn" id="10_ppjx1"]
 [ext_resource type="Texture2D" uid="uid://dmkmmumjiphu1" path="res://Assets/BKR3.png" id="11_cddlw"]
-[ext_resource type="Script" uid="uid://3u3plyorjwb6" path="res://scripts/Underground.gd" id="12_ppjx1"]
+[ext_resource type="Script" uid="uid://b0iovyc7f5aya" path="res://scripts/Underground.gd" id="12_ppjx1"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i7dl8"]
 radius = 23.0
