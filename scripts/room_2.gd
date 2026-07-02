@@ -10,58 +10,58 @@ var current_shop = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-    $PriceSystem.prices_changed.connect(_on_market_prices_changed)
-    pass # Replace with function body.
-    
+	$PriceSystem.prices_changed.connect(_on_market_prices_changed)
+	pass # Replace with function body.
+	
 func _on_market_prices_changed():
-    if price_change_sound:
-        price_change_sound.play()
-        print("[Sound Prompt] Price change sound effect")
-    #if the player currently has the shop interface open, immediately refresh the data for them.
-    if current_shop != null and current_shop.has_method("init_shop_data"):
-        current_shop.init_shop_data($PriceSystem.market_data)
+	if price_change_sound:
+		price_change_sound.play()
+		print("[Sound Prompt] Price change sound effect")
+	#if the player currently has the shop interface open, immediately refresh the data for them.
+	if current_shop != null and current_shop.has_method("init_shop_data"):
+		current_shop.init_shop_data($PriceSystem.market_data)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 
 func _process(delta: float) -> void:
-    if player_in_range and Input.is_action_just_pressed("interaction"):
-        if current_shop == null:
-            open_shop()
-        
+	if player_in_range and Input.is_action_just_pressed("interaction"):
+		if current_shop == null:
+			open_shop()
+		
 
 
 
 func open_shop():
-    current_shop = shop_scene.instantiate()
-    add_child(current_shop)
-    if price_system.prices_changed.is_connected(current_shop.init_shop_data):
-        price_system.prices_changed.disconnect(current_shop.init_shop_data)
-        price_system.prices_changed.connect(current_shop.init_shop_data.bind(price_system.market_data))
-    
-    if current_shop.has_method("init_shop_data"):
-        current_shop.init_shop_data(price_system.market_data)
-    $Shop_UI/PopSound.play()
-    $Shop_UI/ShopMenu.visible = true
-    get_tree().paused = true
-    Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-    pass
+	current_shop = shop_scene.instantiate()
+	add_child(current_shop)
+	if price_system.prices_changed.is_connected(current_shop.init_shop_data):
+		price_system.prices_changed.disconnect(current_shop.init_shop_data)
+		price_system.prices_changed.connect(current_shop.init_shop_data.bind(price_system.market_data))
+	
+	if current_shop.has_method("init_shop_data"):
+		current_shop.init_shop_data(price_system.market_data)
+	$Shop_UI/PopSound.play()
+	$Shop_UI/ShopMenu.visible = true
+	get_tree().paused = true
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	pass
 
 func _on_shop_ui_body_entered(body: Node2D) -> void:
-    if body.name == "player":
-        player_in_range = true
-        body.get_node_or_null("interaction").visible = true
+	if body.name == "player":
+		player_in_range = true
+		body.get_node_or_null("interaction").visible = true
 
 func _on_shop_ui_body_exited(body: Node2D) -> void:
-    if body.name == "player":
-        player_in_range = false
-        body.get_node("interaction").visible = false
-        
+	if body.name == "player":
+		player_in_range = false
+		body.get_node("interaction").visible = false
+		
 func _on_area_2d_body_entered(body: Node2D) -> void:
-    if body.name == "player":
-        Json.save_game()
-        Global.current_room = "room2"
-        get_tree().change_scene_to_file(Global.Room_1)
-        Json.load_game()
+	if body.name == "player":
+		Json.save_game()
+		Global.current_room = "room2"
+		get_tree().change_scene_to_file(Global.Room_1)
+		Json.load_game()
 
 func _on_player_tree_entered() -> void:
-    pass # Replace with function body.
+	pass # Replace with function body.

@@ -5,19 +5,20 @@
 [ext_resource type="Texture2D" uid="uid://oq1fv4cuxw6r" path="res://Assets/Pic/Block UI.png" id="2_qf5tm"]
 [ext_resource type="Texture2D" uid="uid://47h7e8afm4wk" path="res://Assets/Pic/item.png" id="3_5wht7"]
 [ext_resource type="Texture2D" uid="uid://bwwdwv8o6k0ps" path="res://Assets/Pic/coin 3.png" id="4_pxn6d"]
-[ext_resource type="Texture2D" uid="uid://b2ekphaaavof3" path="res://Assets/item/Corn/corn(Object).png" id="5_6a1ug"]
 [ext_resource type="Texture2D" uid="uid://bf6h3kbppacj0" path="res://Assets/item/Tomato.png" id="5_pxn6d"]
 [ext_resource type="Texture2D" uid="uid://cosj8xbnfj1b7" path="res://Assets/Pic/Down.png" id="9_2rj55"]
 [ext_resource type="Texture2D" uid="uid://j58gqqyiyw2s" path="res://Assets/Pic/Up.png" id="10_5jfs2"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="10_18nhq"]
+[ext_resource type="Texture2D" uid="uid://58jsmh17aeoj" path="res://Assets/item/Corn/corn_seed.png" id="10_slh2l"]
 [ext_resource type="Texture2D" uid="uid://b82cpg5gsh13v" path="res://Assets/Pic/SrollButton.png" id="11_18nhq"]
-[ext_resource type="Texture2D" uid="uid://0fu7nqu4gd4" path="res://Assets/item/Milk/milk(Object).png" id="13_se1wg"]
+[ext_resource type="Texture2D" uid="uid://cancu8qha3cje" path="res://Assets/item/Milk/milk_seed.png" id="13_q4qqb"]
+[ext_resource type="Texture2D" uid="uid://d0favsgfepkp1" path="res://Assets/item/Chocolate/chocolate_seed.png" id="14_7wl1f"]
 [ext_resource type="AudioStream" uid="uid://b3na8gxvl7xp5" path="res://Sound/buying-clinking-coins-4-468430.mp3" id="14_pigwl"]
-[ext_resource type="Texture2D" uid="uid://cf1a0efw77hlr" path="res://Assets/item/Chocolate/chocolate(Object).png" id="14_qi2nu"]
 [ext_resource type="Texture2D" uid="uid://bh77u11eh427p" path="res://Assets/item/Orange.png" id="14_qx7ap"]
 [ext_resource type="Texture2D" uid="uid://x81xnfrexvp" path="res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Red.png" id="15_slh2l"]
-[ext_resource type="PackedScene" uid="uid://tgrxpaqlgev2" path="res://rooms/inventory.tscn" id="16_se1wg"]
-[ext_resource type="Script" uid="uid://jgllpsu0f4o" path="res://scripts/buttonshop.gd" id="17_qi2nu"]
+[ext_resource type="Script" uid="uid://cj71kd5cfy3dn" path="res://scripts/buttonshop.gd" id="17_qi2nu"]
+[ext_resource type="Texture2D" uid="uid://tpuwkhcxd3iy" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Inventory(Changed).png" id="19_7wl1f"]
+[ext_resource type="Script" uid="uid://kudt3pv7q0v" path="res://scripts/slot_1.gd" id="20_160h6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jfs2"]
 
@@ -116,7 +117,7 @@ anchor_bottom = 0.92300004
 offset_left = 0.52799606
 offset_top = 12.136
 offset_right = 15.679962
-offset_bottom = 191.896
+offset_bottom = 241.896
 size_flags_horizontal = 3
 follow_focus = true
 
@@ -158,11 +159,11 @@ self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 88.0
 offset_top = 14.0
-offset_right = 204.0
+offset_right = 324.0
 offset_bottom = 71.0
 mouse_filter = 2
 theme_override_font_sizes/font_size = 38
-text = "Corn"
+text = "Seed_corn"
 
 [node name="corn_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Corn_Button" unique_id=894570448]
 layout_mode = 0
@@ -176,11 +177,12 @@ text = "20"
 
 [node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer/Corn_Button" unique_id=341919678]
 layout_mode = 0
-offset_left = 24.0
-offset_top = 22.0
-offset_right = 68.0
-offset_bottom = 71.0
-texture = ExtResource("5_6a1ug")
+offset_left = 13.0
+offset_top = 12.0
+offset_right = 57.0
+offset_bottom = 61.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("10_slh2l")
 expand_mode = 1
 
 [node name="corn_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Corn_Button" unique_id=102377659]
@@ -365,11 +367,11 @@ self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
 offset_left = 88.0
 offset_top = 14.0
-offset_right = 204.0
+offset_right = 324.0
 offset_bottom = 71.0
 mouse_filter = 2
 theme_override_font_sizes/font_size = 38
-text = "Milk"
+text = "Seed_milk"
 
 [node name="milk_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=1087197183]
 layout_mode = 0
@@ -383,11 +385,12 @@ text = "20"
 
 [node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=1547925102]
 layout_mode = 0
-offset_left = 19.0
-offset_top = 22.0
-offset_right = 74.0
-offset_bottom = 71.0
-texture = ExtResource("13_se1wg")
+offset_left = 3.0
+offset_top = 11.0
+offset_right = 58.0
+offset_bottom = 60.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("13_q4qqb")
 expand_mode = 1
 
 [node name="milk_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Milk_Button" unique_id=533438807]
@@ -432,13 +435,14 @@ expand_mode = 1
 [node name="TextEdit2" type="TextEdit" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=628066268]
 self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 88.0
-offset_top = 14.0
-offset_right = 308.0
-offset_bottom = 71.0
+offset_left = 87.0
+offset_top = 20.0
+offset_right = 382.0
+offset_bottom = 83.75
+scale = Vector2(0.8, 0.8)
 mouse_filter = 2
 theme_override_font_sizes/font_size = 38
-text = "Chocolate"
+text = "Seed_chocolate"
 
 [node name="chocolate_price_label2" type="Label" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=216809089]
 layout_mode = 0
@@ -452,11 +456,12 @@ text = "20"
 
 [node name="TextureRect8" type="TextureRect" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=1612217696]
 layout_mode = 0
-offset_left = 17.0
-offset_top = 18.0
-offset_right = 75.0
-offset_bottom = 75.0
-texture = ExtResource("14_qi2nu")
+offset_left = 0.9999995
+offset_top = 6.9999995
+offset_right = 59.0
+offset_bottom = 64.0
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("14_7wl1f")
 expand_mode = 1
 
 [node name="chocolate_stock_label" type="Label" parent="ScrollContainer/VBoxContainer/Chocolate_Button2" unique_id=600583402]
@@ -543,10 +548,6 @@ vertical_alignment = 1
 [node name="BuySound" type="AudioStreamPlayer2D" parent="." unique_id=1194135101]
 stream = ExtResource("14_pigwl")
 
-[node name="CanvasLayer" parent="." unique_id=948162825 instance=ExtResource("16_se1wg")]
-offset = Vector2(250, 0)
-transform = Transform2D(1, 0, 0, 1, 250, 0)
-
 [node name="Button" type="Button" parent="." unique_id=1986700641]
 z_index = 10
 offset_left = 1061.0
@@ -556,6 +557,634 @@ offset_bottom = 28.451431
 scale = Vector2(5.657868, 4.387866)
 flat = true
 script = ExtResource("17_qi2nu")
+
+[node name="inventory" type="Control" parent="." unique_id=1273213646]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 252.0
+offset_top = 3.0
+offset_right = 292.0
+offset_bottom = 43.0
+
+[node name="TextureRect" type="TextureRect" parent="inventory" unique_id=356875866]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 14.786
+anchor_top = 8.195001
+anchor_right = 14.786
+anchor_bottom = 8.195001
+offset_left = -332.44
+offset_top = -323.80002
+offset_right = -231.44
+offset_bottom = -220.80002
+scale = Vector2(6.2180853, 5.338749)
+texture = ExtResource("19_7wl1f")
+stretch_mode = 5
+
+[node name="GridContainer" type="GridContainer" parent="inventory" unique_id=1728985145]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 97.0
+offset_right = 820.0
+offset_bottom = 509.0
+columns = 5
+
+[node name="Slot1" type="Panel" parent="inventory/GridContainer" unique_id=1612213637]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot1" unique_id=1749009253]
+layout_mode = 0
+offset_top = -1.9999982
+offset_right = 88.0
+offset_bottom = 88.27938
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot1" unique_id=2036471876]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 54.0
+offset_right = 87.0
+offset_bottom = 75.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot2" type="Panel" parent="inventory/GridContainer" unique_id=1672712551]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot2" unique_id=20609585]
+layout_mode = 0
+offset_left = 96.0
+offset_top = -1.9999982
+offset_right = 184.0
+offset_bottom = 88.27938
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot2" unique_id=1599508388]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 54.0
+offset_right = 183.0
+offset_bottom = 75.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot3" type="Panel" parent="inventory/GridContainer" unique_id=1906022239]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot3" unique_id=1668866381]
+layout_mode = 0
+offset_left = 191.0
+offset_top = -1.9999982
+offset_right = 279.0
+offset_bottom = 88.27938
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot3" unique_id=1959375010]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 54.0
+offset_right = 278.0
+offset_bottom = 75.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot4" type="Panel" parent="inventory/GridContainer" unique_id=219861648]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot4" unique_id=1189494887]
+layout_mode = 0
+offset_left = 287.0
+offset_top = -1.9999982
+offset_right = 375.0
+offset_bottom = 88.27938
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot4" unique_id=169189317]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 54.0
+offset_right = 374.0
+offset_bottom = 75.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot5" type="Panel" parent="inventory/GridContainer" unique_id=1364294593]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot5" unique_id=1773644150]
+layout_mode = 0
+offset_left = 382.0
+offset_top = -0.9999981
+offset_right = 470.0
+offset_bottom = 89.27938
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot5" unique_id=764839965]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 55.0
+offset_right = 469.0
+offset_bottom = 76.780014
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot6" type="Panel" parent="inventory/GridContainer" unique_id=79604640]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot6" unique_id=1852512138]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 79.00001
+offset_right = 89.0
+offset_bottom = 169.27939
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot6" unique_id=258125434]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 135.0
+offset_right = 88.0
+offset_bottom = 156.78001
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot7" type="Panel" parent="inventory/GridContainer" unique_id=1759572450]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot7" unique_id=397398916]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 79.00001
+offset_right = 184.0
+offset_bottom = 169.27939
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot7" unique_id=488986863]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 135.0
+offset_right = 183.0
+offset_bottom = 156.78001
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot8" type="Panel" parent="inventory/GridContainer" unique_id=1897332658]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot8" unique_id=1739218385]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 80.00001
+offset_right = 279.0
+offset_bottom = 170.27939
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot8" unique_id=1906036446]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 136.0
+offset_right = 278.0
+offset_bottom = 157.78001
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot9" type="Panel" parent="inventory/GridContainer" unique_id=502724913]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot9" unique_id=1067243031]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 79.00001
+offset_right = 375.0
+offset_bottom = 169.27939
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot9" unique_id=1879434538]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 135.0
+offset_right = 374.0
+offset_bottom = 156.78001
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot10" type="Panel" parent="inventory/GridContainer" unique_id=1327852745]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot10" unique_id=1958907037]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 79.00001
+offset_right = 470.0
+offset_bottom = 169.27939
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot10" unique_id=2040425821]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 135.0
+offset_right = 469.0
+offset_bottom = 156.78001
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot11" type="Panel" parent="inventory/GridContainer" unique_id=2101926089]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot11" unique_id=1791877926]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 161.00002
+offset_right = 89.0
+offset_bottom = 251.27939
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot11" unique_id=1373907783]
+layout_mode = 0
+offset_left = 65.0
+offset_top = 217.0
+offset_right = 88.0
+offset_bottom = 238.78001
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot12" type="Panel" parent="inventory/GridContainer" unique_id=1292518710]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot12" unique_id=1915825230]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 161.00002
+offset_right = 183.0
+offset_bottom = 251.27939
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot12" unique_id=1866935549]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 217.0
+offset_right = 182.0
+offset_bottom = 238.78001
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot13" type="Panel" parent="inventory/GridContainer" unique_id=141909690]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot13" unique_id=2123355781]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 161.00002
+offset_right = 280.0
+offset_bottom = 251.27939
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot13" unique_id=567941014]
+layout_mode = 0
+offset_left = 256.0
+offset_top = 217.0
+offset_right = 279.0
+offset_bottom = 238.78001
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot14" type="Panel" parent="inventory/GridContainer" unique_id=2093800474]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot14" unique_id=48042306]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 161.00002
+offset_right = 375.0
+offset_bottom = 251.27939
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot14" unique_id=1088734528]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 217.0
+offset_right = 374.0
+offset_bottom = 238.78001
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot15" type="Panel" parent="inventory/GridContainer" unique_id=556431467]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot15" unique_id=1139369421]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 161.00002
+offset_right = 470.0
+offset_bottom = 251.27939
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot15" unique_id=1436390939]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 217.0
+offset_right = 469.0
+offset_bottom = 238.78001
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot16" type="Panel" parent="inventory/GridContainer" unique_id=789129249]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot16" unique_id=1716799192]
+layout_mode = 0
+offset_top = 242.00003
+offset_right = 88.0
+offset_bottom = 332.27942
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot16" unique_id=2084281852]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 298.0
+offset_right = 87.0
+offset_bottom = 319.78003
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot17" type="Panel" parent="inventory/GridContainer" unique_id=2028737481]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot17" unique_id=1424666833]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 243.0
+offset_right = 183.0
+offset_bottom = 333.2794
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot17" unique_id=1995939468]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 298.99997
+offset_right = 182.0
+offset_bottom = 320.78
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot18" type="Panel" parent="inventory/GridContainer" unique_id=1451167880]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot18" unique_id=234054716]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 242.0
+offset_right = 279.0
+offset_bottom = 332.2794
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot18" unique_id=1449654228]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 297.99997
+offset_right = 278.0
+offset_bottom = 319.78
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot19" type="Panel" parent="inventory/GridContainer" unique_id=1348859047]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot19" unique_id=911350758]
+layout_mode = 0
+offset_left = 286.0
+offset_top = 242.0
+offset_right = 374.0
+offset_bottom = 332.2794
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot19" unique_id=203275659]
+layout_mode = 0
+offset_left = 350.0
+offset_top = 297.99997
+offset_right = 373.0
+offset_bottom = 319.78
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot20" type="Panel" parent="inventory/GridContainer" unique_id=2023026394]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot20" unique_id=901567403]
+layout_mode = 0
+offset_left = 383.0
+offset_top = 242.0
+offset_right = 471.0
+offset_bottom = 332.2794
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot20" unique_id=1317697428]
+layout_mode = 0
+offset_left = 447.0
+offset_top = 297.99997
+offset_right = 470.0
+offset_bottom = 319.78
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot21" type="Panel" parent="inventory/GridContainer" unique_id=550899021]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot21" unique_id=231490426]
+layout_mode = 0
+offset_top = 324.0
+offset_right = 88.0
+offset_bottom = 414.2794
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot21" unique_id=839427388]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 379.99997
+offset_right = 87.0
+offset_bottom = 401.78
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot22" type="Panel" parent="inventory/GridContainer" unique_id=84756219]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot22" unique_id=961931255]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 323.0
+offset_right = 183.0
+offset_bottom = 413.2794
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot22" unique_id=1141415868]
+layout_mode = 0
+offset_left = 159.0
+offset_top = 378.99997
+offset_right = 182.0
+offset_bottom = 400.78
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot23" type="Panel" parent="inventory/GridContainer" unique_id=196372987]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot23" unique_id=719756811]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 324.0
+offset_right = 279.0
+offset_bottom = 414.2794
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot23" unique_id=1307701525]
+layout_mode = 0
+offset_left = 255.0
+offset_top = 379.99997
+offset_right = 278.0
+offset_bottom = 401.78
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot24" type="Panel" parent="inventory/GridContainer" unique_id=1452199521]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot24" unique_id=1580203790]
+layout_mode = 0
+offset_left = 287.0
+offset_top = 323.0
+offset_right = 375.0
+offset_bottom = 413.2794
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot24" unique_id=809433720]
+layout_mode = 0
+offset_left = 351.0
+offset_top = 378.99997
+offset_right = 374.0
+offset_bottom = 400.78
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Slot25" type="Panel" parent="inventory/GridContainer" unique_id=1640639411]
+layout_mode = 2
+script = ExtResource("20_160h6")
+
+[node name="Icon" type="TextureRect" parent="inventory/GridContainer/Slot25" unique_id=328767807]
+layout_mode = 0
+offset_left = 382.0
+offset_top = 324.0
+offset_right = 470.0
+offset_bottom = 414.2794
+scale = Vector2(0.97870654, 0.81967777)
+
+[node name="Count" type="Label" parent="inventory/GridContainer/Slot25" unique_id=823580721]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 379.99997
+offset_right = 469.0
+offset_bottom = 401.78
+scale = Vector2(0.97870654, 0.81967777)
+theme_override_fonts/font = ExtResource("10_18nhq")
+text = "99"
+horizontal_alignment = 1
+vertical_alignment = 2
 
 [connection signal="pressed" from="UpButton" to="." method="_on_up_button_pressed"]
 [connection signal="pressed" from="DownButton" to="." method="_on_down_button_pressed"]

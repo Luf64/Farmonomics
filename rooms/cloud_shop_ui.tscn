@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://bm80l6tus6fxn" path="res://scripts/CloudShopUi.gd" id="1_xaxjc"]
 [ext_resource type="Script" uid="uid://b6bsjirsqfgbp" path="res://scripts/icon_selling.gd" id="3_s1yx0"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="3_xaxjc"]
+[ext_resource type="Texture2D" uid="uid://bwwdwv8o6k0ps" path="res://Assets/Pic/coin 3.png" id="5_s1yx0"]
 
 [node name="CloudShopUi" type="CanvasLayer" unique_id=1810376039]
 script = ExtResource("1_xaxjc")
@@ -58,6 +59,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot1" unique_id=2116732755]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot1" unique_id=511626955]
 z_index = 1
 layout_mode = 0
@@ -91,6 +101,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot2" unique_id=769433877]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot2" unique_id=865168442]
 z_index = 1
@@ -126,6 +145,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot3" unique_id=100823561]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.000008
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot3" unique_id=972500185]
 z_index = 1
 layout_mode = 0
@@ -159,6 +187,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot4" unique_id=653819553]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot4" unique_id=1608936667]
 z_index = 1
@@ -194,6 +231,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot5" unique_id=1807139335]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot5" unique_id=322713772]
 z_index = 1
 layout_mode = 0
@@ -227,6 +273,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot6" unique_id=1810463655]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot6" unique_id=1456073912]
 z_index = 1
@@ -262,6 +317,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot7" unique_id=2043567471]
+layout_mode = 0
+offset_left = 19.99997
+offset_right = 54.99997
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot7" unique_id=664220286]
 z_index = 1
 layout_mode = 0
@@ -295,6 +359,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot8" unique_id=234963781]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot8" unique_id=1916551120]
 z_index = 1
@@ -330,6 +403,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot9" unique_id=1204731031]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot9" unique_id=1576878246]
 z_index = 1
 layout_mode = 0
@@ -363,6 +445,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot10" unique_id=352316900]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot10" unique_id=1513344606]
 z_index = 1
@@ -398,6 +489,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot11" unique_id=1287915063]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot11" unique_id=256364322]
 z_index = 1
 layout_mode = 0
@@ -431,6 +531,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot12" unique_id=95367413]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot12" unique_id=1528071714]
 z_index = 1
@@ -466,6 +575,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot13" unique_id=1203495839]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot13" unique_id=213279959]
 z_index = 1
 layout_mode = 0
@@ -499,6 +617,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot14" unique_id=1015849447]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot14" unique_id=1293260613]
 z_index = 1
@@ -534,6 +661,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot15" unique_id=2019187711]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot15" unique_id=1001747106]
 z_index = 1
 layout_mode = 0
@@ -567,6 +703,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot16" unique_id=373901641]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot16" unique_id=1552836952]
 z_index = 1
@@ -602,6 +747,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot17" unique_id=193775017]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot17" unique_id=1884046562]
 z_index = 1
 layout_mode = 0
@@ -635,6 +789,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot18" unique_id=844833630]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot18" unique_id=1390676530]
 z_index = 1
@@ -670,6 +833,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot19" unique_id=818071658]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot19" unique_id=300906814]
 z_index = 1
 layout_mode = 0
@@ -703,6 +875,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot20" unique_id=892106563]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot20" unique_id=478743186]
 z_index = 1
@@ -738,6 +919,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot21" unique_id=981200375]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot21" unique_id=671667887]
 z_index = 1
 layout_mode = 0
@@ -771,6 +961,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot22" unique_id=1925453693]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot22" unique_id=1971664869]
 z_index = 1
@@ -806,6 +1005,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot23" unique_id=1278329357]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot23" unique_id=1444743524]
 z_index = 1
 layout_mode = 0
@@ -840,6 +1048,15 @@ custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
 
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot24" unique_id=943630021]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
+
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot24" unique_id=1072003618]
 z_index = 1
 layout_mode = 0
@@ -873,6 +1090,15 @@ text = "99"
 custom_minimum_size = Vector2(92.5, 92.5)
 layout_mode = 2
 script = ExtResource("3_s1yx0")
+
+[node name="Coin2" type="TextureRect" parent="Control/GridContainer/Slot25" unique_id=631446489]
+layout_mode = 0
+offset_left = 20.0
+offset_right = 55.0
+offset_bottom = 50.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_s1yx0")
+expand_mode = 1
 
 [node name="Icon" type="TextureButton" parent="Control/GridContainer/Slot25" unique_id=2139188621]
 z_index = 1
