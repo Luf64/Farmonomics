@@ -21,7 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://coxhktuy2x6a2" path="res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Purple.png" id="18_d5uch"]
 [ext_resource type="Texture2D" uid="uid://tpuwkhcxd3iy" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Inventory(Changed).png" id="19_7wl1f"]
 [ext_resource type="Texture2D" uid="uid://dvdvjyo0omb42" path="res://Assets/room 4 (brewing room with selling it)/flowers/Flower_Yellow.png" id="19_wsnes"]
-[ext_resource type="Script" uid="uid://kudt3pv7q0v" path="res://scripts/slot_1.gd" id="20_160h6"]
+[ext_resource type="Script" uid="uid://cuc8um1abbkh2" path="res://scripts/slot_1.gd" id="20_160h6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5jfs2"]
 

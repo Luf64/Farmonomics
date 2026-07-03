@@ -73,14 +73,17 @@ shape = SubResource("RectangleShape2D_jf0mo")
 
 [node name="Label" type="Label" parent="god/speech1" unique_id=268937169]
 visible = false
-offset_left = -259.25
-offset_top = -50.250004
-offset_right = 342.75
-offset_bottom = -14.250004
+offset_left = -185.00002
+offset_top = -63.750004
+offset_right = 146.99998
+offset_bottom = 11.249996
 scale = Vector2(0.4, 0.4)
 theme_override_fonts/font = ExtResource("7_bssnt")
 theme_override_font_sizes/font_size = 35
-text = "Greeting Mortal from another world"
+text = "Greeting Mortal
+from another world"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="speech2" type="Area2D" parent="god" unique_id=1396147273]
 
@@ -90,16 +93,19 @@ shape = SubResource("RectangleShape2D_jf0mo")
 
 [node name="Label" type="Label" parent="god/speech2" unique_id=814626350]
 visible = false
-offset_left = -251.50002
-offset_top = -74.0
-offset_right = 2035.5
-offset_bottom = 483.0
+offset_left = -231.50002
+offset_top = -96.75
+offset_right = 2055.5
+offset_bottom = 600.25
 scale = Vector2(0.1, 0.1)
 theme_override_font_sizes/font_size = 100
-text = "In the world, most of the mortal are greedy, 
-so i grant you the permission to trade with me, 
-and i will grant you coins that you can use 
-in this world."
+text = "In the world, most of the mortal 
+are greedy, so i grant you the 
+permission to trade with me, 
+and i will grant you coins that 
+you can use in this world."
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="interaction" type="Area2D" parent="god" unique_id=841107794]
 scale = Vector2(0.5, 0.5)
@@ -134,7 +140,7 @@ text = "1. Talk to ...
 2. Trade with ..."
 
 [node name="lift" type="Sprite2D" parent="." unique_id=1349726948]
-position = Vector2(106, 519)
+position = Vector2(184, 523)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("3_8bfre")
 
@@ -185,7 +191,7 @@ position = Vector2(21, 96)
 shape = SubResource("RectangleShape2D_chgrx")
 
 [node name="player" parent="." unique_id=1637164717 instance=ExtResource("4_8bfre")]
-position = Vector2(260, 568)
+position = Vector2(341, 570)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2007946496]
 

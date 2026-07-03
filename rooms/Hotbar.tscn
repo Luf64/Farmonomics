@@ -1,9 +1,9 @@
-[gd_scene format=3 uid="uid://bqbmuq50yvi1d"]
+[gd_scene format=3 uid="uid://c74x453jxkj52"]
 
 [ext_resource type="Texture2D" uid="uid://bw1igms6fms2" path="res://Assets/Hotbar.jpeg" id="1_m7ov1"]
-[ext_resource type="Script" uid="uid://c107q55vslmlg" path="res://scripts/hotbar.gd" id="1_xn682"]
+[ext_resource type="Script" uid="uid://xxcx443nujfi" path="res://scripts/hotbar.gd" id="1_xn682"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="2_xn682"]
-[ext_resource type="Script" uid="uid://kudt3pv7q0v" path="res://scripts/slot_1.gd" id="3_2dfi8"]
+[ext_resource type="Script" uid="uid://cuc8um1abbkh2" path="res://scripts/slot_1.gd" id="3_2dfi8"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=292898355]
 script = ExtResource("1_xn682")
@@ -11,23 +11,27 @@ script = ExtResource("1_xn682")
 [node name="Control" type="Control" parent="." unique_id=754544204]
 layout_mode = 3
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 3.0
+offset_top = 77.0
+offset_right = 43.0
+offset_bottom = 117.0
 
 [node name="TextureRect" type="TextureRect" parent="Control" unique_id=1739978255]
 layout_mode = 0
-offset_left = 313.0
-offset_top = 543.0
-offset_right = 838.0
-offset_bottom = 646.0
+offset_left = 102.0
+offset_top = 45.0
+offset_right = 627.0
+offset_bottom = 148.0
+rotation = 1.5707964
 texture = ExtResource("1_m7ov1")
 
 [node name="GridContainer" type="GridContainer" parent="Control" unique_id=506058518]
 layout_mode = 0
-offset_left = 314.0
-offset_top = 543.0
-offset_right = 838.0
-offset_bottom = 646.0
+offset_left = 101.0
+offset_top = 45.0
+offset_right = 625.0
+offset_bottom = 148.0
+rotation = 1.5707964
 
 [node name="Slot1" type="Panel" parent="Control/GridContainer" unique_id=1129967074]
 layout_mode = 2
@@ -36,10 +40,11 @@ script = ExtResource("3_2dfi8")
 [node name="Count" type="Label" parent="Control/GridContainer/Slot1" unique_id=1894197926]
 z_index = 1
 layout_mode = 0
-offset_left = 76.0
-offset_top = 80.0
-offset_right = 97.0
-offset_bottom = 96.0
+offset_left = 82.0
+offset_top = 27.0
+offset_right = 103.0
+offset_bottom = 43.0
+rotation = -1.5707964
 theme_override_fonts/font = ExtResource("2_xn682")
 text = "99"
 horizontal_alignment = 1
@@ -48,10 +53,11 @@ vertical_alignment = 1
 [node name="Icon" type="TextureRect" parent="Control/GridContainer/Slot1" unique_id=1220127001]
 z_index = 1
 layout_mode = 0
-offset_left = 6.0
-offset_top = 7.0
-offset_right = 97.0
-offset_bottom = 96.0
+offset_left = 7.000004
+offset_top = 97.0
+offset_right = 98.0
+offset_bottom = 186.0
+rotation = -1.5707964
 
 [node name="ColorRect" type="ColorRect" parent="Control/GridContainer/Slot1" unique_id=757663221]
 visible = false
@@ -69,10 +75,11 @@ script = ExtResource("3_2dfi8")
 [node name="Count" type="Label" parent="Control/GridContainer/Slot2" unique_id=2005758320]
 z_index = 1
 layout_mode = 0
-offset_left = 182.0
-offset_top = 75.0
-offset_right = 203.0
-offset_bottom = 91.0
+offset_left = 187.0
+offset_top = 22.999985
+offset_right = 208.0
+offset_bottom = 38.999985
+rotation = -1.5707964
 theme_override_fonts/font = ExtResource("2_xn682")
 text = "99"
 horizontal_alignment = 1
@@ -81,10 +88,11 @@ vertical_alignment = 1
 [node name="Icon" type="TextureRect" parent="Control/GridContainer/Slot2" unique_id=1889141680]
 z_index = 1
 layout_mode = 0
-offset_left = 112.0
-offset_top = 2.0
-offset_right = 203.0
-offset_bottom = 91.0
+offset_left = 115.00001
+offset_top = 91.99999
+offset_right = 206.0
+offset_bottom = 180.99998
+rotation = -1.5707964
 
 [node name="ColorRect" type="ColorRect" parent="Control/GridContainer/Slot2" unique_id=41928168]
 visible = false
@@ -102,10 +110,11 @@ script = ExtResource("3_2dfi8")
 [node name="Count" type="Label" parent="Control/GridContainer/Slot3" unique_id=110293668]
 z_index = 1
 layout_mode = 0
-offset_left = 286.0
-offset_top = 73.0
-offset_right = 307.0
-offset_bottom = 89.0
+offset_left = 291.0
+offset_top = 19.999985
+offset_right = 312.0
+offset_bottom = 35.999985
+rotation = -1.5707964
 theme_override_fonts/font = ExtResource("2_xn682")
 text = "99"
 horizontal_alignment = 1
@@ -114,9 +123,11 @@ vertical_alignment = 1
 [node name="Icon" type="TextureRect" parent="Control/GridContainer/Slot3" unique_id=1346181722]
 z_index = 1
 layout_mode = 0
-offset_left = 216.0
-offset_right = 307.0
-offset_bottom = 89.0
+offset_left = 219.0
+offset_top = 89.99999
+offset_right = 310.0
+offset_bottom = 178.99998
+rotation = -1.5707964
 
 [node name="ColorRect" type="ColorRect" parent="Control/GridContainer/Slot3" unique_id=1679740444]
 visible = false
@@ -134,10 +145,11 @@ script = ExtResource("3_2dfi8")
 [node name="Count" type="Label" parent="Control/GridContainer/Slot4" unique_id=1675589510]
 z_index = 1
 layout_mode = 0
-offset_left = 391.0
-offset_top = 68.0
-offset_right = 412.0
-offset_bottom = 84.0
+offset_left = 397.0
+offset_top = 14.999985
+offset_right = 418.0
+offset_bottom = 30.999985
+rotation = -1.5707964
 theme_override_fonts/font = ExtResource("2_xn682")
 text = "99"
 horizontal_alignment = 1
@@ -146,10 +158,11 @@ vertical_alignment = 1
 [node name="Icon" type="TextureRect" parent="Control/GridContainer/Slot4" unique_id=46359879]
 z_index = 1
 layout_mode = 0
-offset_left = 321.0
-offset_top = -5.0
-offset_right = 412.0
-offset_bottom = 84.0
+offset_left = 324.0
+offset_top = 84.99999
+offset_right = 415.0
+offset_bottom = 173.99998
+rotation = -1.5707964
 
 [node name="ColorRect" type="ColorRect" parent="Control/GridContainer/Slot4" unique_id=1236861264]
 visible = false
@@ -167,10 +180,11 @@ script = ExtResource("3_2dfi8")
 [node name="Count" type="Label" parent="Control/GridContainer/Slot5" unique_id=2028802410]
 z_index = 1
 layout_mode = 0
-offset_left = 496.0
-offset_top = 65.0
-offset_right = 517.0
-offset_bottom = 81.0
+offset_left = 501.0
+offset_top = 9.999985
+offset_right = 522.0
+offset_bottom = 25.999985
+rotation = -1.5707964
 theme_override_fonts/font = ExtResource("2_xn682")
 text = "99"
 horizontal_alignment = 1
@@ -179,10 +193,11 @@ vertical_alignment = 1
 [node name="Icon" type="TextureRect" parent="Control/GridContainer/Slot5" unique_id=294735055]
 z_index = 1
 layout_mode = 0
-offset_left = 426.0
-offset_top = -8.0
-offset_right = 517.0
-offset_bottom = 81.0
+offset_left = 429.0
+offset_top = 81.99999
+offset_right = 520.0
+offset_bottom = 170.99998
+rotation = -1.5707964
 
 [node name="ColorRect" type="ColorRect" parent="Control/GridContainer/Slot5" unique_id=1917926605]
 visible = false

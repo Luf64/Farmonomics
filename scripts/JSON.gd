@@ -1,140 +1,188 @@
 extends Node
 
-const SAVE_FILE = "res://scripts/main.json"
+const SAVE_FILE = "user://main.json"
 var game = {
-	"username": "",
-	"id": "",
-	"scene": "res://rooms/room_0.tscn",
-	"position": {"x":0,"y":0},
-	"time":{},
-	"money": 100,
-	"money_state": [],
-	"plant":{},
-	"volume": 100.0,
-	"is_muted": false,
-	"inventory": [
-		#5 Slots
-		{},{},{},{},{},
-		#6-30 Slots
-		{},{},{},{},{},
-		{},{},{},{},{},
-		{},{},{},{},{},
-		{},{},{},{},{},
-		{},{},{},{},{},
-		],
+    "username": "",
+    "id": "",
+    "scene": "res://rooms/room_0.tscn",
+    "position": {"x":0,"y":0},
+    "time":{},
+    "money": 100,
+    "money_state": [],
+    "plant":{},
+    "volume": 100.0,
+    "is_muted": false,
+    "inventory": [
+        #5 Slots
+        {},{},{},{},{},
+        #6-30 Slots
+        {},{},{},{},{},
+        {},{},{},{},{},
+        {},{},{},{},{},
+        {},{},{},{},{},
+        {},{},{},{},{},
+        ],
 }
 
+func new_game():
+    game = {
+        "username": "",
+        "id": "",
+        "scene": "res://rooms/room_0.tscn",
+        "position": {"x":0,"y":0},
+        "time":{},
+        "money": 100,
+        "money_state": [],
+        "plant":{},
+        "volume": 100.0,
+        "is_muted": false,
+        "inventory": [
+            {},{},{},{},{},
+            {},{},{},{},{},
+            {},{},{},{},{},
+            {},{},{},{},{},
+            {},{},{},{},{},
+            {},{},{},{},{},
+        ],
+    }
+    Global.money = 100
+    Global.player_name = ""
+    Global.time = {}
+    Global.current_room = ""
+    Global.coordinates = ""
+    for key in Global.crops:
+        Global.crops[key]["stock"] = Global.crops[key]["ideal"]
+        Global.crops[key]["current_price"] = Global.crops[key]["base_price"]
+    for key in Global.flower:
+        Global.flower[key]["stock"] = Global.flower[key]["ideal"]
+        Global.flower[key]["current_price"] = Global.flower[key]["base_price"]
+    for key in Global.seed:
+        Global.seed[key]["stock"] = Global.seed[key]["ideal"]
+        Global.seed[key]["current_price"] = Global.seed[key]["base_price"]
+    save_game()
 func save_plant(plant_data:Dictionary) -> void:
-	game["plant"] = plant_data
-	save_game()
+    game["plant"] = plant_data
+    save_game()
 
 func load_plant() -> Dictionary:
-	return game.get("plant",{})
+    return game.get("plant",{})
 
 func add_item(item:String, amount:int = 1) -> void:
-	for entry in game.inventory:
-		if not entry.is_empty() and entry["id"] == item:
-			entry["amount"] += amount
-			save_game()
-			return
-	for x in range(game.inventory.size()):
-		if game.inventory[x].is_empty():
-				game.inventory[x] = {"id":item,"amount":amount}
-				save_game()
-				return
-	print("Inventory is completely full")
+    for entry in game.inventory:
+        if not entry.is_empty() and entry["id"] == item:
+            entry["amount"] += amount
+            save_game()
+            return
+    for x in range(game.inventory.size()):
+        if game.inventory[x].is_empty():
+                game.inventory[x] = {"id":item,"amount":amount}
+                save_game()
+                return
+    print("Inventory is completely full")
 
 func remove_item(item:String,amount:int=1) ->void:
-	for entry in game.inventory:
-		if not entry.is_empty() and entry["id"] == item:
-			entry["amount"] -= amount
-			if entry["amount"] <=0:
-				game.inventory.erase(entry)
-			save_game()
-			return
+    for entry in game.inventory:
+        if not entry.is_empty() and entry["id"] == item:
+            entry["amount"] -= amount
+            if entry["amount"] <=0:
+                game.inventory.erase(entry)
+            save_game()
+            return
 
 func get_item_count(item:String) -> int:
-	for entry in game.inventory:
-		if not entry.is_empty() and entry["id"] == item:
-			return  entry["amount"]
-	return 0
+    for entry in game.inventory:
+        if not entry.is_empty() and entry["id"] == item:
+            return  entry["amount"]
+    return 0
 
 func save_game():
-	Timemanager.save_time_to_global()
-	var player = get_tree().get_first_node_in_group("Player")
-	if player != null:
-		game.position.x = player.global_position.x
-		game.position.y = player.global_position.y
-	game.scene = get_tree().current_scene.scene_file_path
-	game["money"] = Global.money
-	game["crops"] = Global.crops
-	game["flower"] = Global.flower
-	game["volume"] = Global.sound_percent
-	game["is_muted"] = Global.is_muted
-	game["username"] = Global.player_name
-	game["time"] = Global.time
-	var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
-	var content = JSON.stringify(game)
-	file.store_string(content)
-	file.close()
-	print("Game Saved")
+    Timemanager.save_time_to_global()
+    var player = get_tree().get_first_node_in_group("Player")
+    if player != null:
+        game.position.x = player.global_position.x
+        game.position.y = player.global_position.y
+    game.scene = get_tree().current_scene.scene_file_path
+    game["money"] = Global.money
+    game["crops"] = Global.crops
+    game["flower"] = Global.flower
+    game["seed"] = Global.seed
+    game["volume"] = Global.sound_percent
+    game["is_muted"] = Global.is_muted
+    game["username"] = Global.player_name
+    game["time"] = Global.time
+    var file = FileAccess.open(SAVE_FILE, FileAccess.WRITE)
+    var content = JSON.stringify(game)
+    file.store_string(content)
+    file.close()
+    print("Game Saved")
 
 func load_game():
-	if not FileAccess.file_exists(SAVE_FILE):
-		print("File could not be found.")
-		return false
-	var file = FileAccess.open(SAVE_FILE, FileAccess.READ)
-	var content = file.get_as_text()
-	file.close()
-	var parse = JSON.parse_string(content)
-	if parse == null:
-		print("Save file corrupted")
-		return false
-	game = parse
-	if not game.has("inventory"):
-		game["inventory"] = []
-	if not game.has("money"):
-		game["money"] = 100
-	if game.has("username"):
-		Global.player_name = game["username"]
-	if game.has("money"):
-		Global.money = int(game["money"])
-	if game.has("time"):
-		Global.time = game["time"]
-	if game.has("crops"):
-		Global.crops = game["crops"]
-	if game.has("flower"):
-		Global.flower = game["flower"]
-	if game.has("scene"):
-		print("Loaded scene:",game["scene"])
-	if game.has("position"):
-		print("Loaded position:",game["position"])
-	if game.has("volume"):
-		Global.sound_percent = float(game["volume"])
-	if game.has("is_muted"):
-		Global.is_muted = bool(game["is_muted"])
-	Global.apply_volume()
-	if game.has("username"):
-		Global.player_name = game[("username")]
-	# Re-sync TimeManager now that Global.time may have just been overwritten.
-	Timemanager.load_time_from_global()
-	print("Game loaded sucessfully")
-	return true
+    if not FileAccess.file_exists(SAVE_FILE):
+        print("File could not be found.")
+        return false
+    var file = FileAccess.open(SAVE_FILE, FileAccess.READ)
+    var content = file.get_as_text()
+    file.close()
+    var parse = JSON.parse_string(content)
+    if parse == null:
+        print("Save file corrupted")
+        return false
+    game = parse
+    if not game.has("inventory"):
+        game["inventory"] = []
+    if not game.has("money"):
+        game["money"] = 100
+    if game.has("username"):
+        Global.player_name = game["username"]
+    if game.has("money"):
+        Global.money = int(game["money"])
+    if game.has("time"):
+        Global.time = game["time"]
+    if game.has("crops"):
+        for key in game["crops"]:
+            if Global.crops.has(key):
+                Global.crops[key]["stock"] = game["crops"][key].get("stock", Global.crops[key]["stock"])
+                Global.crops[key]["current_price"] = game["crops"][key].get("current_price", Global.crops[key]["current_price"])
+    if game.has("seed"):
+        for key in game["seed"]:
+            if Global.seed.has(key):
+                Global.seed[key]["stock"] = game["seed"][key].get("stock", Global.seed[key]["stock"])
+                Global.seed[key]["current_price"] = game["seed"][key].get("current_price", Global.seed[key]["current_price"])
+    if game.has("flower"):
+        for key in game["flower"]:
+            if Global.flower.has(key):
+                Global.flower[key]["stock"] = game["flower"][key].get("stock", Global.flower[key]["stock"])
+                Global.flower[key]["current_price"] = game["flower"][key].get("current_price", Global.flower[key]["current_price"])
+    if game.has("scene"):
+        print("Loaded scene:",game["scene"])
+    if game.has("position"):
+        print("Loaded position:",game["position"])
+    if game.has("volume"):
+        Global.sound_percent = float(game["volume"])
+    if game.has("is_muted"):
+        Global.is_muted = bool(game["is_muted"])
+    Global.apply_volume()
+    if game.has("username"):
+        Global.player_name = game[("username")]
+    # Re-sync TimeManager now that Global.time may have just been overwritten.
+    Timemanager.load_time_from_global()
+    print("Game loaded sucessfully")
+    return true
 
 func apply_save():
-	var player = get_tree().get_first_node_in_group("Player")
-	if player != null:
-		player.global_position = Vector2(game.position.x,game.position.y)
+    var player = get_tree().get_first_node_in_group("Player")
+    if player != null:
+        player.global_position = Vector2(game.position.x,game.position.y)
 
 func money_change(x: int):
-	Global.money += x
-	game.money = Global.money
-	var sign = "+" if x > 0 else ""
-	var track = str(sign,x," ","Farmonomies","Total: ", game.money)
-	game.money_state.append(track)
-	if game.money_state.size() > 10:
-		game.money_state.remove_at(0)
+    Global.money += x
+    game.money = Global.money
+    var sign = "+" if x > 0 else ""
+    var track = str(sign,x," ","Farmonomies","Total: ", game.money)
+    game.money_state.append(track)
+    if game.money_state.size() > 10:
+        game.money_state.remove_at(0)
 
 func get_inventory() -> Array:
-	return game.inventory
+    return game.inventory
  

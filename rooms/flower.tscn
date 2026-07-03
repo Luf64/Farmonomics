@@ -11,6 +11,7 @@ script = ExtResource("1_v3hyk")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=707443682]
 y_sort_enabled = true
+rotation = 0.0003152182
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1280900112]
 shape = SubResource("CircleShape2D_0qk0t")

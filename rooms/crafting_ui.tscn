@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bgfb1hyfgy8u2"]
 
-[ext_resource type="Script" uid="uid://datjtjorby1nm" path="res://scripts/crafting_ui.gd" id="1_ntsyr"]
+[ext_resource type="Script" uid="uid://8krl5pa7lx4r" path="res://scripts/crafting_ui.gd" id="1_ntsyr"]
 [ext_resource type="Texture2D" uid="uid://dj6xjmrswr80" path="res://Assets/room 1 (outside)/inventory and stuff/PNG/Craft(crafting only).png" id="1_xh8vp"]
-[ext_resource type="Script" uid="uid://dbhbundbfmxqs" path="res://scripts/crafting_slots(inventory).gd" id="3_k6hpp"]
+[ext_resource type="Script" uid="uid://bixpl8pouuw2m" path="res://scripts/crafting_slots(inventory).gd" id="3_k6hpp"]
 [ext_resource type="FontFile" uid="uid://criy57ycjr1le" path="res://Fonts/agsfnt3.ttf" id="4_xhjsy"]
-[ext_resource type="Script" uid="uid://dt0p2dity7vr" path="res://scripts/crafting_grid_slot.gd" id="5_xhjsy"]
+[ext_resource type="Script" uid="uid://c0v0m8fi4ycg" path="res://scripts/crafting_grid_slot.gd" id="5_xhjsy"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=915512477]
 script = ExtResource("1_ntsyr")
@@ -594,25 +594,28 @@ offset_bottom = 507.0
 
 [node name="Label" type="Label" parent="Control/recipes/Panel" unique_id=1077225886]
 layout_mode = 0
-offset_right = 282.0
-offset_bottom = 453.0
-text = "Red potion : Red flower
-(Enlarge body size)
+offset_left = 2.0
+offset_top = -1.0
+offset_right = 284.0
+offset_bottom = 464.0
+text = "(Enlarge body size)
+Red potion : Red flower
+(Reset effect)
 Blue potion : Blue flower + Purple 
-                         flower + Red flower + 
+                         flower + Red Flower + 
                          White flower + Yellow 
                          flower
-(Reset effect)
-Yellow potion : Chocolate +  Corn +  
-                            Flower white + Milk 
 (Speed boost I)
-White potion : Chocolate +  Corn +  
-                           Flower white + Milk + 
-                           Orange + Tomato
+Yellow potion : Chocolate +  Corn +  
+                            Yellow Flower  + Milk 
 (Speed boost II)
+White potion : Chocolate +  Corn +  
+                           White Flower + Milk + 
+                           Orange + Tomato
+(Invisible)
 Purple potion : Purple flower + 
                             chocolate
-(Invisible)"
+"
 
 [connection signal="pressed" from="Control/close" to="." method="_on_close_pressed"]
 [connection signal="pressed" from="Control/inventory GridContainer/Slot1/Icon" to="Control/inventory GridContainer/Slot1" method="_on_icon_pressed"]

@@ -23,13 +23,13 @@ func _input(event: InputEvent) -> void:
 
 func harvest():
     print("Harvested: ", flower_type)
-    Json.add_item(flower_type,1)
+    Json.add_item(flower_type, 1)
+    $Sprite2D.visible = false
     if Global.inventory_ui != null:
         Global.inventory_ui.refresh()
-    $Sprite2D.visible = false
+    if Global.hotbar_ui != null:
+        Global.hotbar_ui.refresh()
     queue_free()
-    Global.inventory_ui.refresh()
-    Global.hotbar_ui.refresh()
 
 func _on_body_entered(body: Node2D) -> void:
     if body.name == "player":
