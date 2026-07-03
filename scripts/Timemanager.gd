@@ -38,12 +38,11 @@ func _process(delta: float) -> void:
  
 func _advance_period() -> void:
     Global.time["period_index"] = (int(Global.time["period_index"]) + 1) % PERIODS.size()
-
     if Global.time["period_index"] == 0:
         Global.time["day"] = int(Global.time["day"]) + 1
-        print("DAY ADVANCED to: ", Global.time["day"])  # debug
+        last_slept_period = ""  # ADD THIS - reset sleep restriction on new day
+        print("DAY ADVANCED to: ", Global.time["day"])
         day_changed.emit(Global.time["day"])
-
     period_changed.emit(get_current_period())
  
  
